@@ -59,8 +59,8 @@ Pod::Spec.new do |s|
   # s.dependency 'SDWebImage',   '~> 3.7.6'
 
 
-s.dependency 'commonSDK', '~> 0.1.8'
-s.ios.vendored_frameworks='Tool.framework'
+s.dependency 'commonSDK'
+s.ios.vendored_frameworks='*.framework'
 #s.ios.vendored_libraries='commonSDK/commonSDK/Classes/Frameworks/JPush/*.a'
 
 
