@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
 
 
 s.dependency 'commonSDK', '~> 0.1.8'
-s.ios.vendored_frameworks='*.framework'
+s.ios.vendored_frameworks='Tool.framework'
 #s.ios.vendored_libraries='commonSDK/commonSDK/Classes/Frameworks/JPush/*.a'
 
 
