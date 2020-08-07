@@ -1,0 +1,32 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/aliyun/aliyun-specs.git'
+platform :ios,'9.0'
+target 'ToolDemo' do
+  use_frameworks!
+  pod 'Masonry', '~> 1.1.0'
+  pod 'AFNetworking', '~> 3.2.1'
+  pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'SDWebImage', '~> 5.0.6'
+  pod 'MJRefresh'
+#  pod 'WechatOpenSDK',  '~> 1.8.3'
+#  pod 'WeiboSDK',  '~> 3.1.3'
+ # pod 'TencentOpenApiSDK',  '~> 2.9.5'
+#  pod 'AliPay',  '~> 2.1.2'
+
+end
+
+target 'Tool' do
+  use_frameworks!
+  pod 'Masonry', '~> 1.1.0'
+  pod 'AFNetworking', '~> 3.2.1'
+  pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'SDWebImage', '~> 5.0.6'
+  pod 'MJRefresh'
+#  pod 'WechatOpenSDK',  '~> 1.8.3'
+ # pod 'WeiboSDK',  '~> 3.1.3'
+ # pod 'TencentOpenApiSDK',  '~> 2.9.5'
+#  pod 'AliPay',  '~> 2.1.2'
+
+end
+
+
