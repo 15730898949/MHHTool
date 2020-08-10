@@ -25,6 +25,8 @@
 #import <Tool/BaseModel.h>
 #import <Tool/SPPageMenu.h>
 #import <Tool/SortNameTool.h>
+#import <Tool/TBCityIconInfo.h>
+#import <Tool/TBCityIconFont.h>
 
 
 
