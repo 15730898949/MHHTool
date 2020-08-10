@@ -13,7 +13,20 @@
 		04445C3C24E0D84E00D4FA5C /* TBCityIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3724E0D84E00D4FA5C /* TBCityIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04445C3F24E0D98100D4FA5C /* MUHookMethodHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3D24E0D98100D4FA5C /* MUHookMethodHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04445C4024E0D98100D4FA5C /* MUHookMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */; };
-		04AE7EA324DD535C00A94C6D /* Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AE7EA224DD535B00A94C6D /* Tool.framework */; };
+		04445C4224E0E82A00D4FA5C /* UIImage+MUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */; };
+		04445C4524E0F54300D4FA5C /* UIScrollView+Emm.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C4324E0F54300D4FA5C /* UIScrollView+Emm.m */; };
+		04445C4624E0F54300D4FA5C /* UIScrollView+Emm.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C4424E0F54300D4FA5C /* UIScrollView+Emm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04445C6524E1215900D4FA5C /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C5C24E1215900D4FA5C /* LYEmptyBaseView.m */; };
+		04445C6624E1215900D4FA5C /* LYEmptyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C5D24E1215900D4FA5C /* LYEmptyView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04445C6724E1215900D4FA5C /* UIView+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C5E24E1215900D4FA5C /* UIView+Empty.m */; };
+		04445C6824E1215900D4FA5C /* UIView+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C5F24E1215900D4FA5C /* UIView+LYExtension.m */; };
+		04445C6924E1215900D4FA5C /* LYEmptyBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C6024E1215900D4FA5C /* LYEmptyBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04445C6A24E1215900D4FA5C /* LYEmptyViewHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C6124E1215900D4FA5C /* LYEmptyViewHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04445C6B24E1215900D4FA5C /* LYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C6224E1215900D4FA5C /* LYEmptyView.m */; };
+		04445C6C24E1215900D4FA5C /* UIView+LYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C6324E1215900D4FA5C /* UIView+LYExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04445C6D24E1215900D4FA5C /* UIView+Empty.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C6424E1215900D4FA5C /* UIView+Empty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04445C7424E1356900D4FA5C /* Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; };
+		04445C7524E1356900D4FA5C /* Tool.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04EBCC5B24DD4434005D7D8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC5A24DD4434005D7D8C /* AppDelegate.m */; };
 		04EBCC5E24DD4434005D7D8C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC5D24DD4434005D7D8C /* SceneDelegate.m */; };
 		04EBCC6124DD4434005D7D8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC6024DD4434005D7D8C /* ViewController.m */; };
@@ -26,8 +39,6 @@
 		04EBCD7C24DD45FB005D7D8C /* Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; };
 		04EBCD8324DD45FC005D7D8C /* ToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD8224DD45FC005D7D8C /* ToolTests.m */; };
 		04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD7524DD45FB005D7D8C /* Tool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04EBCD8824DD45FC005D7D8C /* Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; };
-		04EBCD8924DD45FC005D7D8C /* Tool.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04EBCDF924DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9224DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */; };
 		04EBCE0324DD4629005D7D8C /* MHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */; };
@@ -42,7 +53,6 @@
 		04EBCE0C24DD4629005D7D8C /* NSDecimalNumber+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */; };
 		04EBCE0D24DD4629005D7D8C /* NSDictionary+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */; };
 		04EBCE0E24DD4629005D7D8C /* NSDictionary+LSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAF24DD4628005D7D8C /* NSDictionary+LSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04EBCE0F24DD4629005D7D8C /* UIImage+MUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */; };
 		04EBCE1024DD4629005D7D8C /* UIImage+MUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB224DD4628005D7D8C /* UIImage+MUColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE1124DD4629005D7D8C /* WSDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB424DD4628005D7D8C /* WSDatePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE1224DD4629005D7D8C /* WSDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB524DD4628005D7D8C /* WSDatePickerView.m */; };
@@ -72,6 +82,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		04445C7224E1353500D4FA5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04EBCC4E24DD4434005D7D8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04EBCD7224DD45FB005D7D8C;
+			remoteInfo = Tool;
+		};
+		04445C7624E1356900D4FA5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04EBCC4E24DD4434005D7D8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04EBCD7224DD45FB005D7D8C;
+			remoteInfo = Tool;
+		};
 		04EBCC7224DD4436005D7D8C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04EBCC4E24DD4434005D7D8C /* Project object */;
@@ -100,23 +124,16 @@
 			remoteGlobalIDString = 04EBCC5524DD4434005D7D8C;
 			remoteInfo = ToolDemo;
 		};
-		04EBCD8624DD45FC005D7D8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04EBCC4E24DD4434005D7D8C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04EBCD7224DD45FB005D7D8C;
-			remoteInfo = Tool;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		04EBCCAD24DD44A9005D7D8C /* Embed Frameworks */ = {
+		04445C7824E1356A00D4FA5C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				04EBCD8924DD45FC005D7D8C /* Tool.framework in Embed Frameworks */,
+				04445C7524E1356900D4FA5C /* Tool.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,7 +147,17 @@
 		04445C3724E0D84E00D4FA5C /* TBCityIconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconFont.h; sourceTree = "<group>"; };
 		04445C3D24E0D98100D4FA5C /* MUHookMethodHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUHookMethodHelper.h; sourceTree = "<group>"; };
 		04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUHookMethodHelper.m; sourceTree = "<group>"; };
-		04AE7EA224DD535B00A94C6D /* Tool.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tool.framework; path = Products/Tool.framework; sourceTree = SOURCE_ROOT; };
+		04445C4324E0F54300D4FA5C /* UIScrollView+Emm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Emm.m"; sourceTree = "<group>"; };
+		04445C4424E0F54300D4FA5C /* UIScrollView+Emm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Emm.h"; sourceTree = "<group>"; };
+		04445C5C24E1215900D4FA5C /* LYEmptyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyBaseView.m; sourceTree = "<group>"; };
+		04445C5D24E1215900D4FA5C /* LYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyView.h; sourceTree = "<group>"; };
+		04445C5E24E1215900D4FA5C /* UIView+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Empty.m"; sourceTree = "<group>"; };
+		04445C5F24E1215900D4FA5C /* UIView+LYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYExtension.m"; sourceTree = "<group>"; };
+		04445C6024E1215900D4FA5C /* LYEmptyBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyBaseView.h; sourceTree = "<group>"; };
+		04445C6124E1215900D4FA5C /* LYEmptyViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyViewHeader.h; sourceTree = "<group>"; };
+		04445C6224E1215900D4FA5C /* LYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyView.m; sourceTree = "<group>"; };
+		04445C6324E1215900D4FA5C /* UIView+LYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LYExtension.h"; sourceTree = "<group>"; };
+		04445C6424E1215900D4FA5C /* UIView+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Empty.h"; sourceTree = "<group>"; };
 		04EBCC5624DD4434005D7D8C /* ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EBCC5924DD4434005D7D8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04EBCC5A24DD4434005D7D8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -207,8 +234,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04EBCD8824DD45FC005D7D8C /* Tool.framework in Frameworks */,
-				04AE7EA324DD535C00A94C6D /* Tool.framework in Frameworks */,
+				04445C7424E1356900D4FA5C /* Tool.framework in Frameworks */,
 				66CC420A319AECFB8CCED05B /* Pods_ToolDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +292,31 @@
 			path = "MUHookMethodHelper(交换方法)";
 			sourceTree = "<group>";
 		};
+		04445C4724E0F55200D4FA5C /* UIScrollView(下拉刷新） */ = {
+			isa = PBXGroup;
+			children = (
+				04445C4424E0F54300D4FA5C /* UIScrollView+Emm.h */,
+				04445C4324E0F54300D4FA5C /* UIScrollView+Emm.m */,
+			);
+			path = "UIScrollView(下拉刷新）";
+			sourceTree = "<group>";
+		};
+		04445C5B24E1215900D4FA5C /* LYEmptyView(空白页) */ = {
+			isa = PBXGroup;
+			children = (
+				04445C6024E1215900D4FA5C /* LYEmptyBaseView.h */,
+				04445C5C24E1215900D4FA5C /* LYEmptyBaseView.m */,
+				04445C5D24E1215900D4FA5C /* LYEmptyView.h */,
+				04445C6224E1215900D4FA5C /* LYEmptyView.m */,
+				04445C6124E1215900D4FA5C /* LYEmptyViewHeader.h */,
+				04445C6424E1215900D4FA5C /* UIView+Empty.h */,
+				04445C5E24E1215900D4FA5C /* UIView+Empty.m */,
+				04445C6324E1215900D4FA5C /* UIView+LYExtension.h */,
+				04445C5F24E1215900D4FA5C /* UIView+LYExtension.m */,
+			);
+			path = "LYEmptyView(空白页)";
+			sourceTree = "<group>";
+		};
 		04EBCC4D24DD4434005D7D8C = {
 			isa = PBXGroup;
 			children = (
@@ -295,7 +346,6 @@
 		04EBCC5824DD4434005D7D8C /* ToolDemo */ = {
 			isa = PBXGroup;
 			children = (
-				04AE7EA224DD535B00A94C6D /* Tool.framework */,
 				04EBCC5924DD4434005D7D8C /* AppDelegate.h */,
 				04EBCC5A24DD4434005D7D8C /* AppDelegate.m */,
 				04EBCC5C24DD4434005D7D8C /* SceneDelegate.h */,
@@ -351,6 +401,7 @@
 		04EBCD9024DD4628005D7D8C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				04445C5B24E1215900D4FA5C /* LYEmptyView(空白页) */,
 				04445C4124E0D98600D4FA5C /* MUHookMethodHelper(交换方法) */,
 				04445C3224E0D84E00D4FA5C /* iconfont(字体图标) */,
 				04EBCD9124DD4628005D7D8C /* FDFullscreenPopGesture(侧滑返回) */,
@@ -391,6 +442,7 @@
 		04EBCDA024DD4628005D7D8C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				04445C4724E0F55200D4FA5C /* UIScrollView(下拉刷新） */,
 				04EBCDA124DD4628005D7D8C /* NSDate+Extension */,
 				04EBCDA424DD4628005D7D8C /* UITextView+Placeholder */,
 				04EBCDA724DD4628005D7D8C /* UIView+Category */,
@@ -588,8 +640,14 @@
 				04EBCE4124DD4629005D7D8C /* ToolMacro.h in Headers */,
 				04445C3B24E0D84E00D4FA5C /* TBCityIconInfo.h in Headers */,
 				04445C3C24E0D84E00D4FA5C /* TBCityIconFont.h in Headers */,
+				04445C6924E1215900D4FA5C /* LYEmptyBaseView.h in Headers */,
+				04445C6D24E1215900D4FA5C /* UIView+Empty.h in Headers */,
+				04445C6C24E1215900D4FA5C /* UIView+LYExtension.h in Headers */,
+				04445C6624E1215900D4FA5C /* LYEmptyView.h in Headers */,
+				04445C6A24E1215900D4FA5C /* LYEmptyViewHeader.h in Headers */,
 				04445C3F24E0D98100D4FA5C /* MUHookMethodHelper.h in Headers */,
 				04EBCE1324DD4629005D7D8C /* MHHTTPSessionManager.h in Headers */,
+				04445C4624E0F54300D4FA5C /* UIScrollView+Emm.h in Headers */,
 				04EBCE0524DD4629005D7D8C /* NSDate+Extension.h in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
 			);
@@ -606,14 +664,14 @@
 				04EBCC5224DD4434005D7D8C /* Sources */,
 				04EBCC5324DD4434005D7D8C /* Frameworks */,
 				04EBCC5424DD4434005D7D8C /* Resources */,
-				04EBCCAD24DD44A9005D7D8C /* Embed Frameworks */,
 				CCDD1AB58CEE049A9D96FC1B /* [CP] Embed Pods Frameworks */,
-				F137CF6A61AB3A60C1D9F55B /* [CP] Copy Pods Resources */,
+				04445C7824E1356A00D4FA5C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				04EBCD8724DD45FC005D7D8C /* PBXTargetDependency */,
+				04445C7324E1353500D4FA5C /* PBXTargetDependency */,
+				04445C7724E1356900D4FA5C /* PBXTargetDependency */,
 			);
 			name = ToolDemo;
 			productName = ToolDemo;
@@ -665,7 +723,6 @@
 				04EBCD6F24DD45FB005D7D8C /* Sources */,
 				04EBCD7024DD45FB005D7D8C /* Frameworks */,
 				04EBCD7124DD45FB005D7D8C /* Resources */,
-				84F947D3AB8DA46D79A3AE49 /* [CP] Copy Pods Resources */,
 				04AE7EA124DD526400A94C6D /* ShellScript */,
 			);
 			buildRules = (
@@ -804,24 +861,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Sets the target folders and the final framework product.\nFMK_NAME=Tool\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n# Creates and renews the final product folder.\nmkdir -p \"${INSTALL_DIR}\"\n# Copies the headers and resources files to the final product folder.\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\n";
-		};
-		84F947D3AB8DA46D79A3AE49 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tool/Pods-Tool-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tool/Pods-Tool-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tool/Pods-Tool-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "TARGETS_NAME=Tool\n\n\n\nINSTALL_DIR=${SRCROOT}/framework/${TARGETS_NAME}.framework\n\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${TARGETS_NAME}.framework\n\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${TARGETS_NAME}.framework\n\n\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\n\n\nmkdir -p \"${INSTALL_DIR}\"\n\n\n\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n#ditto \"${DEVICE_DIR}/Headers\" \"${INSTALL_DIR}/Headers\"\n\nlipo -create \"${DEVICE_DIR}/${TARGETS_NAME}\" \"${SIMULATOR_DIR}/${TARGETS_NAME}\" -output \"${INSTALL_DIR}/${TARGETS_NAME}\"\n\n#open \"${DEVICE_DIR}\"\n#open \"${SRCROOT}/\"\n\n";
 		};
 		A8BA5E1E8B54FFAB293EAAE5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -860,23 +900,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToolDemo/Pods-ToolDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F137CF6A61AB3A60C1D9F55B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ToolDemo/Pods-ToolDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ToolDemo/Pods-ToolDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToolDemo/Pods-ToolDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F198935D58886A597DB77E10 /* [CP] Check Pods Manifest.lock */ = {
@@ -935,16 +958,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04445C4224E0E82A00D4FA5C /* UIImage+MUColor.m in Sources */,
+				04445C4524E0F54300D4FA5C /* UIScrollView+Emm.m in Sources */,
 				04EBCE4224DD4629005D7D8C /* SPPageMenu.m in Sources */,
 				04EBCE0C24DD4629005D7D8C /* NSDecimalNumber+Addtion.m in Sources */,
-				04EBCE0F24DD4629005D7D8C /* UIImage+MUColor.m in Sources */,
 				04EBCE1224DD4629005D7D8C /* WSDatePickerView.m in Sources */,
 				04445C3824E0D84E00D4FA5C /* TBCityIconFont.m in Sources */,
 				04EBCE1624DD4629005D7D8C /* ZZLimitInputManager.m in Sources */,
+				04445C6B24E1215900D4FA5C /* LYEmptyView.m in Sources */,
 				04EBCE0724DD4629005D7D8C /* UITextView+Placeholder.m in Sources */,
+				04445C6524E1215900D4FA5C /* LYEmptyBaseView.m in Sources */,
 				04EBCE2524DD4629005D7D8C /* CWFlowLayout.m in Sources */,
 				04EBCE1824DD4629005D7D8C /* SPAlertController.m in Sources */,
 				04EBCE0D24DD4629005D7D8C /* NSDictionary+LSCore.m in Sources */,
+				04445C6724E1215900D4FA5C /* UIView+Empty.m in Sources */,
+				04445C6824E1215900D4FA5C /* UIView+LYExtension.m in Sources */,
 				04EBCE1524DD4629005D7D8C /* MHHTTPSessionManager.m in Sources */,
 				04EBCE0624DD4629005D7D8C /* NSDate+Extension.m in Sources */,
 				04EBCE4424DD4629005D7D8C /* SortNameTool.m in Sources */,
@@ -970,6 +998,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		04445C7324E1353500D4FA5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04EBCD7224DD45FB005D7D8C /* Tool */;
+			targetProxy = 04445C7224E1353500D4FA5C /* PBXContainerItemProxy */;
+		};
+		04445C7724E1356900D4FA5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04EBCD7224DD45FB005D7D8C /* Tool */;
+			targetProxy = 04445C7624E1356900D4FA5C /* PBXContainerItemProxy */;
+		};
 		04EBCC7324DD4436005D7D8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 04EBCC5524DD4434005D7D8C /* ToolDemo */;
@@ -989,11 +1027,6 @@
 			isa = PBXTargetDependency;
 			target = 04EBCC5524DD4434005D7D8C /* ToolDemo */;
 			targetProxy = 04EBCD7F24DD45FB005D7D8C /* PBXContainerItemProxy */;
-		};
-		04EBCD8724DD45FC005D7D8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04EBCD7224DD45FB005D7D8C /* Tool */;
-			targetProxy = 04EBCD8624DD45FC005D7D8C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1067,7 +1100,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1119,7 +1152,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1143,6 +1176,36 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = a.ToolDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1164,6 +1227,36 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = a.ToolDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1253,12 +1346,13 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZNR56QECEL;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = Tool/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1272,6 +1366,39 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-all_load",
+					"-force_load",
+				);
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = a.Tool;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1287,12 +1414,13 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZNR56QECEL;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				INFOPLIST_FILE = Tool/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1307,6 +1435,39 @@
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-all_load",
+					"-force_load",
+				);
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = a.Tool;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

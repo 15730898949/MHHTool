@@ -11,19 +11,58 @@
 #import <Tool/ToolMacro.h>
 #import <Tool/UIImage+MUColor.h>
 #import <Tool/MHHTTPSessionManager.h>
-@interface ViewController ()<CWCarouselDatasource>
-
+#import <Masonry/Masonry.h>
+#import <Tool/UIScrollView+Emm.h>
+#import <Tool/LYEmptyViewHeader.h>
+@interface ViewController ()<CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic ,strong)UITableView *tableView;
+@property (nonatomic ,strong)NSMutableArray *dataArray;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dataArray = [NSMutableArray array];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableCell"];
+    self.tableView.tableFooterView = [[UIView alloc]init];
+    self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImage:nil titleStr:@"暂无数据" detailStr:nil btnTitleStr:@"点击重试" btnClickBlock:^{
+        [self.dataArray addObject:[NSString stringWithFormat:@"%ld",self.tableView.page]];
+        [self.tableView reloadData];
+    }];
+    
+    WeakSelf(self)
+    [self.tableView addHeaderRefreshWithBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakself.dataArray removeAllObjects];
+            [weakself.tableView reloadData];
+            [weakself.tableView endRefreshing];
+        });
+
+    }];
+ 
+    [self.tableView addFooterRefreshWithBlock:^{
+        [weakself.dataArray addObject:[NSString stringWithFormat:@"%ld",weakself.tableView.page]];
+        [weakself.tableView reloadData];
+        [weakself.tableView endRefreshing];
+
+    }];
+    
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    
+    
     CWFlowLayout *layout = [[CWFlowLayout alloc]initWithStyle:CWCarouselStyle_Normal];
     CWCarousel *banner = [[CWCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100) delegate:nil datasource:self flowLayout:layout];
     [banner.carouselView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     banner.backgroundColor = [UIColor redColor];
-    [self.view addSubview:banner];
+    self.tableView.tableHeaderView = banner;
     // Do any additional setup after loading the view.
 }
 
@@ -46,5 +85,18 @@
     [cell.contentView addSubview:imageV];
     return cell;
 }
+
+- (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell" forIndexPath:indexPath];
+    cell.textLabel.text  = self.dataArray[indexPath.row];
+    
+    return cell;
+}
+
 
 @end

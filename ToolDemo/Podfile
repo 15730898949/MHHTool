@@ -7,12 +7,7 @@ target 'ToolDemo' do
   pod 'AFNetworking', '~> 3.2.1'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'SDWebImage', '~> 5.0.6'
-  pod 'MJRefresh'
-#  pod 'WechatOpenSDK',  '~> 1.8.3'
-#  pod 'WeiboSDK',  '~> 3.1.3'
- # pod 'TencentOpenApiSDK',  '~> 2.9.5'
-#  pod 'AliPay',  '~> 2.1.2'
-
+  pod 'MJRefresh', '~> 3.4.3'
 end
 
 target 'Tool' do
@@ -21,11 +16,7 @@ target 'Tool' do
   pod 'AFNetworking', '~> 3.2.1'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'SDWebImage', '~> 5.0.6'
-  pod 'MJRefresh'
-#  pod 'WechatOpenSDK',  '~> 1.8.3'
- # pod 'WeiboSDK',  '~> 3.1.3'
- # pod 'TencentOpenApiSDK',  '~> 2.9.5'
-#  pod 'AliPay',  '~> 2.1.2'
+  pod 'MJRefresh', '~> 3.4.3'
 
 end
 
