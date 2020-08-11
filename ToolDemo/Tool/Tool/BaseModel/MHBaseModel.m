@@ -6,15 +6,15 @@
 //  Copyright (c) 2014年 itcast. All rights reserved.
 //
 
-#import "BaseModel.h"
+#import "MHBaseModel.h"
 
 #import <objc/runtime.h>// 导入运行时文件
 
-@interface BaseModel()<NSCopying,NSMutableCopying>
+@interface MHBaseModel()<NSCopying,NSMutableCopying>
 
 @end
 
-@implementation BaseModel
+@implementation MHBaseModel
 
 /**
  *  归档实现

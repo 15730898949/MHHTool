@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseModel.h"
+#import "MHBaseModel.h"
 
 
 #define CharacatorNumberArray  @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"]
 
 
-@interface NameModel : BaseModel
+@interface NameModel : MHBaseModel
 
 @property(copy,nonatomic)NSString *chineseCharacter;
 

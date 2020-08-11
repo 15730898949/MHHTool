@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BaseModel : NSObject
+@interface MHBaseModel : NSObject
 
 @property(nonatomic , strong ,readonly)NSDictionary *AllKey;
 
