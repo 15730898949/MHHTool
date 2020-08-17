@@ -46,16 +46,16 @@
 /// cases.
 @interface UIViewController (FDFullscreenPopGesture)
 
-/// Whether the interactive pop gesture is disabled when contained in a navigation
+///当包含在导航中时，是否禁用侧滑手势 Whether the interactive pop gesture is disabled when contained in a navigation
 /// stack.
 @property (nonatomic, assign) BOOL fd_interactivePopDisabled;
 
-/// Indicate this view controller prefers its navigation bar hidden or not,
+/// 是否隐藏 Indicate this view controller prefers its navigation bar hidden or not,
 /// checked when view controller based navigation bar's appearance is enabled.
 /// Default to NO, bars are more likely to show.
 @property (nonatomic, assign) BOOL fd_prefersNavigationBarHidden;
 
-/// Max allowed initial distance to left edge when you begin the interactive pop
+/// 开始侧滑时允许的到左边缘的最大初始距离 默认0 Max allowed initial distance to left edge when you begin the interactive pop
 /// gesture. 0 by default, which means it will ignore this limit.
 @property (nonatomic, assign) CGFloat fd_interactivePopMaxAllowedInitialDistanceToLeftEdge;
 

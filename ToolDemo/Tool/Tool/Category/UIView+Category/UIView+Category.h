@@ -189,119 +189,9 @@
 
 
 /**
- *     视图旋转的扩展
- */
-@interface UIView (rotation)
-
-
-/**
- *     旋转圈数
- */
-@property (nonatomic, assign) NSInteger loopNumber;
-
-/**
- *     开始旋转
- */
-- (void)beginRotation;
-
-/**
- *     取消旋转
- */
-- (void)cancelRotation;
-
-/**
- *     旋转回正常
- */
-- (void)rotation_0;
-
-/**
- *     旋转 90 度
- */
-- (void)rotation_90;
-
-/**
- *     旋转 180 度
- */
-- (void)rotation_180;
-
-/**
- *     旋转 270 度
- */
-- (void)rotation_270;
-
-/**
- *     旋转到指定的幅度
- *
- *     @param arc 幅度
- */
-- (void)rotateToArc:(CGFloat)arc;
-
-
-@end
-
-
-
-/**
  *     快速添加线条
  */
 @interface UIView (line)
-
-
-/**
- *     在最底下添加一条线条
- *
- *     @param sross 线宽
- *     @param color 颜色
- *
- *     @return 线条对象
- */
-- (UIView *)addtionUnderlineWithSross:(CGFloat)sross withColor:(UIColor *)color;
-
-/**
- *     添加横线
- *
- *     @param sross 线宽
- *     @param top   线在上面的距离
- *     @param color 颜色
- *
- *     @return 线条对象
- */
-- (UIView *)addtionHorizontalLineWithSross:(CGFloat)sross withTop:(CGFloat)top withColor:(UIColor *)color;
-
-/**
- *     在最底下添加一条线条
- *
- *     @param sross 线宽
- *     @param left  距左边的距离
- *     @param color 颜色
- *
- *     @return 线条对象
- */
-- (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withColor:(UIColor *)color;
-
-/**
- *     在最底下添加一条线条
- *
- *     @param sross 线宽
- *     @param left  距左边的距离
- *     @param width 线的长度
- *     @param color 颜色
- *
- *     @return 线条对象
- */
-- (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withWidth:(CGFloat)width withColor:(UIColor *)color;
-
-/**
- *     添加横线
- *
- *     @param sross 线宽
- *     @param left  距左边的距离
- *     @param top   距上面的距离
- *     @param color 颜色
- *
- *     @return 线条对象
- */
-- (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withTop:(CGFloat)top withColor:(UIColor *)color;
 
 /**
  *     添加横线
@@ -315,65 +205,6 @@
  *     @return 线条对象
  */
 - (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withTop:(CGFloat)top withWidth:(CGFloat)width withColor:(UIColor *)color;
-
-/**
- *     在最底下添加一条线
- *
- *     @param sross 线宽
- *     @param right 距右边的距离
- *     @param color 颜色
- *
- *     @return 线条对象
- */
-- (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withRight:(CGFloat)right withColor:(UIColor *)color;
-
-/**
- *     在最底下添加一条线
- *
- *     @param sross 线宽
- *     @param right 距右边的距离
- *     @param width 线长
- *     @param color 颜色
- *
- *     @return 线条对象
- */
-- (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withRight:(CGFloat)right withWidth:(CGFloat)width withColor:(UIColor *)color;
-
-/**
- *     添加竖线
- *
- *     @param sross 线宽
- *     @param left  距左边的距离
- *     @param color 颜色
- *
- *     @return 线条对象
- */
-- (UIView *)addtionVarticalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withColor:(UIColor *)color;
-
-/**
- *     添加竖线
- *
- *     @param sross 线宽
- *     @param left  距左边的距离
- *     @param top   距上面的距离
- *     @param color 颜色
- *
- *     @return 线条对象
- */
-- (UIView *)addtionVerticalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withTop:(CGFloat)top withColor:(UIColor *)color;
-
-/**
- *     添加线条
- *
- *     @param sross  线宽
- *     @param left   距左边的距离
- *     @param bottom 距下面的距离
- *     @param color  颜色
- *
- *     @return 线条对象
- */
-- (UIView *)addtionVerticalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withBottom:(CGFloat)bottom withColor:(UIColor *)color;
-
 /**
  *     添加线条
  *
@@ -386,7 +217,6 @@
  *     @return 线条对象
  */
 - (UIView *)addtionVerticalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withTop:(CGFloat)top withHeight:(CGFloat)height withColor:(UIColor *)color;
-
 
 @end
 
@@ -435,3 +265,13 @@
 
 @end
 
+
+@interface UIView (normal)
+/**
+这些方法加载出来xib(autolayout)的高度是经过计算的,它的高度绝大数情况下不会是屏幕的高度
+*/
++(instancetype)viewForXibMu;
++(instancetype)viewForXibMuWithIndex:(NSUInteger)index;
+///刷新布局
+-(void)refreshViewLayout;
+@end

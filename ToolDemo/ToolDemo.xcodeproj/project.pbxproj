@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0414BA9324EA2F9F00EBE089 /* RKNotificationHub.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9124EA2F9E00EBE089 /* RKNotificationHub.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0414BA9424EA2F9F00EBE089 /* RKNotificationHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9224EA2F9E00EBE089 /* RKNotificationHub.m */; };
+		0414BA9924EA50D200EBE089 /* UILabel+topString.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9724EA50D200EBE089 /* UILabel+topString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; };
+		0414BA9E24EA523700EBE089 /* UIButton+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9C24EA523700EBE089 /* UIButton+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0414BA9F24EA523700EBE089 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9D24EA523700EBE089 /* UIButton+Category.m */; };
 		04445C3824E0D84E00D4FA5C /* TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */; };
 		04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */; };
 		04445C3B24E0D84E00D4FA5C /* TBCityIconInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -143,6 +149,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0414BA9124EA2F9E00EBE089 /* RKNotificationHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKNotificationHub.h; sourceTree = "<group>"; };
+		0414BA9224EA2F9E00EBE089 /* RKNotificationHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKNotificationHub.m; sourceTree = "<group>"; };
+		0414BA9724EA50D200EBE089 /* UILabel+topString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+topString.h"; sourceTree = "<group>"; };
+		0414BA9824EA50D200EBE089 /* UILabel+topString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+topString.m"; sourceTree = "<group>"; };
+		0414BA9C24EA523700EBE089 /* UIButton+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
+		0414BA9D24EA523700EBE089 /* UIButton+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
 		04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconFont.m; sourceTree = "<group>"; };
 		04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconInfo.m; sourceTree = "<group>"; };
 		04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconInfo.h; sourceTree = "<group>"; };
@@ -278,6 +290,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0414BA9524EA2FA700EBE089 /* RKNotificationHub(小红点) */ = {
+			isa = PBXGroup;
+			children = (
+				0414BA9124EA2F9E00EBE089 /* RKNotificationHub.h */,
+				0414BA9224EA2F9E00EBE089 /* RKNotificationHub.m */,
+			);
+			path = "RKNotificationHub(小红点)";
+			sourceTree = "<group>";
+		};
+		0414BA9624EA509C00EBE089 /* UILabel+Category */ = {
+			isa = PBXGroup;
+			children = (
+				0414BA9724EA50D200EBE089 /* UILabel+topString.h */,
+				0414BA9824EA50D200EBE089 /* UILabel+topString.m */,
+			);
+			path = "UILabel+Category";
+			sourceTree = "<group>";
+		};
+		0414BA9B24EA51F700EBE089 /* UIButton+Category */ = {
+			isa = PBXGroup;
+			children = (
+				0414BA9C24EA523700EBE089 /* UIButton+Category.h */,
+				0414BA9D24EA523700EBE089 /* UIButton+Category.m */,
+			);
+			path = "UIButton+Category";
+			sourceTree = "<group>";
+		};
 		04445C3224E0D84E00D4FA5C /* iconfont(字体图标) */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,12 +458,13 @@
 		04EBCD9024DD4628005D7D8C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				04EBCDA024DD4628005D7D8C /* Category */,
+				0414BA9524EA2FA700EBE089 /* RKNotificationHub(小红点) */,
 				04C4AABB24E285E90092532B /* LYEmptyView(空白页) */,
 				04445C4124E0D98600D4FA5C /* MUHookMethodHelper(交换方法) */,
 				04445C3224E0D84E00D4FA5C /* iconfont(字体图标) */,
 				04EBCD9124DD4628005D7D8C /* FDFullscreenPopGesture(侧滑返回) */,
 				04EBCD9D24DD4628005D7D8C /* WebViewController */,
-				04EBCDA024DD4628005D7D8C /* Category */,
 				04EBCDB324DD4628005D7D8C /* WSDatePickerView */,
 				04EBCDB624DD4628005D7D8C /* Networking */,
 				04EBCDBA24DD4629005D7D8C /* ZZLimitInputManager(正则限制输入框) */,
@@ -460,6 +500,8 @@
 		04EBCDA024DD4628005D7D8C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				0414BA9B24EA51F700EBE089 /* UIButton+Category */,
+				0414BA9624EA509C00EBE089 /* UILabel+Category */,
 				04445C4724E0F55200D4FA5C /* UIScrollView(下拉刷新） */,
 				04EBCDA124DD4628005D7D8C /* NSDate+Extension */,
 				04EBCDA424DD4628005D7D8C /* UITextView+Placeholder */,
@@ -492,8 +534,8 @@
 		04EBCDA724DD4628005D7D8C /* UIView+Category */ = {
 			isa = PBXGroup;
 			children = (
-				04EBCDA824DD4628005D7D8C /* UIView+Category.m */,
 				04EBCDA924DD4628005D7D8C /* UIView+Category.h */,
+				04EBCDA824DD4628005D7D8C /* UIView+Category.m */,
 			);
 			path = "UIView+Category";
 			sourceTree = "<group>";
@@ -666,7 +708,10 @@
 				04C4AACD24E285EA0092532B /* UIView+Empty.h in Headers */,
 				04C4AACC24E285EA0092532B /* UIView+LYExtension.h in Headers */,
 				04C4AAC624E285EA0092532B /* LYEmptyView.h in Headers */,
+				0414BA9924EA50D200EBE089 /* UILabel+topString.h in Headers */,
+				0414BA9E24EA523700EBE089 /* UIButton+Category.h in Headers */,
 				04C4AACA24E285EA0092532B /* LYEmptyViewHeader.h in Headers */,
+				0414BA9324EA2F9F00EBE089 /* RKNotificationHub.h in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -994,10 +1039,13 @@
 				04C4AAC724E285EA0092532B /* UIView+Empty.m in Sources */,
 				04C4AAC824E285EA0092532B /* UIView+LYExtension.m in Sources */,
 				04EBCE1524DD4629005D7D8C /* MHHTTPSessionManager.m in Sources */,
+				0414BA9F24EA523700EBE089 /* UIButton+Category.m in Sources */,
 				04EBCE0624DD4629005D7D8C /* NSDate+Extension.m in Sources */,
+				0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */,
 				04EBCE4424DD4629005D7D8C /* SortNameTool.m in Sources */,
 				04445C4024E0D98100D4FA5C /* MUHookMethodHelper.m in Sources */,
 				04EBCE2924DD4629005D7D8C /* MHBaseModel.m in Sources */,
+				0414BA9424EA2F9F00EBE089 /* RKNotificationHub.m in Sources */,
 				04EBCE2124DD4629005D7D8C /* GZCMulitiDelegate.m in Sources */,
 				04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */,
 				04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,

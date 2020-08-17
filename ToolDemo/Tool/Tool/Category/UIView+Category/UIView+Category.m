@@ -304,99 +304,8 @@ static char alertKey, alertLableKey;
 
 @end
 
-#import <objc/runtime.h>
-static char loopNumKey;
-
-@implementation UIView (rotation)
-
-- (void)setLoopNumber:(NSInteger)loopNumber
-{
-    objc_setAssociatedObject(self, &loopNumKey, [NSNumber numberWithInteger:loopNumber], OBJC_ASSOCIATION_RETAIN);
-}
-
-- (NSInteger)loopNumber
-{
-    if (!objc_getAssociatedObject(self, &loopNumKey)) {
-        return 0;
-    }
-    return [objc_getAssociatedObject(self, &loopNumKey) integerValue];
-}
-
-- (void)beginRotation
-{
-    if (self.loopNumber == 360) {
-        self.loopNumber = 0;
-    }
-    self.loopNumber ++;
-    self.transform = CGAffineTransformMakeRotation(self.loopNumber * M_PI / 180.0f);
-    
-    [self performSelector:@selector(beginRotation) withObject:nil afterDelay:0.003];
-}
-
-- (void)cancelRotation
-{
-    objc_setAssociatedObject(self, &loopNumKey, nil, OBJC_ASSOCIATION_ASSIGN);
-    [NSObject cancelPreviousPerformRequestsWithTarget:self];
-}
-
-- (void)rotation_0
-{
-    self.transform = CGAffineTransformMakeRotation(0 * M_PI / 180.0f);
-}
-
-- (void)rotation_90
-{
-    self.transform = CGAffineTransformMakeRotation(90 * M_PI / 180.0f);
-}
-
-- (void)rotation_180
-{
-    self.transform = CGAffineTransformMakeRotation(180 * M_PI / 180.0f);
-}
-
-- (void)rotation_270
-{
-    self.transform = CGAffineTransformMakeRotation(270 * M_PI / 180.0f);
-}
-
-- (void)rotateToArc:(CGFloat)arc
-{
-    self.transform = CGAffineTransformMakeRotation(arc * M_PI / 180.0f);
-}
-
-@end
 
 @implementation UIView (line)
-
-- (UIView *)addtionUnderlineWithSross:(CGFloat)sross withColor:(UIColor *)color
-{
-    return [self addtionHorizontalLineWithSross:sross withTop:self.height - sross withColor:color];
-}
-
-- (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withTop:(CGFloat)top withColor:(UIColor *)color
-{
-    return [self addtionHoriaontalLineWithSross:sross withLeft:left withTop:top withWidth:self.width - left withColor:color];
-}
-
-- (UIView *)addtionHorizontalLineWithSross:(CGFloat)sross withTop:(CGFloat)top withColor:(UIColor *)color
-{
-    return [self addtionHoriaontalLineWithSross:sross withLeft:0 withTop:top withWidth:self.width withColor:color];
-}
-
-- (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withColor:(UIColor *)color
-{
-    return [self addtionHoriaontalLineWithSross:sross withLeft:left withTop:self.height - sross withWidth:self.width - left withColor:color];
-}
-
-- (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withRight:(CGFloat)right withColor:(UIColor *)color
-{
-    return [self addtionHoriaontalLineWithSross:sross withRight:right withWidth:right withColor:color];
-}
-
-- (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withWidth:(CGFloat)width withColor:(UIColor *)color
-{
-    return [self addtionHoriaontalLineWithSross:sross withLeft:left withTop:self.height - sross withWidth:width withColor:color];
-}
 
 - (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withTop:(CGFloat)top withWidth:(CGFloat)width withColor:(UIColor *)color
 {
@@ -405,31 +314,6 @@ static char loopNumKey;
     underLine.backgroundColor = color;
     [self addSubview:underLine];
     return underLine;
-}
-
-- (UIView *)addtionHoriaontalLineWithSross:(CGFloat)sross withRight:(CGFloat)right withWidth:(CGFloat)width withColor:(UIColor *)color
-{
-    UIView *underLine = [[UIView alloc]initWithFrame:CGRectMake(0, 0, width, sross)];
-    underLine.right = right;
-    [underLine bringToFront];
-    underLine.backgroundColor = color;
-    [self addSubview:underLine];
-    return underLine;
-}
-
-- (UIView *)addtionVarticalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withColor:(UIColor *)color
-{
-    return [self addtionVerticalLineWithSross:sross withLeft:left withTop:0 withHeight:self.height withColor:color];
-}
-
-- (UIView *)addtionVerticalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withTop:(CGFloat)top withColor:(UIColor *)color
-{
-    return [self addtionVerticalLineWithSross:sross withLeft:left withTop:top withHeight:self.height withColor:color];
-}
-
-- (UIView *)addtionVerticalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withBottom:(CGFloat)bottom withColor:(UIColor *)color
-{
-    return [self addtionVerticalLineWithSross:sross withLeft:left withTop:0 withHeight:bottom withColor:color];
 }
 
 - (UIView *)addtionVerticalLineWithSross:(CGFloat)sross withLeft:(CGFloat)left withTop:(CGFloat)top withHeight:(CGFloat)height withColor:(UIColor *)color
@@ -530,5 +414,88 @@ static char loopNumKey;
     }
     return nil;
 }
+
+@end
+
+@implementation UIView (normal)
+
++(instancetype)viewForXibMu{
+    return [self viewForXibMuWithIndex:0];
+}
++(instancetype)viewForXibMuWithIndex:(NSUInteger)index{
+    UIView *tempView = [[NSBundle bundleForClass:[self class]] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil][index];
+    //    tempView.translatesAutoresizingMaskIntoConstraints = NO;
+    tempView.autoresizingMask = NO;
+    CGFloat maxY  = 0;
+    UIView *tempSubView = nil;
+    for (UIView *subView in tempView.subviews) {
+        CGRect temprect2             =  [subView convertRect:subView.bounds toView:tempView];
+        CGFloat tempY               = CGRectGetMaxY(temprect2);
+        if (tempY > maxY) {
+            maxY = tempY;
+            tempSubView = subView;
+        }
+    }
+    NSLayoutConstraint *bottomFenceConstraint = nil;
+    NSLayoutConstraint *widthFenceConstraint = nil;
+    if (tempSubView) {
+        
+        widthFenceConstraint.priority = UILayoutPriorityRequired ;
+        widthFenceConstraint = [NSLayoutConstraint constraintWithItem:tempView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:[UIScreen mainScreen].bounds.size.width];
+        [tempView addConstraint:widthFenceConstraint];
+        
+        bottomFenceConstraint.priority = UILayoutPriorityRequired - 1;
+        bottomFenceConstraint = [NSLayoutConstraint constraintWithItem:tempSubView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:tempView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
+        [tempView addConstraint:bottomFenceConstraint];
+    }
+    
+    CGSize size = [tempView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    [tempView removeConstraint:bottomFenceConstraint];
+    [tempView removeConstraint:widthFenceConstraint];
+    
+    tempView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, size.height);
+    return tempView;
+}
+-(void)refreshViewLayout{
+    
+    CFRetain((__bridge CFTypeRef)(self));
+    [self updateConstraints];
+    UIView *tempView = self;
+    //    tempView.translatesAutoresizingMaskIntoConstraints = NO;
+    tempView.autoresizingMask = NO;
+    CGFloat maxY  = 0;
+    UIView *tempSubView = nil;
+    for (UIView *subView in tempView.subviews) {
+        CGRect temprect2             =  [subView convertRect:subView.bounds toView:tempView];
+        CGFloat tempY               = CGRectGetMaxY(temprect2);
+        if (tempY > maxY) {
+            maxY = tempY;
+            tempSubView = subView;
+        }
+    }
+    NSLayoutConstraint *bottomFenceConstraint = nil;
+    NSLayoutConstraint *widthFenceConstraint = nil;
+    if (tempSubView) {
+        
+        widthFenceConstraint.priority = UILayoutPriorityRequired;
+        widthFenceConstraint = [NSLayoutConstraint constraintWithItem:tempView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:[UIScreen mainScreen].bounds.size.width];
+        [tempView addConstraint:widthFenceConstraint];
+        
+        bottomFenceConstraint.priority = UILayoutPriorityRequired - 1;
+        bottomFenceConstraint = [NSLayoutConstraint constraintWithItem:tempSubView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:tempView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
+        [tempView addConstraint:bottomFenceConstraint];
+    }
+    
+    CGSize size = [tempView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    [tempView removeConstraint:bottomFenceConstraint];
+    [tempView removeConstraint:widthFenceConstraint];
+    
+    CGPoint orginal = tempView.frame.origin;
+    tempView.frame = CGRectMake(orginal.x, orginal.y, [UIScreen mainScreen].bounds.size.width, size.height);
+    [tempView setNeedsLayout];
+     CFRelease((__bridge CFTypeRef)(self));
+}
+
+
 
 @end
