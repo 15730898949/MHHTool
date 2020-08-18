@@ -14,7 +14,10 @@
 #import <Masonry/Masonry.h>
 #import <Tool/UIScrollView+Emm.h>
 #import <Tool/LYEmptyViewHeader.h>
-@interface ViewController ()<CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource>
+#import "MBProgressHUD+Add.h"
+#import <Tool/UIView+Category.h>
+#import <Tool/ToolMacro.h>
+@interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
 @end
@@ -32,6 +35,10 @@
     self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImage:nil titleStr:@"暂无数据" detailStr:nil btnTitleStr:@"点击重试" btnClickBlock:^{
         [self.dataArray addObject:[NSString stringWithFormat:@"%ld",self.tableView.page]];
         [self.tableView reloadData];
+
+      MBProgressHUD*hud =  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+      hud.label.text = @"正在加载";
+        
     }];
     
     WeakSelf(self)
@@ -40,6 +47,7 @@
             [weakself.dataArray removeAllObjects];
             [weakself.tableView reloadData];
             [weakself.tableView endRefreshing];
+
         });
 
     }];
@@ -59,10 +67,16 @@
     
     
     CWFlowLayout *layout = [[CWFlowLayout alloc]initWithStyle:CWCarouselStyle_Normal];
-    CWCarousel *banner = [[CWCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100) delegate:nil datasource:self flowLayout:layout];
+    CWCarousel *banner = [[CWCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100) delegate:self datasource:self flowLayout:layout];
+    banner.isAuto = YES;
+    banner.autoTimInterval = 2;
+    banner.endless = YES;
     [banner.carouselView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-    banner.backgroundColor = [UIColor redColor];
+    banner.backgroundColor = [UIColor whiteColor];
+    [banner freshCarousel];
+
     self.tableView.tableHeaderView = banner;
+
     // Do any additional setup after loading the view.
 }
 
@@ -80,11 +94,35 @@
 
 - (UICollectionViewCell *)viewForCarousel:(CWCarousel *)carousel indexPath:(NSIndexPath *)indexPath index:(NSInteger)index{
     UICollectionViewCell *cell = [carousel.carouselView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    UIImageView *imageV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, 100)];
-    imageV.image = [UIImage imageFromColorMu:UIColorFromRGB(arc4random()%255, arc4random()%255, arc4random()%255, 1)];
-    [cell.contentView addSubview:imageV];
+    UIImageView *imgView = [cell.contentView viewWithTag:10001];
+    if(!imgView) {
+        imgView = [[UIImageView alloc] initWithFrame:cell.contentView.bounds];
+        imgView.tag = 10001;
+        imgView.backgroundColor = [UIColor redColor];
+        imgView.contentMode =  UIViewContentModeScaleAspectFill;
+        [cell.contentView addSubview:imgView];
+        cell.layer.masksToBounds = YES;
+    }
+//    imageV.image = [UIImage imageFromColorMu:UIColorFromRGB(arc4random()%255, arc4random()%255, arc4random()%255, 1)];
+    imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"timg-%ld",index+1]];
+    
+    UILabel *lab = [cell.contentView viewWithTag:10002];
+    if (!lab) {
+        lab = [[UILabel alloc]initWithFrame:CGRectMake(20, cell.contentView.bottom - 30, 200, 20)];
+        lab.tag = 10002;
+        lab.textColor = [UIColor whiteColor];
+        lab.backgroundColor =UIColorFromRGB(0, 0, 0, 0.5);
+        [cell.contentView addSubview:lab];
+    }
+    lab.text = [NSString stringWithFormat:@" 这是第%ld张图片 ",index+1];
+    [lab sizeToFit];
+
     return cell;
 }
+- (void)CWCarousel:(CWCarousel *)carousel didSelectedAtIndex:(NSInteger)index{
+    
+}
+
 
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArray.count;

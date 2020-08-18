@@ -24,9 +24,6 @@
 @property (nonatomic, assign) NSInteger        currentIndex;
 @property (nonatomic, assign) NSInteger        infactIndex;
 @property (nonatomic, assign) CGFloat          addHeight;
-@property (nonatomic, weak) NSTimer             *timer;
-
-
 /**
  自动播放是否暂停
  */
@@ -95,11 +92,6 @@
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     newSuperview.clipsToBounds = NO;
-    
-    if (!newSuperview) {
-        [self invalidateTimer];
-    }
-    
     if(self.customPageControl == nil && self.pageControl.superview == nil) {
         [self addSubview:self.pageControl];
         self.pageControl.translatesAutoresizingMaskIntoConstraints = NO;
@@ -158,7 +150,10 @@
     // 防止拖动加速度太大,一次跳过多张图片,这里设置一下
     scrollView.pagingEnabled = YES;
     if (self.isAuto) {
-        [self invalidateTimer];
+        [self stop];
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(CWCarousel:didStartScrollAtIndex:indexPathRow:)]) {
+        [self.delegate CWCarousel:self didStartScrollAtIndex:[self caculateIndex:self.currentIndexPath.row] indexPathRow:self.currentIndexPath.row];
     }
 }
 
@@ -247,6 +242,10 @@
 //        else
 //            self.carouselView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
 //    }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(CWCarousel:didEndScrollAtIndex:indexPathRow:)]) {
+        [self.delegate CWCarousel:self didEndScrollAtIndex:[self caculateIndex:self.currentIndexPath.row] indexPathRow:self.currentIndexPath.row];
+    }
 }
 
 // 滚动中
@@ -352,31 +351,12 @@
 }
 
 - (void)play {
-    [self invalidateTimer];
+    [self stop];
     if(self.isPause) {
         return;
     }
-    [self setupTimer];
+    [self performSelector:@selector(nextCell) withObject:nil afterDelay:self.autoTimInterval];
 }
-
-
-
-- (void)setupTimer
-{
-    [self invalidateTimer]; // 创建定时器前先停止定时器，不然会出现僵尸定时器，导致轮播频率错误
-    
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.autoTimInterval target:self selector:@selector(nextCell) userInfo:nil repeats:YES];
-    _timer = timer;
-    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-}
-
-- (void)invalidateTimer
-{
-    [_timer invalidate];
-    _timer = nil;
-}
-
-
 
 - (void)nextCell {
     if([self numbers] <= 0) {
@@ -399,8 +379,13 @@
         [self.carouselView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
         self.currentIndexPath = indexPath;
     }
+    [self performSelector:@selector(nextCell) withObject:nil afterDelay:self.autoTimInterval];
 }
 
+- (void)stop {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(nextCell) object:nil];
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+}
 
 - (void)resumePlay {
     self.isPause = NO;
@@ -409,11 +394,11 @@
 
 - (void)pause {
     self.isPause = YES;
-    [self invalidateTimer];
+    [self stop];
 }
 
 - (void)releaseTimer {
-    [self invalidateTimer];
+    [self stop];
 }
 
 #pragma mark - < Configure View>
@@ -431,7 +416,7 @@
        && (indexPath.row == 0 || indexPath.row == [self infactNumbers] - 1))
     {
         UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"tempCell" forIndexPath:indexPath];
-        cell.contentView.backgroundColor = [UIColor whiteColor];
+        cell.contentView.backgroundColor = [UIColor clearColor];
         return cell;
     }
     else
@@ -454,11 +439,13 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self adjustErrorCell:YES];
     if(self.delegate &&
        [self.delegate respondsToSelector:@selector(CWCarousel:didSelectedAtIndex:)]) {
         [self.delegate CWCarousel:self didSelectedAtIndex:[self caculateIndex:indexPath.row]];
     }
+    // 处于动画中时,点击cell,可能会出现cell不居中问题.这里处理下
+    // 将里中心点最近的那个cell居中
+    [self adjustErrorCell:YES];
 }
 
 #pragma mark - <setter>
@@ -574,7 +561,7 @@
 }
 
 - (NSString *)version {
-    return @"1.1.4";
+    return @"1.1.5";
 }
 
 #pragma mark - Setter
@@ -590,9 +577,6 @@
         }
     }
 }
-
-
-
 @end
 
 

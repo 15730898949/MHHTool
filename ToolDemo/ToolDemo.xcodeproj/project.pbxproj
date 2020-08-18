@@ -36,9 +36,7 @@
 		04C4AACC24E285EA0092532B /* UIView+LYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC324E285EA0092532B /* UIView+LYExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C4AACD24E285EA0092532B /* UIView+Empty.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC424E285EA0092532B /* UIView+Empty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCC5B24DD4434005D7D8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC5A24DD4434005D7D8C /* AppDelegate.m */; };
-		04EBCC5E24DD4434005D7D8C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC5D24DD4434005D7D8C /* SceneDelegate.m */; };
 		04EBCC6124DD4434005D7D8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC6024DD4434005D7D8C /* ViewController.m */; };
-		04EBCC6424DD4434005D7D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EBCC6224DD4434005D7D8C /* Main.storyboard */; };
 		04EBCC6624DD4436005D7D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EBCC6524DD4436005D7D8C /* Assets.xcassets */; };
 		04EBCC6924DD4436005D7D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EBCC6724DD4436005D7D8C /* LaunchScreen.storyboard */; };
 		04EBCC6C24DD4436005D7D8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC6B24DD4436005D7D8C /* main.m */; };
@@ -73,9 +71,7 @@
 		04EBCE2124DD4629005D7D8C /* GZCMulitiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; };
 		04EBCE2224DD4629005D7D8C /* GZCMulitiDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCA24DD4629005D7D8C /* GZCMulitiDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE2324DD4629005D7D8C /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDCC24DD4629005D7D8C /* CWCarousel.m */; };
-		04EBCE2424DD4629005D7D8C /* CWCarouselHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCD24DD4629005D7D8C /* CWCarouselHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE2524DD4629005D7D8C /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */; };
-		04EBCE2624DD4629005D7D8C /* CWCarouselProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCF24DD4629005D7D8C /* CWCarouselProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE2724DD4629005D7D8C /* CWCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD024DD4629005D7D8C /* CWCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE2824DD4629005D7D8C /* CWFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD124DD4629005D7D8C /* CWFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE2924DD4629005D7D8C /* MHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDD324DD4629005D7D8C /* MHBaseModel.m */; };
@@ -91,13 +87,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		04445C7224E1353500D4FA5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04EBCC4E24DD4434005D7D8C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04EBCD7224DD45FB005D7D8C;
-			remoteInfo = Tool;
-		};
-		04445C7624E1356900D4FA5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04EBCC4E24DD4434005D7D8C /* Project object */;
 			proxyType = 1;
@@ -179,11 +168,8 @@
 		04EBCC5624DD4434005D7D8C /* ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EBCC5924DD4434005D7D8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04EBCC5A24DD4434005D7D8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04EBCC5C24DD4434005D7D8C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		04EBCC5D24DD4434005D7D8C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		04EBCC5F24DD4434005D7D8C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		04EBCC6024DD4434005D7D8C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		04EBCC6324DD4434005D7D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04EBCC6524DD4436005D7D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04EBCC6824DD4436005D7D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04EBCC6A24DD4436005D7D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -227,9 +213,7 @@
 		04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZCMulitiDelegate.m; sourceTree = "<group>"; };
 		04EBCDCA24DD4629005D7D8C /* GZCMulitiDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZCMulitiDelegate.h; sourceTree = "<group>"; };
 		04EBCDCC24DD4629005D7D8C /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
-		04EBCDCD24DD4629005D7D8C /* CWCarouselHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarouselHeader.h; sourceTree = "<group>"; };
 		04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
-		04EBCDCF24DD4629005D7D8C /* CWCarouselProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarouselProtocol.h; sourceTree = "<group>"; };
 		04EBCDD024DD4629005D7D8C /* CWCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarousel.h; sourceTree = "<group>"; };
 		04EBCDD124DD4629005D7D8C /* CWFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlowLayout.h; sourceTree = "<group>"; };
 		04EBCDD324DD4629005D7D8C /* MHBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHBaseModel.m; sourceTree = "<group>"; };
@@ -405,11 +389,8 @@
 				04C4AA4824E27C400092532B /* MBProgressHUD+Add.m */,
 				04EBCC5924DD4434005D7D8C /* AppDelegate.h */,
 				04EBCC5A24DD4434005D7D8C /* AppDelegate.m */,
-				04EBCC5C24DD4434005D7D8C /* SceneDelegate.h */,
-				04EBCC5D24DD4434005D7D8C /* SceneDelegate.m */,
 				04EBCC5F24DD4434005D7D8C /* ViewController.h */,
 				04EBCC6024DD4434005D7D8C /* ViewController.m */,
-				04EBCC6224DD4434005D7D8C /* Main.storyboard */,
 				04EBCC6524DD4436005D7D8C /* Assets.xcassets */,
 				04EBCC6724DD4436005D7D8C /* LaunchScreen.storyboard */,
 				04EBCC6A24DD4436005D7D8C /* Info.plist */,
@@ -615,12 +596,10 @@
 		04EBCDCB24DD4629005D7D8C /* CWCarousel(轮播图) */ = {
 			isa = PBXGroup;
 			children = (
-				04EBCDCC24DD4629005D7D8C /* CWCarousel.m */,
-				04EBCDCD24DD4629005D7D8C /* CWCarouselHeader.h */,
-				04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */,
-				04EBCDCF24DD4629005D7D8C /* CWCarouselProtocol.h */,
 				04EBCDD024DD4629005D7D8C /* CWCarousel.h */,
+				04EBCDCC24DD4629005D7D8C /* CWCarousel.m */,
 				04EBCDD124DD4629005D7D8C /* CWFlowLayout.h */,
+				04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */,
 			);
 			path = "CWCarousel(轮播图)";
 			sourceTree = "<group>";
@@ -646,8 +625,8 @@
 		04EBCDF624DD4629005D7D8C /* SortNameTool(首字母排序) */ = {
 			isa = PBXGroup;
 			children = (
-				04EBCDF724DD4629005D7D8C /* SortNameTool.m */,
 				04EBCDF824DD4629005D7D8C /* SortNameTool.h */,
+				04EBCDF724DD4629005D7D8C /* SortNameTool.m */,
 			);
 			path = "SortNameTool(首字母排序)";
 			sourceTree = "<group>";
@@ -679,8 +658,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04EBCE2624DD4629005D7D8C /* CWCarouselProtocol.h in Headers */,
-				04EBCE2424DD4629005D7D8C /* CWCarouselHeader.h in Headers */,
 				04EBCE2824DD4629005D7D8C /* CWFlowLayout.h in Headers */,
 				04EBCE0E24DD4629005D7D8C /* NSDictionary+LSCore.h in Headers */,
 				04EBCE1924DD4629005D7D8C /* SPAlertController.h in Headers */,
@@ -734,7 +711,6 @@
 			);
 			dependencies = (
 				04445C7324E1353500D4FA5C /* PBXTargetDependency */,
-				04445C7724E1356900D4FA5C /* PBXTargetDependency */,
 			);
 			name = ToolDemo;
 			productName = ToolDemo;
@@ -874,7 +850,6 @@
 			files = (
 				04EBCC6924DD4436005D7D8C /* LaunchScreen.storyboard in Resources */,
 				04EBCC6624DD4436005D7D8C /* Assets.xcassets in Resources */,
-				04EBCC6424DD4434005D7D8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,7 +974,6 @@
 				04EBCC5B24DD4434005D7D8C /* AppDelegate.m in Sources */,
 				04C4AA4C24E27C400092532B /* MBProgressHUD+Add.m in Sources */,
 				04EBCC6C24DD4436005D7D8C /* main.m in Sources */,
-				04EBCC5E24DD4434005D7D8C /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1071,11 +1045,6 @@
 			target = 04EBCD7224DD45FB005D7D8C /* Tool */;
 			targetProxy = 04445C7224E1353500D4FA5C /* PBXContainerItemProxy */;
 		};
-		04445C7724E1356900D4FA5C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04EBCD7224DD45FB005D7D8C /* Tool */;
-			targetProxy = 04445C7624E1356900D4FA5C /* PBXContainerItemProxy */;
-		};
 		04EBCC7324DD4436005D7D8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 04EBCC5524DD4434005D7D8C /* ToolDemo */;
@@ -1099,14 +1068,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		04EBCC6224DD4434005D7D8C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04EBCC6324DD4434005D7D8C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04EBCC6724DD4436005D7D8C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
