@@ -14,9 +14,10 @@
 #import <Masonry/Masonry.h>
 #import <Tool/UIScrollView+Emm.h>
 #import <Tool/LYEmptyViewHeader.h>
-#import "MBProgressHUD+Add.h"
+#import <Tool/MBProgressHUD+Add.h>
 #import <Tool/UIView+Category.h>
 #import <Tool/ToolMacro.h>
+#import <Tool/MBProgressHUD.h>
 @interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
@@ -26,29 +27,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColorFromHex(0x161b2f, 1);
     self.dataArray = [NSMutableArray array];
     self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableCell"];
     self.tableView.tableFooterView = [[UIView alloc]init];
+    self.tableView.backgroundColor = UIColorFromHex(0x161b2f, 1);
     self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImage:nil titleStr:@"暂无数据" detailStr:nil btnTitleStr:@"点击重试" btnClickBlock:^{
         [self.dataArray addObject:[NSString stringWithFormat:@"%ld",self.tableView.page]];
         [self.tableView reloadData];
+//        [MBProgressHUD showRingInView:self.view Msg:nil animation:YES];
+//        [MBProgressHUD showActivView:self.view Msg:@"加载中" animation:YES];
+        [MBProgressHUD showMsg:@"暂无数据"];
 
-      MBProgressHUD*hud =  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-      hud.label.text = @"正在加载";
-        
     }];
     
+
     WeakSelf(self)
     [self.tableView addHeaderRefreshWithBlock:^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [weakself.dataArray removeAllObjects];
-            [weakself.tableView reloadData];
-            [weakself.tableView endRefreshing];
-
-        });
+        [weakself   textNetwork];
 
     }];
  
@@ -56,9 +55,9 @@
         [weakself.dataArray addObject:[NSString stringWithFormat:@"%ld",weakself.tableView.page]];
         [weakself.tableView reloadData];
         [weakself.tableView endRefreshing];
-
+        [MBProgressHUD showRingInView:UIApplication.sharedApplication.delegate.window Msg:@"加载中" animation:YES];
     }];
-    
+
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
@@ -76,16 +75,23 @@
     [banner freshCarousel];
 
     self.tableView.tableHeaderView = banner;
+    [self   textNetwork ];
+    [self   textNetwork ];
+    [self   textNetwork ];
+    [self   textNetwork ];
 
     // Do any additional setup after loading the view.
 }
 
 - (void)textNetwork{
-    [[MHHTTPSessionManager sharedInstance] POST:@"" parameters:nil success:^(id responseObject) {
-        
-    } failure:^(NSURLSessionDataTask *task, NSError *error, NSString *errorMsg) {
-        
-    }];
+    [MBProgressHUD show];
+    WeakSelf(self)
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakself.dataArray removeAllObjects];
+        [weakself.tableView reloadData];
+        [weakself.tableView endRefreshing];
+        [MBProgressHUD hide];
+    });
 }
 
 - (NSInteger)numbersForCarousel{

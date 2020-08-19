@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04089EDF24ECB59E0044DD26 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04089EDB24ECB59E0044DD26 /* MBProgressHUD.m */; };
+		04089EE024ECB59E0044DD26 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 04089EDC24ECB59E0044DD26 /* MBProgressHUD+Add.m */; };
+		04089EE124ECB59E0044DD26 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 04089EDD24ECB59E0044DD26 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04089EE224ECB59E0044DD26 /* MBProgressHUD+Add.h in Headers */ = {isa = PBXBuildFile; fileRef = 04089EDE24ECB59E0044DD26 /* MBProgressHUD+Add.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0414BA9324EA2F9F00EBE089 /* RKNotificationHub.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9124EA2F9E00EBE089 /* RKNotificationHub.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0414BA9424EA2F9F00EBE089 /* RKNotificationHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9224EA2F9E00EBE089 /* RKNotificationHub.m */; };
 		0414BA9924EA50D200EBE089 /* UILabel+topString.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9724EA50D200EBE089 /* UILabel+topString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,8 +28,6 @@
 		04445C4624E0F54300D4FA5C /* UIScrollView+Emm.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C4424E0F54300D4FA5C /* UIScrollView+Emm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04445C7424E1356900D4FA5C /* Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; };
 		04445C7524E1356900D4FA5C /* Tool.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		04C4AA4C24E27C400092532B /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA4824E27C400092532B /* MBProgressHUD+Add.m */; };
-		04C4AA4D24E27C400092532B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AA4A24E27C400092532B /* MBProgressHUD.m */; };
 		04C4AAC524E285EA0092532B /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AABC24E285E90092532B /* LYEmptyBaseView.m */; };
 		04C4AAC624E285EA0092532B /* LYEmptyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AABD24E285E90092532B /* LYEmptyView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C4AAC724E285EA0092532B /* UIView+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AABE24E285E90092532B /* UIView+Empty.m */; };
@@ -138,6 +140,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04089EDB24ECB59E0044DD26 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		04089EDC24ECB59E0044DD26 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		04089EDD24ECB59E0044DD26 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		04089EDE24ECB59E0044DD26 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		0414BA9124EA2F9E00EBE089 /* RKNotificationHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKNotificationHub.h; sourceTree = "<group>"; };
 		0414BA9224EA2F9E00EBE089 /* RKNotificationHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKNotificationHub.m; sourceTree = "<group>"; };
 		0414BA9724EA50D200EBE089 /* UILabel+topString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+topString.h"; sourceTree = "<group>"; };
@@ -152,10 +158,6 @@
 		04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUHookMethodHelper.m; sourceTree = "<group>"; };
 		04445C4324E0F54300D4FA5C /* UIScrollView+Emm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Emm.m"; sourceTree = "<group>"; };
 		04445C4424E0F54300D4FA5C /* UIScrollView+Emm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Emm.h"; sourceTree = "<group>"; };
-		04C4AA4724E27C400092532B /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
-		04C4AA4824E27C400092532B /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
-		04C4AA4A24E27C400092532B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		04C4AA4B24E27C400092532B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		04C4AABC24E285E90092532B /* LYEmptyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyBaseView.m; sourceTree = "<group>"; };
 		04C4AABD24E285E90092532B /* LYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyView.h; sourceTree = "<group>"; };
 		04C4AABE24E285E90092532B /* UIView+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Empty.m"; sourceTree = "<group>"; };
@@ -274,6 +276,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04089EDA24ECB59E0044DD26 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				04089EDD24ECB59E0044DD26 /* MBProgressHUD.h */,
+				04089EDB24ECB59E0044DD26 /* MBProgressHUD.m */,
+				04089EDE24ECB59E0044DD26 /* MBProgressHUD+Add.h */,
+				04089EDC24ECB59E0044DD26 /* MBProgressHUD+Add.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		0414BA9524EA2FA700EBE089 /* RKNotificationHub(小红点) */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,15 +343,6 @@
 			path = "UIScrollView(下拉刷新）";
 			sourceTree = "<group>";
 		};
-		04C4AA4924E27C400092532B /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				04C4AA4A24E27C400092532B /* MBProgressHUD.m */,
-				04C4AA4B24E27C400092532B /* MBProgressHUD.h */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
 		04C4AABB24E285E90092532B /* LYEmptyView(空白页) */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,9 +388,6 @@
 		04EBCC5824DD4434005D7D8C /* ToolDemo */ = {
 			isa = PBXGroup;
 			children = (
-				04C4AA4924E27C400092532B /* MBProgressHUD */,
-				04C4AA4724E27C400092532B /* MBProgressHUD+Add.h */,
-				04C4AA4824E27C400092532B /* MBProgressHUD+Add.m */,
 				04EBCC5924DD4434005D7D8C /* AppDelegate.h */,
 				04EBCC5A24DD4434005D7D8C /* AppDelegate.m */,
 				04EBCC5F24DD4434005D7D8C /* ViewController.h */,
@@ -439,6 +440,7 @@
 		04EBCD9024DD4628005D7D8C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				04089EDA24ECB59E0044DD26 /* MBProgressHUD */,
 				04EBCDA024DD4628005D7D8C /* Category */,
 				0414BA9524EA2FA700EBE089 /* RKNotificationHub(小红点) */,
 				04C4AABB24E285E90092532B /* LYEmptyView(空白页) */,
@@ -689,6 +691,8 @@
 				0414BA9E24EA523700EBE089 /* UIButton+Category.h in Headers */,
 				04C4AACA24E285EA0092532B /* LYEmptyViewHeader.h in Headers */,
 				0414BA9324EA2F9F00EBE089 /* RKNotificationHub.h in Headers */,
+				04089EE124ECB59E0044DD26 /* MBProgressHUD.h in Headers */,
+				04089EE224ECB59E0044DD26 /* MBProgressHUD+Add.h in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -970,9 +974,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04EBCC6124DD4434005D7D8C /* ViewController.m in Sources */,
-				04C4AA4D24E27C400092532B /* MBProgressHUD.m in Sources */,
 				04EBCC5B24DD4434005D7D8C /* AppDelegate.m in Sources */,
-				04C4AA4C24E27C400092532B /* MBProgressHUD+Add.m in Sources */,
 				04EBCC6C24DD4436005D7D8C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1004,6 +1006,7 @@
 				04EBCE1224DD4629005D7D8C /* WSDatePickerView.m in Sources */,
 				04445C3824E0D84E00D4FA5C /* TBCityIconFont.m in Sources */,
 				04EBCE1624DD4629005D7D8C /* ZZLimitInputManager.m in Sources */,
+				04089EDF24ECB59E0044DD26 /* MBProgressHUD.m in Sources */,
 				04C4AACB24E285EA0092532B /* LYEmptyView.m in Sources */,
 				04EBCE0724DD4629005D7D8C /* UITextView+Placeholder.m in Sources */,
 				04C4AAC524E285EA0092532B /* LYEmptyBaseView.m in Sources */,
@@ -1023,6 +1026,7 @@
 				04EBCE2124DD4629005D7D8C /* GZCMulitiDelegate.m in Sources */,
 				04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */,
 				04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				04089EE024ECB59E0044DD26 /* MBProgressHUD+Add.m in Sources */,
 				04EBCE0924DD4629005D7D8C /* UIView+Category.m in Sources */,
 				04EBCE0324DD4629005D7D8C /* MHWebViewController.m in Sources */,
 				04EBCE2324DD4629005D7D8C /* CWCarousel.m in Sources */,
