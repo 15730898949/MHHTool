@@ -28,6 +28,7 @@
 		04445C4624E0F54300D4FA5C /* UIScrollView+Emm.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C4424E0F54300D4FA5C /* UIScrollView+Emm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04445C7424E1356900D4FA5C /* Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; };
 		04445C7524E1356900D4FA5C /* Tool.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0483C27324EF5B2A005BFD32 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483C27224EF5B2A005BFD32 /* NullSafe.m */; };
 		04C4AAC524E285EA0092532B /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AABC24E285E90092532B /* LYEmptyBaseView.m */; };
 		04C4AAC624E285EA0092532B /* LYEmptyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AABD24E285E90092532B /* LYEmptyView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C4AAC724E285EA0092532B /* UIView+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AABE24E285E90092532B /* UIView+Empty.m */; };
@@ -158,6 +159,7 @@
 		04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUHookMethodHelper.m; sourceTree = "<group>"; };
 		04445C4324E0F54300D4FA5C /* UIScrollView+Emm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Emm.m"; sourceTree = "<group>"; };
 		04445C4424E0F54300D4FA5C /* UIScrollView+Emm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Emm.h"; sourceTree = "<group>"; };
+		0483C27224EF5B2A005BFD32 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
 		04C4AABC24E285E90092532B /* LYEmptyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyBaseView.m; sourceTree = "<group>"; };
 		04C4AABD24E285E90092532B /* LYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyView.h; sourceTree = "<group>"; };
 		04C4AABE24E285E90092532B /* UIView+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Empty.m"; sourceTree = "<group>"; };
@@ -483,6 +485,7 @@
 		04EBCDA024DD4628005D7D8C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				0483C27224EF5B2A005BFD32 /* NullSafe.m */,
 				0414BA9B24EA51F700EBE089 /* UIButton+Category */,
 				0414BA9624EA509C00EBE089 /* UILabel+Category */,
 				04445C4724E0F55200D4FA5C /* UIScrollView(下拉刷新） */,
@@ -1030,6 +1033,7 @@
 				04EBCE0924DD4629005D7D8C /* UIView+Category.m in Sources */,
 				04EBCE0324DD4629005D7D8C /* MHWebViewController.m in Sources */,
 				04EBCE2324DD4629005D7D8C /* CWCarousel.m in Sources */,
+				0483C27324EF5B2A005BFD32 /* NullSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

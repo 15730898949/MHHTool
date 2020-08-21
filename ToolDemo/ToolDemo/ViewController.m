@@ -21,6 +21,8 @@
 @interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
+@property (nonatomic ,strong)UILabel *lable;
+
 @end
 
 @implementation ViewController
@@ -62,6 +64,15 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    self.lable = [[UILabel alloc]init];
+    self.lable.textColor = [UIColor redColor];
+    [self.view addSubview:self.lable];
+    [self.lable mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(100);
+        make.top.offset(100);
+        make.height.offset(30);
+        make.width.offset(100);
+    }];
     
     
     
@@ -76,14 +87,18 @@
 
     self.tableView.tableHeaderView = banner;
     [self   textNetwork ];
-    [self   textNetwork ];
-    [self   textNetwork ];
-    [self   textNetwork ];
 
     // Do any additional setup after loading the view.
 }
 
 - (void)textNetwork{
+    
+    NSArray *dataArr = @[@"123",@"234",@"345",[NSNull null]];
+    for (NSString*str in dataArr) {
+        NSLog(@"%@",str);
+        self.lable.text = str;
+    }
+    
     [MBProgressHUD show];
     WeakSelf(self)
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

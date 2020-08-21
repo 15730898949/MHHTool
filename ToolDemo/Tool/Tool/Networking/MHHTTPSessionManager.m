@@ -262,6 +262,10 @@ static  MHHTTPSessionManager * instance;
 - (AFHTTPSessionManager *)sessionManager {
     if (!_sessionManager) {
         _sessionManager = [AFHTTPSessionManager manager];
+        //需要在网络请求中添加的字段
+        AFJSONResponseSerializer *response = [AFJSONResponseSerializer serializer];
+        response.removesKeysWithNullValues = YES;
+        _sessionManager.responseSerializer = response;
         _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
 
         _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", @"text/plain",@"application/octet-stream", @"image/jpeg",@"multipart/form-data",nil];
