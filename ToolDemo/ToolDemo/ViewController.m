@@ -89,6 +89,7 @@
     [self   textNetwork ];
 
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)textNetwork{
@@ -96,8 +97,11 @@
     NSArray *dataArr = @[@"123",@"234",@"345",[NSNull null]];
     for (NSString*str in dataArr) {
         NSLog(@"%@",str);
+        NSLog(@"isnull = %d",isNullString(str));
+
         self.lable.text = str;
     }
+    
     
     [MBProgressHUD show];
     WeakSelf(self)

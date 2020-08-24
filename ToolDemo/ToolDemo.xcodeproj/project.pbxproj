@@ -574,8 +574,8 @@
 		04EBCDBA24DD4629005D7D8C /* ZZLimitInputManager(正则限制输入框) */ = {
 			isa = PBXGroup;
 			children = (
-				04EBCDBB24DD4629005D7D8C /* ZZLimitInputManager.m */,
 				04EBCDBC24DD4629005D7D8C /* ZZLimitInputManager.h */,
+				04EBCDBB24DD4629005D7D8C /* ZZLimitInputManager.m */,
 			);
 			path = "ZZLimitInputManager(正则限制输入框)";
 			sourceTree = "<group>";
@@ -583,8 +583,8 @@
 		04EBCDBD24DD4629005D7D8C /* SPAlertController(仿原始AlertController) */ = {
 			isa = PBXGroup;
 			children = (
-				04EBCDBE24DD4629005D7D8C /* SPAlertController.m */,
 				04EBCDBF24DD4629005D7D8C /* SPAlertController.h */,
+				04EBCDBE24DD4629005D7D8C /* SPAlertController.m */,
 			);
 			path = "SPAlertController(仿原始AlertController)";
 			sourceTree = "<group>";
