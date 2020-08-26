@@ -27,17 +27,16 @@
 #define Scale(s) HwinScale*s                                                //根据宽度比例缩放
 
 #define NavgationBar_Height   (iPhoneX ? 88:64)
-
 #define TabBar_Height         (iPhoneX ? 83:49)
-
 #define Status_Height         [[UIApplication sharedApplication] statusBarFrame].size.height
-
+#define ExtraBottomHeight (iPhoneX ? 34 : 0)
+#define ExtraTopHeight (iPhoneX ? 24 : 0)
 
 
 
 #define ItemViewControllerFrame CGRectMake(0, 0, WinSize_Width, WinSize_Height-TabBar_Height)
 
-#define iPhoneX  CGSizeEqualToSize([[UIScreen mainScreen] bounds].size, CGSizeMake(375, 812))
+#define iPhoneX  CGSizeEqualToSize([[UIScreen mainScreen] bounds].size, CGSizeMake(375, 812)) || (RCDScreenWidth>=375.0f && RCDScreenHeight>=812.0f)
 
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
@@ -49,7 +48,7 @@
 
 #define UIColorFromRGB(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-
-#define isNullString(string) !((![string isKindOfClass:[NSString class]])||[string isEqualToString:@""] || (string == nil) || [string isEqualToString:@"<null>"]|| [string isEqualToString:@"(null)"]|| [string isEqualToString:@"null"]|| [string isEqualToString:@"nil"] || [string isKindOfClass:[NSNull class]]||[[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0)
+//YES =  空字符串 ；； NO = 不是空
+#define isNullString(string) ((![string isKindOfClass:[NSString class]])||[string isEqualToString:@""] || (string == nil) || [string isEqualToString:@"<null>"]|| [string isEqualToString:@"(null)"]|| [string isEqualToString:@"null"]|| [string isEqualToString:@"nil"] || [string isKindOfClass:[NSNull class]]||[[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0)
 
 #endif

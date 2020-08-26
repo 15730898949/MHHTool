@@ -18,10 +18,12 @@
 #import <Tool/UIView+Category.h>
 #import <Tool/ToolMacro.h>
 #import <Tool/MBProgressHUD.h>
-@interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource>
+#import <Tool/SPPageMenu.h>
+@interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
 @property (nonatomic ,strong)UILabel *lable;
+@property (nonatomic ,strong)SPPageMenu *pageMenu;
 
 @end
 
@@ -89,7 +91,18 @@
     [self   textNetwork ];
 
     // Do any additional setup after loading the view.
-    
+    self.pageMenu.frame = CGRectMake(0, 300, SCREEN_Width, 100);
+    [self.view addSubview:self.pageMenu];
+    NSArray *colorArr = @[[UIColor redColor],[UIColor blueColor],[UIColor orangeColor],[UIColor grayColor],[UIColor blackColor],[UIColor brownColor],[UIColor purpleColor]];
+    NSMutableArray *arr = [NSMutableArray array];
+    for (UIColor *color in colorArr) {
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+        view.backgroundColor = color;
+        view.userInteractionEnabled = NO;
+        [arr addObject:view];
+    }
+    [self.pageMenu setItems:arr selectedItemIndex:0];
+//    [self.pageMenu setItems:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"] selectedItemIndex:0];
 }
 
 - (void)textNetwork{
@@ -159,6 +172,22 @@
     cell.textLabel.text  = self.dataArray[indexPath.row];
     
     return cell;
+}
+
+
+#pragma mark - 懒加载
+
+- (SPPageMenu *)pageMenu{
+    if (!_pageMenu) {
+        _pageMenu = [SPPageMenu pageMenuWithFrame:CGRectMake(0,300, SCREEN_Width, 40) trackerStyle:SPPageMenuTrackerStyleNothing];
+        _pageMenu.permutationWay = SPPageMenuPermutationWayScrollAdaptContent;
+        _pageMenu.delegate = self;
+        _pageMenu.dividingLineHeight = 0.2;
+        _pageMenu.isClickItemSlide = NO;
+        _pageMenu.spacing = 0;
+        [_pageMenu setTrackerHeight:0.3 cornerRadius:0];
+    }
+    return _pageMenu;
 }
 
 

@@ -621,8 +621,8 @@
 		04EBCDF324DD4629005D7D8C /* SPPageMenu(分页Page) */ = {
 			isa = PBXGroup;
 			children = (
-				04EBCDF424DD4629005D7D8C /* SPPageMenu.m */,
 				04EBCDF524DD4629005D7D8C /* SPPageMenu.h */,
+				04EBCDF424DD4629005D7D8C /* SPPageMenu.m */,
 			);
 			path = "SPPageMenu(分页Page)";
 			sourceTree = "<group>";

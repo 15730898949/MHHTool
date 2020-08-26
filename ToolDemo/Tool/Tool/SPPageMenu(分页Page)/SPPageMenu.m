@@ -51,6 +51,7 @@
 
 @property (nonatomic) SPItemImagePosition imagePosition; // 图片位置
 @property (nonatomic, assign) CGFloat imageTitleSpace; // 图片和文字之间的间距
+@property (nonatomic, strong) UIView* contentView;
 
 @end
 
@@ -386,6 +387,16 @@
     [self setNeedsLayout];
 }
 
+- (void)setContentView:(UIView *)contentView{
+    _contentView = contentView;
+    UIView *view = [self viewWithTag:12303];
+    if (view) {
+        [view removeFromSuperview];
+    }
+    [self addSubview:contentView];
+    self.frame = contentView.frame;
+}
+
 - (void)setContentHorizontalAlignment:(UIControlContentHorizontalAlignment)contentHorizontalAlignment {
     [super setContentHorizontalAlignment:contentHorizontalAlignment];
     [self setNeedsLayout];
@@ -457,6 +468,30 @@
     return self;
 }
 
+- (void)setItemsWithArray:(NSArray *)items{
+    NSAssert(items.count > 0, @"items.count 小于0");
+    _items = items.copy;
+    
+    self.insert = NO;
+
+    if (self.buttons.count) {
+        for (SPPageMenuButton *button in self.buttons) {
+            [button removeFromSuperview];
+        }
+    }
+    [self.buttons removeAllObjects];
+    
+    for (int i = 0; i < items.count; i++) {
+        id object = items[i];
+        NSAssert([object isKindOfClass:[NSString class]] || [object isKindOfClass:[UIImage class]] || [object isKindOfClass:[SPPageMenuButtonItem class]] || [object isKindOfClass:[UIView class]], @"items中的元素类型只能是NSString、UIImage、UIView或SPPageMenuButtonItem");
+        [self addButton:i object:object animated:NO];
+    }
+
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+}
+
+
 - (void)setItems:(NSArray *)items selectedItemIndex:(NSInteger)selectedItemIndex {
     if (selectedItemIndex < 0) selectedItemIndex = 0;
     NSAssert(selectedItemIndex <= items.count-1, @"selectedItemIndex 大于了 %ld",items.count-1);
@@ -474,7 +509,7 @@
     
     for (int i = 0; i < items.count; i++) {
         id object = items[i];
-        NSAssert([object isKindOfClass:[NSString class]] || [object isKindOfClass:[UIImage class]] || [object isKindOfClass:[SPPageMenuButtonItem class]], @"items中的元素类型只能是NSString、UIImage或SPPageMenuButtonItem");
+        NSAssert([object isKindOfClass:[NSString class]] || [object isKindOfClass:[UIImage class]] || [object isKindOfClass:[SPPageMenuButtonItem class]] || [object isKindOfClass:[UIView class]], @"items中的元素类型只能是NSString、UIImage、UIView或SPPageMenuButtonItem");
         [self addButton:i object:object animated:NO];
     }
 
@@ -966,12 +1001,22 @@
         [button setTitle:object forState:UIControlStateNormal];
     } else if ([object isKindOfClass:[UIImage class]]) {
         [button setImage:object forState:UIControlStateNormal];
+    }else if ([object isKindOfClass:[UIView class]]){
+        button.contentView = object;
+        [button layoutIfNeeded];
+        [self.customWidths setValue:@(button.contentView.frame.size.width) forKey:[NSString stringWithFormat:@"%lu",(unsigned long)index]];
+
     } else {
         SPPageMenuButtonItem *item = (SPPageMenuButtonItem *)object;
         [button setTitle:item.title forState:UIControlStateNormal];
         [button setImage:item.image forState:UIControlStateNormal];
         button.imagePosition = item.imagePosition;
         button.imageTitleSpace = item.imageTitleSpace;
+        if (item.contentView) {
+            button.contentView = item.contentView;
+            [button layoutIfNeeded];
+            [self.customWidths setValue:@(button.contentView.frame.size.width) forKey:[NSString stringWithFormat:@"%lu",(unsigned long)index]];
+        }
     }
     if (self.insert) {
         if ([self haveOrNeedsTracker]) {
@@ -1045,6 +1090,7 @@
     _funtionButtonshadowOpacity = 0.5;
     _selectedItemZoomScale = 1;
     _needTextColorGradients = YES;
+    _isClickItemSlide = YES;
     [self setupSubViews];
 }
 
@@ -1107,8 +1153,10 @@
         self.selectedButton.titleLabel.font = _unSelectedItemTitleFont;
         sender.titleLabel.font = _selectedItemTitleFont;
         
-        // 让itemScrollView发生偏移
-        [self moveItemScrollViewWithSelectedButton:sender];
+        if (self.isClickItemSlide) {
+            // 让itemScrollView发生偏移
+            [self moveItemScrollViewWithSelectedButton:sender];
+        }
         
         if (self.trackerStyle == SPPageMenuTrackerStyleTextZoom || _selectedItemZoomScale != 1) {
             if (labs(toIndex-fromIndex) >= 2) { // 该条件意思是当外界滑动scrollView连续的滑动了超过2页

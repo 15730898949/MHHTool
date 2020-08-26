@@ -59,6 +59,8 @@ typedef NS_ENUM(NSInteger, SPItemImagePosition) {
 + (instancetype)pageMenuWithFrame:(CGRect)frame trackerStyle:(SPPageMenuTrackerStyle)trackerStyle;
 - (instancetype)initWithFrame:(CGRect)frame trackerStyle:(SPPageMenuTrackerStyle)trackerStyle;
 
+
+
 /**
  *  传递数据
  *
@@ -66,6 +68,7 @@ typedef NS_ENUM(NSInteger, SPItemImagePosition) {
  *  @param selectedItemIndex  默认选中item的下标
  */
 - (void)setItems:(nullable NSArray *)items selectedItemIndex:(NSInteger)selectedItemIndex;
+- (void)setItemsWithArray:(NSArray *)items;
 
 @property (nonatomic) NSInteger selectedItemIndex; // 选中的item下标，改变其值可以用于切换选中的item
 @property(nonatomic,readonly) NSUInteger numberOfItems; // items的总个数
@@ -77,6 +80,7 @@ typedef NS_ENUM(NSInteger, SPItemImagePosition) {
 #endif
 
 @property (nonatomic, assign) SPPageMenuPermutationWay permutationWay; // 排列方式
+
 
 @property (nonatomic, assign) CGFloat spacing; // item之间的间距
 
@@ -108,6 +112,7 @@ typedef NS_ENUM(NSInteger, SPItemImagePosition) {
 
 @property (nonatomic, assign) BOOL showFuntionButton; // 是否显示功能按钮(功能按钮显示在最右侧),默认为NO
 @property (nonatomic, assign) CGFloat funtionButtonshadowOpacity; // 功能按钮左侧的阴影透明度,如果设置小于等于0，则没有阴影
+@property (nonatomic, assign) BOOL isClickItemSlide; // 点击item是否居中滑动,默认为YES
 
 @property(nonatomic) BOOL bounces; // 边界反弹效果，默认YES
 @property(nonatomic) BOOL alwaysBounceHorizontal; // 水平方向上，当内容没有充满scrollView时，滑动scrollView是否有反弹效果，默认NO
@@ -207,6 +212,9 @@ typedef NS_ENUM(NSInteger, SPItemImagePosition) {
 @property (nonatomic, assign) SPItemImagePosition imagePosition;
 // 图片与标题之间的间距,默认0.0
 @property (nonatomic, assign) CGFloat imageTitleSpace;
+
+@property (nonatomic, strong) UIView *contentView;
+
 
 @end
 
