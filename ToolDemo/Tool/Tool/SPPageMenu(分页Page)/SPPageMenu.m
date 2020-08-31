@@ -678,7 +678,12 @@
         [button setImage:item.image forState:UIControlStateNormal];
         button.imagePosition = item.imagePosition;
         button.imageTitleSpace = item.imageTitleSpace;
-        
+        if (item.contentView) {
+            button.contentView = item.contentView;
+            [button layoutIfNeeded];
+            [self.customWidths setValue:@(button.contentView.frame.size.width) forKey:[NSString stringWithFormat:@"%lu",(unsigned long)index]];
+        }
+
         if (item != nil) {
             NSMutableArray *items = self.items.mutableCopy;
             [items replaceObjectAtIndex:itemIndex withObject:item];
@@ -710,12 +715,23 @@
             [button setTitle:content forState:UIControlStateNormal];
         } else if ([content isKindOfClass:[UIImage class]]) {
             [button setImage:content forState:UIControlStateNormal];
+        }else if ([content isKindOfClass:[UIView class]]){
+            button.contentView = content;
+            [button layoutIfNeeded];
+            [self.customWidths setValue:@(button.contentView.frame.size.width) forKey:[NSString stringWithFormat:@"%lu",(unsigned long)index]];
+
         } else if ([content isKindOfClass:[SPPageMenuButtonItem class]]) {
             SPPageMenuButtonItem *item = (SPPageMenuButtonItem *)content;
             [button setTitle:item.title forState:UIControlStateNormal];
             [button setImage:item.image forState:UIControlStateNormal];
             button.imagePosition = item.imagePosition;
             button.imageTitleSpace = item.imageTitleSpace;
+            if (item.contentView) {
+                button.contentView = item.contentView;
+                [button layoutIfNeeded];
+                [self.customWidths setValue:@(button.contentView.frame.size.width) forKey:[NSString stringWithFormat:@"%lu",(unsigned long)index]];
+            }
+
         }
         NSMutableArray *items = self.items.mutableCopy;
         [items replaceObjectAtIndex:itemIndex withObject:content];
@@ -759,6 +775,16 @@
     }
     return YES;
 }
+
+//获取指定item的button
+- (UIButton *)buttonForItemAtIndex:(NSUInteger)itemIndex{
+    if (itemIndex < self.buttons.count) {
+        id object = [self.buttons objectAtIndex:itemIndex];
+        return object;
+    }
+    return nil;
+}
+
 
 - (void)setWidth:(CGFloat)width forItemAtIndex:(NSUInteger)itemIndex {
     if (itemIndex < self.buttons.count) {

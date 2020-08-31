@@ -148,6 +148,8 @@ typedef NS_ENUM(NSInteger, SPItemImagePosition) {
 - (void)setEnabled:(BOOL)enaled forItemAtIndex:(NSUInteger)itemIndex; // 设置指定item的enabled状态
 - (BOOL)enabledForItemAtIndex:(NSUInteger)itemIndex; // 获取指定item的enabled状态
 
+- (UIButton *)buttonForItemAtIndex:(NSUInteger)itemIndex;//获取指定item的button
+
 - (void)setContentEdgeInsets:(UIEdgeInsets)contentEdgeInsets forItemAtIndex:(NSUInteger)itemIndex; // 设置指定item的四周内边距
 - (UIEdgeInsets)contentEdgeInsetsForItemAtIndex:(NSUInteger)itemIndex; // 获取指定item的四周内边距
 

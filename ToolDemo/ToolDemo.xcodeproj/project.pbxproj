@@ -17,6 +17,8 @@
 		0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; };
 		0414BA9E24EA523700EBE089 /* UIButton+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9C24EA523700EBE089 /* UIButton+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0414BA9F24EA523700EBE089 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9D24EA523700EBE089 /* UIButton+Category.m */; };
+		04269F7724FCC11C00CFD9D5 /* SPAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7524FCC11C00CFD9D5 /* SPAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; };
 		04445C3824E0D84E00D4FA5C /* TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */; };
 		04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */; };
 		04445C3B24E0D84E00D4FA5C /* TBCityIconInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,8 +71,6 @@
 		04EBCE1524DD4629005D7D8C /* MHHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB924DD4629005D7D8C /* MHHTTPSessionManager.m */; };
 		04EBCE1624DD4629005D7D8C /* ZZLimitInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDBB24DD4629005D7D8C /* ZZLimitInputManager.m */; };
 		04EBCE1724DD4629005D7D8C /* ZZLimitInputManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDBC24DD4629005D7D8C /* ZZLimitInputManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04EBCE1824DD4629005D7D8C /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDBE24DD4629005D7D8C /* SPAlertController.m */; };
-		04EBCE1924DD4629005D7D8C /* SPAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDBF24DD4629005D7D8C /* SPAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE2124DD4629005D7D8C /* GZCMulitiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; };
 		04EBCE2224DD4629005D7D8C /* GZCMulitiDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCA24DD4629005D7D8C /* GZCMulitiDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE2324DD4629005D7D8C /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDCC24DD4629005D7D8C /* CWCarousel.m */; };
@@ -151,6 +151,8 @@
 		0414BA9824EA50D200EBE089 /* UILabel+topString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+topString.m"; sourceTree = "<group>"; };
 		0414BA9C24EA523700EBE089 /* UIButton+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
 		0414BA9D24EA523700EBE089 /* UIButton+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
+		04269F7524FCC11C00CFD9D5 /* SPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAlertController.h; sourceTree = "<group>"; };
+		04269F7624FCC11C00CFD9D5 /* SPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAlertController.m; sourceTree = "<group>"; };
 		04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconFont.m; sourceTree = "<group>"; };
 		04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconInfo.m; sourceTree = "<group>"; };
 		04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconInfo.h; sourceTree = "<group>"; };
@@ -212,8 +214,6 @@
 		04EBCDB924DD4629005D7D8C /* MHHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHHTTPSessionManager.m; sourceTree = "<group>"; };
 		04EBCDBB24DD4629005D7D8C /* ZZLimitInputManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZLimitInputManager.m; sourceTree = "<group>"; };
 		04EBCDBC24DD4629005D7D8C /* ZZLimitInputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZLimitInputManager.h; sourceTree = "<group>"; };
-		04EBCDBE24DD4629005D7D8C /* SPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAlertController.m; sourceTree = "<group>"; };
-		04EBCDBF24DD4629005D7D8C /* SPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAlertController.h; sourceTree = "<group>"; };
 		04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZCMulitiDelegate.m; sourceTree = "<group>"; };
 		04EBCDCA24DD4629005D7D8C /* GZCMulitiDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZCMulitiDelegate.h; sourceTree = "<group>"; };
 		04EBCDCC24DD4629005D7D8C /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
@@ -583,8 +583,8 @@
 		04EBCDBD24DD4629005D7D8C /* SPAlertController(仿原始AlertController) */ = {
 			isa = PBXGroup;
 			children = (
-				04EBCDBF24DD4629005D7D8C /* SPAlertController.h */,
-				04EBCDBE24DD4629005D7D8C /* SPAlertController.m */,
+				04269F7524FCC11C00CFD9D5 /* SPAlertController.h */,
+				04269F7624FCC11C00CFD9D5 /* SPAlertController.m */,
 			);
 			path = "SPAlertController(仿原始AlertController)";
 			sourceTree = "<group>";
@@ -665,7 +665,6 @@
 			files = (
 				04EBCE2824DD4629005D7D8C /* CWFlowLayout.h in Headers */,
 				04EBCE0E24DD4629005D7D8C /* NSDictionary+LSCore.h in Headers */,
-				04EBCE1924DD4629005D7D8C /* SPAlertController.h in Headers */,
 				04EBCDF924DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
 				04EBCE0A24DD4629005D7D8C /* UIView+Category.h in Headers */,
 				04EBCE2224DD4629005D7D8C /* GZCMulitiDelegate.h in Headers */,
@@ -675,6 +674,7 @@
 				04EBCE1724DD4629005D7D8C /* ZZLimitInputManager.h in Headers */,
 				04EBCE0424DD4629005D7D8C /* MHWebViewController.h in Headers */,
 				04EBCE4524DD4629005D7D8C /* SortNameTool.h in Headers */,
+				04269F7724FCC11C00CFD9D5 /* SPAlertController.h in Headers */,
 				04EBCE4324DD4629005D7D8C /* SPPageMenu.h in Headers */,
 				04EBCE2A24DD4629005D7D8C /* MHBaseModel.h in Headers */,
 				04EBCE2724DD4629005D7D8C /* CWCarousel.h in Headers */,
@@ -1014,8 +1014,8 @@
 				04EBCE0724DD4629005D7D8C /* UITextView+Placeholder.m in Sources */,
 				04C4AAC524E285EA0092532B /* LYEmptyBaseView.m in Sources */,
 				04EBCE2524DD4629005D7D8C /* CWFlowLayout.m in Sources */,
-				04EBCE1824DD4629005D7D8C /* SPAlertController.m in Sources */,
 				04EBCE0D24DD4629005D7D8C /* NSDictionary+LSCore.m in Sources */,
+				04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */,
 				04C4AAC724E285EA0092532B /* UIView+Empty.m in Sources */,
 				04C4AAC824E285EA0092532B /* UIView+LYExtension.m in Sources */,
 				04EBCE1524DD4629005D7D8C /* MHHTTPSessionManager.m in Sources */,
