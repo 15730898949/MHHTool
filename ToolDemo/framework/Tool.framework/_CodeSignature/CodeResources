@@ -12,6 +12,10 @@
 		<data>
 		6QSntQP1Znr994GrGrnTnXvg2Xw=
 		</data>
+		<key>Headers/FTPopOverMenu.h</key>
+		<data>
+		nsbDd6X5Ptd85DzwihMI6xUxfXI=
+		</data>
 		<key>Headers/GZCMulitiDelegate.h</key>
 		<data>
 		qJkdzFtoqZPV1HrH+kNohyvmJzs=
@@ -90,7 +94,7 @@
 		</data>
 		<key>Headers/Tool.h</key>
 		<data>
-		yuNxhcUuKPzatuUmDiyThiQc0fw=
+		iXyhNbrwZA8ryhfjmmhWYfmydWY=
 		</data>
 		<key>Headers/ToolMacro.h</key>
 		<data>
@@ -142,7 +146,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Xy53JUNXeBZ0YrLtkTdKBB4oRCY=
+		8DWp96GFkj6b277a/zZf5j6WiaU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -171,6 +175,17 @@
 			<key>hash2</key>
 			<data>
 			0J5GIoB5uCSHLRgjfnYPvPAdNVqNN9ZKolw9Ly+qHlo=
+			</data>
+		</dict>
+		<key>Headers/FTPopOverMenu.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nsbDd6X5Ptd85DzwihMI6xUxfXI=
+			</data>
+			<key>hash2</key>
+			<data>
+			QnKKY+54J8oxpxmhRAJZy0iLYfQE+MJcJWvbRjtBnvU=
 			</data>
 		</dict>
 		<key>Headers/GZCMulitiDelegate.h</key>
@@ -386,11 +401,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yuNxhcUuKPzatuUmDiyThiQc0fw=
+			iXyhNbrwZA8ryhfjmmhWYfmydWY=
 			</data>
 			<key>hash2</key>
 			<data>
-			b8Iw9IM+Np2yIFKpoA0th/2Z4O7EZG6farfqcLAnJuk=
+			D1RqJVRy993NsFVZ/RrPRs6dR3lGETfWi05w5fIlRu0=
 			</data>
 		</dict>
 		<key>Headers/ToolMacro.h</key>
