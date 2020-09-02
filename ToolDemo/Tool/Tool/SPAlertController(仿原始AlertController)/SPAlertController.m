@@ -982,6 +982,40 @@ UIEdgeInsets UIEdgeInsetsAddEdgeInsets(UIEdgeInsets i1,UIEdgeInsets i2) {
 @synthesize title = _title;
 
 #pragma mark - public
+
+
++ (void)showAlertWithTitle:(nullable NSString *)title message:(nullable NSString *)message cancelTitle:(nullable NSString *)cancelTitle confirmTitle:(nullable NSString *)confirmTitle cancelBlock:(void(^)(void))cancelBlock confirmBlock:(void(^)(void))confirmBlock{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        SPAlertController *alert = [SPAlertController alertControllerWithTitle:title message:message preferredStyle:SPAlertControllerStyleAlert];
+        if (cancelTitle && [cancelTitle isKindOfClass:[NSString class]]) {
+            [alert addAction:[SPAlertAction actionWithTitle:cancelTitle style:SPAlertActionStyleCancel handler:^(SPAlertAction * _Nonnull action) {
+                if (cancelBlock) {
+                    cancelBlock();
+                }
+            }]];
+        }
+        if (confirmTitle && [confirmTitle isKindOfClass:[NSString class]]) {
+            [alert addAction:[SPAlertAction actionWithTitle:confirmTitle style:SPAlertActionStyleDestructive handler:^(SPAlertAction * _Nonnull action) {
+                if (confirmBlock) {
+                    confirmBlock();
+                }
+            }]];
+        }
+        [self.appRootViewController presentViewController:alert animated:YES completion:nil];
+    });
+
+}
+//iOS获取顶层的控制器
++ (UIViewController *)appRootViewController{
+    UIViewController *RootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *topVC = RootVC;
+    while (topVC.presentedViewController) {
+        topVC = topVC.presentedViewController;
+    }
+    return topVC;
+}
+
+
 + (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(SPAlertControllerStyle)preferredStyle {
     SPAlertController *alertVc = [[SPAlertController alloc] initWithTitle:title message:message customAlertView:nil customHeaderView:nil customActionSequenceView:nil componentView:nil preferredStyle:preferredStyle animationType:SPAlertAnimationTypeDefault];
     return alertVc;

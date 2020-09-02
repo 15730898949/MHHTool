@@ -73,6 +73,8 @@ typedef NS_ENUM(NSInteger, SPAlertActionStyle) {
 @protocol SPAlertControllerDelegate;
 @interface SPAlertController : UIViewController
 
++ (void)showAlertWithTitle:(nullable NSString *)title message:(nullable NSString *)message cancelTitle:(nullable NSString *)cancelTitle confirmTitle:(nullable NSString *)confirmTitle cancelBlock:(nullable void(^)(void))cancelBlock confirmBlock:(nullable void(^)(void))confirmBlock;
+
 + (instancetype)alertControllerWithTitle:(nullable NSString *)title message:(nullable NSString *)message preferredStyle:(SPAlertControllerStyle)preferredStyle;
 + (instancetype)alertControllerWithTitle:(nullable NSString *)title message:(nullable NSString *)message preferredStyle:(SPAlertControllerStyle)preferredStyle animationType:(SPAlertAnimationType)animationType;
 
