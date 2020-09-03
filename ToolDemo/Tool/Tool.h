@@ -38,6 +38,8 @@
 #import <Tool/UIButton+Category.h>
 #import <Tool/MBProgressHUD+Add.h>
 #import <Tool/FTPopOverMenu.h>
+#import <Tool/NSString+Category.h>
+
 
 
 

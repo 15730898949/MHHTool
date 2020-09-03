@@ -51,4 +51,35 @@
 //YES =  空字符串 ；； NO = 不是空
 #define isNullString(string) ((![string isKindOfClass:[NSString class]])||[string isEqualToString:@""] || (string == nil) || [string isEqualToString:@"<null>"]|| [string isEqualToString:@"(null)"]|| [string isEqualToString:@"null"]|| [string isEqualToString:@"nil"] || [string isKindOfClass:[NSNull class]]||[[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0)
 
+
+///当前控制器
+#define MHCurrentViewController \
+^(){\
+{\
+UIViewController* currentViewController = [[[UIApplication sharedApplication] delegate] window].rootViewController;\
+BOOL runLoopFind = YES;\
+while (runLoopFind) {\
+    if (currentViewController.presentedViewController) {\
+        currentViewController = currentViewController.presentedViewController;\
+    } else if ([currentViewController isKindOfClass:[UINavigationController class]]) {\
+        UINavigationController* navigationController = (UINavigationController* )currentViewController;\
+        currentViewController = [navigationController.childViewControllers lastObject];\
+    } else if ([currentViewController isKindOfClass:[UITabBarController class]]) {\
+        UITabBarController* tabBarController = (UITabBarController* )currentViewController;\
+        currentViewController = tabBarController.selectedViewController;\
+    } else {\
+        NSUInteger childViewControllerCount = currentViewController.childViewControllers.count;\
+        if (childViewControllerCount > 0) {\
+            currentViewController = currentViewController.childViewControllers.lastObject; \
+            return currentViewController;\
+        } else {\
+            return currentViewController;\
+        }\
+    }\
+}\
+return currentViewController;\
+}\
+}()
+
+
 #endif

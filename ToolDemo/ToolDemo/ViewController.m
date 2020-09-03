@@ -45,10 +45,15 @@
 //        [MBProgressHUD showRingInView:self.view Msg:nil animation:YES];
 //        [MBProgressHUD showActivView:self.view Msg:@"加载中" animation:YES];
         [MBProgressHUD showMsg:@"暂无数据"];
+        [MHCurrentViewController.navigationController pushViewController:[ViewController new] animated:YES
+         ];
+        
+        NSLog(@"%@",MHCurrentViewController);
 
     }];
     
-
+    NSLog(@"MD5 = %@",Md5_32Bit_String(@"123456", 1));
+    
     WeakSelf(self)
     [self.tableView addHeaderRefreshWithBlock:^{
         [weakself   textNetwork];

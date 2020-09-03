@@ -68,6 +68,10 @@
 		<data>
 		Pc9tL/fsPLoyU9dscNAqgeBShXQ=
 		</data>
+		<key>Headers/NSString+Category.h</key>
+		<data>
+		GB7xSoWkA3GDdbaObiMcNus9fJQ=
+		</data>
 		<key>Headers/RKNotificationHub.h</key>
 		<data>
 		KHfXSUREw8Oyh2LS+W0kTuKSYhg=
@@ -98,7 +102,7 @@
 		</data>
 		<key>Headers/ToolMacro.h</key>
 		<data>
-		eQWIVsFiFUBpdbNqB456LbYVvlI=
+		CIT3ecUe0pheilfObYjl9hIr8FI=
 		</data>
 		<key>Headers/UIButton+Category.h</key>
 		<data>
@@ -331,6 +335,17 @@
 			+at2SRsT4leOIRQFaWwfAkeqghn4cCtH/L65GaoAM4A=
 			</data>
 		</dict>
+		<key>Headers/NSString+Category.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GB7xSoWkA3GDdbaObiMcNus9fJQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			rSrZi3P6e/Dyzu50ZDcoCpbYOfLvXRGAaaJq9/x0ftY=
+			</data>
+		</dict>
 		<key>Headers/RKNotificationHub.h</key>
 		<dict>
 			<key>hash</key>
@@ -412,11 +427,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eQWIVsFiFUBpdbNqB456LbYVvlI=
+			CIT3ecUe0pheilfObYjl9hIr8FI=
 			</data>
 			<key>hash2</key>
 			<data>
-			gyImP2NdGIrz/Xu3NPfVySyU5fbsiAOk0fo09AQTXf8=
+			XdhIrwmJlFHbJNcOQRIo8+1HffDASbvXIrAYhzn/ANs=
 			</data>
 		</dict>
 		<key>Headers/UIButton+Category.h</key>
