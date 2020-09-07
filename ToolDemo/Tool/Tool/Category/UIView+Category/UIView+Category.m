@@ -212,14 +212,14 @@
 
 - (UIImage *)imageByRenderingView
 {
-    CGFloat oldAlpha = self.alpha;
-    self.alpha = 1;
-    UIGraphicsBeginImageContext(self.bounds.size);
-    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *resultingImage = UIGraphicsGetImageFromCurrentImageContext();
+    CGRect frame = self.frame;
+    UIGraphicsBeginImageContextWithOptions(frame.size, NO, [UIScreen mainScreen].scale);
+    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    [self.layer renderInContext:contextRef];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    self.alpha = oldAlpha;
-    return resultingImage;
+    return image;
+
 }
 
 - (BOOL)hasGesture:(id)gestureObjClass
