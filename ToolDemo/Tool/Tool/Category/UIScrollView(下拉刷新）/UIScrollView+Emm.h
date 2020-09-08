@@ -13,13 +13,6 @@
 #define TOPBTN_WIDTH 30
 #define TEXT_COLOR [UIColor lightGrayColor]
 
-typedef void (^ButtonBlock)(UIButton *);
-@interface EmmButton : UIButton
-@property(nonatomic,copy)ButtonBlock block;
-
-- (void)addTapBlock:(ButtonBlock)block;
-@end
-
 
 @interface UIScrollView (Emm)
 //返回顶部Btn

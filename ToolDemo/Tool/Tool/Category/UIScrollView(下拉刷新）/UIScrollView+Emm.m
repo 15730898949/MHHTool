@@ -8,26 +8,6 @@
 
 #import "UIScrollView+Emm.h"
 
-@implementation EmmButton
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:frame]) {
-        
-    }
-    return self;
-}
-- (void)addTapBlock:(ButtonBlock)block
-{
-    _block = block;
-    [self addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
-}
-
-- (void)buttonAction:(UIButton *)button
-{
-    _block(button);
-}
-@end
-
 
 @implementation UIScrollView (Emm)
 @dynamic backToTopBtn;

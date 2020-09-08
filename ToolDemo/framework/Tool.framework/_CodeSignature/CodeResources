@@ -96,9 +96,17 @@
 		<data>
 		A0bxwFmtjdD1NvkOocVDc1FxYw0=
 		</data>
+		<key>Headers/TTGTagCollectionView.h</key>
+		<data>
+		Ffll33E5ko88L5rcGSPdsj7HUco=
+		</data>
+		<key>Headers/TTGTextTagCollectionView.h</key>
+		<data>
+		K52HD3WeG5EFVwCiBiMwFl16Wlo=
+		</data>
 		<key>Headers/Tool.h</key>
 		<data>
-		iXyhNbrwZA8ryhfjmmhWYfmydWY=
+		XnFwAC7w3AWNOLH6KQCHtpPbNDg=
 		</data>
 		<key>Headers/ToolMacro.h</key>
 		<data>
@@ -122,7 +130,7 @@
 		</data>
 		<key>Headers/UIScrollView+Emm.h</key>
 		<data>
-		UCvXcJTzkustO54Yf2OKKOD676s=
+		6oqwhlCJlUkiowxU5t/RCXqJ7LI=
 		</data>
 		<key>Headers/UITextView+Placeholder.h</key>
 		<data>
@@ -412,15 +420,37 @@
 			L7uaLGVg+TSxFWBwGDpMF5z5Cd7JtaIDJOF3lZHheRI=
 			</data>
 		</dict>
+		<key>Headers/TTGTagCollectionView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ffll33E5ko88L5rcGSPdsj7HUco=
+			</data>
+			<key>hash2</key>
+			<data>
+			DyaI5oT08UzgwmBvB8LgleulJsYg93FKIxFXdpkvdZs=
+			</data>
+		</dict>
+		<key>Headers/TTGTextTagCollectionView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			K52HD3WeG5EFVwCiBiMwFl16Wlo=
+			</data>
+			<key>hash2</key>
+			<data>
+			ooi4xhVIvz1jjDiRx82z+OU9pNPpKRmkXqMqRZCz58A=
+			</data>
+		</dict>
 		<key>Headers/Tool.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iXyhNbrwZA8ryhfjmmhWYfmydWY=
+			XnFwAC7w3AWNOLH6KQCHtpPbNDg=
 			</data>
 			<key>hash2</key>
 			<data>
-			D1RqJVRy993NsFVZ/RrPRs6dR3lGETfWi05w5fIlRu0=
+			gCqipx+X38kyf65a8WkfRrNVVY80vILQg6+fOzlYmUc=
 			</data>
 		</dict>
 		<key>Headers/ToolMacro.h</key>
@@ -482,11 +512,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UCvXcJTzkustO54Yf2OKKOD676s=
+			6oqwhlCJlUkiowxU5t/RCXqJ7LI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Wg3B9aoM7w/JQq36VaurF4XDWsgjqwFPETqNWi6pEqY=
+			exRrR6EfQP8YspXCGYmBxtkY1et4rchX4+uDvlp8D90=
 			</data>
 		</dict>
 		<key>Headers/UITextView+Placeholder.h</key>

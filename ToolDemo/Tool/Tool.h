@@ -7,6 +7,7 @@
 //
 /**
     MMDrawerController 左抽屉框架
+    TTGTagCollectionView tag框架
  */
 
 #import <Foundation/Foundation.h>
@@ -39,7 +40,8 @@
 #import <Tool/MBProgressHUD+Add.h>
 #import <Tool/FTPopOverMenu.h>
 #import <Tool/NSString+Category.h>
-
+#import <Tool/TTGTextTagCollectionView.h>
+#import <Tool/TTGTagCollectionView.h>
 
 
 

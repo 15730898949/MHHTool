@@ -17,6 +17,10 @@
 		0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; };
 		0414BA9E24EA523700EBE089 /* UIButton+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9C24EA523700EBE089 /* UIButton+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0414BA9F24EA523700EBE089 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9D24EA523700EBE089 /* UIButton+Category.m */; };
+		041C5ABC2507740B000670E7 /* TTGTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5AB82507740A000670E7 /* TTGTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		041C5ABD2507740B000670E7 /* TTGTextTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5AB92507740A000670E7 /* TTGTextTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		041C5ABE2507740B000670E7 /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; };
+		041C5ABF2507740B000670E7 /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; };
 		04269F7724FCC11C00CFD9D5 /* SPAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7524FCC11C00CFD9D5 /* SPAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; };
 		04269F8224FCE67000CFD9D5 /* FTPopOverMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -155,6 +159,10 @@
 		0414BA9824EA50D200EBE089 /* UILabel+topString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+topString.m"; sourceTree = "<group>"; };
 		0414BA9C24EA523700EBE089 /* UIButton+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
 		0414BA9D24EA523700EBE089 /* UIButton+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
+		041C5AB82507740A000670E7 /* TTGTagCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGTagCollectionView.h; sourceTree = "<group>"; };
+		041C5AB92507740A000670E7 /* TTGTextTagCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGTextTagCollectionView.h; sourceTree = "<group>"; };
+		041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGTagCollectionView.m; sourceTree = "<group>"; };
+		041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGTextTagCollectionView.m; sourceTree = "<group>"; };
 		04269F7524FCC11C00CFD9D5 /* SPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAlertController.h; sourceTree = "<group>"; };
 		04269F7624FCC11C00CFD9D5 /* SPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAlertController.m; sourceTree = "<group>"; };
 		04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPopOverMenu.h; sourceTree = "<group>"; };
@@ -324,6 +332,17 @@
 			path = "UIButton+Category";
 			sourceTree = "<group>";
 		};
+		041C5AB72507740A000670E7 /* TTGTagCollectionView(tag标签) */ = {
+			isa = PBXGroup;
+			children = (
+				041C5AB82507740A000670E7 /* TTGTagCollectionView.h */,
+				041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */,
+				041C5AB92507740A000670E7 /* TTGTextTagCollectionView.h */,
+				041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */,
+			);
+			path = "TTGTagCollectionView(tag标签)";
+			sourceTree = "<group>";
+		};
 		04269F7F24FCE67000CFD9D5 /* FTPopOverMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +506,7 @@
 				04EBCDF224DD4629005D7D8C /* ToolMacro.h */,
 				04EBCDF324DD4629005D7D8C /* SPPageMenu(分页Page) */,
 				04EBCDF624DD4629005D7D8C /* SortNameTool(首字母排序) */,
+				041C5AB72507740A000670E7 /* TTGTagCollectionView(tag标签) */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -724,6 +744,8 @@
 				0414BA9324EA2F9F00EBE089 /* RKNotificationHub.h in Headers */,
 				04089EE124ECB59E0044DD26 /* MBProgressHUD.h in Headers */,
 				04269F8224FCE67000CFD9D5 /* FTPopOverMenu.h in Headers */,
+				041C5ABC2507740B000670E7 /* TTGTagCollectionView.h in Headers */,
+				041C5ABD2507740B000670E7 /* TTGTextTagCollectionView.h in Headers */,
 				04089EE224ECB59E0044DD26 /* MBProgressHUD+Add.h in Headers */,
 				04B085C02500DACB00FB3554 /* NSString+Category.h in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
@@ -1058,11 +1080,13 @@
 				0414BA9424EA2F9F00EBE089 /* RKNotificationHub.m in Sources */,
 				04EBCE2124DD4629005D7D8C /* GZCMulitiDelegate.m in Sources */,
 				04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */,
+				041C5ABE2507740B000670E7 /* TTGTagCollectionView.m in Sources */,
 				04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				04089EE024ECB59E0044DD26 /* MBProgressHUD+Add.m in Sources */,
 				04EBCE0924DD4629005D7D8C /* UIView+Category.m in Sources */,
 				04269F8324FCE67000CFD9D5 /* FTPopOverMenu.m in Sources */,
 				04EBCE0324DD4629005D7D8C /* MHWebViewController.m in Sources */,
+				041C5ABF2507740B000670E7 /* TTGTextTagCollectionView.m in Sources */,
 				04B085C12500DACB00FB3554 /* NSString+Category.m in Sources */,
 				04EBCE2324DD4629005D7D8C /* CWCarousel.m in Sources */,
 				0483C27324EF5B2A005BFD32 /* NullSafe.m in Sources */,

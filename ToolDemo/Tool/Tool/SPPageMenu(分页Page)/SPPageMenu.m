@@ -489,6 +489,19 @@
 
     [self setNeedsLayout];
     [self layoutIfNeeded];
+    
+    if (self.buttons.count) {
+        // 默认选中selectedItemIndex对应的按钮
+        SPPageMenuButton *selectedButton = [self.buttons objectAtIndex:0];
+        
+        // SPPageMenuTrackerStyleTextZoom和SPPageMenuTrackerStyleNothing样式跟tracker没有关联
+        if ([self haveOrNeedsTracker]) {
+            [self.itemScrollView insertSubview:self.tracker atIndex:0];
+            // 这里千万不能再去调用setNeedsLayout和layoutIfNeeded，因为如果外界在此之前对selectedButton进行了缩放，调用了layoutSubViews后会重新对selectedButton设置frame,先缩放再重设置frame会导致文字显示不全，所以我们直接跳过layoutSubViews调用resetSetupTrackerFrameWithSelectedButton：只设置tracker的frame
+            [self resetupTrackerFrameWithSelectedButton:selectedButton];
+        }
+    }
+
 }
 
 
