@@ -108,14 +108,12 @@
 @property (nonatomic, strong, readonly) UIScrollView *scrollView;
 
 // Define if the tag can be selected.
-///定义是否可以选择标签。
 @property (assign, nonatomic) BOOL enableTagSelection;
 
 // Default tag config
 @property (nonatomic, strong) TTGTextTagConfig *defaultConfig;
 
 // Tags scroll direction, default is vertical.
-///标签滚动方向，默认为垂直。
 @property (nonatomic, assign) TTGTagCollectionScrollDirection scrollDirection;
 
 // Tags layout alignment, default is left.
@@ -206,8 +204,6 @@
 - (NSArray <NSString *> *)allTags;
 
 - (NSArray <NSString *> *)allSelectedTags;
-
-- (NSArray<TTGTextTagConfig *> *)allSelectedTagsConfig;
 
 - (NSArray <NSString *> *)allNotSelectedTags;
 

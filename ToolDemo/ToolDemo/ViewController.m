@@ -52,7 +52,6 @@
 
     }];
     
-    NSLog(@"MD5 = %@",Md5_32Bit_String(@"123456", 1));
     
     WeakSelf(self)
     [self.tableView addHeaderRefreshWithBlock:^{

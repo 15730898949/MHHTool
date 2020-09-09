@@ -122,7 +122,7 @@ static const char FPPageSizeKey = '\0';
                 block();
             }
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.0/*延迟执行时间*/ * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self endRefreshing];
+                [self.mj_footer endRefreshing];
             });
             
             
@@ -154,7 +154,7 @@ static const char FPPageSizeKey = '\0';
                 block();
             }
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10.0/*延迟执行时间*/ * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self endRefreshing];
+                [self.mj_header endRefreshing];
             });
             
         }];

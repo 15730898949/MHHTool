@@ -556,19 +556,6 @@
     return [allTags copy];
 }
 
-- (NSArray<TTGTextTagConfig *> *)allSelectedTagsConfig{
-    
-    NSMutableArray *configs = [NSMutableArray new];
-
-    for (TTGTextTagLabel *label in _tagLabels) {
-        if (label.selected) {
-            [configs addObject:[label.config copy]];
-        }
-    }
-    return [configs copy];
-}
-
-
 - (NSArray <NSString *> *)allNotSelectedTags {
     NSMutableArray *allTags = [NSMutableArray new];
 
