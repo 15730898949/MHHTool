@@ -76,6 +76,8 @@
  */
 @interface UIView (extension)
 
+///额外的数据 方便传递
+@property (nonatomic, strong) id extraData;
 
 /**
  *     添加点击

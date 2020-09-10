@@ -128,7 +128,18 @@
 
 @end
 
+#import <objc/runtime.h>
+
 @implementation UIView (extension)
+static char extraDataKey;
+///额外的数据 方便传递
+- (id)extraData{
+    return objc_getAssociatedObject(self, &extraDataKey);
+}
+- (void)setExtraData:(id)extraData{
+    objc_setAssociatedObject(self, &extraDataKey, extraData, OBJC_ASSOCIATION_RETAIN);
+}
+
 
 - (void)addTapGestureWithTarget:(id)pTarget selector:(SEL)pSelector
 {
@@ -256,7 +267,6 @@
 
 @end
 
-#import <objc/runtime.h>
 
 static char alertKey, alertLableKey;
 

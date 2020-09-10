@@ -78,20 +78,20 @@ typedef NS_ENUM(NSUInteger, MUGradientType) {
 + (UIImage *)QRImageForStringMu:(NSString *)string imageSize:(CGSize)imageSize logoImage:(UIImage *)logoImage color:(UIColor *)color;
 
 /**
- Compress a UIImage to the specified ratio
- 
- @param image The image to compress
- @param ratio The compress ratio to compress to
+ 使用最大比率压缩将UIImage压缩到指定的比率
+
+ @param image 要压缩的图像
+ @param ratio 要压缩到的压缩比
  
  */
 + (UIImage *)compressImage:(UIImage *)image
              compressRatio:(CGFloat)ratio;
 /**
- Compress a UIImage to the specified ratio with a max ratio compression
- 
- @param image The image to compress
- @param ratio The compress ratio to compress to
- @param maxRatio The maximum compression ratio for the image
+ 使用最大比率压缩将UIImage压缩到指定的比率
+
+ @param image 要压缩的图像
+ @param ratio 要压缩到的压缩比
+ @param maxRatio 图像的最大压缩比
  
  */
 + (UIImage *)compressImage:(UIImage *)image
@@ -99,21 +99,21 @@ typedef NS_ENUM(NSUInteger, MUGradientType) {
           maxCompressRatio:(CGFloat)maxRatio;
 
 /**
- Compress a remote UIImage to the specified ratio with a max ratio compression
- 
- @param url The remote image URL to compress
- @param ratio The compress ratio to compress to
+ 使用最大比率压缩将远程UIImage压缩到指定的比率
+
+ @param url 要压缩的远程图像url
+ @param ratio 要压缩到的压缩比
  
  */
 + (UIImage *)compressRemoteImage:(NSString *)url
                    compressRatio:(CGFloat)ratio;
 
 /**
- Compress a remote UIImage to the specified ratio with a max ratio compression
- 
- @param url The remote image URL to compress
- @param ratio The compress ratio to compress to
- @param maxRatio The maximum compression ratio for the image
+ 使用最大比率压缩将远程UIImage压缩到指定的比率
+
+ @param url 要压缩的远程图像url
+ @param ratio 要压缩到的压缩比
+ @param maxRatio 图像的最大压缩比
  
  */
 + (UIImage *)compressRemoteImage:(NSString *)url
