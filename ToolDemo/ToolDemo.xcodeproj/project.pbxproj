@@ -25,6 +25,8 @@
 		04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; };
 		04269F8224FCE67000CFD9D5 /* FTPopOverMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04269F8324FCE67000CFD9D5 /* FTPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F8124FCE67000CFD9D5 /* FTPopOverMenu.m */; };
+		042D519D250DBDBD007DB8F8 /* UITableViewCell+MHInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D519B250DBDBD007DB8F8 /* UITableViewCell+MHInitialization.m */; };
+		042D519E250DBDBD007DB8F8 /* UITableViewCell+MHInitialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 042D519C250DBDBD007DB8F8 /* UITableViewCell+MHInitialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04445C3824E0D84E00D4FA5C /* TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */; };
 		04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */; };
 		04445C3B24E0D84E00D4FA5C /* TBCityIconInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -167,6 +169,8 @@
 		04269F7624FCC11C00CFD9D5 /* SPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAlertController.m; sourceTree = "<group>"; };
 		04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPopOverMenu.h; sourceTree = "<group>"; };
 		04269F8124FCE67000CFD9D5 /* FTPopOverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPopOverMenu.m; sourceTree = "<group>"; };
+		042D519B250DBDBD007DB8F8 /* UITableViewCell+MHInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MHInitialization.m"; sourceTree = "<group>"; };
+		042D519C250DBDBD007DB8F8 /* UITableViewCell+MHInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MHInitialization.h"; sourceTree = "<group>"; };
 		04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconFont.m; sourceTree = "<group>"; };
 		04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconInfo.m; sourceTree = "<group>"; };
 		04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconInfo.h; sourceTree = "<group>"; };
@@ -352,6 +356,15 @@
 			path = FTPopOverMenu;
 			sourceTree = "<group>";
 		};
+		042D518F250DB321007DB8F8 /* UITableViewCell+MHInitialization */ = {
+			isa = PBXGroup;
+			children = (
+				042D519C250DBDBD007DB8F8 /* UITableViewCell+MHInitialization.h */,
+				042D519B250DBDBD007DB8F8 /* UITableViewCell+MHInitialization.m */,
+			);
+			path = "UITableViewCell+MHInitialization";
+			sourceTree = "<group>";
+		};
 		04445C3224E0D84E00D4FA5C /* iconfont(字体图标) */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +545,7 @@
 		04EBCDA024DD4628005D7D8C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				042D518F250DB321007DB8F8 /* UITableViewCell+MHInitialization */,
 				0483C27224EF5B2A005BFD32 /* NullSafe.m */,
 				04B085BD2500DA8000FB3554 /* NSString */,
 				0414BA9B24EA51F700EBE089 /* UIButton+Category */,
@@ -747,6 +761,7 @@
 				041C5ABC2507740B000670E7 /* TTGTagCollectionView.h in Headers */,
 				041C5ABD2507740B000670E7 /* TTGTextTagCollectionView.h in Headers */,
 				04089EE224ECB59E0044DD26 /* MBProgressHUD+Add.h in Headers */,
+				042D519E250DBDBD007DB8F8 /* UITableViewCell+MHInitialization.h in Headers */,
 				04B085C02500DACB00FB3554 /* NSString+Category.h in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
 			);
@@ -1079,6 +1094,7 @@
 				04EBCE2924DD4629005D7D8C /* MHBaseModel.m in Sources */,
 				0414BA9424EA2F9F00EBE089 /* RKNotificationHub.m in Sources */,
 				04EBCE2124DD4629005D7D8C /* GZCMulitiDelegate.m in Sources */,
+				042D519D250DBDBD007DB8F8 /* UITableViewCell+MHInitialization.m in Sources */,
 				04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */,
 				041C5ABE2507740B000670E7 /* TTGTagCollectionView.m in Sources */,
 				04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
