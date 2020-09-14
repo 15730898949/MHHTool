@@ -19,6 +19,9 @@
 #import <Tool/ToolMacro.h>
 #import <Tool/MBProgressHUD.h>
 #import <Tool/SPPageMenu.h>
+#import <Tool/UITableViewCell+MHInitialization.h>
+#import "TestTableViewCell.h"
+#import "TestTableViewCell1.h"
 @interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
@@ -36,7 +39,6 @@
     self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"tableCell"];
     self.tableView.tableFooterView = [[UIView alloc]init];
     self.tableView.backgroundColor = UIColorFromHex(0x161b2f, 1);
     self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImage:nil titleStr:@"暂无数据" detailStr:nil btnTitleStr:@"点击重试" btnClickBlock:^{
@@ -45,13 +47,10 @@
 //        [MBProgressHUD showRingInView:self.view Msg:nil animation:YES];
 //        [MBProgressHUD showActivView:self.view Msg:@"加载中" animation:YES];
         [MBProgressHUD showMsg:@"暂无数据"];
-        [MHCurrentViewController.navigationController pushViewController:[ViewController new] animated:YES
-         ];
         
-        NSLog(@"%@",MHCurrentViewController);
-
     }];
-    
+//    [MHCurrentViewController.navigationController pushViewController:[ViewController new] animated:YES];
+
     
     WeakSelf(self)
     [self.tableView addHeaderRefreshWithBlock:^{
@@ -63,7 +62,7 @@
         [weakself.dataArray addObject:[NSString stringWithFormat:@"%ld",weakself.tableView.page]];
         [weakself.tableView reloadData];
         [weakself.tableView endRefreshing];
-        [MBProgressHUD showRingInView:UIApplication.sharedApplication.delegate.window Msg:@"加载中" animation:YES];
+//        [MBProgressHUD showRingInView:UIApplication.sharedApplication.delegate.window Msg:@"加载中" animation:YES];
     }];
 
     [self.view addSubview:self.tableView];
@@ -172,8 +171,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell" forIndexPath:indexPath];
-    cell.textLabel.text  = self.dataArray[indexPath.row];
+//    UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView indexPath:indexPath];
+//    cell.textLabel.text  = self.dataArray[indexPath.row];
+    TestTableViewCell1*cell  =[TestTableViewCell1 cellWithTableView:tableView indexPath:indexPath];
+    cell.backgroundColor = [UIColor redColor];
+    
     
     return cell;
 }

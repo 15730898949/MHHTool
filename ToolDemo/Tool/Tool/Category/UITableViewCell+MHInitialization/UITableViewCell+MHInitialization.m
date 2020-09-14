@@ -19,7 +19,7 @@
 }
 
 + (void)registerWithTableView:(UITableView *)tableView reuseIdentifier:(NSString *)reuseIdentifier{
-    if ([UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil]) {
+    if ([[NSBundle mainBundle] pathForResource:NSStringFromClass([self class]) ofType:@"nib"]) {
         [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([self class]) bundle:nil] forCellReuseIdentifier:reuseIdentifier];
     }else{
         [tableView registerClass:[self class] forCellReuseIdentifier:reuseIdentifier];
@@ -37,8 +37,10 @@
     } @catch (NSException *exception) {
         [self registerWithTableView:tableView reuseIdentifier:reuseIdentifier];
         cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    } @finally {
+        
+        return cell;
     }
-    return cell;
 }
 
 

@@ -96,6 +96,9 @@
 		04EBCE4524DD4629005D7D8C /* SortNameTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF824DD4629005D7D8C /* SortNameTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63758211B845B97FB25449F5 /* Pods_Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B31E198B12B549366BC1F8 /* Pods_Tool.framework */; };
 		66CC420A319AECFB8CCED05B /* Pods_ToolDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D1D7E67C9F2FDA51D0218F /* Pods_ToolDemo.framework */; };
+		7355DB32250F909D000CF840 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355DB30250F909D000CF840 /* TestTableViewCell.m */; };
+		7355DB33250F909D000CF840 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7355DB31250F909D000CF840 /* TestTableViewCell.xib */; };
+		7355DB36250F9134000CF840 /* TestTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355DB35250F9134000CF840 /* TestTableViewCell1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +251,11 @@
 		04EBCDF724DD4629005D7D8C /* SortNameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortNameTool.m; sourceTree = "<group>"; };
 		04EBCDF824DD4629005D7D8C /* SortNameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortNameTool.h; sourceTree = "<group>"; };
 		07D0A9888F1988F690CD6EE6 /* Pods-ToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.debug.xcconfig"; path = "Target Support Files/Pods-ToolDemo/Pods-ToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7355DB2F250F909D000CF840 /* TestTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
+		7355DB30250F909D000CF840 /* TestTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
+		7355DB31250F909D000CF840 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
+		7355DB34250F9134000CF840 /* TestTableViewCell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell1.h; sourceTree = "<group>"; };
+		7355DB35250F9134000CF840 /* TestTableViewCell1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell1.m; sourceTree = "<group>"; };
 		846C32F4E6A339A32B57F53C /* Pods-Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.debug.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.debug.xcconfig"; sourceTree = "<group>"; };
 		8B5640E6AF4AB4B43302D994 /* Pods-ToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.release.xcconfig"; path = "Target Support Files/Pods-ToolDemo/Pods-ToolDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9C3922DE94D3C4CECBA408A6 /* Pods-Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.release.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.release.xcconfig"; sourceTree = "<group>"; };
@@ -456,6 +464,11 @@
 				04EBCC6724DD4436005D7D8C /* LaunchScreen.storyboard */,
 				04EBCC6A24DD4436005D7D8C /* Info.plist */,
 				04EBCC6B24DD4436005D7D8C /* main.m */,
+				7355DB2F250F909D000CF840 /* TestTableViewCell.h */,
+				7355DB30250F909D000CF840 /* TestTableViewCell.m */,
+				7355DB31250F909D000CF840 /* TestTableViewCell.xib */,
+				7355DB34250F9134000CF840 /* TestTableViewCell1.h */,
+				7355DB35250F9134000CF840 /* TestTableViewCell1.m */,
 			);
 			path = ToolDemo;
 			sourceTree = "<group>";
@@ -922,6 +935,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7355DB33250F909D000CF840 /* TestTableViewCell.xib in Resources */,
 				04EBCC6924DD4436005D7D8C /* LaunchScreen.storyboard in Resources */,
 				04EBCC6624DD4436005D7D8C /* Assets.xcassets in Resources */,
 			);
@@ -1043,7 +1057,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7355DB36250F9134000CF840 /* TestTableViewCell1.m in Sources */,
 				04EBCC6124DD4434005D7D8C /* ViewController.m in Sources */,
+				7355DB32250F909D000CF840 /* TestTableViewCell.m in Sources */,
 				04EBCC5B24DD4434005D7D8C /* AppDelegate.m in Sources */,
 				04EBCC6C24DD4436005D7D8C /* main.m in Sources */,
 			);
@@ -1461,7 +1477,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				INFOPLIST_FILE = Tool/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1529,7 +1545,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				INFOPLIST_FILE = Tool/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
