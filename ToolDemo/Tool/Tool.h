@@ -42,8 +42,7 @@
 #import <Tool/NSString+Category.h>
 #import <Tool/TTGTextTagCollectionView.h>
 #import <Tool/TTGTagCollectionView.h>
-#import <Tool/UITableViewCell+MHInitialization.h>
-
+#import <Tool/NSMutableAttributedString+SCRAttributedStringBuilder.h>
 
 
 

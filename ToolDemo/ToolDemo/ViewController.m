@@ -19,9 +19,10 @@
 #import <Tool/ToolMacro.h>
 #import <Tool/MBProgressHUD.h>
 #import <Tool/SPPageMenu.h>
-#import <Tool/UITableViewCell+MHInitialization.h>
 #import "TestTableViewCell.h"
 #import "TestTableViewCell1.h"
+#import "SFAttributedString.h"
+#import "NSMutableAttributedString+SCRAttributedStringBuilder.h"
 @interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
@@ -34,6 +35,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    NSMutableAttributedString *textFont = [[NSMutableAttributedString alloc] initWithString:@"NSAttributedString设置字体大小"];
+    [SFAtStringCore registerAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20]} forLabel:@"LABEL"];
+    [SFAtStringCore registerAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forLabel:@"RED"];
+    
+
     self.view.backgroundColor = UIColorFromHex(0x161b2f, 1);
     self.dataArray = [NSMutableArray array];
     self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -41,6 +47,7 @@
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [[UIView alloc]init];
     self.tableView.backgroundColor = UIColorFromHex(0x161b2f, 1);
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImage:nil titleStr:@"暂无数据" detailStr:nil btnTitleStr:@"点击重试" btnClickBlock:^{
         [self.dataArray addObject:[NSString stringWithFormat:@"%ld",self.tableView.page]];
         [self.tableView reloadData];
@@ -171,10 +178,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    UITableViewCell *cell = [UITableViewCell cellWithTableView:tableView indexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 //    cell.textLabel.text  = self.dataArray[indexPath.row];
-    TestTableViewCell1*cell  =[TestTableViewCell1 cellWithTableView:tableView indexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
+    cell.textLabel.sf_text = @"[LABEL]Give  to  [RED]SFAttri[[!]timg_1,0,0,20,20][LABEL]butedString[asdad]";
+//    TestTableViewCell1*cell  =[TestTableViewCell1 cellWithTableView:tableView indexPath:indexPath];
+//    cell.backgroundColor = [UIColor redColor];
     
     
     return cell;
