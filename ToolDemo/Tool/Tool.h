@@ -43,6 +43,10 @@
 #import <Tool/TTGTextTagCollectionView.h>
 #import <Tool/TTGTagCollectionView.h>
 #import <Tool/NSMutableAttributedString+SCRAttributedStringBuilder.h>
+#import <Tool/UITableView+FDTemplateLayoutCellDebug.h>
+#import <Tool/UITableView+FDTemplateLayoutCell.h>
+#import <Tool/UITableView+FDKeyedHeightCache.h>
+#import <Tool/UITableView+FDIndexPathHeightCache.h>
 
 
 

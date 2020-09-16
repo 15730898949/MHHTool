@@ -102,6 +102,14 @@
 		7355DB32250F909D000CF840 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355DB30250F909D000CF840 /* TestTableViewCell.m */; };
 		7355DB33250F909D000CF840 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7355DB31250F909D000CF840 /* TestTableViewCell.xib */; };
 		7355DB36250F9134000CF840 /* TestTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355DB35250F9134000CF840 /* TestTableViewCell1.m */; };
+		7368146D251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73681465251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m */; };
+		7368146E251258180026C6E7 /* UITableView+FDIndexPathHeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 73681466251258180026C6E7 /* UITableView+FDIndexPathHeightCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7368146F251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 73681467251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73681470251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 73681468251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m */; };
+		73681471251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 73681469251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.m */; };
+		73681472251258180026C6E7 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7368146A251258180026C6E7 /* UITableView+FDKeyedHeightCache.m */; };
+		73681473251258180026C6E7 /* UITableView+FDKeyedHeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 7368146B251258180026C6E7 /* UITableView+FDKeyedHeightCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73681474251258180026C6E7 /* UITableView+FDTemplateLayoutCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7368146C251258180026C6E7 /* UITableView+FDTemplateLayoutCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +271,14 @@
 		7355DB31250F909D000CF840 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 		7355DB34250F9134000CF840 /* TestTableViewCell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell1.h; sourceTree = "<group>"; };
 		7355DB35250F9134000CF840 /* TestTableViewCell1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell1.m; sourceTree = "<group>"; };
+		73681465251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		73681466251258180026C6E7 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
+		73681467251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		73681468251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
+		73681469251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
+		7368146A251258180026C6E7 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		7368146B251258180026C6E7 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		7368146C251258180026C6E7 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
 		846C32F4E6A339A32B57F53C /* Pods-Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.debug.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.debug.xcconfig"; sourceTree = "<group>"; };
 		8B5640E6AF4AB4B43302D994 /* Pods-ToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.release.xcconfig"; path = "Target Support Files/Pods-ToolDemo/Pods-ToolDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9C3922DE94D3C4CECBA408A6 /* Pods-Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.release.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.release.xcconfig"; sourceTree = "<group>"; };
@@ -510,6 +526,7 @@
 		04EBCD9024DD4628005D7D8C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				73681464251257FE0026C6E7 /* UITableView+FDTemplateLayoutCell */,
 				04269F7F24FCE67000CFD9D5 /* FTPopOverMenu */,
 				04089EDA24ECB59E0044DD26 /* MBProgressHUD */,
 				04EBCDA024DD4628005D7D8C /* Category */,
@@ -738,6 +755,21 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		73681464251257FE0026C6E7 /* UITableView+FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				73681466251258180026C6E7 /* UITableView+FDIndexPathHeightCache.h */,
+				73681468251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m */,
+				7368146B251258180026C6E7 /* UITableView+FDKeyedHeightCache.h */,
+				7368146A251258180026C6E7 /* UITableView+FDKeyedHeightCache.m */,
+				7368146C251258180026C6E7 /* UITableView+FDTemplateLayoutCell.h */,
+				73681465251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m */,
+				73681467251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				73681469251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.m */,
+			);
+			path = "UITableView+FDTemplateLayoutCell";
+			sourceTree = "<group>";
+		};
 		7D4830A23E1A4DBEA5AA57B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -800,6 +832,10 @@
 				04269F8224FCE67000CFD9D5 /* FTPopOverMenu.h in Headers */,
 				041C5ABC2507740B000670E7 /* TTGTagCollectionView.h in Headers */,
 				041C5ABD2507740B000670E7 /* TTGTextTagCollectionView.h in Headers */,
+				73681473251258180026C6E7 /* UITableView+FDKeyedHeightCache.h in Headers */,
+				7368146E251258180026C6E7 /* UITableView+FDIndexPathHeightCache.h in Headers */,
+				73681474251258180026C6E7 /* UITableView+FDTemplateLayoutCell.h in Headers */,
+				7368146F251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.h in Headers */,
 				04089EE224ECB59E0044DD26 /* MBProgressHUD+Add.h in Headers */,
 				734D819A2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h in Headers */,
 				04B085C02500DACB00FB3554 /* NSString+Category.h in Headers */,
@@ -1127,13 +1163,16 @@
 				04C4AACB24E285EA0092532B /* LYEmptyView.m in Sources */,
 				04EBCE0724DD4629005D7D8C /* UITextView+Placeholder.m in Sources */,
 				04C4AAC524E285EA0092532B /* LYEmptyBaseView.m in Sources */,
+				73681470251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				04EBCE2524DD4629005D7D8C /* CWFlowLayout.m in Sources */,
 				04EBCE0D24DD4629005D7D8C /* NSDictionary+LSCore.m in Sources */,
 				04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */,
 				04C4AAC724E285EA0092532B /* UIView+Empty.m in Sources */,
+				73681471251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				04C4AAC824E285EA0092532B /* UIView+LYExtension.m in Sources */,
 				04EBCE1524DD4629005D7D8C /* MHHTTPSessionManager.m in Sources */,
 				0414BA9F24EA523700EBE089 /* UIButton+Category.m in Sources */,
+				7368146D251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				04EBCE0624DD4629005D7D8C /* NSDate+Extension.m in Sources */,
 				0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */,
 				04EBCE4424DD4629005D7D8C /* SortNameTool.m in Sources */,
@@ -1144,6 +1183,7 @@
 				04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */,
 				041C5ABE2507740B000670E7 /* TTGTagCollectionView.m in Sources */,
 				04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				73681472251258180026C6E7 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				04089EE024ECB59E0044DD26 /* MBProgressHUD+Add.m in Sources */,
 				04EBCE0924DD4629005D7D8C /* UIView+Category.m in Sources */,
 				04269F8324FCE67000CFD9D5 /* FTPopOverMenu.m in Sources */,
