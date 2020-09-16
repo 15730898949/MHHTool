@@ -68,6 +68,10 @@
 		<data>
 		Pc9tL/fsPLoyU9dscNAqgeBShXQ=
 		</data>
+		<key>Headers/NSMutableAttributedString+SCRAttributedStringBuilder.h</key>
+		<data>
+		zlN8szWVCVGtav9oT8JaRiadrO0=
+		</data>
 		<key>Headers/NSString+Category.h</key>
 		<data>
 		GB7xSoWkA3GDdbaObiMcNus9fJQ=
@@ -106,7 +110,7 @@
 		</data>
 		<key>Headers/Tool.h</key>
 		<data>
-		1sY3bW0Ja1tRxME9Zwn6ijM1CYs=
+		6E3leNRHC+snYlFvsUxKIbeoNgk=
 		</data>
 		<key>Headers/ToolMacro.h</key>
 		<data>
@@ -131,10 +135,6 @@
 		<key>Headers/UIScrollView+Emm.h</key>
 		<data>
 		6oqwhlCJlUkiowxU5t/RCXqJ7LI=
-		</data>
-		<key>Headers/UITableViewCell+MHInitialization.h</key>
-		<data>
-		7r4wZgxKMd4LqnrCBunwF/jijKU=
 		</data>
 		<key>Headers/UITextView+Placeholder.h</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xnWobtCOb+K23U7xJNbQIhzZvVA=
+		Xy53JUNXeBZ0YrLtkTdKBB4oRCY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -347,6 +347,17 @@
 			+at2SRsT4leOIRQFaWwfAkeqghn4cCtH/L65GaoAM4A=
 			</data>
 		</dict>
+		<key>Headers/NSMutableAttributedString+SCRAttributedStringBuilder.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zlN8szWVCVGtav9oT8JaRiadrO0=
+			</data>
+			<key>hash2</key>
+			<data>
+			w6/BUV7DuJDtnoC7Hh/Dqux2kzle+yQfjx5NIEKE1pU=
+			</data>
+		</dict>
 		<key>Headers/NSString+Category.h</key>
 		<dict>
 			<key>hash</key>
@@ -450,11 +461,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1sY3bW0Ja1tRxME9Zwn6ijM1CYs=
+			6E3leNRHC+snYlFvsUxKIbeoNgk=
 			</data>
 			<key>hash2</key>
 			<data>
-			fGWfp8zEBg8OKg7odvRA0JeXa6TUfT9YP2yZqWYWWEE=
+			PLk2aWPHznmlWJGAT+XOIfGNyl4+5n2Gb5G0JJhmvR4=
 			</data>
 		</dict>
 		<key>Headers/ToolMacro.h</key>
@@ -521,17 +532,6 @@
 			<key>hash2</key>
 			<data>
 			exRrR6EfQP8YspXCGYmBxtkY1et4rchX4+uDvlp8D90=
-			</data>
-		</dict>
-		<key>Headers/UITableViewCell+MHInitialization.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			7r4wZgxKMd4LqnrCBunwF/jijKU=
-			</data>
-			<key>hash2</key>
-			<data>
-			Ux0P8Nmqsxi3r52x+yKzyBdZ5Ze4GHBL3z/Gc6uCPcI=
 			</data>
 		</dict>
 		<key>Headers/UITextView+Placeholder.h</key>
