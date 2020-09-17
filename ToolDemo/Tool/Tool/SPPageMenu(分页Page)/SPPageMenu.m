@@ -654,7 +654,7 @@
 - (NSString *)titleForItemAtIndex:(NSUInteger)itemIndex {
     if (itemIndex < self.items.count) {
         id object = [self.items objectAtIndex:itemIndex];
-        NSAssert([object isKindOfClass:[NSString class]],@"itemIndex对应的item不是NSString类型，请仔细核对");
+//        NSAssert([object isKindOfClass:[NSString class]],@"itemIndex对应的item不是NSString类型，请仔细核对");
         return object;
     }
     return nil;
