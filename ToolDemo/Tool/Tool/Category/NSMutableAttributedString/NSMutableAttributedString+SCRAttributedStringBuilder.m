@@ -170,12 +170,8 @@
 
 #pragma mark - Range
 
-- (NSMutableAttributedString *(^)(NSInteger, NSInteger))range {
-    return ^(NSInteger location, NSInteger length) {
-        if (location < 0 || length <= 0 || location + length > self.length) {
-            return self;
-        }
-        NSRange range = NSMakeRange(location, length);
+- (NSMutableAttributedString *(^)(NSRange))range {
+    return ^(NSRange range) {
         self.scr_ranges = @[ [NSValue valueWithRange:range] ];
         return self;
     };

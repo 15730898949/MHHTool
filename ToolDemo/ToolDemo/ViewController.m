@@ -39,6 +39,8 @@
     [SFAtStringCore registerAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20]} forLabel:@"LABEL"];
     [SFAtStringCore registerAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forLabel:@"RED"];
     
+    
+    
 
     self.view.backgroundColor = UIColorFromHex(0x161b2f, 1);
     self.dataArray = [NSMutableArray array];
@@ -180,9 +182,13 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 //    cell.textLabel.text  = self.dataArray[indexPath.row];
-    cell.textLabel.sf_text = @"[LABEL]Give  to  [RED]SFAttri[[!]timg_1,0,0,20,20][LABEL]butedString[asdad]";
+//    cell.textLabel.sf_text = @"[LABEL]Give  to  [RED]SFAttri[[!]timg_1,0,0,20,20][LABEL]butedString[asdad]";
 //    TestTableViewCell1*cell  =[TestTableViewCell1 cellWithTableView:tableView indexPath:indexPath];
 //    cell.backgroundColor = [UIColor redColor];
+    
+    NSString *str = @"123123";
+    NSMutableAttributedString *attstr =  str.attributedBuild.range([str rangeOfString:@"4"]).color([UIColor redColor]);
+    cell.textLabel.attributedText = attstr;
     
     
     return cell;

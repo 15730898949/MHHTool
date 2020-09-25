@@ -70,7 +70,7 @@
 		</data>
 		<key>Headers/NSMutableAttributedString+SCRAttributedStringBuilder.h</key>
 		<data>
-		zlN8szWVCVGtav9oT8JaRiadrO0=
+		1r1dMsUk2pBmJsCzZRwe1j1AP/c=
 		</data>
 		<key>Headers/NSString+Category.h</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Headers/TTGTagCollectionView.h</key>
 		<data>
-		Ffll33E5ko88L5rcGSPdsj7HUco=
+		FYtAPzcKuLP5zPLLDfZaE9a8aSY=
 		</data>
 		<key>Headers/TTGTextTagCollectionView.h</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Xy53JUNXeBZ0YrLtkTdKBB4oRCY=
+		xnWobtCOb+K23U7xJNbQIhzZvVA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -367,11 +367,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zlN8szWVCVGtav9oT8JaRiadrO0=
+			1r1dMsUk2pBmJsCzZRwe1j1AP/c=
 			</data>
 			<key>hash2</key>
 			<data>
-			w6/BUV7DuJDtnoC7Hh/Dqux2kzle+yQfjx5NIEKE1pU=
+			VrW0KO7bX/sy6wDDHnodGnetSEiovVpJDANbQ5K1aOs=
 			</data>
 		</dict>
 		<key>Headers/NSString+Category.h</key>
@@ -455,11 +455,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ffll33E5ko88L5rcGSPdsj7HUco=
+			FYtAPzcKuLP5zPLLDfZaE9a8aSY=
 			</data>
 			<key>hash2</key>
 			<data>
-			DyaI5oT08UzgwmBvB8LgleulJsYg93FKIxFXdpkvdZs=
+			kcWccWkzch834UpE6m6wz9gDLstlgXTTdLOsSkM0mcE=
 			</data>
 		</dict>
 		<key>Headers/TTGTextTagCollectionView.h</key>

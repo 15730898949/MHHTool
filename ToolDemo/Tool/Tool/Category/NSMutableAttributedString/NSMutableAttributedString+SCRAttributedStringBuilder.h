@@ -65,7 +65,7 @@
 #pragma mark - Range
 
 // 根据 start 和 length 设置范围
-- (NSMutableAttributedString *(^)(NSInteger location, NSInteger length))range;
+- (NSMutableAttributedString *(^)(NSRange range))range;
 
 // 将范围设置为当前字符串全部
 - (NSMutableAttributedString *)all;

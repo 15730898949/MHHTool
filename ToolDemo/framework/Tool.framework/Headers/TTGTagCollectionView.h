@@ -4,7 +4,12 @@
 //
 //  Created by zorro on 15/12/26.
 //
-//
+/*
+使用masonry 布局 reload之前需要调用
+[self.view setNeedsLayout];
+[self.view layoutIfNeeded];
+
+*/
 
 #import <UIKit/UIKit.h>
 
