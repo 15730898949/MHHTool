@@ -8,6 +8,10 @@
 使用masonry 布局 reload之前需要调用
 [self.view setNeedsLayout];
 [self.view layoutIfNeeded];
+或者
+self.tagView.manualCalculateHeight = YES;
+self.tagView.preferredMaxLayoutWidth = SCREEN_Width;
+
 
 */
 
