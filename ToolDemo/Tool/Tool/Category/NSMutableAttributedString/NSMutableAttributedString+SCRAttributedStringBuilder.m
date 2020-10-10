@@ -105,7 +105,12 @@
 
 - (NSMutableAttributedString *(^)(UIImage *, CGSize))appendSizeImage {
     return ^(UIImage *image, CGSize imageSize) {
-        UIFont *font = [self attribute:NSFontAttributeName atIndex:self.string.length - 1 effectiveRange:nil];
+        UIFont *font;
+        if (self.string.length) {
+           font = [self attribute:NSFontAttributeName atIndex:self.string.length - 1 effectiveRange:nil];
+        }else{
+           font = nil;
+        }
         return self.appendCustomImage(image, imageSize, font);
     };
 }
