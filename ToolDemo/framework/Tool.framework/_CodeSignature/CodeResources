@@ -114,7 +114,7 @@
 		</data>
 		<key>Headers/ToolMacro.h</key>
 		<data>
-		CIT3ecUe0pheilfObYjl9hIr8FI=
+		z2dzgSakR9sNZFTOyAmuUkUR1D0=
 		</data>
 		<key>Headers/UIButton+Category.h</key>
 		<data>
@@ -176,9 +176,13 @@
 		<data>
 		OmbdZ6C0mOzDjKps2YzHZdoCfQg=
 		</data>
+		<key>Headers/ZZLimitInputManager.m</key>
+		<data>
+		8diEhVmmz8mqXPpqT/vMM8wp58k=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		Xy53JUNXeBZ0YrLtkTdKBB4oRCY=
+		xnWobtCOb+K23U7xJNbQIhzZvVA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -488,11 +492,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CIT3ecUe0pheilfObYjl9hIr8FI=
+			z2dzgSakR9sNZFTOyAmuUkUR1D0=
 			</data>
 			<key>hash2</key>
 			<data>
-			XdhIrwmJlFHbJNcOQRIo8+1HffDASbvXIrAYhzn/ANs=
+			APn8eYRoVGN9SD7d/6yY5//BTsBex3qb3L1Xi7/j0Z0=
 			</data>
 		</dict>
 		<key>Headers/UIButton+Category.h</key>
@@ -658,6 +662,17 @@
 			<key>hash2</key>
 			<data>
 			LUDNihfWq+fSsLV4DiB7SgZueQUq3LPIyqLchsxvmuQ=
+			</data>
+		</dict>
+		<key>Headers/ZZLimitInputManager.m</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8diEhVmmz8mqXPpqT/vMM8wp58k=
+			</data>
+			<key>hash2</key>
+			<data>
+			uHjLDiYhTpqEYXzz/OehD95KNiUDlTnIcOJj+fLByho=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
