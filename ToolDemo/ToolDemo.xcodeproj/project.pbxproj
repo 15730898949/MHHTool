@@ -151,6 +151,9 @@
 		73B3A90D253202B2008066B1 /* SortNameTool.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A90E253202B2008066B1 /* TTGTagCollectionView.m in Headers */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A90F253202B2008066B1 /* TTGTextTagCollectionView.m in Headers */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		73B3A913253203EA008066B1 /* MHNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B3A911253203EA008066B1 /* MHNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73B3A914253203EA008066B1 /* MHNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3A912253203EA008066B1 /* MHNavigation.m */; };
+		73B3A9152532048A008066B1 /* MHNavigation.m in Headers */ = {isa = PBXBuildFile; fileRef = 73B3A912253203EA008066B1 /* MHNavigation.m */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -320,6 +323,8 @@
 		7368146A251258180026C6E7 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
 		7368146B251258180026C6E7 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		7368146C251258180026C6E7 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		73B3A911253203EA008066B1 /* MHNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHNavigation.h; sourceTree = "<group>"; };
+		73B3A912253203EA008066B1 /* MHNavigation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHNavigation.m; sourceTree = "<group>"; };
 		846C32F4E6A339A32B57F53C /* Pods-Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.debug.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.debug.xcconfig"; sourceTree = "<group>"; };
 		8B5640E6AF4AB4B43302D994 /* Pods-ToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.release.xcconfig"; path = "Target Support Files/Pods-ToolDemo/Pods-ToolDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9C3922DE94D3C4CECBA408A6 /* Pods-Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.release.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.release.xcconfig"; sourceTree = "<group>"; };
@@ -567,6 +572,7 @@
 		04EBCD9024DD4628005D7D8C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				73B3A910253203D6008066B1 /* MHNavigation */,
 				73681464251257FE0026C6E7 /* UITableView+FDTemplateLayoutCell */,
 				04269F7F24FCE67000CFD9D5 /* FTPopOverMenu */,
 				04089EDA24ECB59E0044DD26 /* MBProgressHUD */,
@@ -811,6 +817,15 @@
 			path = "UITableView+FDTemplateLayoutCell";
 			sourceTree = "<group>";
 		};
+		73B3A910253203D6008066B1 /* MHNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				73B3A911253203EA008066B1 /* MHNavigation.h */,
+				73B3A912253203EA008066B1 /* MHNavigation.m */,
+			);
+			path = MHNavigation;
+			sourceTree = "<group>";
+		};
 		7D4830A23E1A4DBEA5AA57B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -920,6 +935,8 @@
 				04089EE224ECB59E0044DD26 /* MBProgressHUD+Add.h in Headers */,
 				73B3A8E72531FD8A008066B1 /* ZZLimitInputManager.m in Headers */,
 				734D819A2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h in Headers */,
+				73B3A913253203EA008066B1 /* MHNavigation.h in Headers */,
+				73B3A9152532048A008066B1 /* MHNavigation.m in Headers */,
 				04B085C02500DACB00FB3554 /* NSString+Category.h in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
 			);
@@ -1249,6 +1266,7 @@
 				04EBCE2524DD4629005D7D8C /* CWFlowLayout.m in Sources */,
 				04EBCE0D24DD4629005D7D8C /* NSDictionary+LSCore.m in Sources */,
 				04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */,
+				73B3A914253203EA008066B1 /* MHNavigation.m in Sources */,
 				04C4AAC724E285EA0092532B /* UIView+Empty.m in Sources */,
 				73681471251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				04C4AAC824E285EA0092532B /* UIView+LYExtension.m in Sources */,
