@@ -23,6 +23,7 @@
 #import "TestTableViewCell1.h"
 #import "SFAttributedString.h"
 #import "NSMutableAttributedString+SCRAttributedStringBuilder.h"
+#import <Tool/Tool.h>
 @interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
@@ -34,7 +35,9 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
+
 //    NSMutableAttributedString *textFont = [[NSMutableAttributedString alloc] initWithString:@"NSAttributedString设置字体大小"];
     [SFAtStringCore registerAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20]} forLabel:@"LABEL"];
     [SFAtStringCore registerAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forLabel:@"RED"];
@@ -62,17 +65,21 @@
 
     
     WeakSelf(self)
-    [self.tableView addHeaderRefreshWithBlock:^{
-        [weakself   textNetwork];
-
-    }];
+//    [self.tableView addHeaderRefreshWithBlock:^{
+//        [weakself   textNetwork];
+//
+//    }];
  
-    [self.tableView addFooterRefreshWithBlock:^{
-        [weakself.dataArray addObject:[NSString stringWithFormat:@"%ld",weakself.tableView.page]];
-        [weakself.tableView reloadData];
-        [weakself.tableView endRefreshing];
-//        [MBProgressHUD showRingInView:UIApplication.sharedApplication.delegate.window Msg:@"加载中" animation:YES];
-    }];
+    
+    [self.dataArray addObjectsFromArray:@[@"123",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213"]];
+
+    
+//    [self.tableView addFooterRefreshWithBlock:^{
+//        [weakself.dataArray addObject:[NSString stringWithFormat:@"%ld",weakself.tableView.page]];
+//        [weakself.tableView reloadData];
+//        [weakself.tableView endRefreshing];
+////        [MBProgressHUD showRingInView:UIApplication.sharedApplication.delegate.window Msg:@"加载中" animation:YES];
+//    }];
 
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -89,7 +96,6 @@
     }];
     
     
-    
     CWFlowLayout *layout = [[CWFlowLayout alloc]initWithStyle:CWCarouselStyle_Normal];
     CWCarousel *banner = [[CWCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100) delegate:self datasource:self flowLayout:layout];
     banner.isAuto = YES;
@@ -103,39 +109,44 @@
     [self   textNetwork ];
 
     // Do any additional setup after loading the view.
-    self.pageMenu.frame = CGRectMake(0, 300, SCREEN_Width, 100);
-    [self.view addSubview:self.pageMenu];
-    NSArray *colorArr = @[[UIColor redColor],[UIColor blueColor],[UIColor orangeColor],[UIColor grayColor],[UIColor blackColor],[UIColor brownColor],[UIColor purpleColor]];
-    NSMutableArray *arr = [NSMutableArray array];
-    for (UIColor *color in colorArr) {
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
-        view.backgroundColor = color;
-        view.userInteractionEnabled = NO;
-        [arr addObject:view];
-    }
-    [self.pageMenu setItems:arr selectedItemIndex:0];
-//    [self.pageMenu setItems:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"] selectedItemIndex:0];
+//    self.pageMenu.frame = CGRectMake(0, 300, SCREEN_Width, 100);
+//    [self.view addSubview:self.pageMenu];
+//    NSArray *colorArr = @[[UIColor redColor],[UIColor blueColor],[UIColor orangeColor],[UIColor grayColor],[UIColor blackColor],[UIColor brownColor],[UIColor purpleColor]];
+//    NSMutableArray *arr = [NSMutableArray array];
+//    for (UIColor *color in colorArr) {
+//        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+//        view.backgroundColor = color;
+//        view.userInteractionEnabled = NO;
+//        [arr addObject:view];
+//    }
+//    [self.pageMenu setItems:arr selectedItemIndex:0];
+////    [self.pageMenu setItems:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"] selectedItemIndex:0];
+    
+    [self addNavBar];
+
+    self.titleLab.text = @"123333";
+
 }
 
 - (void)textNetwork{
     
-    NSArray *dataArr = @[@"123",@"234",@"345",[NSNull null]];
-    for (NSString*str in dataArr) {
-        NSLog(@"%@",str);
-        NSLog(@"isnull = %d",isNullString(str));
-
-        self.lable.text = str;
-    }
-    
-    
-    [MBProgressHUD show];
-    WeakSelf(self)
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [weakself.dataArray removeAllObjects];
-        [weakself.tableView reloadData];
-        [weakself.tableView endRefreshing];
-        [MBProgressHUD hide];
-    });
+//    NSArray *dataArr = @[@"123",@"234",@"345",[NSNull null]];
+//    for (NSString*str in dataArr) {
+//        NSLog(@"%@",str);
+//        NSLog(@"isnull = %d",isNullString(str));
+//
+//        self.lable.text = str;
+//    }
+//    
+//    
+//    [MBProgressHUD show];
+//    WeakSelf(self)
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [weakself.dataArray removeAllObjects];
+//        [weakself.tableView reloadData];
+//        [weakself.tableView endRefreshing];
+//        [MBProgressHUD hide];
+//    });
 }
 
 - (NSInteger)numbersForCarousel{
@@ -192,6 +203,15 @@
     
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ViewController * vc = [[ViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    self.navigationBarTranslationY =  scrollView.contentOffset.y;
 }
 
 
