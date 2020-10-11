@@ -31,7 +31,9 @@ void MUHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL ,c
     method_exchangeImplementations(oldMethod, newMethod);
 }
 @interface UIViewController (MHNavigations)<UIScrollViewDelegate>
-@property(nonatomic, assign)BOOL isNav;
+@property(nonatomic, copy)void(^leftItemByTapped)(UIBarButtonItem *item);
+@property(nonatomic, copy)void(^rightItemByTapped)(UIBarButtonItem *item);
+@property(nonatomic, strong)UILabel *titleLabel;//自定义标题
 @end
 @implementation UIViewController (MUNavigation)
 
@@ -131,18 +133,6 @@ void MUHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL ,c
 }
 
 
-- (void)setIsNav:(BOOL)isNav{
-    objc_setAssociatedObject(self, @selector(isNav), @(isNav), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-
-}
-
-- (BOOL)isNav{
-    return [objc_getAssociatedObject(self, @selector(isNav)) boolValue];
-
-}
-
-
-
 +(void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -172,37 +162,54 @@ void MUHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL ,c
     MUHookMethodSubDecrption(originalName, originalSEL, newName, newSEL);
 }
 -(void)mu_viewDidLoad{
+    
+    if ([self canUpdateNavigationBar]) {//判断当前控制器有无导航控制器
+        //关闭自动设置边距
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        if (@available(iOS 11.0, *)) {
+            [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+        }
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeStatusBarFrame) name:UIApplicationDidChangeStatusBarFrameNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkStatusBarNormal) name:@"enterForeground" object:nil];
+        
+        //添加导航栏
+        [self addNavBar];
+    }
+    
     [self mu_viewDidLoad];
 }
 
 - (void)addNavBar{
-    self.isNav = YES;
-    //关闭自动设置边距
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-    if (@available(iOS 11.0, *)) {
-        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
-    }
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didChangeStatusBarFrame) name:UIApplicationDidChangeStatusBarFrameNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkStatusBarNormal) name:@"enterForeground" object:nil];
-
-    
     self.navigationController.navigationBar.hidden = YES;
     [self.navBar addSubview:self.titleLab];
-    [self.navBar  addSubview:self.backBtn];
-    [self.navBar  addSubview:self.RightBtn];
-    [self.navBar addSubview:self.barline];
-    [self.view addSubview:self.navBar];
-    [self.view bringSubviewToFront:self.navBar];
-
-    self.navBar.hidden = NO;
+    self.titleLabel.frame = CGRectMake(50, CGRectGetHeight([UIApplication sharedApplication].statusBarFrame), [UIScreen mainScreen].bounds.size.width-100, 44);
+    
+    self.backBtn.hidden = YES;
     [self.backBtn setTitle:@"ㄑ" forState:UIControlStateNormal];
     [self.backBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.navBar  addSubview:self.backBtn];
+    self.backBtn.frame = CGRectMake(10, CGRectGetHeight([UIApplication sharedApplication].statusBarFrame), 40, 44);
     
     
     [self.RightBtn addTarget:self action:@selector(RightAction) forControlEvents:UIControlEventTouchUpInside];
     self.RightBtn.titleLabel.font = [UIFont systemFontOfSize:17.0];
     
-    [self didChangeStatusBarFrame];
+    [self.navBar  addSubview:self.RightBtn];
+    
+    self.RightBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-55, CGRectGetHeight([UIApplication sharedApplication].statusBarFrame), 40, 44);
+
+    
+    [self.navBar addSubview:self.barline];
+    self.barline.frame = CGRectMake(0, [self navigationBarAndStatusBarHeight], [UIScreen mainScreen].bounds.size.width, 0.5);
+
+    
+    [self.view addSubview:self.navBar];
+    [self.view bringSubviewToFront:self.navBar];
+
+    self.navBar.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [self navigationBarAndStatusBarHeight]);
+    
+
 }
 
 - (void)backAction{
@@ -216,20 +223,17 @@ void MUHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL ,c
 }
 
 - (void)checkStatusBarNormal {
-    NSLog(@"checkStatusBarNormal");
 
 }
 
 - (void)didChangeStatusBarFrame {
     
     [self setNeedsStatusBarAppearanceUpdate];       // 调用导航栏的 preferredStatusBarStyle 方法
-    self.navBar.frame = CGRectMake(0, self.navBar.frame.origin.y, [UIScreen mainScreen].bounds.size.width, [self navigationBarAndStatusBarHeight]);
-    
-    self.barline.frame = CGRectMake(0, [self navigationBarAndStatusBarHeight], [UIScreen mainScreen].bounds.size.width, 0.5);
-    self.RightBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-55, CGRectGetHeight([UIApplication sharedApplication].statusBarFrame), 40, 44);
-    self.backBtn.frame = CGRectMake(10, CGRectGetHeight([UIApplication sharedApplication].statusBarFrame), 40, 44);
-    self.titleLab.frame = CGRectMake(50, CGRectGetHeight([UIApplication sharedApplication].statusBarFrame), [UIScreen mainScreen].bounds.size.width-100, 44);
-
+//
+//    [self.navBar mas_updateConstraints:^(MASConstraintMaker *make) {
+//        make.top.left.right.bottom.equalTo(self.navigationController.navigationBar);
+////        make.top.equalTo(self.navigationController.navigationBar).offset(- CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]));
+//    }];
 
     
 }
@@ -246,16 +250,15 @@ void MUHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL ,c
 
 - (void)mu_viewWillAppear:(BOOL)animated {
     
-    if (self.isNav) {//判断当前控制器有无导航控制器
-        if (self.navigationController.childViewControllers.count >1) {
-            self.backBtn.hidden = NO;
-        }else{
-            self.backBtn.hidden = YES;
-        }
-
-    }
     [self mu_viewWillAppear:animated];
-
+    if ([self canUpdateNavigationBar]) {//判断当前控制器有无导航控制器
+    }
+    
+    if (self.navigationController.childViewControllers.count >1) {
+        self.backBtn.hidden = NO;
+    }else{
+        self.backBtn.hidden = YES;
+    }
     
 
     
@@ -268,7 +271,7 @@ void MUHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL ,c
 - (void)mu_viewWillDisappear:(BOOL)animated {
     
     [self mu_viewWillDisappear:animated];
-    if (self.isNav) {//判断当前控制器有无导航控制器
+    if ([self canUpdateNavigationBar]) {//判断当前控制器有无导航控制器
         if (self.navigationBarTranslationY > 0) {
             self.navBar.transform = CGAffineTransformIdentity;
             self.navigationBarTranslationY = 0;
@@ -286,6 +289,14 @@ void MUHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL ,c
 }
 
 #pragma mark -public method
+
+- (BOOL)canUpdateNavigationBar {
+    // 如果当前有导航栏//且没有手动设置隐藏导航栏
+    if (self.navigationController && ([NSStringFromClass([self.navigationController class]) isEqualToString:NSStringFromClass([UINavigationController class])]) && self.navBar.hidden == NO) {//如果有自定义的导航栏则过滤掉
+        return YES;
+    }
+    return NO;
+}
 
 
 //电池电量
