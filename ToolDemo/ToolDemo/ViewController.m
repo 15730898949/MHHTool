@@ -24,6 +24,7 @@
 #import "SFAttributedString.h"
 #import "NSMutableAttributedString+SCRAttributedStringBuilder.h"
 #import <Tool/Tool.h>
+#import "BaseWebViewController.h"
 @interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
@@ -214,7 +215,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    ViewController * vc = [[ViewController alloc]init];
 //    [self.navigationController pushViewController:vc animated:YES];
-    MHWebViewController *vc = [[MHWebViewController alloc]init];
+    BaseWebViewController *vc = [[BaseWebViewController alloc]init];
     vc.urlString = @"http://47.116.75.232:23341/";
     [self.navigationController pushViewController:vc animated:YES];
 

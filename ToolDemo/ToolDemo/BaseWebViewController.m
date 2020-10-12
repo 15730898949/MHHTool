@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     // Do any additional setup after loading the view.
+    [super viewDidLoad];
+    NSLog(@"12312312313");
     [self addScriptMessageHandlerWithName:@[@"setTitle",@"setBackgroundColor",@"getToken"] observeValue:^(WKUserContentController *userContentController, WKScriptMessage *message) {
         if([message.name isEqualToString:@"setTitle"]){
             self.titleLab.text = message.body;
@@ -28,7 +30,6 @@
 
     }];
     
-    [super viewDidLoad];
 
 }
 
