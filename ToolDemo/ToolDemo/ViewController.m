@@ -192,13 +192,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-//    cell.textLabel.text  = self.dataArray[indexPath.row];
+    cell.textLabel.text  = self.dataArray[indexPath.row];
 //    cell.textLabel.sf_text = @"[LABEL]Give  to  [RED]SFAttri[[!]timg_1,0,0,20,20][LABEL]butedString[asdad]";
 //    TestTableViewCell1*cell  =[TestTableViewCell1 cellWithTableView:tableView indexPath:indexPath];
 //    cell.backgroundColor = [UIColor redColor];
     
-    NSString *str = @"123123";
-    NSMutableAttributedString *attstr =  str.attributedBuild.range([str rangeOfString:@"4"]).color([UIColor redColor]);
+    NSString *str = @"123";
+    NSMutableAttributedString *attstr =  str.attributedBuild
+    .appendSizeImage([UIImage imageNamed:@"timg_1"],CGSizeMake(20, 20))
+    .append(@"123")
+    .appendSizeImage([UIImage imageNamed:@"timg_1"],CGSizeMake(10, 10)).baselineOffset(10)
+    .append(@"123")
+    .appendSizeImage([UIImage imageNamed:@"timg_1"],CGSizeMake(20, 20))
+    .append(@"123123");
     cell.textLabel.attributedText = attstr;
     
     

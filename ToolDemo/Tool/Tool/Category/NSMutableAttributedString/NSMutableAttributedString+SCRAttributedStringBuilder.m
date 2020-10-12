@@ -130,7 +130,10 @@
         NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
         attachment.image = image;
         attachment.bounds = CGRectMake(0, offset, imageSize.width, imageSize.height);
+        
+        NSRange range = NSMakeRange(self.length, 1);
         [self appendAttributedString:[NSAttributedString attributedStringWithAttachment:attachment]];
+        self.scr_ranges = @[ [NSValue valueWithRange:range] ];
         return self;
     };
 }
