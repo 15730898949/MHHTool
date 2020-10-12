@@ -7,7 +7,8 @@
 //
 
 #import "MHWebViewController.h"
-#import "Masonry.h"
+#import <Tool/MHNavigation.h>
+#import <Tool/UINavigationController+FDFullscreenPopGesture.h>
 #define NAV_HEIGHT (CGRectGetHeight(self.navigationController.navigationBar.bounds) +CGRectGetHeight([UIApplication sharedApplication].statusBarFrame))
 
 @interface MHWebViewController ()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler,UIGestureRecognizerDelegate>{
@@ -134,13 +135,6 @@
         [_closeBarButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _closeBarButton.titleLabel.font =  [UIFont fontWithName:@"PingFangSC-Medium" size:15.f];
         [_closeBarButton addTarget:self action:@selector(close:) forControlEvents:UIControlEventTouchUpInside];
-//        [self.navBar addSubview:_closeBarButton];
-//        [_closeBarButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.centerY.equalTo(self.backBtn);
-//            make.left.equalTo(self.backBtn.mas_right).offset(10);
-//        }];
-        
-        
     }
     return _closeBarButton;
 }
@@ -162,6 +156,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.fd_interactivePopDisabled = YES;
+    [self addNavBar];
+    [self.navBar addSubview:self.closeBarButton];
+    self.backBtn.frame = CGRectMake(self.backBtn.frame.origin.x , self.backBtn.frame.origin.y, 20, self.backBtn.frame.size.height);
+    self.closeBarButton.frame = CGRectMake(self.backBtn.frame.origin.x +self.backBtn.frame.size.width +10, self.backBtn.frame.origin.y, 30, self.backBtn.frame.size.height);
+
     [self setupUI];
     [self loadRequest];
     
@@ -173,6 +173,7 @@
     _delegate = self.navigationController.interactivePopGestureRecognizer.delegate;
     // 设置系统返回手势的代理为当前控制器
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];

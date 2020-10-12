@@ -610,8 +610,8 @@
 		04EBCD9D24DD4628005D7D8C /* WebViewController */ = {
 			isa = PBXGroup;
 			children = (
-				04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */,
 				04EBCD9F24DD4628005D7D8C /* MHWebViewController.h */,
+				04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */,
 			);
 			path = WebViewController;
 			sourceTree = "<group>";
