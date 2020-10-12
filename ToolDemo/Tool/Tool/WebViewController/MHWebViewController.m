@@ -7,44 +7,65 @@
 //
 
 #import "MHWebViewController.h"
-#import <Tool/MHNavigation.h>
-#import <Tool/UINavigationController+FDFullscreenPopGesture.h>
-#define NAV_HEIGHT (CGRectGetHeight(self.navigationController.navigationBar.bounds) +CGRectGetHeight([UIApplication sharedApplication].statusBarFrame))
+#define NAV_HEIGHT (44 +CGRectGetHeight([UIApplication sharedApplication].statusBarFrame))
+
+static MessageBlock messageCallback = nil;
 
 @interface MHWebViewController ()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler,UIGestureRecognizerDelegate>{
     BOOL navigationBarHidden;
 }
+@property(nonatomic , strong)WKWebViewConfiguration* config;
+
+
 @property(nonatomic , strong)id delegate;
 
 @property (nonatomic,strong) UIRefreshControl *refreshControl;  //刷新
 @property (nonatomic,strong) UIProgressView *progress;  //进度条
 @property (nonatomic,strong) UIButton *reloadBtn;  //重新加载按钮
+///jsCallOC数组
+@property (nonatomic,strong) NSArray *messageHandlerName;
 
 
 @end
 
 @implementation MHWebViewController
 
+- (UIModalPresentationStyle)modalPresentationStyle{
+    return UIModalPresentationFullScreen;
+}
 
 #pragma mark lazy load
+
+-(WKWebViewConfiguration *)config
+{
+    if (_config == nil) {
+        _config = [[WKWebViewConfiguration alloc] init];
+        _config.userContentController = [[WKUserContentController alloc] init];
+        _config.preferences = [[WKPreferences alloc] init];
+        _config.preferences.minimumFontSize = 8;
+        _config.preferences.javaScriptEnabled = YES; //是否支持 JavaScript
+        _config.preferences.javaScriptCanOpenWindowsAutomatically = YES;
+        _config.processPool = [[WKProcessPool alloc] init];
+        
+        _config.allowsInlineMediaPlayback = YES;        // 允许在线播放
+        if (@available(iOS 9.0, *)) {
+            _config.allowsAirPlayForMediaPlayback = YES;  //允许视频播放
+        }
+        
+        NSMutableString *javascript = [NSMutableString string];
+        [javascript appendString:@"document.documentElement.style.webkitTouchCallout='none';"];//禁止长按
+//        [javascript appendString:@"document.documentElement.style.webkitUserSelect='none';"];//禁止选择
+        WKUserScript *noneSelectScript = [[WKUserScript alloc] initWithSource:javascript injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+        [_config.userContentController addUserScript:noneSelectScript];
+    }
+    return _config;
+}
+
+
 - (WKWebView *)wkWebView{
     if (!_wkWebView) {
-        // 设置WKWebView基本配置信息
-        WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-        configuration.preferences = [[WKPreferences alloc] init];
-        configuration.allowsInlineMediaPlayback = YES;
-        configuration.selectionGranularity = YES;
-        
-        WKUserContentController *userContentController = [[WKUserContentController alloc] init];
-        [userContentController addScriptMessageHandler:self name:@"jsCallOC"];
-        
-        if (self.jsString) {
-            WKUserScript *jsString = [[WKUserScript alloc] initWithSource:self.jsString injectionTime:(WKUserScriptInjectionTimeAtDocumentStart) forMainFrameOnly:NO];
-            [userContentController addUserScript:jsString];
-        }
-        configuration.userContentController = userContentController;
 
-        self.wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, NAV_HEIGHT, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-NAV_HEIGHT) configuration:configuration];
+        _wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, NAV_HEIGHT, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-NAV_HEIGHT) configuration:self.config];
         // 设置代理
         _wkWebView.UIDelegate = self;
         _wkWebView.navigationDelegate = self;
@@ -92,10 +113,10 @@
     if (@available(iOS 10.0, *)) {
         // 是否开启下拉刷新
         if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0 && _canDownRefresh) {
-            _wkWebView.scrollView.refreshControl = self.refreshControl;
+            self.wkWebView.scrollView.refreshControl = self.refreshControl;
             
         }else{
-            _wkWebView.scrollView.refreshControl = nil;
+            self.wkWebView.scrollView.refreshControl = nil;
             
         }
     } else {
@@ -138,14 +159,6 @@
     }
     return _closeBarButton;
 }
-- (void)setJSInteractionArray:(NSArray<NSString *> *)JSInteractionArray{
-    _JSInteractionArray = JSInteractionArray;
-    [[self.wkWebView configuration].userContentController removeAllUserScripts];
-    for (NSString *nameStr in _JSInteractionArray) {
-        [[self.wkWebView configuration].userContentController addScriptMessageHandler:self name:nameStr];
-
-    }
-}
 
 - (void)setProgressHide:(BOOL)progressHide{
     _progressHide = progressHide;
@@ -155,20 +168,21 @@
 #pragma mark viewDidload
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
 
-    self.fd_interactivePopDisabled = YES;
     [self addNavBar];
     [self.navBar addSubview:self.closeBarButton];
     self.backBtn.frame = CGRectMake(self.backBtn.frame.origin.x , self.backBtn.frame.origin.y, 20, self.backBtn.frame.size.height);
     self.closeBarButton.frame = CGRectMake(self.backBtn.frame.origin.x +self.backBtn.frame.size.width +10, self.backBtn.frame.origin.y, 30, self.backBtn.frame.size.height);
+    
 
-    [self setupUI];
     [self loadRequest];
     
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.backBtn.hidden = NO;
     // 记录系统返回手势的代理
     _delegate = self.navigationController.interactivePopGestureRecognizer.delegate;
     // 设置系统返回手势的代理为当前控制器
@@ -304,6 +318,62 @@
     
 }
 
+
+#pragma mark -
+#pragma mark - JS交互 messageHandler
+
+/**
+ *  OC 调用 JS
+ *  @param jsMethod JS方法
+ */
+- (void)callJS:(NSString *)jsMethod {
+    
+    [self callJS:jsMethod handler:nil];
+}
+
+- (void)callJS:(NSString *)jsMethod handler:(void (^)(id response, NSError *error))handler {
+    
+    NSLog(@"call js:%@",jsMethod);
+    [self.wkWebView evaluateJavaScript:jsMethod completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+        handler ? handler(response,error) : NULL;
+    }];
+}
+
+/**
+ *  注入 meaasgeHandler
+ *  @param nameArr 脚本
+ */
+- (void)addScriptMessageHandlerWithName:(NSArray<NSString *> *)nameArr
+{
+    /* removeScriptMessageHandlerForName 同时使用，否则内存泄漏 */
+    for (NSString * objStr in nameArr) {
+        @try{
+            [self.config.userContentController addScriptMessageHandler:self name:objStr];
+        }@catch (NSException *e){
+            NSLog(@"异常信息：%@",e);
+        }@finally{
+            
+        }
+    }
+    self.messageHandlerName = nameArr;
+}
+
+- (void)addScriptMessageHandlerWithName:(NSArray<NSString *> *)nameArr observeValue:(MessageBlock)callback{
+    messageCallback = callback;
+    [self addScriptMessageHandlerWithName:nameArr];
+}
+
+/**
+ *  注销 注册过的js回调oc通知方式，适用于 iOS8 之后
+ */
+- (void)removeScriptMessageHandlerForName:(NSString *)name
+{
+    [self.config.userContentController removeScriptMessageHandlerForName:name];
+}
+
+
+
+
 #pragma mark WKNavigationDelegate
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {
@@ -316,12 +386,8 @@
     if ([webView.URL.scheme isEqual:@"about"]) {
         webView.hidden = YES;
     }
-    [self mh_webView:webView didStartProvisionalNavigation:navigation];
 }
 
-- (void)mh_webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
-    
-}
 
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
@@ -333,14 +399,10 @@
     
     [self showLeftBarButtonItem];
     [_refreshControl endRefreshing];
-    [self mh_webView:webView didFinishNavigation:navigation];
     self.progress.alpha = 0.0f;
 
 }
 
-- (void)mh_webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-    
-}
 
 #pragma mark - WKNavigationDelegate method
 // 如果不添加这个，那么wkwebview跳转不了AppStore
@@ -424,18 +486,10 @@
     //        NSLog(@"未实行方法：%@", methods);
     //    }
     
-    if([message.name isEqualToString:@"jsCallOc"]){
-        // do something
-    }
-    
-    [self mh_userContentController:userContentController didReceiveScriptMessage:message];
+    messageCallback ? messageCallback(userContentController,message) : NULL;
+
     
 }
-
-- (void)mh_userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
-    
-}
-
 
 
 
@@ -447,8 +501,8 @@
     _wkWebView.UIDelegate = nil;
     _wkWebView.navigationDelegate = nil;
     
-    [[self.wkWebView configuration].userContentController removeAllUserScripts];
-    
+    [self.config.userContentController removeAllUserScripts];
+
     
     
     

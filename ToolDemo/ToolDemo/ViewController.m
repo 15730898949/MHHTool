@@ -214,7 +214,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    ViewController * vc = [[ViewController alloc]init];
 //    [self.navigationController pushViewController:vc animated:YES];
-    
     MHWebViewController *vc = [[MHWebViewController alloc]init];
     vc.urlString = @"http://47.116.75.232:23341/";
     [self.navigationController pushViewController:vc animated:YES];

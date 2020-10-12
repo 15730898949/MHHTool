@@ -15,7 +15,6 @@
 
 @interface UIViewController (MHNavigation)
 
-- (void)addNavBar;
 
 @property(nonatomic, strong)UIView               *navBar;                   //导航栏
 
@@ -29,6 +28,13 @@
 @property(nonatomic, strong)UIView               *barline;                  //分割线
 
 
+
+
+/**
+ 当前导航栏的透明度
+ Setting the navigation bar Alpha with a value(0 ~ 1).
+ */
+@property(nonatomic, assign) CGFloat          navigationBarAlphaMu;
 
 
 

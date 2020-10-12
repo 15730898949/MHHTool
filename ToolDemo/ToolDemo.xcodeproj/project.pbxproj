@@ -154,6 +154,7 @@
 		73B3A913253203EA008066B1 /* MHNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B3A911253203EA008066B1 /* MHNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A914253203EA008066B1 /* MHNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3A912253203EA008066B1 /* MHNavigation.m */; };
 		73B3A9152532048A008066B1 /* MHNavigation.m in Headers */ = {isa = PBXBuildFile; fileRef = 73B3A912253203EA008066B1 /* MHNavigation.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		73B3A91E2534A678008066B1 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3A91D2534A678008066B1 /* BaseWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -325,6 +326,8 @@
 		7368146C251258180026C6E7 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
 		73B3A911253203EA008066B1 /* MHNavigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHNavigation.h; sourceTree = "<group>"; };
 		73B3A912253203EA008066B1 /* MHNavigation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHNavigation.m; sourceTree = "<group>"; };
+		73B3A91C2534A678008066B1 /* BaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
+		73B3A91D2534A678008066B1 /* BaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
 		846C32F4E6A339A32B57F53C /* Pods-Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.debug.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.debug.xcconfig"; sourceTree = "<group>"; };
 		8B5640E6AF4AB4B43302D994 /* Pods-ToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.release.xcconfig"; path = "Target Support Files/Pods-ToolDemo/Pods-ToolDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9C3922DE94D3C4CECBA408A6 /* Pods-Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.release.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.release.xcconfig"; sourceTree = "<group>"; };
@@ -528,6 +531,8 @@
 				04EBCC6724DD4436005D7D8C /* LaunchScreen.storyboard */,
 				04EBCC6A24DD4436005D7D8C /* Info.plist */,
 				04EBCC6B24DD4436005D7D8C /* main.m */,
+				73B3A91C2534A678008066B1 /* BaseWebViewController.h */,
+				73B3A91D2534A678008066B1 /* BaseWebViewController.m */,
 			);
 			path = ToolDemo;
 			sourceTree = "<group>";
@@ -1222,6 +1227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7355DB36250F9134000CF840 /* TestTableViewCell1.m in Sources */,
+				73B3A91E2534A678008066B1 /* BaseWebViewController.m in Sources */,
 				734D81922510EF36009834F7 /* SFAttributedString.m in Sources */,
 				04EBCC6124DD4434005D7D8C /* ViewController.m in Sources */,
 				7355DB32250F909D000CF840 /* TestTableViewCell.m in Sources */,
