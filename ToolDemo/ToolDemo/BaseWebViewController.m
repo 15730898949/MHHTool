@@ -18,13 +18,18 @@
     // Do any additional setup after loading the view.
     [super viewDidLoad];
     NSLog(@"12312312313");
+    
+    NSURL *path = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
+    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:path]];
+
     [self addScriptMessageHandlerWithName:@[@"setTitle",@"setBackgroundColor",@"getToken"] observeValue:^(WKUserContentController *userContentController, WKScriptMessage *message) {
         if([message.name isEqualToString:@"setTitle"]){
             self.titleLab.text = message.body;
         }else if([message.name isEqualToString:@"setBackgroundColor"]){
             self.navBar.backgroundColor = [self colorWithHexString:message.body alpha:1];
         }else if([message.name isEqualToString:@"getToken"]){
-            [self callJS:[NSString stringWithFormat:@"getToken('%@')",@"123123"]];
+            
+            [self callJS:[NSString stringWithFormat:@"%@('%@')",message.body,@"444444"]];
 
         }
 

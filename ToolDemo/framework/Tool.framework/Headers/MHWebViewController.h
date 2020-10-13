@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
+#import <Tool/MHNavigation.h>
+
+typedef void (^MessageBlock)(WKUserContentController *userContentController,WKScriptMessage *message);
 
 @interface MHWebViewController : UIViewController
 
@@ -40,18 +43,14 @@
 
 @property (nonatomic, strong) UIButton *closeBarButton;  //关闭按钮
 
-///跳转触发
-- (void)mh_webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation;
 
-///jsCallOC数组
-@property (nonatomic,strong) NSArray<NSString *> *JSInteractionArray;
+/** JS调用OC方法 */
+- (void)addScriptMessageHandlerWithName:(NSArray<NSString *> *)nameArr observeValue:(MessageBlock)callback;
 
-///jsCallOC
-- (void)mh_userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message;
 
-///网页加载完成
-- (void)mh_webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation;
-
+/** OC调用JS方法 */
+- (void)callJS:(NSString *)jsMethod;
+- (void)callJS:(NSString *)jsMethod handler:(void (^)(id response, NSError *error))handler;
 
 @end
 

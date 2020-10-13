@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iOS and Js</title>
+    <style type="text/css">
+      * {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+    <div style="margin-top: 100px">
+      <h1>Test how to use objective-c call js</h1><br/>
+      <div><input type="button" value="call js alert" onclick="callJsAlert()"></div>
+      <br/>
+      <div><input type="button" value="Call js confirm" onclick="callJsConfirm()"></div><br/>
+    </div>
+    <br/>
+    <div>
+      <div><input type="button" value="Call Js prompt " onclick="callJsInput()"></div><br/>
+      <div>Click me here: <a href="http://www.baidu.com">Jump to Baidu</a></div>
+    </div>
+    
+    <br/>
+    <div id="SwiftDiv">
+      <span id="jsParamFuncSpan" style="color: red; font-size: 50px;"></span>
+    </div>
+    
+    <script type="text/javascript">
+      function callJsAlert() {
+        alert('Objective-C call js to show alert');
+        
+        window.webkit.messageHandlers.AppModel.postMessage({body: 'call js alert in js'});
+      }
+    
+    function callJsConfirm() {
+      
+      // AppModel是我们所注入的对象
+    }
+    
+    window.webkit.messageHandlers.getToken.postMessage('getTokenBlock');
+
+    function getTokenBlock(token){
+        alert(token);
+    }
+    
+    function callJsInput() {
+
+    }
+      </script>
+  </body>
+</html>
