@@ -93,6 +93,9 @@
 		04EBCE4424DD4629005D7D8C /* SortNameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; };
 		04EBCE4524DD4629005D7D8C /* SortNameTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF824DD4629005D7D8C /* SortNameTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04F0EDB0253535F500F20FED /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F0EDAF253535F500F20FED /* test.html */; };
+		04F0EDC5253697F000F20FED /* StepSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F0EDC3253697EF00F20FED /* StepSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04F0EDC6253697F000F20FED /* StepSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0EDC4253697EF00F20FED /* StepSlider.m */; };
+		04F0EDC72536981300F20FED /* StepSlider.m in Headers */ = {isa = PBXBuildFile; fileRef = 04F0EDC4253697EF00F20FED /* StepSlider.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		63758211B845B97FB25449F5 /* Pods_Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B31E198B12B549366BC1F8 /* Pods_Tool.framework */; };
 		66CC420A319AECFB8CCED05B /* Pods_ToolDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D1D7E67C9F2FDA51D0218F /* Pods_ToolDemo.framework */; };
 		734D81922510EF36009834F7 /* SFAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 734D81902510EF36009834F7 /* SFAttributedString.m */; };
@@ -306,6 +309,8 @@
 		04EBCDF724DD4629005D7D8C /* SortNameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortNameTool.m; sourceTree = "<group>"; };
 		04EBCDF824DD4629005D7D8C /* SortNameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortNameTool.h; sourceTree = "<group>"; };
 		04F0EDAF253535F500F20FED /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		04F0EDC3253697EF00F20FED /* StepSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepSlider.h; sourceTree = "<group>"; };
+		04F0EDC4253697EF00F20FED /* StepSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepSlider.m; sourceTree = "<group>"; };
 		07D0A9888F1988F690CD6EE6 /* Pods-ToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.debug.xcconfig"; path = "Target Support Files/Pods-ToolDemo/Pods-ToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		734D81902510EF36009834F7 /* SFAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAttributedString.m; sourceTree = "<group>"; };
 		734D81912510EF36009834F7 /* SFAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAttributedString.h; sourceTree = "<group>"; };
@@ -580,6 +585,7 @@
 		04EBCD9024DD4628005D7D8C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				04F0EDC1253697EF00F20FED /* StepSlider */,
 				73B3A910253203D6008066B1 /* MHNavigation */,
 				73681464251257FE0026C6E7 /* UITableView+FDTemplateLayoutCell */,
 				04269F7F24FCE67000CFD9D5 /* FTPopOverMenu */,
@@ -780,6 +786,15 @@
 			path = "SortNameTool(首字母排序)";
 			sourceTree = "<group>";
 		};
+		04F0EDC1253697EF00F20FED /* StepSlider */ = {
+			isa = PBXGroup;
+			children = (
+				04F0EDC3253697EF00F20FED /* StepSlider.h */,
+				04F0EDC4253697EF00F20FED /* StepSlider.m */,
+			);
+			path = StepSlider;
+			sourceTree = "<group>";
+		};
 		734D81972510F7D6009834F7 /* NSMutableAttributedString */ = {
 			isa = PBXGroup;
 			children = (
@@ -945,6 +960,8 @@
 				734D819A2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h in Headers */,
 				73B3A913253203EA008066B1 /* MHNavigation.h in Headers */,
 				73B3A9152532048A008066B1 /* MHNavigation.m in Headers */,
+				04F0EDC5253697F000F20FED /* StepSlider.h in Headers */,
+				04F0EDC72536981300F20FED /* StepSlider.m in Headers */,
 				04B085C02500DACB00FB3554 /* NSString+Category.h in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
 			);
@@ -1287,6 +1304,7 @@
 				0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */,
 				04EBCE4424DD4629005D7D8C /* SortNameTool.m in Sources */,
 				04445C4024E0D98100D4FA5C /* MUHookMethodHelper.m in Sources */,
+				04F0EDC6253697F000F20FED /* StepSlider.m in Sources */,
 				04EBCE2924DD4629005D7D8C /* MHBaseModel.m in Sources */,
 				0414BA9424EA2F9F00EBE089 /* RKNotificationHub.m in Sources */,
 				04EBCE2124DD4629005D7D8C /* GZCMulitiDelegate.m in Sources */,

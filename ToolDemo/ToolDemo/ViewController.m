@@ -126,6 +126,19 @@
     [self addNavBar];
 
     self.titleLab.text = @"123333";
+    
+    
+    StepSlider *slider = [[StepSlider alloc]init];
+    slider.trackHeight = 4;
+    slider.trackCircleRadius = 0;
+    slider.sliderCircleRadius = 4;
+    slider.maxCount = 1000;
+    [self.view addSubview:slider];
+    [slider mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(16);
+        make.right.offset(-16);
+        make.top.offset(100);
+    }];
 
 }
 

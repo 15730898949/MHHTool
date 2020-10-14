@@ -39,6 +39,7 @@ typedef void (^MessageBlock)(WKUserContentController *userContentController,WKSc
 
 @property (nonatomic, assign) BOOL progressHide;
 
+@property (nonatomic,strong) UIProgressView *progress;  //进度条
 
 
 @property (nonatomic, strong) UIButton *closeBarButton;  //关闭按钮

@@ -20,7 +20,6 @@ static MessageBlock messageCallback = nil;
 @property(nonatomic , strong)id delegate;
 
 @property (nonatomic,strong) UIRefreshControl *refreshControl;  //刷新
-@property (nonatomic,strong) UIProgressView *progress;  //进度条
 @property (nonatomic,strong) UIButton *reloadBtn;  //重新加载按钮
 ///jsCallOC数组
 @property (nonatomic,strong) NSArray *messageHandlerName;
