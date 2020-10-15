@@ -117,13 +117,13 @@
 /**
  相关代理
  */
-@property (nonatomic, assign) id <CWCarouselDelegate> _Nullable delegate;
+@property (nonatomic, weak) id <CWCarouselDelegate> _Nullable delegate;
 
 
 /**
  相关数据源
  */
-@property (nonatomic, assign) id <CWCarouselDatasource> _Nullable datasource;
+@property (nonatomic, weak) id <CWCarouselDatasource> _Nullable datasource;
 
 
 /**
