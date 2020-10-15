@@ -129,10 +129,12 @@
     
     
     StepSlider *slider = [[StepSlider alloc]init];
+    [slider addTarget:self action:@selector(sliderChange:) forControlEvents:UIControlEventValueChanged];
     slider.trackHeight = 4;
     slider.trackCircleRadius = 0;
     slider.sliderCircleRadius = 4;
-    slider.maxCount = 1000;
+    slider.maxCount = 3;
+    slider.sliderBounces = NO;
     [self.view addSubview:slider];
     [slider mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.offset(16);
@@ -140,6 +142,10 @@
         make.top.offset(100);
     }];
 
+}
+
+- (void)sliderChange:(StepSlider *)slider{
+    NSLog(@"******%lu",slider.index);
 }
 
 - (void)textNetwork{

@@ -77,6 +77,7 @@ void withoutCAAnimation(withoutAnimationBlock code)
 - (void)addLayers
 {
     _dotsInteractionEnabled = YES;
+    _sliderBounces = YES;
     _trackCirclesArray = [[NSMutableArray alloc] init];
     _trackLabelsArray  = [[NSMutableArray alloc] init];
     _trackCircleImages = [[NSMutableDictionary alloc] init];
@@ -545,16 +546,18 @@ void withoutCAAnimation(withoutAnimationBlock code)
 
 - (void)endTouches
 {
-    NSUInteger newIndex = roundf([self indexCalculate]);
-    
-    if (newIndex != _index) {
-        _index = newIndex;
-        [self sendActionsForControlEvents:UIControlEventValueChanged];
+    if (_sliderBounces) {
+        NSUInteger newIndex = roundf([self indexCalculate]);
+        if (newIndex != _index) {
+            _index = newIndex;
+            [self sendActionsForControlEvents:UIControlEventValueChanged];
+        }
+        animateLayouts = YES;
+        [self setNeedsLayout];
+        _selectFeedback = nil;
+
     }
     
-    animateLayouts = YES;
-    [self setNeedsLayout];
-    _selectFeedback = nil;
 }
 
 #pragma mark - Texts

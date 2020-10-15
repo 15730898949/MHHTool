@@ -120,6 +120,12 @@ IB_DESIGNABLE
  */
 @property (nonatomic) IBInspectable BOOL enableHapticFeedback;
 
+/**
+ *  sliderBounces 是否需要弹性
+ *  Default value is `YES`.
+ */
+@property (nonatomic) IBInspectable BOOL sliderBounces;
+
 
 /**
  *  Set the `index` property to parameter value.

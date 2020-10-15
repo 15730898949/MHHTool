@@ -391,11 +391,12 @@ static MessageBlock messageCallback = nil;
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
-    //执行JS方法获取导航栏标题
-    [webView evaluateJavaScript:@"document.title" completionHandler:^(id _Nullable title, NSError * _Nullable error) {
-        self.title = title;
-    }];
-    
+    if (self.isFollowTitle) {
+        //执行JS方法获取导航栏标题
+        [webView evaluateJavaScript:@"document.title" completionHandler:^(id _Nullable title, NSError * _Nullable error) {
+            self.title = title;
+        }];
+    }
     [self showLeftBarButtonItem];
     [_refreshControl endRefreshing];
     self.progress.alpha = 0.0f;
