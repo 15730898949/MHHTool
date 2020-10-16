@@ -405,24 +405,6 @@
 			path = "RKNotificationHub(小红点)";
 			sourceTree = "<group>";
 		};
-		0414BA9624EA509C00EBE089 /* UILabel+Category */ = {
-			isa = PBXGroup;
-			children = (
-				0414BA9724EA50D200EBE089 /* UILabel+topString.h */,
-				0414BA9824EA50D200EBE089 /* UILabel+topString.m */,
-			);
-			path = "UILabel+Category";
-			sourceTree = "<group>";
-		};
-		0414BA9B24EA51F700EBE089 /* UIButton+Category */ = {
-			isa = PBXGroup;
-			children = (
-				0414BA9C24EA523700EBE089 /* UIButton+Category.h */,
-				0414BA9D24EA523700EBE089 /* UIButton+Category.m */,
-			);
-			path = "UIButton+Category";
-			sourceTree = "<group>";
-		};
 		041C5AB72507740A000670E7 /* TTGTagCollectionView(tag标签) */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,24 +443,6 @@
 				04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */,
 			);
 			path = "MUHookMethodHelper(交换方法)";
-			sourceTree = "<group>";
-		};
-		04445C4724E0F55200D4FA5C /* UIScrollView(下拉刷新） */ = {
-			isa = PBXGroup;
-			children = (
-				04445C4424E0F54300D4FA5C /* UIScrollView+Emm.h */,
-				04445C4324E0F54300D4FA5C /* UIScrollView+Emm.m */,
-			);
-			path = "UIScrollView(下拉刷新）";
-			sourceTree = "<group>";
-		};
-		04B085BD2500DA8000FB3554 /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				04B085BE2500DACB00FB3554 /* NSString+Category.h */,
-				04B085BF2500DACB00FB3554 /* NSString+Category.m */,
-			);
-			path = NSString;
 			sourceTree = "<group>";
 		};
 		04C4AABB24E285E90092532B /* LYEmptyView(空白页) */ = {
@@ -633,74 +597,31 @@
 		04EBCDA024DD4628005D7D8C /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				734D81972510F7D6009834F7 /* NSMutableAttributedString */,
 				0483C27224EF5B2A005BFD32 /* NullSafe.m */,
-				04B085BD2500DA8000FB3554 /* NSString */,
-				0414BA9B24EA51F700EBE089 /* UIButton+Category */,
-				0414BA9624EA509C00EBE089 /* UILabel+Category */,
-				04445C4724E0F55200D4FA5C /* UIScrollView(下拉刷新） */,
-				04EBCDA124DD4628005D7D8C /* NSDate+Extension */,
-				04EBCDA424DD4628005D7D8C /* UITextView+Placeholder */,
-				04EBCDA724DD4628005D7D8C /* UIView+Category */,
-				04EBCDAA24DD4628005D7D8C /* NSDecimalNumber+Addtion(精确计算) */,
-				04EBCDAD24DD4628005D7D8C /* NSDictionary+LSCore */,
-				04EBCDB024DD4628005D7D8C /* UIImage+MUColor */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		04EBCDA124DD4628005D7D8C /* NSDate+Extension */ = {
-			isa = PBXGroup;
-			children = (
+				734D81982510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h */,
+				734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */,
+				04B085BE2500DACB00FB3554 /* NSString+Category.h */,
+				04B085BF2500DACB00FB3554 /* NSString+Category.m */,
+				0414BA9C24EA523700EBE089 /* UIButton+Category.h */,
+				0414BA9D24EA523700EBE089 /* UIButton+Category.m */,
+				0414BA9724EA50D200EBE089 /* UILabel+topString.h */,
+				0414BA9824EA50D200EBE089 /* UILabel+topString.m */,
+				04445C4424E0F54300D4FA5C /* UIScrollView+Emm.h */,
+				04445C4324E0F54300D4FA5C /* UIScrollView+Emm.m */,
+				04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */,
+				04EBCDA624DD4628005D7D8C /* UITextView+Placeholder.h */,
+				04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */,
+				04EBCDAF24DD4628005D7D8C /* NSDictionary+LSCore.h */,
+				04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */,
+				04EBCDB224DD4628005D7D8C /* UIImage+MUColor.h */,
+				04EBCDA924DD4628005D7D8C /* UIView+Category.h */,
+				04EBCDA824DD4628005D7D8C /* UIView+Category.m */,
+				04EBCDAB24DD4628005D7D8C /* NSDecimalNumber+Addtion.h */,
+				04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */,
 				04EBCDA224DD4628005D7D8C /* NSDate+Extension.h */,
 				04EBCDA324DD4628005D7D8C /* NSDate+Extension.m */,
 			);
-			path = "NSDate+Extension";
-			sourceTree = "<group>";
-		};
-		04EBCDA424DD4628005D7D8C /* UITextView+Placeholder */ = {
-			isa = PBXGroup;
-			children = (
-				04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */,
-				04EBCDA624DD4628005D7D8C /* UITextView+Placeholder.h */,
-			);
-			path = "UITextView+Placeholder";
-			sourceTree = "<group>";
-		};
-		04EBCDA724DD4628005D7D8C /* UIView+Category */ = {
-			isa = PBXGroup;
-			children = (
-				04EBCDA924DD4628005D7D8C /* UIView+Category.h */,
-				04EBCDA824DD4628005D7D8C /* UIView+Category.m */,
-			);
-			path = "UIView+Category";
-			sourceTree = "<group>";
-		};
-		04EBCDAA24DD4628005D7D8C /* NSDecimalNumber+Addtion(精确计算) */ = {
-			isa = PBXGroup;
-			children = (
-				04EBCDAB24DD4628005D7D8C /* NSDecimalNumber+Addtion.h */,
-				04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */,
-			);
-			path = "NSDecimalNumber+Addtion(精确计算)";
-			sourceTree = "<group>";
-		};
-		04EBCDAD24DD4628005D7D8C /* NSDictionary+LSCore */ = {
-			isa = PBXGroup;
-			children = (
-				04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */,
-				04EBCDAF24DD4628005D7D8C /* NSDictionary+LSCore.h */,
-			);
-			path = "NSDictionary+LSCore";
-			sourceTree = "<group>";
-		};
-		04EBCDB024DD4628005D7D8C /* UIImage+MUColor */ = {
-			isa = PBXGroup;
-			children = (
-				04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */,
-				04EBCDB224DD4628005D7D8C /* UIImage+MUColor.h */,
-			);
-			path = "UIImage+MUColor";
+			path = Category;
 			sourceTree = "<group>";
 		};
 		04EBCDB324DD4628005D7D8C /* WSDatePickerView */ = {
@@ -793,15 +714,6 @@
 				04F0EDC4253697EF00F20FED /* StepSlider.m */,
 			);
 			path = StepSlider;
-			sourceTree = "<group>";
-		};
-		734D81972510F7D6009834F7 /* NSMutableAttributedString */ = {
-			isa = PBXGroup;
-			children = (
-				734D81982510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h */,
-				734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */,
-			);
-			path = NSMutableAttributedString;
 			sourceTree = "<group>";
 		};
 		734D819C25110643009834F7 /* 表情键盘 */ = {

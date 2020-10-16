@@ -9,7 +9,58 @@
 #import "UIButton+Category.h"
 #import <objc/runtime.h>
 
+
+//hook
+void BttonHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL ,const char * newClassName ,SEL newSEL){
+    
+    Class originalClass = objc_getClass(originalClassName);//get a class through a string
+    if (originalClass == 0) {
+        NSLog(@"I can't find a class through a 'originalClassName'");
+        return;
+    }
+    Class newClass     = objc_getClass(newClassName);
+    if (newClass == 0) {
+        NSLog(@"I can't find a class through a 'newClassName'");
+        return;
+    }
+    class_addMethod(originalClass, newSEL, class_getMethodImplementation(newClass, newSEL), nil);//if newSEL not found in originalClass,it will auto add a method to this class;
+    Method oldMethod = class_getInstanceMethod(originalClass, originalSEL);
+    assert(oldMethod);
+    Method newMethod = class_getInstanceMethod(originalClass, newSEL);
+    assert(newMethod);
+    method_exchangeImplementations(oldMethod, newMethod);
+}
+@interface UIButton(Category)
+@property (nonatomic,strong) dispatch_source_t timer;
+
+
+@end
+
 @implementation UIButton(Category)
++(void)load{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+    [self muHookMethodViewController:NSStringFromClass([self class]) orignalSEL:NSSelectorFromString(@"dealloc") newClassName:NSStringFromClass([self class]) newSEL: @selector(mu_Dealloc)];
+
+    });
+}
+
++(void)muHookMethodViewController:(NSString *)originalClassName orignalSEL:(SEL)originalSEL newClassName:(NSString *)newClassName newSEL:(SEL)newSEL{
+    
+    const char * originalName = [originalClassName UTF8String];
+    const char * newName      = [newClassName UTF8String];
+    BttonHookMethodSubDecrption(originalName, originalSEL, newName, newSEL);
+}
+
+- (void)mu_Dealloc{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidChangeStatusBarFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"enterForeground" object:nil];
+    
+    [self mu_Dealloc];
+}
+
+
 
 - (void)layoutButtonWithEdgeInsetsStyle:(MHButtonEdgeInsetsStyle)style
                         imageTitleSpace:(CGFloat)space {
@@ -71,6 +122,8 @@
     
     return [objc_getAssociatedObject(self, @selector(swapPositionMu)) boolValue];
 }
+
+
 
 -(void)startCountDownWithSeconds:(NSInteger)seconds{
     __block NSInteger timeOut = seconds;
