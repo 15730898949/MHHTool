@@ -30,11 +30,6 @@ void BttonHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL
     assert(newMethod);
     method_exchangeImplementations(oldMethod, newMethod);
 }
-@interface UIButton(Category)
-@property (nonatomic,strong) dispatch_source_t timer;
-
-
-@end
 
 @implementation UIButton(Category)
 +(void)load{
@@ -58,6 +53,11 @@ void BttonHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"enterForeground" object:nil];
     
     [self mu_Dealloc];
+}
+
+- (dispatch_source_t)timer{
+     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    return dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
 }
 
 
