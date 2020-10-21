@@ -662,8 +662,13 @@ static CGFloat itemMargin = 5;
     }
     TZAssetModel *model = _models[index];
     
-    TZPreviewController *previewVc = [[TZPreviewController alloc] initWithPhotos:_models currentIndex:index tzImagePickerVc:(TZImagePickerController *)self.navigationController];
-    [self presentViewController:previewVc animated:YES completion:nil];
+//    TZPreviewController *previewVc = [[TZPreviewController alloc] initWithPhotos:_models currentIndex:index tzImagePickerVc:(TZImagePickerController *)self.navigationController];
+//    [self presentViewController:previewVc animated:YES completion:nil];
+    
+    TZPhotoPreviewController *photoPreviewVc = [[TZPhotoPreviewController alloc] initWithPhotos:_models currentIndex:index tzImagePickerVc:(TZImagePickerController *)self.navigationController];
+    photoPreviewVc.currentIndex = index;
+    photoPreviewVc.models = _models;
+    [self pushPhotoPrevireViewController:photoPreviewVc];
     return;
     if (model.type == TZAssetModelMediaTypeVideo && !tzImagePickerVc.allowPickingMultipleVideo) {
         if (tzImagePickerVc.selectedModels.count > 0) {
