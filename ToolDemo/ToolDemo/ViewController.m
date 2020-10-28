@@ -12,7 +12,6 @@
 #import <Tool/UIImage+MUColor.h>
 #import <Tool/MHHTTPSessionManager.h>
 #import <Masonry/Masonry.h>
-#import <Tool/UIScrollView+Emm.h>
 #import <Tool/LYEmptyViewHeader.h>
 #import <Tool/MBProgressHUD+Add.h>
 #import <Tool/UIView+Category.h>
@@ -25,7 +24,6 @@
 #import "NSMutableAttributedString+SCRAttributedStringBuilder.h"
 #import <Tool/Tool.h>
 #import "BaseWebViewController.h"
-#import "TZImagePickerController.h"
 @interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
@@ -39,6 +37,7 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
+    [self addNavBar];
 
 //    NSMutableAttributedString *textFont = [[NSMutableAttributedString alloc] initWithString:@"NSAttributedString设置字体大小"];
     [SFAtStringCore registerAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20]} forLabel:@"LABEL"];
@@ -56,7 +55,7 @@
     self.tableView.backgroundColor = UIColorFromHex(0x161b2f, 1);
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImage:nil titleStr:@"暂无数据" detailStr:nil btnTitleStr:@"点击重试" btnClickBlock:^{
-        [self.dataArray addObject:[NSString stringWithFormat:@"%ld",self.tableView.page]];
+//        [self.dataArray addObject:[NSString stringWithFormat:@"%ld",self.tableView.page]];
         [self.tableView reloadData];
 //        [MBProgressHUD showRingInView:self.view Msg:nil animation:YES];
 //        [MBProgressHUD showActivView:self.view Msg:@"加载中" animation:YES];
@@ -85,7 +84,8 @@
 
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.navBar.mas_bottom);
     }];
     self.lable = [[UILabel alloc]init];
     self.lable.textColor = [UIColor redColor];
@@ -124,7 +124,6 @@
 //    [self.pageMenu setItems:arr selectedItemIndex:0];
 ////    [self.pageMenu setItems:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"] selectedItemIndex:0];
     
-    [self addNavBar];
 
     self.titleLab.text = @"123333";
     
@@ -171,7 +170,7 @@
 }
 
 - (NSInteger)numbersForCarousel{
-    return 5;
+    return 1;
 }
 
 - (UICollectionViewCell *)viewForCarousel:(CWCarousel *)carousel indexPath:(NSIndexPath *)indexPath index:(NSInteger)index{
@@ -233,42 +232,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    ViewController * vc = [[ViewController alloc]init];
-//    [self.navigationController pushViewController:vc animated:YES];
-//    BaseWebViewController *vc = [[BaseWebViewController alloc]init];
-//    vc.urlString = @"http://47.116.75.232:23341/";
-//    [self.navigationController pushViewController:vc animated:YES];
-    //初始化 TZImagePickerController  MaxImagerCount 相片最大可选数量  columnNumber 相册选择器中 一行显示cell的数量
-    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc]initWithMaxImagesCount:9 columnNumber:4 delegate:self pushPhotoPickerVc:YES];
-    
-    imagePickerVc.isSelectOriginalPhoto = NO;//是否显示原图
-    
-    imagePickerVc.allowTakePicture = YES;//是否允许显示拍照按钮  本次已关闭 如果有需要可自行赋值
-    imagePickerVc.allowTakeVideo = YES;//同上
-    
-    imagePickerVc.videoMaximumDuration = 10;//视频的最大拍摄时间
-    //拍摄视频质量
-    [imagePickerVc setUiImagePickerControllerSettingBlock:^(UIImagePickerController *imagePickerController) {
-        imagePickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
-    }];
-    
-    imagePickerVc.autoSelectCurrentWhenDone = NO;// 如果用户未选择任何图片，在点击完成按钮时自动选中当前图片，默认YES
-    imagePickerVc.iconThemeColor = [UIColor colorWithRed:31 / 255.0 green:185 / 255.0 blue:34 / 255.0 alpha:1.0];
-    imagePickerVc.showPhotoCannotSelectLayer = YES;//如果超过最大选择图片数据  其他照片会显示 模糊图层
-    imagePickerVc.cannotSelectLayerColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
-    //是否可以多种类选择  此处 全部设置成NO  可以根据需要 动态设置
-    imagePickerVc.allowPickingVideo = YES;//是否允许选择视频
-    imagePickerVc.allowPickingImage = YES;//是否允许选择图片
-    imagePickerVc.allowPickingOriginalPhoto = NO;//默认为YES，如果设置为NO,原图按钮将隐藏，用户不能选择发送原图
-    imagePickerVc.allowPickingGif = YES;//单选是否允许选择gif
-    
-//    imagePickerVc.allowPickingMultipleVideo = NO; // 是否可以多选视频
-//    imagePickerVc.sortAscendingByModificationDate = YES;//照片排列按修改时间升序 默认YES
-
-    imagePickerVc.allowCrop = YES;
-        
-    imagePickerVc.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:imagePickerVc animated:YES completion:nil];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
