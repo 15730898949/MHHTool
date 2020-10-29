@@ -59,7 +59,7 @@
         [self.tableView reloadData];
 //        [MBProgressHUD showRingInView:self.view Msg:nil animation:YES];
 //        [MBProgressHUD showActivView:self.view Msg:@"加载中" animation:YES];
-        [MBProgressHUD showMsg:@"暂无数据"];
+        [MBHUD show];
         
     }];
 //    [MHCurrentViewController.navigationController pushViewController:[ViewController new] animated:YES];
@@ -232,6 +232,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        [MBHUD show];
+//        [MBHUD hideAnimated:YES afterDelay:3];
+        [MBHUD hide];
+    }else if (indexPath.row == 1){
+        [MBHUD showRingInView:self.tableView.tableHeaderView Msg:@"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%ld" animation:YES];
+        [MBHUD hideAnimated:YES afterDelay:3];
+
+    } else{
+        [MBHUD showMsg:[NSString stringWithFormat:@"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%ld",indexPath.row]];
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{

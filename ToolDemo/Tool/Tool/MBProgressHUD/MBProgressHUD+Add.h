@@ -9,24 +9,29 @@
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
 
+#define MBHUD [MBProgressHUD sharedMBHUD]
+
 @interface MBProgressHUD(Add)
 
-+(MBProgressHUD *)show;
-+(void)hide;
++(MBProgressHUD *)sharedMBHUD;
+
+- (void)show;
+- (void)hide;
+
 //加载环形
-+(MBProgressHUD *)showRingInView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation;
+-(void)showRingInView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation;
 ///系统菊花样式
-+(MBProgressHUD *)showActivView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation;
-+(MBProgressHUD *)showInView:(UIView *)view animation:(BOOL)animation;
-+(void)hideInView:(UIView *)view animation:(BOOL)animation;
+-(void)showActivView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation;
+
+-(void)showInView:(UIView *)view animation:(BOOL)animation;
 
 +(void)setHudStyle:(MBProgressHUD *)hud;
 
-+(void)showMsg:(NSString *)msg;
-+(void)showMsgInView:(UIView *)view msg:(NSString *)msg;
-+(void)showMsg:(NSString *)msg andOffer:(CGFloat)offerset;
-+(void)showMsg:(NSString *)msg andDelay:(float)delay;
-+(void)showInView:(UIView *)view Msg:(NSString *)msg andOffer:(CGFloat)offerset andDelay:(float)delay;
+-(void)showMsg:(NSString *)msg;
+-(void)showMsgInView:(UIView *)view msg:(NSString *)msg;
+-(void)showMsg:(NSString *)msg andOffer:(CGFloat)offerset;
+-(void)showMsg:(NSString *)msg andDelay:(float)delay;
+-(void)showInView:(UIView *)view Msg:(NSString *)msg andOffer:(CGFloat)offerset andDelay:(float)delay;
 
 
 
