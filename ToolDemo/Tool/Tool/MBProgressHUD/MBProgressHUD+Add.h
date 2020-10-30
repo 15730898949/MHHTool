@@ -20,12 +20,12 @@
 
 //加载环形
 -(void)showRingInView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation;
-///系统菊花样式
--(void)showActivView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation;
 
 -(void)showInView:(UIView *)view animation:(BOOL)animation;
 
-+(void)setHudStyle:(MBProgressHUD *)hud;
+- (void)showProgress:(float)progress;
+
+-(void)setHudStyle;
 
 -(void)showMsg:(NSString *)msg;
 -(void)showMsgInView:(UIView *)view msg:(NSString *)msg;

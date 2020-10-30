@@ -29,7 +29,7 @@ static MBProgressHUD * _MBHUD = nil;
         _MBHUD.layer.shadowOffset = CGSizeMake(3,3);//阴影偏移的位置
         _MBHUD.layer.shadowOpacity = 0.6;//阴影透明度
         _MBHUD.layer.shadowRadius = 5;//阴影圆角
-        [MBProgressHUD setHudStyle:_MBHUD];
+        [_MBHUD setHudStyle];
     });
     return _MBHUD;
 
@@ -44,6 +44,9 @@ static MBProgressHUD * _MBHUD = nil;
 - (void)show{
     [self showRingInView:[[UIApplication sharedApplication].delegate window] Msg:@"" animation:YES];
 }
+-(void)showInView:(UIView *)view animation:(BOOL)animation {
+    [self showRingInView:view Msg:@"" animation:animation];
+}
 
 
 -(void)showRingInView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation{
@@ -53,6 +56,7 @@ static MBProgressHUD * _MBHUD = nil;
         [view addSubview:hud];
     }
     hud.mode = MBProgressHUDModeCustomView;
+    hud.backgroundView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
     hud.userInteractionEnabled = YES;
     SVIndefiniteAnimatedView *arcview = [[SVIndefiniteAnimatedView alloc]initWithFrame:CGRectZero];
     arcview.strokeColor = [UIColor whiteColor];
@@ -82,35 +86,13 @@ static MBProgressHUD * _MBHUD = nil;
                                                                    multiplier:1
                                                                      constant:arcview.frame.size.height];
     [hud.customView addConstraints:@[w_constraint,h_constraint]];
-    hud.margin = 10.f;
-    hud.label.font = [UIFont systemFontOfSize:16];
     hud.label.textColor = [UIColor whiteColor];
     hud.label.text = msg;
 
     [hud showAnimated:animation];
 
 }
-///系统菊花样式
--(void)showActivView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation{
-    MBProgressHUD *hud = self;
-    hud.mode = MBProgressHUDModeIndeterminate;
-    if (hud.superview != view) {
-        [self hideAnimated:NO];
-        [view addSubview:hud];
-    }
-    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-    hud.bezelView.color = [[UIColor blackColor]colorWithAlphaComponent:0.7];
-    hud.label.text = msg;
-    hud.label.textColor = [UIColor whiteColor];
-    hud.label.numberOfLines = 0;
-    [MBProgressHUD setHudStyle:hud];
 
-    [hud showAnimated:animation];
-}
-
--(void)showInView:(UIView *)view animation:(BOOL)animation {
-    [self showRingInView:view Msg:@"" animation:animation];
-}
 
 //+(void)hideInView:(UIView *)view animation:(BOOL)animation{
 //    dispatch_async(dispatch_get_main_queue(), ^{
@@ -126,11 +108,22 @@ static MBProgressHUD * _MBHUD = nil;
 //
 //}
 
+- (void)showProgress:(float)progress{
+    MBHUD.mode = MBProgressHUDModeAnnularDeterminate;
+    [MBHUD setHudStyle];
+    MBHUD.userInteractionEnabled = YES;
+    if (self.superview != [[UIApplication sharedApplication].delegate window]) {
+        [self hideAnimated:NO];
+        [[[UIApplication sharedApplication].delegate window] addSubview:self];
+    }
+    [MBHUD showAnimated:YES];
+    MBHUD.label.textColor = [UIColor whiteColor];
+    MBHUD.progress = progress;
+}
 
 #pragma -mark 设置样式
-+(void)setHudStyle:(MBProgressHUD *)hud {
-
-    for(UIView *view in hud.bezelView.subviews){
+-(void)setHudStyle{
+    for(UIView *view in self.bezelView.subviews){
 
         if([view isKindOfClass:[UIActivityIndicatorView class]]){
             UIActivityIndicatorView *indicatorView = (UIActivityIndicatorView *) view;
@@ -145,8 +138,8 @@ static MBProgressHUD * _MBHUD = nil;
         }
 
     }
-    hud.bezelView.color = [UIColor colorWithRed:41/255.f green:42/255.f blue:47/255.f alpha:0.7f];
-    hud.backgroundView.backgroundColor  = [[UIColor blackColor]colorWithAlphaComponent:0.1];
+    self.bezelView.color = [UIColor colorWithRed:41/255.f green:42/255.f blue:47/255.f alpha:0.7f];
+    self.backgroundView.backgroundColor  = [[UIColor blackColor]colorWithAlphaComponent:0.1];
 
 }
 #pragma -mark 显示text
@@ -179,7 +172,7 @@ static MBProgressHUD * _MBHUD = nil;
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.offset = CGPointMake(hud.offset.x, hud.offset.y+offerset);
     hud.bezelView.color = [UIColor colorWithRed:41/255.f green:42/255.f blue:47/255.f alpha:0.7f];
-    hud.backgroundView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
+    hud.backgroundView.backgroundColor = [UIColor clearColor];
     hud.margin = 10;
     
     [hud showAnimated:YES];

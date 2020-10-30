@@ -35,7 +35,6 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-
     [super viewDidLoad];
     [self addNavBar];
 
@@ -216,7 +215,8 @@
 //    cell.textLabel.sf_text = @"[LABEL]Give  to  [RED]SFAttri[[!]timg_1,0,0,20,20][LABEL]butedString[asdad]";
 //    TestTableViewCell1*cell  =[TestTableViewCell1 cellWithTableView:tableView indexPath:indexPath];
 //    cell.backgroundColor = [UIColor redColor];
-    
+    cell.backgroundColor = [UIColor redColor];
+
     NSString *str = @"123";
     NSMutableAttributedString *attstr =  str.attributedBuild
     .appendSizeImage([UIImage imageNamed:@"timg_1"],CGSizeMake(20, 20))
@@ -234,12 +234,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         [MBHUD show];
-//        [MBHUD hideAnimated:YES afterDelay:3];
-        [MBHUD hide];
-    }else if (indexPath.row == 1){
-        [MBHUD showRingInView:self.tableView.tableHeaderView Msg:@"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%ld" animation:YES];
         [MBHUD hideAnimated:YES afterDelay:3];
-
+    }else if (indexPath.row == 1){
+//        [MBHUD showRingInView:self.view Msg:@"12312312" animation:YES];
+        
     } else{
         [MBHUD showMsg:[NSString stringWithFormat:@"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%ld",indexPath.row]];
     }
@@ -247,6 +245,13 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     self.navigationBarTranslationY =  scrollView.contentOffset.y;
+    
+    [MBHUD showProgress:scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.height)];
+    MBHUD.userInteractionEnabled = NO;
+//    MBHUD.progress = scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.height);
+//    MBHUD.label.text = [NSString stringWithFormat:@"%.0f%%",MBHUD.progress*100];
+    [MBHUD.button setTitle:@"111" forState:UIControlStateNormal];
+
 }
 
 
