@@ -20,10 +20,11 @@
 
 //加载环形
 -(void)showRingInView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation;
-
--(void)showInView:(UIView *)view animation:(BOOL)animation;
+-(void)showLoadingInView:(UIView *)view animation:(BOOL)animation;
+-(void)showLoadingMsg:(NSString *)msg;
 
 - (void)showProgress:(float)progress;
+- (void)showProgress:(float)progress inView:(UIView *)view animation:(BOOL)animation;
 
 -(void)setHudStyle;
 

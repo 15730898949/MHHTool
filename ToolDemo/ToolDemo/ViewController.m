@@ -236,7 +236,7 @@
         [MBHUD show];
         [MBHUD hideAnimated:YES afterDelay:3];
     }else if (indexPath.row == 1){
-//        [MBHUD showRingInView:self.view Msg:@"12312312" animation:YES];
+        [MBHUD showMsg:@"111" andOffer:100];
         
     } else{
         [MBHUD showMsg:[NSString stringWithFormat:@"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%ld",indexPath.row]];
@@ -246,11 +246,11 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     self.navigationBarTranslationY =  scrollView.contentOffset.y;
     
-    [MBHUD showProgress:scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.height)];
+    [MBHUD showProgress:scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.height) inView:self.tableView.tableHeaderView animation:YES];
     MBHUD.userInteractionEnabled = NO;
 //    MBHUD.progress = scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.height);
 //    MBHUD.label.text = [NSString stringWithFormat:@"%.0f%%",MBHUD.progress*100];
-    [MBHUD.button setTitle:@"111" forState:UIControlStateNormal];
+//    [MBHUD.button setTitle:@"111" forState:UIControlStateNormal];
 
 }
 

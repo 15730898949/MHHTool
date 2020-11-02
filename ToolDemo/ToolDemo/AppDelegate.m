@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#import <Tool/MBProgressHUD+Add.h>
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    MBHUD.label.textColor = [UIColor whiteColor];
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     ViewController *vc = [[ViewController alloc]init];
     UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:vc];

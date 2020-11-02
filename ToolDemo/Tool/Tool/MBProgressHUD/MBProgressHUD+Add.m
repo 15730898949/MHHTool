@@ -17,7 +17,7 @@ static MBProgressHUD * _MBHUD = nil;
 +(MBProgressHUD *)sharedMBHUD{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _MBHUD = [[self alloc]initWithView:[[UIApplication sharedApplication].delegate window]];
+        _MBHUD = [[self alloc]init];
         _MBHUD.removeFromSuperViewOnHide = YES;
         _MBHUD.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
         _MBHUD.bezelView.color = [[UIColor blackColor]colorWithAlphaComponent:0.7];
@@ -44,8 +44,11 @@ static MBProgressHUD * _MBHUD = nil;
 - (void)show{
     [self showRingInView:[[UIApplication sharedApplication].delegate window] Msg:@"" animation:YES];
 }
--(void)showInView:(UIView *)view animation:(BOOL)animation {
+-(void)showLoadingInView:(UIView *)view animation:(BOOL)animation {
     [self showRingInView:view Msg:@"" animation:animation];
+}
+-(void)showLoadingMsg:(NSString *)msg{
+    [self showRingInView:[[UIApplication sharedApplication].delegate window] Msg:msg animation:YES];
 }
 
 
@@ -88,6 +91,8 @@ static MBProgressHUD * _MBHUD = nil;
     [hud.customView addConstraints:@[w_constraint,h_constraint]];
     hud.label.textColor = [UIColor whiteColor];
     hud.label.text = msg;
+    hud.offset = CGPointMake(0, 0);
+
 
     [hud showAnimated:animation];
 
@@ -109,16 +114,24 @@ static MBProgressHUD * _MBHUD = nil;
 //}
 
 - (void)showProgress:(float)progress{
-    MBHUD.mode = MBProgressHUDModeAnnularDeterminate;
-    [MBHUD setHudStyle];
-    MBHUD.userInteractionEnabled = YES;
-    if (self.superview != [[UIApplication sharedApplication].delegate window]) {
+    [self showProgress:progress inView:[[UIApplication sharedApplication].delegate window] animation:YES];
+}
+
+- (void)showProgress:(float)progress inView:(UIView *)view animation:(BOOL)animation{
+    MBProgressHUD *hud = self;
+    hud.mode = MBProgressHUDModeAnnularDeterminate;
+    hud.userInteractionEnabled = YES;
+    [hud setHudStyle];
+    hud.backgroundView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
+    if (self.superview != view) {
         [self hideAnimated:NO];
-        [[[UIApplication sharedApplication].delegate window] addSubview:self];
+        [view addSubview:self];
     }
-    [MBHUD showAnimated:YES];
-    MBHUD.label.textColor = [UIColor whiteColor];
-    MBHUD.progress = progress;
+    [hud showAnimated:animation];
+    hud.label.textColor = [UIColor whiteColor];
+    hud.progress = progress;
+    hud.offset = CGPointMake(0, 0);
+
 }
 
 #pragma -mark 设置样式
@@ -169,12 +182,8 @@ static MBProgressHUD * _MBHUD = nil;
     hud.mode=MBProgressHUDModeText;
     hud.label.text = msg;
     hud.label.textColor = [UIColor whiteColor];
-    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-    hud.offset = CGPointMake(hud.offset.x, hud.offset.y+offerset);
-    hud.bezelView.color = [UIColor colorWithRed:41/255.f green:42/255.f blue:47/255.f alpha:0.7f];
-    hud.backgroundView.backgroundColor = [UIColor clearColor];
-    hud.margin = 10;
-    
+    hud.offset = CGPointMake(0, offerset);
+
     [hud showAnimated:YES];
     [hud hideAnimated:YES afterDelay:delay];
 
