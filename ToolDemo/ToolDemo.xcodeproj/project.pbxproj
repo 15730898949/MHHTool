@@ -21,6 +21,131 @@
 		041C5ABD2507740B000670E7 /* TTGTextTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5AB92507740A000670E7 /* TTGTextTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		041C5ABE2507740B000670E7 /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; };
 		041C5ABF2507740B000670E7 /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; };
+		042356F725552F2C00349CBD /* UITableView+FDIndexPathHeightCache.m in Headers */ = {isa = PBXBuildFile; fileRef = 73681468251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		042356F825552F2C00349CBD /* UITableView+FDKeyedHeightCache.m in Headers */ = {isa = PBXBuildFile; fileRef = 7368146A251258180026C6E7 /* UITableView+FDKeyedHeightCache.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		042356F925552F2C00349CBD /* UITableView+FDTemplateLayoutCell.m in Headers */ = {isa = PBXBuildFile; fileRef = 73681465251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		042356FA25552F2C00349CBD /* UITableView+FDTemplateLayoutCellDebug.m in Headers */ = {isa = PBXBuildFile; fileRef = 73681469251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		042356FB25552F2C00349CBD /* FTPopOverMenu.m in Headers */ = {isa = PBXBuildFile; fileRef = 04269F8124FCE67000CFD9D5 /* FTPopOverMenu.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		042356FC25552F2C00349CBD /* MBProgressHUD.m in Headers */ = {isa = PBXBuildFile; fileRef = 04089EDB24ECB59E0044DD26 /* MBProgressHUD.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		042356FD25552F2C00349CBD /* MBProgressHUD+Add.m in Headers */ = {isa = PBXBuildFile; fileRef = 04089EDC24ECB59E0044DD26 /* MBProgressHUD+Add.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		042356FE25552F2C00349CBD /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Headers */ = {isa = PBXBuildFile; fileRef = 734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		042356FF25552F2C00349CBD /* NullSafe.m in Headers */ = {isa = PBXBuildFile; fileRef = 0483C27224EF5B2A005BFD32 /* NullSafe.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570025552F2C00349CBD /* NSString+Category.m in Headers */ = {isa = PBXBuildFile; fileRef = 04B085BF2500DACB00FB3554 /* NSString+Category.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570125552F2C00349CBD /* UIButton+Category.m in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9D24EA523700EBE089 /* UIButton+Category.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570225552F2C00349CBD /* UILabel+topString.m in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570325552F2C00349CBD /* NSDate+Extension.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+Extension.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570425552F2C00349CBD /* UITextView+Placeholder.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570525552F2C00349CBD /* UIView+Category.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA824DD4628005D7D8C /* UIView+Category.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570625552F2C00349CBD /* NSDecimalNumber+Addtion.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570725552F2C00349CBD /* NSDictionary+LSCore.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570825552F2C00349CBD /* UIImage+MUColor.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570925552F2C00349CBD /* RKNotificationHub.m in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9224EA2F9E00EBE089 /* RKNotificationHub.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570A25552F2C00349CBD /* LYEmptyBaseView.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AABC24E285E90092532B /* LYEmptyBaseView.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570B25552F2C00349CBD /* LYEmptyView.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC224E285EA0092532B /* LYEmptyView.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570C25552F2C00349CBD /* UIView+Empty.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AABE24E285E90092532B /* UIView+Empty.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570D25552F2C00349CBD /* UIView+LYExtension.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AABF24E285E90092532B /* UIView+LYExtension.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570E25552F2C00349CBD /* MUHookMethodHelper.m in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570F25552F2C00349CBD /* TBCityIconFont.m in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571025552F2C00349CBD /* TBCityIconInfo.m in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571125552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571225552F2C00349CBD /* MHWebViewController.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571325552F2C00349CBD /* WSDatePickerView.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB524DD4628005D7D8C /* WSDatePickerView.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571525552F2C00349CBD /* SPAlertController.m in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571625552F2C00349CBD /* GZCMulitiDelegate.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571725552F2C00349CBD /* CWCarousel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCC24DD4629005D7D8C /* CWCarousel.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571825552F2C00349CBD /* CWFlowLayout.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571925552F2C00349CBD /* MHBaseModel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD324DD4629005D7D8C /* MHBaseModel.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571A25552F2C00349CBD /* SPPageMenu.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF424DD4629005D7D8C /* SPPageMenu.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571B25552F2C00349CBD /* SortNameTool.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571C25552F2C00349CBD /* TTGTagCollectionView.m in Headers */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571D25552F2C00349CBD /* TTGTextTagCollectionView.m in Headers */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571E25552F2C00349CBD /* CWFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD124DD4629005D7D8C /* CWFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423571F25552F2C00349CBD /* NSDictionary+LSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAF24DD4628005D7D8C /* NSDictionary+LSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572025552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9224DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572125552F2C00349CBD /* UIView+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA924DD4628005D7D8C /* UIView+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572225552F2C00349CBD /* GZCMulitiDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCA24DD4629005D7D8C /* GZCMulitiDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572325552F2C00349CBD /* UIImage+MUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB224DD4628005D7D8C /* UIImage+MUColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572425552F2C00349CBD /* WSDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB424DD4628005D7D8C /* WSDatePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572525552F2C00349CBD /* NSDecimalNumber+Addtion.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAB24DD4628005D7D8C /* NSDecimalNumber+Addtion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572625552F2C00349CBD /* ZZLimitInputManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDBC24DD4629005D7D8C /* ZZLimitInputManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572725552F2C00349CBD /* MHWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9F24DD4628005D7D8C /* MHWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572825552F2C00349CBD /* SortNameTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF824DD4629005D7D8C /* SortNameTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572925552F2C00349CBD /* SPAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7524FCC11C00CFD9D5 /* SPAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572A25552F2C00349CBD /* SPPageMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF524DD4629005D7D8C /* SPPageMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572B25552F2C00349CBD /* MHBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD424DD4629005D7D8C /* MHBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572C25552F2C00349CBD /* CWCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD024DD4629005D7D8C /* CWCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572D25552F2C00349CBD /* UITextView+Placeholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA624DD4628005D7D8C /* UITextView+Placeholder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572E25552F2C00349CBD /* ToolMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF224DD4629005D7D8C /* ToolMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572F25552F2C00349CBD /* TBCityIconInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573025552F2C00349CBD /* TBCityIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3724E0D84E00D4FA5C /* TBCityIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573125552F2C00349CBD /* MUHookMethodHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3D24E0D98100D4FA5C /* MUHookMethodHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573325552F2C00349CBD /* NSDate+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA224DD4628005D7D8C /* NSDate+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573425552F2C00349CBD /* LYEmptyBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC024E285E90092532B /* LYEmptyBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573525552F2C00349CBD /* UIView+Empty.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC424E285EA0092532B /* UIView+Empty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573625552F2C00349CBD /* UIView+LYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC324E285EA0092532B /* UIView+LYExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573725552F2C00349CBD /* LYEmptyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AABD24E285E90092532B /* LYEmptyView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573825552F2C00349CBD /* UILabel+topString.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9724EA50D200EBE089 /* UILabel+topString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573925552F2C00349CBD /* UIButton+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9C24EA523700EBE089 /* UIButton+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573A25552F2C00349CBD /* LYEmptyViewHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC124E285E90092532B /* LYEmptyViewHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573B25552F2C00349CBD /* RKNotificationHub.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9124EA2F9E00EBE089 /* RKNotificationHub.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573C25552F2C00349CBD /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 04089EDD24ECB59E0044DD26 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573D25552F2C00349CBD /* FTPopOverMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573E25552F2C00349CBD /* TTGTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5AB82507740A000670E7 /* TTGTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573F25552F2C00349CBD /* TTGTextTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5AB92507740A000670E7 /* TTGTextTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574025552F2C00349CBD /* UITableView+FDKeyedHeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 7368146B251258180026C6E7 /* UITableView+FDKeyedHeightCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574125552F2C00349CBD /* UITableView+FDIndexPathHeightCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 73681466251258180026C6E7 /* UITableView+FDIndexPathHeightCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574225552F2C00349CBD /* UITableView+FDTemplateLayoutCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7368146C251258180026C6E7 /* UITableView+FDTemplateLayoutCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574325552F2C00349CBD /* UITableView+FDTemplateLayoutCellDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 73681467251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574425552F2C00349CBD /* MBProgressHUD+Add.h in Headers */ = {isa = PBXBuildFile; fileRef = 04089EDE24ECB59E0044DD26 /* MBProgressHUD+Add.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574525552F2C00349CBD /* ZZLimitInputManager.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDBB24DD4629005D7D8C /* ZZLimitInputManager.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574625552F2C00349CBD /* NSMutableAttributedString+SCRAttributedStringBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 734D81982510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574725552F2C00349CBD /* MHNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B3A911253203EA008066B1 /* MHNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574825552F2C00349CBD /* MHNavigation.m in Headers */ = {isa = PBXBuildFile; fileRef = 73B3A912253203EA008066B1 /* MHNavigation.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574925552F2C00349CBD /* StepSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F0EDC3253697EF00F20FED /* StepSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574A25552F2C00349CBD /* StepSlider.m in Headers */ = {isa = PBXBuildFile; fileRef = 04F0EDC4253697EF00F20FED /* StepSlider.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574B25552F2C00349CBD /* NSString+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B085BE2500DACB00FB3554 /* NSString+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574C25552F2C00349CBD /* Tool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD7524DD45FB005D7D8C /* Tool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423574E25552F2C00349CBD /* UIImage+MUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */; };
+		0423574F25552F2C00349CBD /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDF424DD4629005D7D8C /* SPPageMenu.m */; };
+		0423575025552F2C00349CBD /* NSDecimalNumber+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */; };
+		0423575125552F2C00349CBD /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */; };
+		0423575225552F2C00349CBD /* WSDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB524DD4628005D7D8C /* WSDatePickerView.m */; };
+		0423575325552F2C00349CBD /* TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */; };
+		0423575425552F2C00349CBD /* ZZLimitInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDBB24DD4629005D7D8C /* ZZLimitInputManager.m */; };
+		0423575525552F2C00349CBD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04089EDB24ECB59E0044DD26 /* MBProgressHUD.m */; };
+		0423575625552F2C00349CBD /* LYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAC224E285EA0092532B /* LYEmptyView.m */; };
+		0423575725552F2C00349CBD /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */; };
+		0423575825552F2C00349CBD /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AABC24E285E90092532B /* LYEmptyBaseView.m */; };
+		0423575925552F2C00349CBD /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 73681468251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m */; };
+		0423575A25552F2C00349CBD /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */; };
+		0423575B25552F2C00349CBD /* NSDictionary+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */; };
+		0423575C25552F2C00349CBD /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; };
+		0423575D25552F2C00349CBD /* MHNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3A912253203EA008066B1 /* MHNavigation.m */; };
+		0423575E25552F2C00349CBD /* UIView+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AABE24E285E90092532B /* UIView+Empty.m */; };
+		0423575F25552F2C00349CBD /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 73681469251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.m */; };
+		0423576025552F2C00349CBD /* UIView+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AABF24E285E90092532B /* UIView+LYExtension.m */; };
+		0423576225552F2C00349CBD /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9D24EA523700EBE089 /* UIButton+Category.m */; };
+		0423576325552F2C00349CBD /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73681465251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m */; };
+		0423576425552F2C00349CBD /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+Extension.m */; };
+		0423576525552F2C00349CBD /* UILabel+topString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; };
+		0423576625552F2C00349CBD /* SortNameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; };
+		0423576725552F2C00349CBD /* MUHookMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */; };
+		0423576825552F2C00349CBD /* StepSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0EDC4253697EF00F20FED /* StepSlider.m */; };
+		0423576925552F2C00349CBD /* MHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDD324DD4629005D7D8C /* MHBaseModel.m */; };
+		0423576A25552F2C00349CBD /* RKNotificationHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9224EA2F9E00EBE089 /* RKNotificationHub.m */; };
+		0423576B25552F2C00349CBD /* GZCMulitiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; };
+		0423576C25552F2C00349CBD /* TBCityIconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */; };
+		0423576D25552F2C00349CBD /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; };
+		0423576E25552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */; };
+		0423576F25552F2C00349CBD /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7368146A251258180026C6E7 /* UITableView+FDKeyedHeightCache.m */; };
+		0423577025552F2C00349CBD /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 04089EDC24ECB59E0044DD26 /* MBProgressHUD+Add.m */; };
+		0423577125552F2C00349CBD /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA824DD4628005D7D8C /* UIView+Category.m */; };
+		0423577225552F2C00349CBD /* FTPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F8124FCE67000CFD9D5 /* FTPopOverMenu.m */; };
+		0423577325552F2C00349CBD /* MHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */; };
+		0423577425552F2C00349CBD /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; };
+		0423577525552F2C00349CBD /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B085BF2500DACB00FB3554 /* NSString+Category.m */; };
+		0423577625552F2C00349CBD /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDCC24DD4629005D7D8C /* CWCarousel.m */; };
+		0423577725552F2C00349CBD /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483C27224EF5B2A005BFD32 /* NullSafe.m */; };
 		04269F7724FCC11C00CFD9D5 /* SPAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7524FCC11C00CFD9D5 /* SPAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; };
 		04269F8224FCE67000CFD9D5 /* FTPopOverMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -225,6 +350,8 @@
 		041C5AB92507740A000670E7 /* TTGTextTagCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGTextTagCollectionView.h; sourceTree = "<group>"; };
 		041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGTagCollectionView.m; sourceTree = "<group>"; };
 		041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGTextTagCollectionView.m; sourceTree = "<group>"; };
+		0423577F25552F2C00349CBD /* Tool_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tool_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0423578025552F2C00349CBD /* Tool copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Tool copy-Info.plist"; path = "/Users/mac/MHHTool/ToolDemo/Tool copy-Info.plist"; sourceTree = "<absolute>"; };
 		04269F7524FCC11C00CFD9D5 /* SPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAlertController.h; sourceTree = "<group>"; };
 		04269F7624FCC11C00CFD9D5 /* SPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAlertController.m; sourceTree = "<group>"; };
 		04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPopOverMenu.h; sourceTree = "<group>"; };
@@ -338,6 +465,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0423577825552F2C00349CBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04EBCC5324DD4434005D7D8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,6 +601,7 @@
 				04EBCC5724DD4434005D7D8C /* Products */,
 				BFE8B820541A94752B017FCB /* Pods */,
 				7D4830A23E1A4DBEA5AA57B6 /* Frameworks */,
+				0423578025552F2C00349CBD /* Tool copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -478,6 +613,7 @@
 				04EBCC7C24DD4436005D7D8C /* ToolDemoUITests.xctest */,
 				04EBCD7324DD45FB005D7D8C /* Tool.framework */,
 				04EBCD7B24DD45FB005D7D8C /* ToolTests.xctest */,
+				0423577F25552F2C00349CBD /* Tool_swift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -777,6 +913,97 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		042356F625552F2C00349CBD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				042356F725552F2C00349CBD /* UITableView+FDIndexPathHeightCache.m in Headers */,
+				042356F825552F2C00349CBD /* UITableView+FDKeyedHeightCache.m in Headers */,
+				042356F925552F2C00349CBD /* UITableView+FDTemplateLayoutCell.m in Headers */,
+				042356FA25552F2C00349CBD /* UITableView+FDTemplateLayoutCellDebug.m in Headers */,
+				042356FB25552F2C00349CBD /* FTPopOverMenu.m in Headers */,
+				042356FC25552F2C00349CBD /* MBProgressHUD.m in Headers */,
+				042356FD25552F2C00349CBD /* MBProgressHUD+Add.m in Headers */,
+				042356FE25552F2C00349CBD /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Headers */,
+				042356FF25552F2C00349CBD /* NullSafe.m in Headers */,
+				0423570025552F2C00349CBD /* NSString+Category.m in Headers */,
+				0423570125552F2C00349CBD /* UIButton+Category.m in Headers */,
+				0423570225552F2C00349CBD /* UILabel+topString.m in Headers */,
+				0423570325552F2C00349CBD /* NSDate+Extension.m in Headers */,
+				0423570425552F2C00349CBD /* UITextView+Placeholder.m in Headers */,
+				0423570525552F2C00349CBD /* UIView+Category.m in Headers */,
+				0423570625552F2C00349CBD /* NSDecimalNumber+Addtion.m in Headers */,
+				0423570725552F2C00349CBD /* NSDictionary+LSCore.m in Headers */,
+				0423570825552F2C00349CBD /* UIImage+MUColor.m in Headers */,
+				0423570925552F2C00349CBD /* RKNotificationHub.m in Headers */,
+				0423570A25552F2C00349CBD /* LYEmptyBaseView.m in Headers */,
+				0423570B25552F2C00349CBD /* LYEmptyView.m in Headers */,
+				0423570C25552F2C00349CBD /* UIView+Empty.m in Headers */,
+				0423570D25552F2C00349CBD /* UIView+LYExtension.m in Headers */,
+				0423570E25552F2C00349CBD /* MUHookMethodHelper.m in Headers */,
+				0423570F25552F2C00349CBD /* TBCityIconFont.m in Headers */,
+				0423571025552F2C00349CBD /* TBCityIconInfo.m in Headers */,
+				0423571125552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.m in Headers */,
+				0423571225552F2C00349CBD /* MHWebViewController.m in Headers */,
+				0423571325552F2C00349CBD /* WSDatePickerView.m in Headers */,
+				0423571525552F2C00349CBD /* SPAlertController.m in Headers */,
+				0423571625552F2C00349CBD /* GZCMulitiDelegate.m in Headers */,
+				0423571725552F2C00349CBD /* CWCarousel.m in Headers */,
+				0423571825552F2C00349CBD /* CWFlowLayout.m in Headers */,
+				0423571925552F2C00349CBD /* MHBaseModel.m in Headers */,
+				0423571A25552F2C00349CBD /* SPPageMenu.m in Headers */,
+				0423571B25552F2C00349CBD /* SortNameTool.m in Headers */,
+				0423571C25552F2C00349CBD /* TTGTagCollectionView.m in Headers */,
+				0423571D25552F2C00349CBD /* TTGTextTagCollectionView.m in Headers */,
+				0423571E25552F2C00349CBD /* CWFlowLayout.h in Headers */,
+				0423571F25552F2C00349CBD /* NSDictionary+LSCore.h in Headers */,
+				0423572025552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
+				0423572125552F2C00349CBD /* UIView+Category.h in Headers */,
+				0423572225552F2C00349CBD /* GZCMulitiDelegate.h in Headers */,
+				0423572325552F2C00349CBD /* UIImage+MUColor.h in Headers */,
+				0423572425552F2C00349CBD /* WSDatePickerView.h in Headers */,
+				0423572525552F2C00349CBD /* NSDecimalNumber+Addtion.h in Headers */,
+				0423572625552F2C00349CBD /* ZZLimitInputManager.h in Headers */,
+				0423572725552F2C00349CBD /* MHWebViewController.h in Headers */,
+				0423572825552F2C00349CBD /* SortNameTool.h in Headers */,
+				0423572925552F2C00349CBD /* SPAlertController.h in Headers */,
+				0423572A25552F2C00349CBD /* SPPageMenu.h in Headers */,
+				0423572B25552F2C00349CBD /* MHBaseModel.h in Headers */,
+				0423572C25552F2C00349CBD /* CWCarousel.h in Headers */,
+				0423572D25552F2C00349CBD /* UITextView+Placeholder.h in Headers */,
+				0423572E25552F2C00349CBD /* ToolMacro.h in Headers */,
+				0423572F25552F2C00349CBD /* TBCityIconInfo.h in Headers */,
+				0423573025552F2C00349CBD /* TBCityIconFont.h in Headers */,
+				0423573125552F2C00349CBD /* MUHookMethodHelper.h in Headers */,
+				0423573325552F2C00349CBD /* NSDate+Extension.h in Headers */,
+				0423573425552F2C00349CBD /* LYEmptyBaseView.h in Headers */,
+				0423573525552F2C00349CBD /* UIView+Empty.h in Headers */,
+				0423573625552F2C00349CBD /* UIView+LYExtension.h in Headers */,
+				0423573725552F2C00349CBD /* LYEmptyView.h in Headers */,
+				0423573825552F2C00349CBD /* UILabel+topString.h in Headers */,
+				0423573925552F2C00349CBD /* UIButton+Category.h in Headers */,
+				0423573A25552F2C00349CBD /* LYEmptyViewHeader.h in Headers */,
+				0423573B25552F2C00349CBD /* RKNotificationHub.h in Headers */,
+				0423573C25552F2C00349CBD /* MBProgressHUD.h in Headers */,
+				0423573D25552F2C00349CBD /* FTPopOverMenu.h in Headers */,
+				0423573E25552F2C00349CBD /* TTGTagCollectionView.h in Headers */,
+				0423573F25552F2C00349CBD /* TTGTextTagCollectionView.h in Headers */,
+				0423574025552F2C00349CBD /* UITableView+FDKeyedHeightCache.h in Headers */,
+				0423574125552F2C00349CBD /* UITableView+FDIndexPathHeightCache.h in Headers */,
+				0423574225552F2C00349CBD /* UITableView+FDTemplateLayoutCell.h in Headers */,
+				0423574325552F2C00349CBD /* UITableView+FDTemplateLayoutCellDebug.h in Headers */,
+				0423574425552F2C00349CBD /* MBProgressHUD+Add.h in Headers */,
+				0423574525552F2C00349CBD /* ZZLimitInputManager.m in Headers */,
+				0423574625552F2C00349CBD /* NSMutableAttributedString+SCRAttributedStringBuilder.h in Headers */,
+				0423574725552F2C00349CBD /* MHNavigation.h in Headers */,
+				0423574825552F2C00349CBD /* MHNavigation.m in Headers */,
+				0423574925552F2C00349CBD /* StepSlider.h in Headers */,
+				0423574A25552F2C00349CBD /* StepSlider.m in Headers */,
+				0423574B25552F2C00349CBD /* NSString+Category.h in Headers */,
+				0423574C25552F2C00349CBD /* Tool.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04EBCD6E24DD45FB005D7D8C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -873,6 +1100,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		042356F425552F2C00349CBD /* Tool_swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0423577C25552F2C00349CBD /* Build configuration list for PBXNativeTarget "Tool_swift" */;
+			buildPhases = (
+				042356F525552F2C00349CBD /* [CP] Check Pods Manifest.lock */,
+				042356F625552F2C00349CBD /* Headers */,
+				0423574D25552F2C00349CBD /* Sources */,
+				0423577825552F2C00349CBD /* Frameworks */,
+				0423577A25552F2C00349CBD /* Resources */,
+				0423577B25552F2C00349CBD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tool_swift;
+			productName = Tool;
+			productReference = 0423577F25552F2C00349CBD /* Tool_swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		04EBCC5524DD4434005D7D8C /* ToolDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04EBCC8524DD4436005D7D8C /* Build configuration list for PBXNativeTarget "ToolDemo" */;
@@ -1016,11 +1263,19 @@
 				04EBCC7B24DD4436005D7D8C /* ToolDemoUITests */,
 				04EBCD7224DD45FB005D7D8C /* Tool */,
 				04EBCD7A24DD45FB005D7D8C /* ToolTests */,
+				042356F425552F2C00349CBD /* Tool_swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0423577A25552F2C00349CBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04EBCC5424DD4434005D7D8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1065,6 +1320,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		042356F525552F2C00349CBD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0423577B25552F2C00349CBD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TARGETS_NAME=Tool_swift\n\n\n\nINSTALL_DIR=${SRCROOT}/framework/${TARGETS_NAME}.framework\n\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${TARGETS_NAME}.framework\n\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${TARGETS_NAME}.framework\n\n\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\n\n\nmkdir -p \"${INSTALL_DIR}\"\n\n\n\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n#ditto \"${DEVICE_DIR}/Headers\" \"${INSTALL_DIR}/Headers\"\n\nlipo -create \"${DEVICE_DIR}/${TARGETS_NAME}\" \"${SIMULATOR_DIR}/${TARGETS_NAME}\" -output \"${INSTALL_DIR}/${TARGETS_NAME}\"\n\n#open \"${DEVICE_DIR}\"\n#open \"${SRCROOT}/\"\n\n";
+		};
 		04AE7EA124DD526400A94C6D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1146,6 +1440,54 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0423574D25552F2C00349CBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0423574E25552F2C00349CBD /* UIImage+MUColor.m in Sources */,
+				0423574F25552F2C00349CBD /* SPPageMenu.m in Sources */,
+				0423575025552F2C00349CBD /* NSDecimalNumber+Addtion.m in Sources */,
+				0423575125552F2C00349CBD /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Sources */,
+				0423575225552F2C00349CBD /* WSDatePickerView.m in Sources */,
+				0423575325552F2C00349CBD /* TBCityIconFont.m in Sources */,
+				0423575425552F2C00349CBD /* ZZLimitInputManager.m in Sources */,
+				0423575525552F2C00349CBD /* MBProgressHUD.m in Sources */,
+				0423575625552F2C00349CBD /* LYEmptyView.m in Sources */,
+				0423575725552F2C00349CBD /* UITextView+Placeholder.m in Sources */,
+				0423575825552F2C00349CBD /* LYEmptyBaseView.m in Sources */,
+				0423575925552F2C00349CBD /* UITableView+FDIndexPathHeightCache.m in Sources */,
+				0423575A25552F2C00349CBD /* CWFlowLayout.m in Sources */,
+				0423575B25552F2C00349CBD /* NSDictionary+LSCore.m in Sources */,
+				0423575C25552F2C00349CBD /* SPAlertController.m in Sources */,
+				0423575D25552F2C00349CBD /* MHNavigation.m in Sources */,
+				0423575E25552F2C00349CBD /* UIView+Empty.m in Sources */,
+				0423575F25552F2C00349CBD /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
+				0423576025552F2C00349CBD /* UIView+LYExtension.m in Sources */,
+				0423576225552F2C00349CBD /* UIButton+Category.m in Sources */,
+				0423576325552F2C00349CBD /* UITableView+FDTemplateLayoutCell.m in Sources */,
+				0423576425552F2C00349CBD /* NSDate+Extension.m in Sources */,
+				0423576525552F2C00349CBD /* UILabel+topString.m in Sources */,
+				0423576625552F2C00349CBD /* SortNameTool.m in Sources */,
+				0423576725552F2C00349CBD /* MUHookMethodHelper.m in Sources */,
+				0423576825552F2C00349CBD /* StepSlider.m in Sources */,
+				0423576925552F2C00349CBD /* MHBaseModel.m in Sources */,
+				0423576A25552F2C00349CBD /* RKNotificationHub.m in Sources */,
+				0423576B25552F2C00349CBD /* GZCMulitiDelegate.m in Sources */,
+				0423576C25552F2C00349CBD /* TBCityIconInfo.m in Sources */,
+				0423576D25552F2C00349CBD /* TTGTagCollectionView.m in Sources */,
+				0423576E25552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				0423576F25552F2C00349CBD /* UITableView+FDKeyedHeightCache.m in Sources */,
+				0423577025552F2C00349CBD /* MBProgressHUD+Add.m in Sources */,
+				0423577125552F2C00349CBD /* UIView+Category.m in Sources */,
+				0423577225552F2C00349CBD /* FTPopOverMenu.m in Sources */,
+				0423577325552F2C00349CBD /* MHWebViewController.m in Sources */,
+				0423577425552F2C00349CBD /* TTGTextTagCollectionView.m in Sources */,
+				0423577525552F2C00349CBD /* NSString+Category.m in Sources */,
+				0423577625552F2C00349CBD /* CWCarousel.m in Sources */,
+				0423577725552F2C00349CBD /* NullSafe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04EBCC5224DD4434005D7D8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1275,6 +1617,135 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0423577D25552F2C00349CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 846C32F4E6A339A32B57F53C /* Pods-Tool.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZNR56QECEL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				INFOPLIST_FILE = "Tool copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tool/Tool/PlayerManager(音视频播放器)/lame",
+				);
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-all_load",
+					"-force_load",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = a.Tool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0423577E25552F2C00349CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C3922DE94D3C4CECBA408A6 /* Pods-Tool.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZNR56QECEL;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				INFOPLIST_FILE = "Tool copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tool/Tool/PlayerManager(音视频播放器)/lame",
+				);
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-all_load",
+					"-force_load",
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = a.Tool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		04EBCC8324DD4436005D7D8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1725,6 +2196,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0423577C25552F2C00349CBD /* Build configuration list for PBXNativeTarget "Tool_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0423577D25552F2C00349CBD /* Debug */,
+				0423577E25552F2C00349CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		04EBCC5124DD4434005D7D8C /* Build configuration list for PBXProject "ToolDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

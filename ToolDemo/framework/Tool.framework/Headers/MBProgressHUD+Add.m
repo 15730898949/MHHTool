@@ -8,59 +8,35 @@
 
 #import "MBProgressHUD+Add.h"
 #import <objc/runtime.h>
-
-static MBProgressHUD * _MBHUD = nil;
-
 @implementation MBProgressHUD(Add)
 
-
-+(MBProgressHUD *)sharedMBHUD{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _MBHUD = [[self alloc]init];
-        _MBHUD.removeFromSuperViewOnHide = YES;
-        _MBHUD.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-        _MBHUD.bezelView.color = [[UIColor blackColor]colorWithAlphaComponent:0.7];
-        _MBHUD.margin = 10.f;
-        _MBHUD.label.font = [UIFont systemFontOfSize:16];
-        _MBHUD.label.textColor = [UIColor whiteColor];
-        _MBHUD.label.numberOfLines = 0;
-        _MBHUD.layer.shadowColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1.f].CGColor;
-        _MBHUD.layer.shadowOffset = CGSizeMake(3,3);//阴影偏移的位置
-        _MBHUD.layer.shadowOpacity = 0.6;//阴影透明度
-        _MBHUD.layer.shadowRadius = 5;//阴影圆角
-        [_MBHUD setHudStyle];
-    });
-    return _MBHUD;
-
-}
-
 #pragma -mark 显示加载中
-
-- (void)hide{
-    [self hideAnimated:YES];
++(MBProgressHUD *)show{
+    return [self showRingInView:[[UIApplication sharedApplication].delegate window] Msg:@"" animation:YES];
 }
 
-- (void)show{
-    [self showRingInView:[[UIApplication sharedApplication].delegate window] Msg:@"" animation:YES];
-}
--(void)showLoadingInView:(UIView *)view animation:(BOOL)animation {
-    [self showRingInView:view Msg:@"" animation:animation];
-}
--(void)showLoadingMsg:(NSString *)msg{
-    [self showRingInView:[[UIApplication sharedApplication].delegate window] Msg:msg animation:YES];
++(void)hide{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        do {
+            MBProgressHUD *hud = [self HUDForView:[[UIApplication sharedApplication].delegate window]];
+            if (hud != nil) {
+                hud.removeFromSuperViewOnHide = YES;
+                [hud hideAnimated:YES];
+            }
+        } while ([self HUDForView:[[UIApplication sharedApplication].delegate window]]);
+    });
 }
 
 
--(void)showRingInView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation{
-    MBProgressHUD *hud = self;
-    if (hud.superview != view) {
-        [self hideAnimated:NO];
-        [view addSubview:hud];
-    }
++(MBProgressHUD *)showRingInView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation{
+    
+    MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:view];
+    hud.removeFromSuperViewOnHide = YES;
     hud.mode = MBProgressHUDModeCustomView;
-    hud.backgroundView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
-    hud.userInteractionEnabled = YES;
+    [view addSubview:hud];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.color = [[UIColor blackColor]colorWithAlphaComponent:0.7];
+    
     SVIndefiniteAnimatedView *arcview = [[SVIndefiniteAnimatedView alloc]initWithFrame:CGRectZero];
     arcview.strokeColor = [UIColor whiteColor];
     arcview.strokeThickness = 2;
@@ -89,54 +65,65 @@ static MBProgressHUD * _MBHUD = nil;
                                                                    multiplier:1
                                                                      constant:arcview.frame.size.height];
     [hud.customView addConstraints:@[w_constraint,h_constraint]];
+    hud.margin = 10.f;
+    hud.label.font = [UIFont systemFontOfSize:16];
     hud.label.textColor = [UIColor whiteColor];
     hud.label.text = msg;
-    hud.offset = CGPointMake(0, 0);
-
+    [MBProgressHUD setHudStyle:hud];
+    hud.layer.shadowColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1.f].CGColor;
+    hud.layer.shadowOffset = CGSizeMake(3,3);//阴影偏移的位置
+    hud.layer.shadowOpacity = 0.6;//阴影透明度
+    hud.layer.shadowRadius = 5;//阴影圆角
 
     [hud showAnimated:animation];
 
+    return hud;
+
 }
-
-
-//+(void)hideInView:(UIView *)view animation:(BOOL)animation{
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        do {
-//            MBProgressHUD *hud = [self HUDForView:view];
-//            if (hud != nil) {
-//                hud.removeFromSuperViewOnHide = YES;
-//                [hud hideAnimated:animation];
-//            }
-//        } while ([self HUDForView:view]);
-//    });
-//
-//
-//}
-
-- (void)showProgress:(float)progress{
-    [self showProgress:progress inView:[[UIApplication sharedApplication].delegate window] animation:YES];
-}
-
-- (void)showProgress:(float)progress inView:(UIView *)view animation:(BOOL)animation{
-    MBProgressHUD *hud = self;
-    hud.mode = MBProgressHUDModeAnnularDeterminate;
-    hud.userInteractionEnabled = YES;
-    [hud setHudStyle];
-    hud.backgroundView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
-    if (self.superview != view) {
-        [self hideAnimated:NO];
-        [view addSubview:self];
-    }
-    [hud showAnimated:animation];
+///系统菊花样式
++(MBProgressHUD *)showActivView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation{
+    MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:view];
+    hud.removeFromSuperViewOnHide = YES;
+    [view addSubview:hud];
+    
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.color = [[UIColor blackColor]colorWithAlphaComponent:0.7];
+    hud.label.text = msg;
     hud.label.textColor = [UIColor whiteColor];
-    hud.progress = progress;
-    hud.offset = CGPointMake(0, 0);
+    hud.label.numberOfLines = 0;
+    [MBProgressHUD setHudStyle:hud];
+    hud.layer.shadowColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1.f].CGColor;
+    hud.layer.shadowOffset = CGSizeMake(3,3);//阴影偏移的位置
+    hud.layer.shadowOpacity = 0.6;//阴影透明度
+    hud.layer.shadowRadius = 5;//阴影圆角
 
+    [hud showAnimated:animation];
+    return hud;
 }
+
++(MBProgressHUD *)showInView:(UIView *)view animation:(BOOL)animation {
+    return [self showRingInView:view Msg:@"" animation:animation];
+}
+
++(void)hideInView:(UIView *)view animation:(BOOL)animation{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        do {
+            MBProgressHUD *hud = [self HUDForView:view];
+            if (hud != nil) {
+                hud.removeFromSuperViewOnHide = YES;
+                [hud hideAnimated:animation];
+            }
+        } while ([self HUDForView:view]);
+    });
+    
+    
+}
+
 
 #pragma -mark 设置样式
--(void)setHudStyle{
-    for(UIView *view in self.bezelView.subviews){
++(void)setHudStyle:(MBProgressHUD *)hud {
+
+    for(UIView *view in hud.bezelView.subviews){
 
         if([view isKindOfClass:[UIActivityIndicatorView class]]){
             UIActivityIndicatorView *indicatorView = (UIActivityIndicatorView *) view;
@@ -151,41 +138,50 @@ static MBProgressHUD * _MBHUD = nil;
         }
 
     }
-    self.bezelView.color = [UIColor colorWithRed:41/255.f green:42/255.f blue:47/255.f alpha:0.7f];
-    self.backgroundView.backgroundColor  = [[UIColor blackColor]colorWithAlphaComponent:0.1];
+    hud.bezelView.color = [UIColor colorWithRed:41/255.f green:42/255.f blue:47/255.f alpha:0.7f];
+    hud.backgroundView.backgroundColor  = [[UIColor blackColor]colorWithAlphaComponent:0.1];
 
 }
 #pragma -mark 显示text
--(void)showMsg:(NSString *)msg{
++(void)showMsg:(NSString *)msg{
     [self showInView:[[UIApplication sharedApplication].delegate window] Msg:msg andOffer:0 andDelay:1.5];
 }
 
--(void)showMsgInView:(UIView *)view msg:(NSString *)msg {
++(void)showMsgInView:(UIView *)view msg:(NSString *)msg {
     [self showInView:view Msg:msg andOffer:0 andDelay:1.5];
 }
 
--(void)showMsg:(NSString *)msg andOffer:(CGFloat)offerset{
++(void)showMsg:(NSString *)msg andOffer:(CGFloat)offerset{
     [self showInView:[[UIApplication sharedApplication].delegate window] Msg:msg andOffer:offerset andDelay:1.5];
 }
--(void)showMsg:(NSString *)msg andDelay:(float)delay{
++(void)showMsg:(NSString *)msg andDelay:(float)delay{
     [self showInView:[[UIApplication sharedApplication].delegate window] Msg:msg andOffer:0 andDelay:delay];
 }
 
--(void)showInView:(UIView *)view Msg:(NSString *)msg andOffer:(CGFloat)offerset andDelay:(float)delay{
-    MBProgressHUD *hud = self;
-    hud.userInteractionEnabled = NO;
-    if (hud.superview != view) {
-        [self hideAnimated:NO];
++(void)showInView:(UIView *)view Msg:(NSString *)msg andOffer:(CGFloat)offerset andDelay:(float)delay{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:view];
+        hud.removeFromSuperViewOnHide = YES;
         [view addSubview:hud];
-    }
+        
+        hud.mode=MBProgressHUDModeText;
+        hud.label.text = msg;
+        hud.label.textColor = [UIColor whiteColor];
+        hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+        hud.offset = CGPointMake(hud.offset.x, hud.offset.y+offerset);
+        hud.bezelView.color = [UIColor colorWithRed:41/255.f green:42/255.f blue:47/255.f alpha:0.7f];
+        hud.margin = 10;
+        
+        hud.layer.shadowColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1.f].CGColor;
+        hud.layer.shadowOffset = CGSizeMake(3,3);//阴影偏移的位置
+        hud.layer.shadowOpacity = 0.6;//阴影透明度
+        hud.layer.shadowRadius = 5;//阴影圆角
 
-    hud.mode=MBProgressHUDModeText;
-    hud.label.text = msg;
-    hud.label.textColor = [UIColor whiteColor];
-    hud.offset = CGPointMake(0, offerset);
+        
+        [hud showAnimated:YES];
+        [hud hideAnimated:YES afterDelay:delay];
 
-    [hud showAnimated:YES];
-    [hud hideAnimated:YES afterDelay:delay];
+    });
 
 
 }

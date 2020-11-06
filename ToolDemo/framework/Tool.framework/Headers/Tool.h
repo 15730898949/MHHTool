@@ -32,6 +32,7 @@
 #import <Tool/TBCityIconInfo.h>
 #import <Tool/TBCityIconFont.h>
 #import <Tool/MUHookMethodHelper.h>
+#import <Tool/UIScrollView+Emm.h>
 #import <Tool/LYEmptyViewHeader.h>
 #import <Tool/RKNotificationHub.h>
 #import <Tool/UILabel+topString.h>
