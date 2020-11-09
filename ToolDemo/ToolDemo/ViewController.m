@@ -24,7 +24,7 @@
 #import "NSMutableAttributedString+SCRAttributedStringBuilder.h"
 #import <Tool/Tool.h>
 #import "BaseWebViewController.h"
-@interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate>
+@interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate,MHInfoItemCellDelegate>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
 @property (nonatomic ,strong)UILabel *lable;
@@ -52,7 +52,7 @@
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [[UIView alloc]init];
     self.tableView.backgroundColor = UIColorFromHex(0x161b2f, 1);
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[MHInfoItemCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImage:nil titleStr:@"暂无数据" detailStr:nil btnTitleStr:@"点击重试" btnClickBlock:^{
 //        [self.dataArray addObject:[NSString stringWithFormat:@"%ld",self.tableView.page]];
         [self.tableView reloadData];
@@ -144,7 +144,7 @@
 }
 
 - (void)sliderChange:(StepSlider *)slider{
-    NSLog(@"******%lu",slider.index);
+//    NSLog(@"******%lu",slider.index);
 }
 
 - (void)textNetwork{
@@ -205,30 +205,59 @@
 
 
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataArray.count;
+    return 30;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text  = self.dataArray[indexPath.row];
-//    cell.textLabel.sf_text = @"[LABEL]Give  to  [RED]SFAttri[[!]timg_1,0,0,20,20][LABEL]butedString[asdad]";
-//    TestTableViewCell1*cell  =[TestTableViewCell1 cellWithTableView:tableView indexPath:indexPath];
-//    cell.backgroundColor = [UIColor redColor];
-    cell.backgroundColor = [UIColor redColor];
+    MHInfoItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.delegate = self;
+    cell.titleTextField.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    cell.contentTextField.enabled = YES;
+    if (indexPath.row == 0) {
+        cell.accessoryViewSizeMargin = CGSizeMake(50, 50);
+    }else{
+        cell.accessoryViewSizeMargin = CGSizeMake(30, 30);
+    }
+    if (indexPath.row == 2) {
+        cell.titleTextField.leftView = ({
+            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, 50)];
+            UIImageView *imgView = [UIImageView new];
+            imgView.contentMode = UIViewContentModeCenter;
+            imgView.image = [UIImage imageNamed:@"add_wechat"];
+            imgView.frame = CGRectMake(0, 0, 50, 50);
+            imgView.layer.cornerRadius = 15;
+            imgView.layer.masksToBounds = YES;
+            [view addSubview:imgView];
+            
+            view;
+        });
+        cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
+        cell.fixedTitleWidth = 160;
+        
+        cell.accessoryView = [UISwitch new];
 
-    NSString *str = @"123";
-    NSMutableAttributedString *attstr =  str.attributedBuild
-    .appendSizeImage([UIImage imageNamed:@"timg_1"],CGSizeMake(20, 20))
-    .append(@"123")
-    .appendSizeImage([UIImage imageNamed:@"timg_1"],CGSizeMake(10, 10)).baselineOffset(10)
-    .append(@"123")
-    .appendSizeImage([UIImage imageNamed:@"timg_1"],CGSizeMake(20, 20))
-    .append(@"123123");
-    cell.textLabel.attributedText = attstr;
-    
-    
+    }else{
+        cell.titleTextField.leftView = nil;
+        cell.fixedTitleWidth = 100;
+        cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"add_wechat"]]];
+    }
+
+    cell.titleTextFieldLeftMargin = 16;
+    [cell setDidEndEditing:^(MHInfoItemCell * _Nonnull cell, UITextField * _Nonnull textField) {
+        NSLog(@"%ld--%@",[tableView indexPathForCell:cell].row,textField.text);
+    }];
+
     return cell;
+}
+
+- (void)infoItemCell:(MHInfoItemCell *)cell didEndEditing:(UITextField *)textField{
+    NSLog(@"--%ld--%@",[self.tableView indexPathForCell:cell].row,textField.text);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

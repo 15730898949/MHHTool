@@ -171,6 +171,10 @@
 		04C4AACB24E285EA0092532B /* LYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAC224E285EA0092532B /* LYEmptyView.m */; };
 		04C4AACC24E285EA0092532B /* UIView+LYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC324E285EA0092532B /* UIView+LYExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C4AACD24E285EA0092532B /* UIView+Empty.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC424E285EA0092532B /* UIView+Empty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04C87D7725594A8B00BF7078 /* MHInfoItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C87D582558E9AE00BF7078 /* MHInfoItemCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04C87D7D25594A8E00BF7078 /* MHInfoItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C87D582558E9AE00BF7078 /* MHInfoItemCell.h */; };
+		04C87D8825594A9700BF7078 /* MHInfoItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C87D5A2558E9AE00BF7078 /* MHInfoItemCell.m */; };
+		04C87D8E25594A9900BF7078 /* MHInfoItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C87D5A2558E9AE00BF7078 /* MHInfoItemCell.m */; };
 		04EBCC5B24DD4434005D7D8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC5A24DD4434005D7D8C /* AppDelegate.m */; };
 		04EBCC6124DD4434005D7D8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC6024DD4434005D7D8C /* ViewController.m */; };
 		04EBCC6624DD4436005D7D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EBCC6524DD4436005D7D8C /* Assets.xcassets */; };
@@ -374,6 +378,8 @@
 		04C4AAC224E285EA0092532B /* LYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyView.m; sourceTree = "<group>"; };
 		04C4AAC324E285EA0092532B /* UIView+LYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LYExtension.h"; sourceTree = "<group>"; };
 		04C4AAC424E285EA0092532B /* UIView+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Empty.h"; sourceTree = "<group>"; };
+		04C87D582558E9AE00BF7078 /* MHInfoItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHInfoItemCell.h; sourceTree = "<group>"; };
+		04C87D5A2558E9AE00BF7078 /* MHInfoItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHInfoItemCell.m; sourceTree = "<group>"; };
 		04EBCC5624DD4434005D7D8C /* ToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EBCC5924DD4434005D7D8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04EBCC5A24DD4434005D7D8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -590,6 +596,15 @@
 			path = "LYEmptyView(空白页)";
 			sourceTree = "<group>";
 		};
+		04C87D572558E9AE00BF7078 /* MHInfoItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				04C87D582558E9AE00BF7078 /* MHInfoItemCell.h */,
+				04C87D5A2558E9AE00BF7078 /* MHInfoItemCell.m */,
+			);
+			path = MHInfoItemCell;
+			sourceTree = "<group>";
+		};
 		04EBCC4D24DD4434005D7D8C = {
 			isa = PBXGroup;
 			children = (
@@ -680,6 +695,7 @@
 		04EBCD9024DD4628005D7D8C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				04C87D572558E9AE00BF7078 /* MHInfoItemCell */,
 				04F0EDC1253697EF00F20FED /* StepSlider */,
 				73B3A910253203D6008066B1 /* MHNavigation */,
 				73681464251257FE0026C6E7 /* UITableView+FDTemplateLayoutCell */,
@@ -931,6 +947,7 @@
 				0423570225552F2C00349CBD /* UILabel+topString.m in Headers */,
 				0423570325552F2C00349CBD /* NSDate+Extension.m in Headers */,
 				0423570425552F2C00349CBD /* UITextView+Placeholder.m in Headers */,
+				04C87D7D25594A8E00BF7078 /* MHInfoItemCell.h in Headers */,
 				0423570525552F2C00349CBD /* UIView+Category.m in Headers */,
 				0423570625552F2C00349CBD /* NSDecimalNumber+Addtion.m in Headers */,
 				0423570725552F2C00349CBD /* NSDictionary+LSCore.m in Headers */,
@@ -1011,6 +1028,7 @@
 				73B3A8E8253202B2008066B1 /* UITableView+FDIndexPathHeightCache.m in Headers */,
 				73B3A8E9253202B2008066B1 /* UITableView+FDKeyedHeightCache.m in Headers */,
 				73B3A8EA253202B2008066B1 /* UITableView+FDTemplateLayoutCell.m in Headers */,
+				04C87D7725594A8B00BF7078 /* MHInfoItemCell.h in Headers */,
 				73B3A8EB253202B2008066B1 /* UITableView+FDTemplateLayoutCellDebug.m in Headers */,
 				73B3A8EC253202B2008066B1 /* FTPopOverMenu.m in Headers */,
 				73B3A8ED253202B2008066B1 /* MBProgressHUD.m in Headers */,
@@ -1463,6 +1481,7 @@
 				0423575E25552F2C00349CBD /* UIView+Empty.m in Sources */,
 				0423575F25552F2C00349CBD /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				0423576025552F2C00349CBD /* UIView+LYExtension.m in Sources */,
+				04C87D8E25594A9900BF7078 /* MHInfoItemCell.m in Sources */,
 				0423576225552F2C00349CBD /* UIButton+Category.m in Sources */,
 				0423576325552F2C00349CBD /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				0423576425552F2C00349CBD /* NSDate+Extension.m in Sources */,
@@ -1533,6 +1552,7 @@
 				04C4AACB24E285EA0092532B /* LYEmptyView.m in Sources */,
 				04EBCE0724DD4629005D7D8C /* UITextView+Placeholder.m in Sources */,
 				04C4AAC524E285EA0092532B /* LYEmptyBaseView.m in Sources */,
+				04C87D8825594A9700BF7078 /* MHInfoItemCell.m in Sources */,
 				73681470251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				04EBCE2524DD4629005D7D8C /* CWFlowLayout.m in Sources */,
 				04EBCE0D24DD4629005D7D8C /* NSDictionary+LSCore.m in Sources */,

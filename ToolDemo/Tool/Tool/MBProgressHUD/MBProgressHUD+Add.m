@@ -183,6 +183,7 @@ static MBProgressHUD * _MBHUD = nil;
     hud.label.text = msg;
     hud.label.textColor = [UIColor whiteColor];
     hud.offset = CGPointMake(0, offerset);
+    self.backgroundView.backgroundColor  = [[UIColor blackColor]colorWithAlphaComponent:0.0];
 
     [hud showAnimated:YES];
     [hud hideAnimated:YES afterDelay:delay];

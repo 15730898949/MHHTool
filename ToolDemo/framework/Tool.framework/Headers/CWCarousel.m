@@ -148,7 +148,7 @@
 /// 开始拖拽
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     // 防止拖动加速度太大,一次跳过多张图片,这里设置一下
-    scrollView.pagingEnabled = YES;
+//    scrollView.pagingEnabled = YES;
     if (self.isAuto) {
         [self stop];
     }
@@ -186,7 +186,7 @@
         self.currentIndexPath = [NSIndexPath indexPathForRow:self.currentIndexPath.row - 1 inSection:self.currentIndexPath.section];
     }else if (velocity.x == 0) {
         //还有一种情况,当滑动后手指按住不放,然后松开,此时的加速度其实是为0的
-        [self adjustErrorCell:NO];
+        [self adjustErrorCell:YES];
     }
 }
 

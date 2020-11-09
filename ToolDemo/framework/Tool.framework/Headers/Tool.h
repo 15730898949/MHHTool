@@ -32,7 +32,6 @@
 #import <Tool/TBCityIconInfo.h>
 #import <Tool/TBCityIconFont.h>
 #import <Tool/MUHookMethodHelper.h>
-#import <Tool/UIScrollView+Emm.h>
 #import <Tool/LYEmptyViewHeader.h>
 #import <Tool/RKNotificationHub.h>
 #import <Tool/UILabel+topString.h>
@@ -49,7 +48,7 @@
 #import <Tool/UITableView+FDIndexPathHeightCache.h>
 #import <Tool/MHNavigation.h>
 #import <Tool/StepSlider.h>
-
+#import <Tool/MHInfoItemCell.h>
 
 
 

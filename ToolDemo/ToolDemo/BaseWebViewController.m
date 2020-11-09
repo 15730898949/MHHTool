@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     // Do any additional setup after loading the view.
     [super viewDidLoad];
-    NSLog(@"12312312313");
     
     NSURL *path = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
     [self.wkWebView loadRequest:[NSURLRequest requestWithURL:path]];
