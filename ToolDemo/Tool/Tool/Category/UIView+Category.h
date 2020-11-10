@@ -19,52 +19,52 @@
 /**
  *     左边距离
  */
-@property (nonatomic) CGFloat left;
+@property (nonatomic) CGFloat mh_left;
 
 /**
  *     上面的距离
  */
-@property (nonatomic) CGFloat top;
+@property (nonatomic) CGFloat mh_top;
 
 /**
  *     右边距离
  */
-@property (nonatomic) CGFloat right;
+@property (nonatomic) CGFloat mh_right;
 
 /**
  *     下面的距离
  */
-@property (nonatomic) CGFloat bottom;
+@property (nonatomic) CGFloat mh_bottom;
 
 /**
  *     宽度
  */
-@property (nonatomic) CGFloat width;
+@property (nonatomic) CGFloat mh_width;
 
 /**
  *     高度
  */
-@property (nonatomic) CGFloat height;
+@property (nonatomic) CGFloat mh_height;
 
 /**
  *     横向的中心点
  */
-@property (nonatomic) CGFloat centerX;
+@property (nonatomic) CGFloat mh_centerX;
 
 /**
  *     纵向的中心点
  */
-@property (nonatomic) CGFloat centerY;
+@property (nonatomic) CGFloat mh_centerY;
 
 /**
  *     左边距离和上面距离
  */
-@property (nonatomic) CGPoint origin;
+@property (nonatomic) CGPoint mh_origin;
 
 /**
  *     宽度和高度
  */
-@property (nonatomic) CGSize size;
+@property (nonatomic) CGSize mh_size;
 
 
 @end

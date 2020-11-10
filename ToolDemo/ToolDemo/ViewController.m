@@ -142,6 +142,8 @@
     }];
 }
 
+
+
 - (void)sliderChange:(StepSlider *)slider{
 //    NSLog(@"******%lu",slider.index);
 }

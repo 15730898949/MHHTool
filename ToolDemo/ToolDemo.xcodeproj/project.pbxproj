@@ -351,6 +351,7 @@
 		0414BA9824EA50D200EBE089 /* UILabel+topString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+topString.m"; sourceTree = "<group>"; };
 		0414BA9C24EA523700EBE089 /* UIButton+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
 		0414BA9D24EA523700EBE089 /* UIButton+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
+		041564E4255A62C8006C3379 /* ocSwiftBridging.header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ocSwiftBridging.header.h; sourceTree = "<group>"; };
 		041C5AB82507740A000670E7 /* TTGTagCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGTagCollectionView.h; sourceTree = "<group>"; };
 		041C5AB92507740A000670E7 /* TTGTextTagCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGTextTagCollectionView.h; sourceTree = "<group>"; };
 		041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGTagCollectionView.m; sourceTree = "<group>"; };
@@ -652,6 +653,7 @@
 				04EBCC6B24DD4436005D7D8C /* main.m */,
 				73B3A91C2534A678008066B1 /* BaseWebViewController.h */,
 				73B3A91D2534A678008066B1 /* BaseWebViewController.m */,
+				041564E4255A62C8006C3379 /* ocSwiftBridging.header.h */,
 			);
 			path = ToolDemo;
 			sourceTree = "<group>";
@@ -1922,6 +1924,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = a.ToolDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ToolDemo/ocSwiftBridging.header.h";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1970,6 +1974,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = a.ToolDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ToolDemo/ocSwiftBridging.header.h";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
