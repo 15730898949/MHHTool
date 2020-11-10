@@ -48,7 +48,7 @@
 #import <Tool/UITableView+FDIndexPathHeightCache.h>
 #import <Tool/MHNavigation.h>
 #import <Tool/StepSlider.h>
-
+#import <Tool/MHInfoItemCell.h>
 
 
 
