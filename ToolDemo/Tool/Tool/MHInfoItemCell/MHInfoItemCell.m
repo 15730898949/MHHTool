@@ -29,9 +29,14 @@
         _accessoryViewRightMargin = 16;
         _fixedTitleWidth = -1;
         self.titleTextField.text = @"";
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldValueChanged:) name:UITextFieldTextDidChangeNotification object:nil];
 
     }
     return self;
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 #pragma mark - Override Method
@@ -114,6 +119,21 @@
         [self.delegate infoItemCell:self didEndEditing:textField];
     }
 }
+
+- (void)textFieldValueChanged:(NSNotification *)notification{
+    UITextField *textField = (UITextField *)notification.object;
+    if(textField != self.titleTextField && textField != self.contentTextField){
+        return;
+    }
+
+    !self.textFieldValueChanged ? : self.textFieldValueChanged(self,textField);
+    if ([self.delegate respondsToSelector:@selector(infoItemCell:textFieldValueChanged:)]) {
+        [self.delegate infoItemCell:self textFieldValueChanged:textField];
+    }
+
+}
+
+
 
 #pragma mark - Setter
 - (void)setAccessoryView:(UIView *)accessoryView{
@@ -203,6 +223,7 @@
 
         _titleTextField.delegate = self;
         _titleTextField.enabled = NO;
+
         [self.contentView addSubview:_titleTextField];
     }
     return _titleTextField;
@@ -219,6 +240,7 @@
 
         _contentTextField.delegate = self;
         _contentTextField.enabled = NO;
+        
         [self.contentView addSubview:_contentTextField];
     }
     return _contentTextField;

@@ -32,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 - (void)infoItemCell:(MHInfoItemCell *)cell didBeginEditing:(UITextField *)textField;
 - (void)infoItemCell:(MHInfoItemCell *)cell didEndEditing:(UITextField *)textField;
+- (void)infoItemCell:(MHInfoItemCell *)cell textFieldValueChanged:(UITextField *)textField;
+
 
 @end
 
@@ -73,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<MHInfoItemCellDelegate> delegate;
 @property (nonatomic, copy) void (^didBeginEditing)(MHInfoItemCell *cell,UITextField *textField);
 @property (nonatomic, copy) void (^didEndEditing)(MHInfoItemCell *cell,UITextField *textField);
-
+@property (nonatomic, copy) void (^textFieldValueChanged)(MHInfoItemCell *cell,UITextField *textField);
 
 @end
 

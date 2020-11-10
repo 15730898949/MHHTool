@@ -17,6 +17,7 @@
 		0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; };
 		0414BA9E24EA523700EBE089 /* UIButton+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9C24EA523700EBE089 /* UIButton+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0414BA9F24EA523700EBE089 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9D24EA523700EBE089 /* UIButton+Category.m */; };
+		04155C50255A207A006C3379 /* MHInfoItemCell.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C87D5A2558E9AE00BF7078 /* MHInfoItemCell.m */; };
 		041C5ABC2507740B000670E7 /* TTGTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5AB82507740A000670E7 /* TTGTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		041C5ABD2507740B000670E7 /* TTGTextTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5AB92507740A000670E7 /* TTGTextTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		041C5ABE2507740B000670E7 /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; };
@@ -172,7 +173,7 @@
 		04C4AACC24E285EA0092532B /* UIView+LYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC324E285EA0092532B /* UIView+LYExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C4AACD24E285EA0092532B /* UIView+Empty.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC424E285EA0092532B /* UIView+Empty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C87D7725594A8B00BF7078 /* MHInfoItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C87D582558E9AE00BF7078 /* MHInfoItemCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04C87D7D25594A8E00BF7078 /* MHInfoItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C87D582558E9AE00BF7078 /* MHInfoItemCell.h */; };
+		04C87D7D25594A8E00BF7078 /* MHInfoItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C87D582558E9AE00BF7078 /* MHInfoItemCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04C87D8825594A9700BF7078 /* MHInfoItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C87D5A2558E9AE00BF7078 /* MHInfoItemCell.m */; };
 		04C87D8E25594A9900BF7078 /* MHInfoItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C87D5A2558E9AE00BF7078 /* MHInfoItemCell.m */; };
 		04EBCC5B24DD4434005D7D8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC5A24DD4434005D7D8C /* AppDelegate.m */; };
@@ -939,6 +940,7 @@
 				042356FA25552F2C00349CBD /* UITableView+FDTemplateLayoutCellDebug.m in Headers */,
 				042356FB25552F2C00349CBD /* FTPopOverMenu.m in Headers */,
 				042356FC25552F2C00349CBD /* MBProgressHUD.m in Headers */,
+				04C87D7D25594A8E00BF7078 /* MHInfoItemCell.h in Headers */,
 				042356FD25552F2C00349CBD /* MBProgressHUD+Add.m in Headers */,
 				042356FE25552F2C00349CBD /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Headers */,
 				042356FF25552F2C00349CBD /* NullSafe.m in Headers */,
@@ -947,7 +949,6 @@
 				0423570225552F2C00349CBD /* UILabel+topString.m in Headers */,
 				0423570325552F2C00349CBD /* NSDate+Extension.m in Headers */,
 				0423570425552F2C00349CBD /* UITextView+Placeholder.m in Headers */,
-				04C87D7D25594A8E00BF7078 /* MHInfoItemCell.h in Headers */,
 				0423570525552F2C00349CBD /* UIView+Category.m in Headers */,
 				0423570625552F2C00349CBD /* NSDecimalNumber+Addtion.m in Headers */,
 				0423570725552F2C00349CBD /* NSDictionary+LSCore.m in Headers */,
@@ -1018,6 +1019,7 @@
 				0423574A25552F2C00349CBD /* StepSlider.m in Headers */,
 				0423574B25552F2C00349CBD /* NSString+Category.h in Headers */,
 				0423574C25552F2C00349CBD /* Tool.h in Headers */,
+				04155C50255A207A006C3379 /* MHInfoItemCell.m in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

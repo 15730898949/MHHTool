@@ -52,7 +52,7 @@
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [[UIView alloc]init];
     self.tableView.backgroundColor = UIColorFromHex(0x161b2f, 1);
-    [self.tableView registerClass:[MHInfoItemCell class] forCellReuseIdentifier:@"cell"];
+//    [self.tableView registerClass:[MHInfoItemCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImage:nil titleStr:@"暂无数据" detailStr:nil btnTitleStr:@"点击重试" btnClickBlock:^{
 //        [self.dataArray addObject:[NSString stringWithFormat:@"%ld",self.tableView.page]];
         [self.tableView reloadData];
@@ -71,8 +71,8 @@
 //    }];
  
     
-    [self.dataArray addObjectsFromArray:@[@"123",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213",@"213"]];
-
+    [self.dataArray addObjectsFromArray:@[@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"},@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"},@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"},@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"}]];
+    
     
 //    [self.tableView addFooterRefreshWithBlock:^{
 //        [weakself.dataArray addObject:[NSString stringWithFormat:@"%ld",weakself.tableView.page]];
@@ -140,7 +140,6 @@
         make.right.offset(-16);
         make.top.offset(100);
     }];
-
 }
 
 - (void)sliderChange:(StepSlider *)slider{
@@ -205,7 +204,7 @@
 
 
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 30;
+    return self.dataArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -215,72 +214,109 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    MHInfoItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    MHInfoItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[MHInfoItemCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
     cell.delegate = self;
-    cell.titleTextField.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    NSString *title = self.dataArray[indexPath.row][@"title"];
+    cell.titleTextField.text = title;
     cell.contentTextField.enabled = YES;
-    if (indexPath.row == 0) {
-        cell.accessoryViewSizeMargin = CGSizeMake(50, 50);
-    }else{
+    cell.contentTextField.text = self.dataArray[indexPath.row][@"content"];
+    cell.contentTextField.placeholder = [NSString stringWithFormat:@"请输入%@",title];
+    cell.accessoryView = nil;
+    if ([title isEqualToString:@"头像"]) {
+        cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"add_wechat"]];
         cell.accessoryViewSizeMargin = CGSizeMake(30, 30);
-    }
-    if (indexPath.row == 2) {
-        cell.titleTextField.leftView = ({
-            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, 50)];
-            UIImageView *imgView = [UIImageView new];
-            imgView.contentMode = UIViewContentModeCenter;
-            imgView.image = [UIImage imageNamed:@"add_wechat"];
-            imgView.frame = CGRectMake(0, 0, 50, 50);
-            imgView.layer.cornerRadius = 15;
-            imgView.layer.masksToBounds = YES;
-            [view addSubview:imgView];
-            
-            view;
-        });
-        cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
-        cell.fixedTitleWidth = 160;
-        
-        cell.accessoryView = [UISwitch new];
+        cell.contentTextField.enabled = NO;
+        cell.contentTextField.placeholder = @"";
+//        cell.contentTextField.text = @"";
 
-    }else{
-        cell.titleTextField.leftView = nil;
-        cell.fixedTitleWidth = 100;
-        cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"add_wechat"]]];
-    }
+    }else if ([title isEqualToString:@"性别"]){
+        cell.contentTextField.enabled = NO;
+    }else if ([title isEqualToString:@"通知"]){
+        UISwitch *sw = [UISwitch new];
+        [sw addTarget:self action:@selector(changeSW:) forControlEvents:UIControlEventValueChanged];
+        cell.accessoryView = sw;
+        cell.contentTextField.enabled = NO;
+        cell.contentTextField.placeholder = @"";
+//        cell.contentTextField.text = @"";
 
-    cell.titleTextFieldLeftMargin = 16;
-    [cell setDidEndEditing:^(MHInfoItemCell * _Nonnull cell, UITextField * _Nonnull textField) {
-        NSLog(@"%ld--%@",[tableView indexPathForCell:cell].row,textField.text);
+    }
+    
+//    if (indexPath.row == 2) {
+//        cell.titleTextField.leftView = ({
+//            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, 50)];
+//            UIImageView *imgView = [UIImageView new];
+//            imgView.contentMode = UIViewContentModeCenter;
+//            imgView.image = [UIImage imageNamed:@"add_wechat"];
+//            imgView.frame = CGRectMake(0, 0, 50, 50);
+//            imgView.layer.cornerRadius = 15;
+//            imgView.layer.masksToBounds = YES;
+//            [view addSubview:imgView];
+//
+//            view;
+//        });
+//        cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
+//        cell.fixedTitleWidth = 160;
+//
+//        cell.accessoryView = [UISwitch new];
+//
+//    }else{
+//        cell.titleTextField.leftView = nil;
+//        cell.fixedTitleWidth = 100;
+//        cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"add_wechat"]]];
+//    }
+    
+    [cell setTextFieldValueChanged:^(MHInfoItemCell * _Nonnull cell, UITextField * _Nonnull textField) {
+        NSIndexPath *index = indexPath;
+//        if (!index) {
+//            return;
+//        }
+        NSInteger row =index.row;
+        NSLog(@"----%ld--%@",row,textField.text);
+        NSMutableDictionary * dic = [NSMutableDictionary dictionaryWithDictionary:self.dataArray[row]];
+        [dic setValue:textField.text forKey:@"content"];
+        [self.dataArray replaceObjectAtIndex:row withObject:dic];
+
     }];
 
     return cell;
 }
 
-- (void)infoItemCell:(MHInfoItemCell *)cell didEndEditing:(UITextField *)textField{
-    NSLog(@"--%ld--%@",[self.tableView indexPathForCell:cell].row,textField.text);
-}
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
-        [MBHUD show];
-        [MBHUD hideAnimated:YES afterDelay:3];
-    }else if (indexPath.row == 1){
-        [MBHUD showMsg:@"111" andOffer:100];
-        
-    } else{
-        [MBHUD showMsg:[NSString stringWithFormat:@"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%ld",indexPath.row]];
+//        [MBHUD show];
+//        [MBHUD hideAnimated:YES afterDelay:3];
+        NSLog(@"%@",self.dataArray);
     }
+//    else if (indexPath.row == 1){
+//        [MBHUD showMsg:@"111" andOffer:100];
+//
+//    } else{
+//        [MBHUD showMsg:[NSString stringWithFormat:@"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$%ld",indexPath.row]];
+//    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     self.navigationBarTranslationY =  scrollView.contentOffset.y;
-    
+//    [self.view endEditing:YES];
+
     [MBHUD showProgress:scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.height) inView:self.tableView.tableHeaderView animation:YES];
     MBHUD.userInteractionEnabled = NO;
 //    MBHUD.progress = scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.height);
 //    MBHUD.label.text = [NSString stringWithFormat:@"%.0f%%",MBHUD.progress*100];
 //    [MBHUD.button setTitle:@"111" forState:UIControlStateNormal];
 
+}
+
+- (void)changeSW:(UISwitch *)sw{
+    NSLog(@"%@", [NSString stringWithFormat:@"通知%@",sw.isOn?@"开":@"关"]);
+    
 }
 
 
