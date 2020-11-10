@@ -34,9 +34,9 @@
 		0423570025552F2C00349CBD /* NSString+Category.m in Headers */ = {isa = PBXBuildFile; fileRef = 04B085BF2500DACB00FB3554 /* NSString+Category.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423570125552F2C00349CBD /* UIButton+Category.m in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9D24EA523700EBE089 /* UIButton+Category.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423570225552F2C00349CBD /* UILabel+topString.m in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423570325552F2C00349CBD /* NSDate+Extension.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+Extension.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570325552F2C00349CBD /* NSDate+MHExtension.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+MHExtension.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423570425552F2C00349CBD /* UITextView+Placeholder.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423570525552F2C00349CBD /* UIView+Category.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA824DD4628005D7D8C /* UIView+Category.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423570525552F2C00349CBD /* UIView+MHCategory.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA824DD4628005D7D8C /* UIView+MHCategory.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423570625552F2C00349CBD /* NSDecimalNumber+Addtion.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423570725552F2C00349CBD /* NSDictionary+LSCore.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423570825552F2C00349CBD /* UIImage+MUColor.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,7 +63,7 @@
 		0423571E25552F2C00349CBD /* CWFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD124DD4629005D7D8C /* CWFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571F25552F2C00349CBD /* NSDictionary+LSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAF24DD4628005D7D8C /* NSDictionary+LSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572025552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9224DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423572125552F2C00349CBD /* UIView+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA924DD4628005D7D8C /* UIView+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423572125552F2C00349CBD /* UIView+MHCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA924DD4628005D7D8C /* UIView+MHCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572225552F2C00349CBD /* GZCMulitiDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCA24DD4629005D7D8C /* GZCMulitiDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572325552F2C00349CBD /* UIImage+MUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB224DD4628005D7D8C /* UIImage+MUColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572425552F2C00349CBD /* WSDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB424DD4628005D7D8C /* WSDatePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,7 +80,7 @@
 		0423572F25552F2C00349CBD /* TBCityIconInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423573025552F2C00349CBD /* TBCityIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3724E0D84E00D4FA5C /* TBCityIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423573125552F2C00349CBD /* MUHookMethodHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3D24E0D98100D4FA5C /* MUHookMethodHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423573325552F2C00349CBD /* NSDate+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA224DD4628005D7D8C /* NSDate+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423573325552F2C00349CBD /* NSDate+MHExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA224DD4628005D7D8C /* NSDate+MHExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423573425552F2C00349CBD /* LYEmptyBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC024E285E90092532B /* LYEmptyBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423573525552F2C00349CBD /* UIView+Empty.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC424E285EA0092532B /* UIView+Empty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423573625552F2C00349CBD /* UIView+LYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC324E285EA0092532B /* UIView+LYExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -127,7 +127,7 @@
 		0423576025552F2C00349CBD /* UIView+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AABF24E285E90092532B /* UIView+LYExtension.m */; };
 		0423576225552F2C00349CBD /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9D24EA523700EBE089 /* UIButton+Category.m */; };
 		0423576325552F2C00349CBD /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73681465251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m */; };
-		0423576425552F2C00349CBD /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+Extension.m */; };
+		0423576425552F2C00349CBD /* NSDate+MHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+MHExtension.m */; };
 		0423576525552F2C00349CBD /* UILabel+topString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; };
 		0423576625552F2C00349CBD /* SortNameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; };
 		0423576725552F2C00349CBD /* MUHookMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */; };
@@ -140,7 +140,7 @@
 		0423576E25552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */; };
 		0423576F25552F2C00349CBD /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7368146A251258180026C6E7 /* UITableView+FDKeyedHeightCache.m */; };
 		0423577025552F2C00349CBD /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 04089EDC24ECB59E0044DD26 /* MBProgressHUD+Add.m */; };
-		0423577125552F2C00349CBD /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA824DD4628005D7D8C /* UIView+Category.m */; };
+		0423577125552F2C00349CBD /* UIView+MHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA824DD4628005D7D8C /* UIView+MHCategory.m */; };
 		0423577225552F2C00349CBD /* FTPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F8124FCE67000CFD9D5 /* FTPopOverMenu.m */; };
 		0423577325552F2C00349CBD /* MHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */; };
 		0423577425552F2C00349CBD /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; };
@@ -190,12 +190,12 @@
 		04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */; };
 		04EBCE0324DD4629005D7D8C /* MHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */; };
 		04EBCE0424DD4629005D7D8C /* MHWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9F24DD4628005D7D8C /* MHWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04EBCE0524DD4629005D7D8C /* NSDate+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA224DD4628005D7D8C /* NSDate+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04EBCE0624DD4629005D7D8C /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+Extension.m */; };
+		04EBCE0524DD4629005D7D8C /* NSDate+MHExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA224DD4628005D7D8C /* NSDate+MHExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04EBCE0624DD4629005D7D8C /* NSDate+MHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+MHExtension.m */; };
 		04EBCE0724DD4629005D7D8C /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */; };
 		04EBCE0824DD4629005D7D8C /* UITextView+Placeholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA624DD4628005D7D8C /* UITextView+Placeholder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04EBCE0924DD4629005D7D8C /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA824DD4628005D7D8C /* UIView+Category.m */; };
-		04EBCE0A24DD4629005D7D8C /* UIView+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA924DD4628005D7D8C /* UIView+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04EBCE0924DD4629005D7D8C /* UIView+MHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA824DD4628005D7D8C /* UIView+MHCategory.m */; };
+		04EBCE0A24DD4629005D7D8C /* UIView+MHCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA924DD4628005D7D8C /* UIView+MHCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE0B24DD4629005D7D8C /* NSDecimalNumber+Addtion.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAB24DD4628005D7D8C /* NSDecimalNumber+Addtion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE0C24DD4629005D7D8C /* NSDecimalNumber+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */; };
 		04EBCE0D24DD4629005D7D8C /* NSDictionary+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */; };
@@ -255,9 +255,9 @@
 		73B3A8F1253202B2008066B1 /* NSString+Category.m in Headers */ = {isa = PBXBuildFile; fileRef = 04B085BF2500DACB00FB3554 /* NSString+Category.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8F2253202B2008066B1 /* UIButton+Category.m in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9D24EA523700EBE089 /* UIButton+Category.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8F3253202B2008066B1 /* UILabel+topString.m in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B3A8F5253202B2008066B1 /* NSDate+Extension.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+Extension.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		73B3A8F5253202B2008066B1 /* NSDate+MHExtension.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+MHExtension.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8F6253202B2008066B1 /* UITextView+Placeholder.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B3A8F7253202B2008066B1 /* UIView+Category.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA824DD4628005D7D8C /* UIView+Category.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		73B3A8F7253202B2008066B1 /* UIView+MHCategory.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA824DD4628005D7D8C /* UIView+MHCategory.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8F8253202B2008066B1 /* NSDecimalNumber+Addtion.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8F9253202B2008066B1 /* NSDictionary+LSCore.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8FA253202B2008066B1 /* UIImage+MUColor.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -407,12 +407,12 @@
 		04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHWebViewController.m; sourceTree = "<group>"; };
 		04EBCD9F24DD4628005D7D8C /* MHWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHWebViewController.h; sourceTree = "<group>"; };
-		04EBCDA224DD4628005D7D8C /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
-		04EBCDA324DD4628005D7D8C /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		04EBCDA224DD4628005D7D8C /* NSDate+MHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MHExtension.h"; sourceTree = "<group>"; };
+		04EBCDA324DD4628005D7D8C /* NSDate+MHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MHExtension.m"; sourceTree = "<group>"; };
 		04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
 		04EBCDA624DD4628005D7D8C /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
-		04EBCDA824DD4628005D7D8C /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
-		04EBCDA924DD4628005D7D8C /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		04EBCDA824DD4628005D7D8C /* UIView+MHCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MHCategory.m"; sourceTree = "<group>"; };
+		04EBCDA924DD4628005D7D8C /* UIView+MHCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MHCategory.h"; sourceTree = "<group>"; };
 		04EBCDAB24DD4628005D7D8C /* NSDecimalNumber+Addtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Addtion.h"; sourceTree = "<group>"; };
 		04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Addtion.m"; sourceTree = "<group>"; };
 		04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LSCore.m"; sourceTree = "<group>"; };
@@ -756,18 +756,18 @@
 				0414BA9D24EA523700EBE089 /* UIButton+Category.m */,
 				0414BA9724EA50D200EBE089 /* UILabel+topString.h */,
 				0414BA9824EA50D200EBE089 /* UILabel+topString.m */,
-				04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */,
 				04EBCDA624DD4628005D7D8C /* UITextView+Placeholder.h */,
-				04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */,
+				04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */,
 				04EBCDAF24DD4628005D7D8C /* NSDictionary+LSCore.h */,
-				04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */,
+				04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */,
 				04EBCDB224DD4628005D7D8C /* UIImage+MUColor.h */,
-				04EBCDA924DD4628005D7D8C /* UIView+Category.h */,
-				04EBCDA824DD4628005D7D8C /* UIView+Category.m */,
+				04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */,
+				04EBCDA924DD4628005D7D8C /* UIView+MHCategory.h */,
+				04EBCDA824DD4628005D7D8C /* UIView+MHCategory.m */,
 				04EBCDAB24DD4628005D7D8C /* NSDecimalNumber+Addtion.h */,
 				04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */,
-				04EBCDA224DD4628005D7D8C /* NSDate+Extension.h */,
-				04EBCDA324DD4628005D7D8C /* NSDate+Extension.m */,
+				04EBCDA224DD4628005D7D8C /* NSDate+MHExtension.h */,
+				04EBCDA324DD4628005D7D8C /* NSDate+MHExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -949,9 +949,9 @@
 				0423570025552F2C00349CBD /* NSString+Category.m in Headers */,
 				0423570125552F2C00349CBD /* UIButton+Category.m in Headers */,
 				0423570225552F2C00349CBD /* UILabel+topString.m in Headers */,
-				0423570325552F2C00349CBD /* NSDate+Extension.m in Headers */,
+				0423570325552F2C00349CBD /* NSDate+MHExtension.m in Headers */,
 				0423570425552F2C00349CBD /* UITextView+Placeholder.m in Headers */,
-				0423570525552F2C00349CBD /* UIView+Category.m in Headers */,
+				0423570525552F2C00349CBD /* UIView+MHCategory.m in Headers */,
 				0423570625552F2C00349CBD /* NSDecimalNumber+Addtion.m in Headers */,
 				0423570725552F2C00349CBD /* NSDictionary+LSCore.m in Headers */,
 				0423570825552F2C00349CBD /* UIImage+MUColor.m in Headers */,
@@ -978,7 +978,7 @@
 				0423571E25552F2C00349CBD /* CWFlowLayout.h in Headers */,
 				0423571F25552F2C00349CBD /* NSDictionary+LSCore.h in Headers */,
 				0423572025552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
-				0423572125552F2C00349CBD /* UIView+Category.h in Headers */,
+				0423572125552F2C00349CBD /* UIView+MHCategory.h in Headers */,
 				0423572225552F2C00349CBD /* GZCMulitiDelegate.h in Headers */,
 				0423572325552F2C00349CBD /* UIImage+MUColor.h in Headers */,
 				0423572425552F2C00349CBD /* WSDatePickerView.h in Headers */,
@@ -995,7 +995,7 @@
 				0423572F25552F2C00349CBD /* TBCityIconInfo.h in Headers */,
 				0423573025552F2C00349CBD /* TBCityIconFont.h in Headers */,
 				0423573125552F2C00349CBD /* MUHookMethodHelper.h in Headers */,
-				0423573325552F2C00349CBD /* NSDate+Extension.h in Headers */,
+				0423573325552F2C00349CBD /* NSDate+MHExtension.h in Headers */,
 				0423573425552F2C00349CBD /* LYEmptyBaseView.h in Headers */,
 				0423573525552F2C00349CBD /* UIView+Empty.h in Headers */,
 				0423573625552F2C00349CBD /* UIView+LYExtension.h in Headers */,
@@ -1042,9 +1042,9 @@
 				73B3A8F1253202B2008066B1 /* NSString+Category.m in Headers */,
 				73B3A8F2253202B2008066B1 /* UIButton+Category.m in Headers */,
 				73B3A8F3253202B2008066B1 /* UILabel+topString.m in Headers */,
-				73B3A8F5253202B2008066B1 /* NSDate+Extension.m in Headers */,
+				73B3A8F5253202B2008066B1 /* NSDate+MHExtension.m in Headers */,
 				73B3A8F6253202B2008066B1 /* UITextView+Placeholder.m in Headers */,
-				73B3A8F7253202B2008066B1 /* UIView+Category.m in Headers */,
+				73B3A8F7253202B2008066B1 /* UIView+MHCategory.m in Headers */,
 				73B3A8F8253202B2008066B1 /* NSDecimalNumber+Addtion.m in Headers */,
 				73B3A8F9253202B2008066B1 /* NSDictionary+LSCore.m in Headers */,
 				73B3A8FA253202B2008066B1 /* UIImage+MUColor.m in Headers */,
@@ -1072,7 +1072,7 @@
 				04EBCE2824DD4629005D7D8C /* CWFlowLayout.h in Headers */,
 				04EBCE0E24DD4629005D7D8C /* NSDictionary+LSCore.h in Headers */,
 				04EBCDF924DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
-				04EBCE0A24DD4629005D7D8C /* UIView+Category.h in Headers */,
+				04EBCE0A24DD4629005D7D8C /* UIView+MHCategory.h in Headers */,
 				04EBCE2224DD4629005D7D8C /* GZCMulitiDelegate.h in Headers */,
 				04EBCE1024DD4629005D7D8C /* UIImage+MUColor.h in Headers */,
 				04EBCE1124DD4629005D7D8C /* WSDatePickerView.h in Headers */,
@@ -1090,7 +1090,7 @@
 				04445C3C24E0D84E00D4FA5C /* TBCityIconFont.h in Headers */,
 				04445C3F24E0D98100D4FA5C /* MUHookMethodHelper.h in Headers */,
 				04EBCE1324DD4629005D7D8C /* MHHTTPSessionManager.h in Headers */,
-				04EBCE0524DD4629005D7D8C /* NSDate+Extension.h in Headers */,
+				04EBCE0524DD4629005D7D8C /* NSDate+MHExtension.h in Headers */,
 				04C4AAC924E285EA0092532B /* LYEmptyBaseView.h in Headers */,
 				04C4AACD24E285EA0092532B /* UIView+Empty.h in Headers */,
 				04C4AACC24E285EA0092532B /* UIView+LYExtension.h in Headers */,
@@ -1488,7 +1488,7 @@
 				04C87D8E25594A9900BF7078 /* MHInfoItemCell.m in Sources */,
 				0423576225552F2C00349CBD /* UIButton+Category.m in Sources */,
 				0423576325552F2C00349CBD /* UITableView+FDTemplateLayoutCell.m in Sources */,
-				0423576425552F2C00349CBD /* NSDate+Extension.m in Sources */,
+				0423576425552F2C00349CBD /* NSDate+MHExtension.m in Sources */,
 				0423576525552F2C00349CBD /* UILabel+topString.m in Sources */,
 				0423576625552F2C00349CBD /* SortNameTool.m in Sources */,
 				0423576725552F2C00349CBD /* MUHookMethodHelper.m in Sources */,
@@ -1501,7 +1501,7 @@
 				0423576E25552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				0423576F25552F2C00349CBD /* UITableView+FDKeyedHeightCache.m in Sources */,
 				0423577025552F2C00349CBD /* MBProgressHUD+Add.m in Sources */,
-				0423577125552F2C00349CBD /* UIView+Category.m in Sources */,
+				0423577125552F2C00349CBD /* UIView+MHCategory.m in Sources */,
 				0423577225552F2C00349CBD /* FTPopOverMenu.m in Sources */,
 				0423577325552F2C00349CBD /* MHWebViewController.m in Sources */,
 				0423577425552F2C00349CBD /* TTGTextTagCollectionView.m in Sources */,
@@ -1568,7 +1568,7 @@
 				04EBCE1524DD4629005D7D8C /* MHHTTPSessionManager.m in Sources */,
 				0414BA9F24EA523700EBE089 /* UIButton+Category.m in Sources */,
 				7368146D251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m in Sources */,
-				04EBCE0624DD4629005D7D8C /* NSDate+Extension.m in Sources */,
+				04EBCE0624DD4629005D7D8C /* NSDate+MHExtension.m in Sources */,
 				0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */,
 				04EBCE4424DD4629005D7D8C /* SortNameTool.m in Sources */,
 				04445C4024E0D98100D4FA5C /* MUHookMethodHelper.m in Sources */,
@@ -1581,7 +1581,7 @@
 				04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				73681472251258180026C6E7 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				04089EE024ECB59E0044DD26 /* MBProgressHUD+Add.m in Sources */,
-				04EBCE0924DD4629005D7D8C /* UIView+Category.m in Sources */,
+				04EBCE0924DD4629005D7D8C /* UIView+MHCategory.m in Sources */,
 				04269F8324FCE67000CFD9D5 /* FTPopOverMenu.m in Sources */,
 				04EBCE0324DD4629005D7D8C /* MHWebViewController.m in Sources */,
 				041C5ABF2507740B000670E7 /* TTGTextTagCollectionView.m in Sources */,
