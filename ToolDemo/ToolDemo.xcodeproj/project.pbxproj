@@ -17,7 +17,7 @@
 		0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; };
 		0414BA9E24EA523700EBE089 /* UIButton+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9C24EA523700EBE089 /* UIButton+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0414BA9F24EA523700EBE089 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9D24EA523700EBE089 /* UIButton+Category.m */; };
-		04155C50255A207A006C3379 /* MHInfoItemCell.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C87D5A2558E9AE00BF7078 /* MHInfoItemCell.m */; };
+		04155C50255A207A006C3379 /* MHInfoItemCell.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C87D5A2558E9AE00BF7078 /* MHInfoItemCell.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		041C5ABC2507740B000670E7 /* TTGTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5AB82507740A000670E7 /* TTGTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		041C5ABD2507740B000670E7 /* TTGTextTagCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 041C5AB92507740A000670E7 /* TTGTextTagCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		041C5ABE2507740B000670E7 /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; };
@@ -53,14 +53,11 @@
 		0423571325552F2C00349CBD /* WSDatePickerView.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB524DD4628005D7D8C /* WSDatePickerView.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571525552F2C00349CBD /* SPAlertController.m in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571625552F2C00349CBD /* GZCMulitiDelegate.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423571725552F2C00349CBD /* CWCarousel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCC24DD4629005D7D8C /* CWCarousel.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423571825552F2C00349CBD /* CWFlowLayout.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571925552F2C00349CBD /* MHBaseModel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD324DD4629005D7D8C /* MHBaseModel.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571A25552F2C00349CBD /* SPPageMenu.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF424DD4629005D7D8C /* SPPageMenu.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571B25552F2C00349CBD /* SortNameTool.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571C25552F2C00349CBD /* TTGTagCollectionView.m in Headers */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571D25552F2C00349CBD /* TTGTextTagCollectionView.m in Headers */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423571E25552F2C00349CBD /* CWFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD124DD4629005D7D8C /* CWFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571F25552F2C00349CBD /* NSDictionary+LSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAF24DD4628005D7D8C /* NSDictionary+LSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572025552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9224DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572125552F2C00349CBD /* UIView+MHCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA924DD4628005D7D8C /* UIView+MHCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -74,7 +71,6 @@
 		0423572925552F2C00349CBD /* SPAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7524FCC11C00CFD9D5 /* SPAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572A25552F2C00349CBD /* SPPageMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF524DD4629005D7D8C /* SPPageMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572B25552F2C00349CBD /* MHBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD424DD4629005D7D8C /* MHBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423572C25552F2C00349CBD /* CWCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD024DD4629005D7D8C /* CWCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572D25552F2C00349CBD /* UITextView+Placeholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA624DD4628005D7D8C /* UITextView+Placeholder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572E25552F2C00349CBD /* ToolMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF224DD4629005D7D8C /* ToolMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572F25552F2C00349CBD /* TBCityIconInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -118,7 +114,6 @@
 		0423575725552F2C00349CBD /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA524DD4628005D7D8C /* UITextView+Placeholder.m */; };
 		0423575825552F2C00349CBD /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AABC24E285E90092532B /* LYEmptyBaseView.m */; };
 		0423575925552F2C00349CBD /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 73681468251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m */; };
-		0423575A25552F2C00349CBD /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */; };
 		0423575B25552F2C00349CBD /* NSDictionary+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDAE24DD4628005D7D8C /* NSDictionary+LSCore.m */; };
 		0423575C25552F2C00349CBD /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; };
 		0423575D25552F2C00349CBD /* MHNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3A912253203EA008066B1 /* MHNavigation.m */; };
@@ -145,7 +140,6 @@
 		0423577325552F2C00349CBD /* MHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */; };
 		0423577425552F2C00349CBD /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; };
 		0423577525552F2C00349CBD /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B085BF2500DACB00FB3554 /* NSString+Category.m */; };
-		0423577625552F2C00349CBD /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDCC24DD4629005D7D8C /* CWCarousel.m */; };
 		0423577725552F2C00349CBD /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483C27224EF5B2A005BFD32 /* NullSafe.m */; };
 		04269F7724FCC11C00CFD9D5 /* SPAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7524FCC11C00CFD9D5 /* SPAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; };
@@ -161,6 +155,13 @@
 		04445C7424E1356900D4FA5C /* Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; };
 		04445C7524E1356900D4FA5C /* Tool.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0483C27324EF5B2A005BFD32 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483C27224EF5B2A005BFD32 /* NullSafe.m */; };
+		04AD3C5B2563A3A100A429D3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD3C44256368BF00A429D3 /* iCarousel.m */; };
+		04AD3C612563A3A200A429D3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD3C44256368BF00A429D3 /* iCarousel.m */; };
+		04AD3C672563A3AC00A429D3 /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AD3C45256368BF00A429D3 /* iCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04AD3C6D2563A3AD00A429D3 /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AD3C45256368BF00A429D3 /* iCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04AD3C822563A3E300A429D3 /* MHInfoItemCell.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C87D5A2558E9AE00BF7078 /* MHInfoItemCell.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		04AD3C832563A3E300A429D3 /* iCarousel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04AD3C44256368BF00A429D3 /* iCarousel.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		04AD3C8E2563A3FB00A429D3 /* iCarousel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04AD3C44256368BF00A429D3 /* iCarousel.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		04B085C02500DACB00FB3554 /* NSString+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B085BE2500DACB00FB3554 /* NSString+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04B085C12500DACB00FB3554 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B085BF2500DACB00FB3554 /* NSString+Category.m */; };
 		04C4AAC524E285EA0092532B /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AABC24E285E90092532B /* LYEmptyBaseView.m */; };
@@ -209,10 +210,6 @@
 		04EBCE1724DD4629005D7D8C /* ZZLimitInputManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDBC24DD4629005D7D8C /* ZZLimitInputManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE2124DD4629005D7D8C /* GZCMulitiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; };
 		04EBCE2224DD4629005D7D8C /* GZCMulitiDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCA24DD4629005D7D8C /* GZCMulitiDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04EBCE2324DD4629005D7D8C /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDCC24DD4629005D7D8C /* CWCarousel.m */; };
-		04EBCE2524DD4629005D7D8C /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */; };
-		04EBCE2724DD4629005D7D8C /* CWCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD024DD4629005D7D8C /* CWCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04EBCE2824DD4629005D7D8C /* CWFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD124DD4629005D7D8C /* CWFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE2924DD4629005D7D8C /* MHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDD324DD4629005D7D8C /* MHBaseModel.m */; };
 		04EBCE2A24DD4629005D7D8C /* MHBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD424DD4629005D7D8C /* MHBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE4124DD4629005D7D8C /* ToolMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF224DD4629005D7D8C /* ToolMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -275,8 +272,6 @@
 		73B3A906253202B2008066B1 /* MHHTTPSessionManager.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB924DD4629005D7D8C /* MHHTTPSessionManager.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A907253202B2008066B1 /* SPAlertController.m in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A908253202B2008066B1 /* GZCMulitiDelegate.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B3A909253202B2008066B1 /* CWCarousel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCC24DD4629005D7D8C /* CWCarousel.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B3A90A253202B2008066B1 /* CWFlowLayout.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A90B253202B2008066B1 /* MHBaseModel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD324DD4629005D7D8C /* MHBaseModel.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A90C253202B2008066B1 /* SPPageMenu.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF424DD4629005D7D8C /* SPPageMenu.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A90D253202B2008066B1 /* SortNameTool.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -369,6 +364,8 @@
 		04445C3D24E0D98100D4FA5C /* MUHookMethodHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUHookMethodHelper.h; sourceTree = "<group>"; };
 		04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUHookMethodHelper.m; sourceTree = "<group>"; };
 		0483C27224EF5B2A005BFD32 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
+		04AD3C44256368BF00A429D3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		04AD3C45256368BF00A429D3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		04B085BE2500DACB00FB3554 /* NSString+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		04B085BF2500DACB00FB3554 /* NSString+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		04C4AABC24E285E90092532B /* LYEmptyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyBaseView.m; sourceTree = "<group>"; };
@@ -427,10 +424,6 @@
 		04EBCDBC24DD4629005D7D8C /* ZZLimitInputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZLimitInputManager.h; sourceTree = "<group>"; };
 		04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZCMulitiDelegate.m; sourceTree = "<group>"; };
 		04EBCDCA24DD4629005D7D8C /* GZCMulitiDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZCMulitiDelegate.h; sourceTree = "<group>"; };
-		04EBCDCC24DD4629005D7D8C /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
-		04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
-		04EBCDD024DD4629005D7D8C /* CWCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarousel.h; sourceTree = "<group>"; };
-		04EBCDD124DD4629005D7D8C /* CWFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlowLayout.h; sourceTree = "<group>"; };
 		04EBCDD324DD4629005D7D8C /* MHBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHBaseModel.m; sourceTree = "<group>"; };
 		04EBCDD424DD4629005D7D8C /* MHBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHBaseModel.h; sourceTree = "<group>"; };
 		04EBCDF224DD4629005D7D8C /* ToolMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolMacro.h; sourceTree = "<group>"; };
@@ -716,7 +709,7 @@
 				04EBCDBA24DD4629005D7D8C /* ZZLimitInputManager(正则限制输入框) */,
 				04EBCDBD24DD4629005D7D8C /* SPAlertController(仿原始AlertController) */,
 				04EBCDC824DD4629005D7D8C /* GZCMulitiDelegate(多播代理) */,
-				04EBCDCB24DD4629005D7D8C /* CWCarousel(轮播图) */,
+				04EBCDCB24DD4629005D7D8C /* iCarousel(轮播图) */,
 				04EBCDD224DD4629005D7D8C /* BaseModel */,
 				04EBCDF224DD4629005D7D8C /* ToolMacro.h */,
 				04EBCDF324DD4629005D7D8C /* SPPageMenu(分页Page) */,
@@ -817,15 +810,13 @@
 			path = "GZCMulitiDelegate(多播代理)";
 			sourceTree = "<group>";
 		};
-		04EBCDCB24DD4629005D7D8C /* CWCarousel(轮播图) */ = {
+		04EBCDCB24DD4629005D7D8C /* iCarousel(轮播图) */ = {
 			isa = PBXGroup;
 			children = (
-				04EBCDD024DD4629005D7D8C /* CWCarousel.h */,
-				04EBCDCC24DD4629005D7D8C /* CWCarousel.m */,
-				04EBCDD124DD4629005D7D8C /* CWFlowLayout.h */,
-				04EBCDCE24DD4629005D7D8C /* CWFlowLayout.m */,
+				04AD3C45256368BF00A429D3 /* iCarousel.h */,
+				04AD3C44256368BF00A429D3 /* iCarousel.m */,
 			);
-			path = "CWCarousel(轮播图)";
+			path = "iCarousel(轮播图)";
 			sourceTree = "<group>";
 		};
 		04EBCDD224DD4629005D7D8C /* BaseModel */ = {
@@ -968,14 +959,11 @@
 				0423571325552F2C00349CBD /* WSDatePickerView.m in Headers */,
 				0423571525552F2C00349CBD /* SPAlertController.m in Headers */,
 				0423571625552F2C00349CBD /* GZCMulitiDelegate.m in Headers */,
-				0423571725552F2C00349CBD /* CWCarousel.m in Headers */,
-				0423571825552F2C00349CBD /* CWFlowLayout.m in Headers */,
 				0423571925552F2C00349CBD /* MHBaseModel.m in Headers */,
 				0423571A25552F2C00349CBD /* SPPageMenu.m in Headers */,
 				0423571B25552F2C00349CBD /* SortNameTool.m in Headers */,
 				0423571C25552F2C00349CBD /* TTGTagCollectionView.m in Headers */,
 				0423571D25552F2C00349CBD /* TTGTextTagCollectionView.m in Headers */,
-				0423571E25552F2C00349CBD /* CWFlowLayout.h in Headers */,
 				0423571F25552F2C00349CBD /* NSDictionary+LSCore.h in Headers */,
 				0423572025552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
 				0423572125552F2C00349CBD /* UIView+MHCategory.h in Headers */,
@@ -989,7 +977,6 @@
 				0423572925552F2C00349CBD /* SPAlertController.h in Headers */,
 				0423572A25552F2C00349CBD /* SPPageMenu.h in Headers */,
 				0423572B25552F2C00349CBD /* MHBaseModel.h in Headers */,
-				0423572C25552F2C00349CBD /* CWCarousel.h in Headers */,
 				0423572D25552F2C00349CBD /* UITextView+Placeholder.h in Headers */,
 				0423572E25552F2C00349CBD /* ToolMacro.h in Headers */,
 				0423572F25552F2C00349CBD /* TBCityIconInfo.h in Headers */,
@@ -1004,6 +991,7 @@
 				0423573925552F2C00349CBD /* UIButton+Category.h in Headers */,
 				0423573A25552F2C00349CBD /* LYEmptyViewHeader.h in Headers */,
 				0423573B25552F2C00349CBD /* RKNotificationHub.h in Headers */,
+				04AD3C6D2563A3AD00A429D3 /* iCarousel.h in Headers */,
 				0423573C25552F2C00349CBD /* MBProgressHUD.h in Headers */,
 				0423573D25552F2C00349CBD /* FTPopOverMenu.h in Headers */,
 				0423573E25552F2C00349CBD /* TTGTagCollectionView.h in Headers */,
@@ -1020,8 +1008,9 @@
 				0423574925552F2C00349CBD /* StepSlider.h in Headers */,
 				0423574A25552F2C00349CBD /* StepSlider.m in Headers */,
 				0423574B25552F2C00349CBD /* NSString+Category.h in Headers */,
-				0423574C25552F2C00349CBD /* Tool.h in Headers */,
+				04AD3C8E2563A3FB00A429D3 /* iCarousel.m in Headers */,
 				04155C50255A207A006C3379 /* MHInfoItemCell.m in Headers */,
+				0423574C25552F2C00349CBD /* Tool.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1062,14 +1051,12 @@
 				73B3A906253202B2008066B1 /* MHHTTPSessionManager.m in Headers */,
 				73B3A907253202B2008066B1 /* SPAlertController.m in Headers */,
 				73B3A908253202B2008066B1 /* GZCMulitiDelegate.m in Headers */,
-				73B3A909253202B2008066B1 /* CWCarousel.m in Headers */,
-				73B3A90A253202B2008066B1 /* CWFlowLayout.m in Headers */,
 				73B3A90B253202B2008066B1 /* MHBaseModel.m in Headers */,
 				73B3A90C253202B2008066B1 /* SPPageMenu.m in Headers */,
 				73B3A90D253202B2008066B1 /* SortNameTool.m in Headers */,
+				04AD3C672563A3AC00A429D3 /* iCarousel.h in Headers */,
 				73B3A90E253202B2008066B1 /* TTGTagCollectionView.m in Headers */,
 				73B3A90F253202B2008066B1 /* TTGTextTagCollectionView.m in Headers */,
-				04EBCE2824DD4629005D7D8C /* CWFlowLayout.h in Headers */,
 				04EBCE0E24DD4629005D7D8C /* NSDictionary+LSCore.h in Headers */,
 				04EBCDF924DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
 				04EBCE0A24DD4629005D7D8C /* UIView+MHCategory.h in Headers */,
@@ -1083,7 +1070,6 @@
 				04269F7724FCC11C00CFD9D5 /* SPAlertController.h in Headers */,
 				04EBCE4324DD4629005D7D8C /* SPPageMenu.h in Headers */,
 				04EBCE2A24DD4629005D7D8C /* MHBaseModel.h in Headers */,
-				04EBCE2724DD4629005D7D8C /* CWCarousel.h in Headers */,
 				04EBCE0824DD4629005D7D8C /* UITextView+Placeholder.h in Headers */,
 				04EBCE4124DD4629005D7D8C /* ToolMacro.h in Headers */,
 				04445C3B24E0D84E00D4FA5C /* TBCityIconInfo.h in Headers */,
@@ -1114,6 +1100,8 @@
 				73B3A9152532048A008066B1 /* MHNavigation.m in Headers */,
 				04F0EDC5253697F000F20FED /* StepSlider.h in Headers */,
 				04F0EDC72536981300F20FED /* StepSlider.m in Headers */,
+				04AD3C822563A3E300A429D3 /* MHInfoItemCell.m in Headers */,
+				04AD3C832563A3E300A429D3 /* iCarousel.m in Headers */,
 				04B085C02500DACB00FB3554 /* NSString+Category.h in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
 			);
@@ -1478,7 +1466,6 @@
 				0423575725552F2C00349CBD /* UITextView+Placeholder.m in Sources */,
 				0423575825552F2C00349CBD /* LYEmptyBaseView.m in Sources */,
 				0423575925552F2C00349CBD /* UITableView+FDIndexPathHeightCache.m in Sources */,
-				0423575A25552F2C00349CBD /* CWFlowLayout.m in Sources */,
 				0423575B25552F2C00349CBD /* NSDictionary+LSCore.m in Sources */,
 				0423575C25552F2C00349CBD /* SPAlertController.m in Sources */,
 				0423575D25552F2C00349CBD /* MHNavigation.m in Sources */,
@@ -1502,11 +1489,11 @@
 				0423576F25552F2C00349CBD /* UITableView+FDKeyedHeightCache.m in Sources */,
 				0423577025552F2C00349CBD /* MBProgressHUD+Add.m in Sources */,
 				0423577125552F2C00349CBD /* UIView+MHCategory.m in Sources */,
+				04AD3C612563A3A200A429D3 /* iCarousel.m in Sources */,
 				0423577225552F2C00349CBD /* FTPopOverMenu.m in Sources */,
 				0423577325552F2C00349CBD /* MHWebViewController.m in Sources */,
 				0423577425552F2C00349CBD /* TTGTextTagCollectionView.m in Sources */,
 				0423577525552F2C00349CBD /* NSString+Category.m in Sources */,
-				0423577625552F2C00349CBD /* CWCarousel.m in Sources */,
 				0423577725552F2C00349CBD /* NullSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1558,7 +1545,6 @@
 				04C4AAC524E285EA0092532B /* LYEmptyBaseView.m in Sources */,
 				04C87D8825594A9700BF7078 /* MHInfoItemCell.m in Sources */,
 				73681470251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m in Sources */,
-				04EBCE2524DD4629005D7D8C /* CWFlowLayout.m in Sources */,
 				04EBCE0D24DD4629005D7D8C /* NSDictionary+LSCore.m in Sources */,
 				04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */,
 				73B3A914253203EA008066B1 /* MHNavigation.m in Sources */,
@@ -1579,6 +1565,7 @@
 				04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */,
 				041C5ABE2507740B000670E7 /* TTGTagCollectionView.m in Sources */,
 				04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				04AD3C5B2563A3A100A429D3 /* iCarousel.m in Sources */,
 				73681472251258180026C6E7 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				04089EE024ECB59E0044DD26 /* MBProgressHUD+Add.m in Sources */,
 				04EBCE0924DD4629005D7D8C /* UIView+MHCategory.m in Sources */,
@@ -1586,7 +1573,6 @@
 				04EBCE0324DD4629005D7D8C /* MHWebViewController.m in Sources */,
 				041C5ABF2507740B000670E7 /* TTGTextTagCollectionView.m in Sources */,
 				04B085C12500DACB00FB3554 /* NSString+Category.m in Sources */,
-				04EBCE2324DD4629005D7D8C /* CWCarousel.m in Sources */,
 				0483C27324EF5B2A005BFD32 /* NullSafe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

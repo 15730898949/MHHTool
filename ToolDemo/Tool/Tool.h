@@ -25,7 +25,7 @@
 #import <Tool/ZZLimitInputManager.h>
 #import <Tool/SPAlertController.h>
 #import <Tool/GZCMulitiDelegate.h>
-#import <Tool/CWCarousel.h>
+#import <Tool/iCarousel.h>
 #import <Tool/MHBaseModel.h>
 #import <Tool/SPPageMenu.h>
 #import <Tool/SortNameTool.h>

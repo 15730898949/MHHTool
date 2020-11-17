@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <Tool/CWCarousel.h>
+#import <Tool/iCarousel.h>
 #import <Tool/ToolMacro.h>
 #import <Tool/UIImage+MUColor.h>
 #import <Tool/MHHTTPSessionManager.h>
@@ -24,9 +24,13 @@
 #import "NSMutableAttributedString+SCRAttributedStringBuilder.h"
 #import <Tool/Tool.h>
 #import "BaseWebViewController.h"
-
+#import "iCarousel.h"
 #import <objc/runtime.h>
-@interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate,MHInfoItemCellDelegate>
+@interface ViewController ()<iCarouselDelegate,iCarouselDataSource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate,MHInfoItemCellDelegate>{
+    UIPageControl * _pageControl;
+    iCarousel *carousel;
+
+}
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
 @property (nonatomic ,strong)UILabel *lable;
@@ -99,16 +103,29 @@
     }];
     
     
-    CWFlowLayout *layout = [[CWFlowLayout alloc]initWithStyle:CWCarouselStyle_Normal];
-    CWCarousel *banner = [[CWCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100) delegate:self datasource:self flowLayout:layout];
-    banner.isAuto = YES;
-    banner.autoTimInterval = 2;
-    banner.endless = YES;
-    [banner.carouselView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-    banner.backgroundColor = [UIColor whiteColor];
-    [banner freshCarousel];
+    carousel = [[iCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100)];
+    carousel.delegate = self;
+    carousel.dataSource = self;
+    carousel.pagingEnabled = YES;
+    carousel.type = iCarouselTypeLinear;
+    [carousel reloadData];
+    
+    
+    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 70, 150, 20)];
+    _pageControl.numberOfPages = 3;
+    _pageControl.currentPage = 0;
+    [carousel addSubview:_pageControl];
+    
+//    CWFlowLayout *layout = [[CWFlowLayout alloc]initWithStyle:CWCarouselStyle_Normal];
+//    CWCarousel *banner = [[CWCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100) delegate:self datasource:self flowLayout:layout];
+//    banner.isAuto = YES;
+//    banner.autoTimInterval = 2;
+//    banner.endless = YES;
+//    [banner.carouselView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+//    banner.backgroundColor = [UIColor whiteColor];
+//    [banner freshCarousel];
 
-    self.tableView.tableHeaderView = banner;
+    self.tableView.tableHeaderView = carousel;
     [self   textNetwork ];
 
     // Do any additional setup after loading the view.
@@ -145,7 +162,6 @@
 }
 
 
-
 - (void)sliderChange:(StepSlider *)slider{
 //    NSLog(@"******%lu",slider.index);
 }
@@ -171,40 +187,71 @@
 //    });
 }
 
-- (NSInteger)numbersForCarousel{
-    return 1;
+- (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel{
+    return 2;
 }
 
-- (UICollectionViewCell *)viewForCarousel:(CWCarousel *)carousel indexPath:(NSIndexPath *)indexPath index:(NSInteger)index{
-    UICollectionViewCell *cell = [carousel.carouselView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    UIImageView *imgView = [cell.contentView viewWithTag:10001];
-    if(!imgView) {
-        imgView = [[UIImageView alloc] initWithFrame:cell.contentView.bounds];
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view{
+    if (view == nil) {
+        view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, 100)];
+        view.layer.masksToBounds = YES;
+        view.clipsToBounds = YES;
+    }
+    
+    [view addSubview:({
+        UIImageView* imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, SCREEN_Width-20, 100)];
         imgView.tag = 10001;
         imgView.backgroundColor = [UIColor redColor];
         imgView.contentMode =  UIViewContentModeScaleAspectFill;
-        [cell.contentView addSubview:imgView];
-        cell.layer.masksToBounds = YES;
-    }
-//    imageV.image = [UIImage imageFromColorMu:UIColorFromRGB(arc4random()%255, arc4random()%255, arc4random()%255, 1)];
-    imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"timg-%ld",index+1]];
+        imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"timg-%ld",index+1]];
+        imgView;
+    })];
     
-    UILabel *lab = [cell.contentView viewWithTag:10002];
-    if (!lab) {
-        lab = [[UILabel alloc]initWithFrame:CGRectMake(20, cell.contentView.mh_bottom - 30, 200, 20)];
+    [view addSubview:({
+        UILabel* lab = [[UILabel alloc]initWithFrame:CGRectMake(20, view.mh_bottom - 30, 200, 20)];
         lab.tag = 10002;
         lab.textColor = [UIColor whiteColor];
         lab.backgroundColor =UIColorFromRGB(0, 0, 0, 0.5);
-        [cell.contentView addSubview:lab];
-    }
-    lab.text = [NSString stringWithFormat:@" 这是第%ld张图片 ",index+1];
-    [lab sizeToFit];
-
-    return cell;
-}
-- (void)CWCarousel:(CWCarousel *)carousel didSelectedAtIndex:(NSInteger)index{
+        lab.text = [NSString stringWithFormat:@" 这是第%ld张图片 ",index+1];
+        [lab sizeToFit];
+        lab;
+    })];
     
+    return view;
+
 }
+
+- (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value {
+    if (option == iCarouselOptionWrap) {
+        return YES;
+    }
+    return value;
+}
+
+- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index{
+    NSLog(@"iCarousel点击%ld",index);
+}
+
+- (void)delayMethod{
+    if (carousel.numberOfItems<= 0 && carousel) {
+        return;
+    }
+    [carousel scrollToItemAtIndex:carousel.currentItemIndex == carousel.numberOfItems-1?0:carousel.currentItemIndex+1 duration:1];
+}
+
+- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel{
+    _pageControl.currentPage = carousel.currentItemIndex;
+    [self performSelector:@selector(delayMethod) withObject:nil afterDelay:3];
+
+}
+
+- (void)carouselWillBeginDragging:(iCarousel *)carousel{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(delayMethod) object:nil];
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+}
+
+
+
 
 
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
