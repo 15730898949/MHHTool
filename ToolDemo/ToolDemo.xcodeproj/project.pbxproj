@@ -46,8 +46,6 @@
 		0423570C25552F2C00349CBD /* UIView+Empty.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AABE24E285E90092532B /* UIView+Empty.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423570D25552F2C00349CBD /* UIView+LYExtension.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AABF24E285E90092532B /* UIView+LYExtension.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423570E25552F2C00349CBD /* MUHookMethodHelper.m in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423570F25552F2C00349CBD /* TBCityIconFont.m in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423571025552F2C00349CBD /* TBCityIconInfo.m in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571125552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571225552F2C00349CBD /* MHWebViewController.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571325552F2C00349CBD /* WSDatePickerView.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB524DD4628005D7D8C /* WSDatePickerView.m */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,7 +53,6 @@
 		0423571625552F2C00349CBD /* GZCMulitiDelegate.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571925552F2C00349CBD /* MHBaseModel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD324DD4629005D7D8C /* MHBaseModel.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571A25552F2C00349CBD /* SPPageMenu.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF424DD4629005D7D8C /* SPPageMenu.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423571B25552F2C00349CBD /* SortNameTool.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571C25552F2C00349CBD /* TTGTagCollectionView.m in Headers */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571D25552F2C00349CBD /* TTGTextTagCollectionView.m in Headers */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423571F25552F2C00349CBD /* NSDictionary+LSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAF24DD4628005D7D8C /* NSDictionary+LSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,14 +64,11 @@
 		0423572525552F2C00349CBD /* NSDecimalNumber+Addtion.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDAB24DD4628005D7D8C /* NSDecimalNumber+Addtion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572625552F2C00349CBD /* ZZLimitInputManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDBC24DD4629005D7D8C /* ZZLimitInputManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572725552F2C00349CBD /* MHWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9F24DD4628005D7D8C /* MHWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423572825552F2C00349CBD /* SortNameTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF824DD4629005D7D8C /* SortNameTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572925552F2C00349CBD /* SPAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7524FCC11C00CFD9D5 /* SPAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572A25552F2C00349CBD /* SPPageMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF524DD4629005D7D8C /* SPPageMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572B25552F2C00349CBD /* MHBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD424DD4629005D7D8C /* MHBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572D25552F2C00349CBD /* UITextView+Placeholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA624DD4628005D7D8C /* UITextView+Placeholder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423572E25552F2C00349CBD /* ToolMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF224DD4629005D7D8C /* ToolMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423572F25552F2C00349CBD /* TBCityIconInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0423573025552F2C00349CBD /* TBCityIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3724E0D84E00D4FA5C /* TBCityIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423573125552F2C00349CBD /* MUHookMethodHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3D24E0D98100D4FA5C /* MUHookMethodHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423573325552F2C00349CBD /* NSDate+MHExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDA224DD4628005D7D8C /* NSDate+MHExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0423573425552F2C00349CBD /* LYEmptyBaseView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AAC024E285E90092532B /* LYEmptyBaseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,7 +101,6 @@
 		0423575025552F2C00349CBD /* NSDecimalNumber+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDAC24DD4628005D7D8C /* NSDecimalNumber+Addtion.m */; };
 		0423575125552F2C00349CBD /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */; };
 		0423575225552F2C00349CBD /* WSDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB524DD4628005D7D8C /* WSDatePickerView.m */; };
-		0423575325552F2C00349CBD /* TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */; };
 		0423575425552F2C00349CBD /* ZZLimitInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDBB24DD4629005D7D8C /* ZZLimitInputManager.m */; };
 		0423575525552F2C00349CBD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04089EDB24ECB59E0044DD26 /* MBProgressHUD.m */; };
 		0423575625552F2C00349CBD /* LYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AAC224E285EA0092532B /* LYEmptyView.m */; };
@@ -124,13 +117,11 @@
 		0423576325552F2C00349CBD /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73681465251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m */; };
 		0423576425552F2C00349CBD /* NSDate+MHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDA324DD4628005D7D8C /* NSDate+MHExtension.m */; };
 		0423576525552F2C00349CBD /* UILabel+topString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9824EA50D200EBE089 /* UILabel+topString.m */; };
-		0423576625552F2C00349CBD /* SortNameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; };
 		0423576725552F2C00349CBD /* MUHookMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */; };
 		0423576825552F2C00349CBD /* StepSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0EDC4253697EF00F20FED /* StepSlider.m */; };
 		0423576925552F2C00349CBD /* MHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDD324DD4629005D7D8C /* MHBaseModel.m */; };
 		0423576A25552F2C00349CBD /* RKNotificationHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9224EA2F9E00EBE089 /* RKNotificationHub.m */; };
 		0423576B25552F2C00349CBD /* GZCMulitiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; };
-		0423576C25552F2C00349CBD /* TBCityIconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */; };
 		0423576D25552F2C00349CBD /* TTGTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; };
 		0423576E25552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */; };
 		0423576F25552F2C00349CBD /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7368146A251258180026C6E7 /* UITableView+FDKeyedHeightCache.m */; };
@@ -145,10 +136,6 @@
 		04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; };
 		04269F8224FCE67000CFD9D5 /* FTPopOverMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04269F8324FCE67000CFD9D5 /* FTPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F8124FCE67000CFD9D5 /* FTPopOverMenu.m */; };
-		04445C3824E0D84E00D4FA5C /* TBCityIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */; };
-		04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */; };
-		04445C3B24E0D84E00D4FA5C /* TBCityIconInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04445C3C24E0D84E00D4FA5C /* TBCityIconFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3724E0D84E00D4FA5C /* TBCityIconFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04445C3F24E0D98100D4FA5C /* MUHookMethodHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3D24E0D98100D4FA5C /* MUHookMethodHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04445C4024E0D98100D4FA5C /* MUHookMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */; };
 		04445C4224E0E82A00D4FA5C /* UIImage+MUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */; };
@@ -215,8 +202,6 @@
 		04EBCE4124DD4629005D7D8C /* ToolMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF224DD4629005D7D8C /* ToolMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE4224DD4629005D7D8C /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDF424DD4629005D7D8C /* SPPageMenu.m */; };
 		04EBCE4324DD4629005D7D8C /* SPPageMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF524DD4629005D7D8C /* SPPageMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04EBCE4424DD4629005D7D8C /* SortNameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; };
-		04EBCE4524DD4629005D7D8C /* SortNameTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF824DD4629005D7D8C /* SortNameTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04F0EDB0253535F500F20FED /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F0EDAF253535F500F20FED /* test.html */; };
 		04F0EDC5253697F000F20FED /* StepSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F0EDC3253697EF00F20FED /* StepSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04F0EDC6253697F000F20FED /* StepSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0EDC4253697EF00F20FED /* StepSlider.m */; };
@@ -264,8 +249,6 @@
 		73B3A8FE253202B2008066B1 /* UIView+Empty.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AABE24E285E90092532B /* UIView+Empty.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8FF253202B2008066B1 /* UIView+LYExtension.m in Headers */ = {isa = PBXBuildFile; fileRef = 04C4AABF24E285E90092532B /* UIView+LYExtension.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A900253202B2008066B1 /* MUHookMethodHelper.m in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B3A901253202B2008066B1 /* TBCityIconFont.m in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B3A902253202B2008066B1 /* TBCityIconInfo.m in Headers */ = {isa = PBXBuildFile; fileRef = 04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A903253202B2008066B1 /* UINavigationController+FDFullscreenPopGesture.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A904253202B2008066B1 /* MHWebViewController.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A905253202B2008066B1 /* WSDatePickerView.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB524DD4628005D7D8C /* WSDatePickerView.m */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -274,7 +257,6 @@
 		73B3A908253202B2008066B1 /* GZCMulitiDelegate.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A90B253202B2008066B1 /* MHBaseModel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD324DD4629005D7D8C /* MHBaseModel.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A90C253202B2008066B1 /* SPPageMenu.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF424DD4629005D7D8C /* SPPageMenu.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B3A90D253202B2008066B1 /* SortNameTool.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDF724DD4629005D7D8C /* SortNameTool.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A90E253202B2008066B1 /* TTGTagCollectionView.m in Headers */ = {isa = PBXBuildFile; fileRef = 041C5ABA2507740A000670E7 /* TTGTagCollectionView.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A90F253202B2008066B1 /* TTGTextTagCollectionView.m in Headers */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A913253203EA008066B1 /* MHNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B3A911253203EA008066B1 /* MHNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -357,10 +339,6 @@
 		04269F7624FCC11C00CFD9D5 /* SPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAlertController.m; sourceTree = "<group>"; };
 		04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPopOverMenu.h; sourceTree = "<group>"; };
 		04269F8124FCE67000CFD9D5 /* FTPopOverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPopOverMenu.m; sourceTree = "<group>"; };
-		04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconFont.m; sourceTree = "<group>"; };
-		04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCityIconInfo.m; sourceTree = "<group>"; };
-		04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconInfo.h; sourceTree = "<group>"; };
-		04445C3724E0D84E00D4FA5C /* TBCityIconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCityIconFont.h; sourceTree = "<group>"; };
 		04445C3D24E0D98100D4FA5C /* MUHookMethodHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUHookMethodHelper.h; sourceTree = "<group>"; };
 		04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUHookMethodHelper.m; sourceTree = "<group>"; };
 		0483C27224EF5B2A005BFD32 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
@@ -429,8 +407,6 @@
 		04EBCDF224DD4629005D7D8C /* ToolMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolMacro.h; sourceTree = "<group>"; };
 		04EBCDF424DD4629005D7D8C /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
 		04EBCDF524DD4629005D7D8C /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
-		04EBCDF724DD4629005D7D8C /* SortNameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortNameTool.m; sourceTree = "<group>"; };
-		04EBCDF824DD4629005D7D8C /* SortNameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortNameTool.h; sourceTree = "<group>"; };
 		04F0EDAF253535F500F20FED /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		04F0EDC3253697EF00F20FED /* StepSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepSlider.h; sourceTree = "<group>"; };
 		04F0EDC4253697EF00F20FED /* StepSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepSlider.m; sourceTree = "<group>"; };
@@ -553,17 +529,6 @@
 				04269F8124FCE67000CFD9D5 /* FTPopOverMenu.m */,
 			);
 			path = FTPopOverMenu;
-			sourceTree = "<group>";
-		};
-		04445C3224E0D84E00D4FA5C /* iconfont(字体图标) */ = {
-			isa = PBXGroup;
-			children = (
-				04445C3624E0D84E00D4FA5C /* TBCityIconInfo.h */,
-				04445C3724E0D84E00D4FA5C /* TBCityIconFont.h */,
-				04445C3324E0D84E00D4FA5C /* TBCityIconFont.m */,
-				04445C3424E0D84E00D4FA5C /* TBCityIconInfo.m */,
-			);
-			path = "iconfont(字体图标)";
 			sourceTree = "<group>";
 		};
 		04445C4124E0D98600D4FA5C /* MUHookMethodHelper(交换方法) */ = {
@@ -701,7 +666,6 @@
 				0414BA9524EA2FA700EBE089 /* RKNotificationHub(小红点) */,
 				04C4AABB24E285E90092532B /* LYEmptyView(空白页) */,
 				04445C4124E0D98600D4FA5C /* MUHookMethodHelper(交换方法) */,
-				04445C3224E0D84E00D4FA5C /* iconfont(字体图标) */,
 				04EBCD9124DD4628005D7D8C /* FDFullscreenPopGesture(侧滑返回) */,
 				04EBCD9D24DD4628005D7D8C /* WebViewController */,
 				04EBCDB324DD4628005D7D8C /* WSDatePickerView */,
@@ -713,7 +677,6 @@
 				04EBCDD224DD4629005D7D8C /* BaseModel */,
 				04EBCDF224DD4629005D7D8C /* ToolMacro.h */,
 				04EBCDF324DD4629005D7D8C /* SPPageMenu(分页Page) */,
-				04EBCDF624DD4629005D7D8C /* SortNameTool(首字母排序) */,
 				041C5AB72507740A000670E7 /* TTGTagCollectionView(tag标签) */,
 			);
 			path = Tool;
@@ -804,8 +767,8 @@
 		04EBCDC824DD4629005D7D8C /* GZCMulitiDelegate(多播代理) */ = {
 			isa = PBXGroup;
 			children = (
-				04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */,
 				04EBCDCA24DD4629005D7D8C /* GZCMulitiDelegate.h */,
+				04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */,
 			);
 			path = "GZCMulitiDelegate(多播代理)";
 			sourceTree = "<group>";
@@ -835,15 +798,6 @@
 				04EBCDF424DD4629005D7D8C /* SPPageMenu.m */,
 			);
 			path = "SPPageMenu(分页Page)";
-			sourceTree = "<group>";
-		};
-		04EBCDF624DD4629005D7D8C /* SortNameTool(首字母排序) */ = {
-			isa = PBXGroup;
-			children = (
-				04EBCDF824DD4629005D7D8C /* SortNameTool.h */,
-				04EBCDF724DD4629005D7D8C /* SortNameTool.m */,
-			);
-			path = "SortNameTool(首字母排序)";
 			sourceTree = "<group>";
 		};
 		04F0EDC1253697EF00F20FED /* StepSlider */ = {
@@ -952,8 +906,6 @@
 				0423570C25552F2C00349CBD /* UIView+Empty.m in Headers */,
 				0423570D25552F2C00349CBD /* UIView+LYExtension.m in Headers */,
 				0423570E25552F2C00349CBD /* MUHookMethodHelper.m in Headers */,
-				0423570F25552F2C00349CBD /* TBCityIconFont.m in Headers */,
-				0423571025552F2C00349CBD /* TBCityIconInfo.m in Headers */,
 				0423571125552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.m in Headers */,
 				0423571225552F2C00349CBD /* MHWebViewController.m in Headers */,
 				0423571325552F2C00349CBD /* WSDatePickerView.m in Headers */,
@@ -961,7 +913,6 @@
 				0423571625552F2C00349CBD /* GZCMulitiDelegate.m in Headers */,
 				0423571925552F2C00349CBD /* MHBaseModel.m in Headers */,
 				0423571A25552F2C00349CBD /* SPPageMenu.m in Headers */,
-				0423571B25552F2C00349CBD /* SortNameTool.m in Headers */,
 				0423571C25552F2C00349CBD /* TTGTagCollectionView.m in Headers */,
 				0423571D25552F2C00349CBD /* TTGTextTagCollectionView.m in Headers */,
 				0423571F25552F2C00349CBD /* NSDictionary+LSCore.h in Headers */,
@@ -973,14 +924,11 @@
 				0423572525552F2C00349CBD /* NSDecimalNumber+Addtion.h in Headers */,
 				0423572625552F2C00349CBD /* ZZLimitInputManager.h in Headers */,
 				0423572725552F2C00349CBD /* MHWebViewController.h in Headers */,
-				0423572825552F2C00349CBD /* SortNameTool.h in Headers */,
 				0423572925552F2C00349CBD /* SPAlertController.h in Headers */,
 				0423572A25552F2C00349CBD /* SPPageMenu.h in Headers */,
 				0423572B25552F2C00349CBD /* MHBaseModel.h in Headers */,
 				0423572D25552F2C00349CBD /* UITextView+Placeholder.h in Headers */,
 				0423572E25552F2C00349CBD /* ToolMacro.h in Headers */,
-				0423572F25552F2C00349CBD /* TBCityIconInfo.h in Headers */,
-				0423573025552F2C00349CBD /* TBCityIconFont.h in Headers */,
 				0423573125552F2C00349CBD /* MUHookMethodHelper.h in Headers */,
 				0423573325552F2C00349CBD /* NSDate+MHExtension.h in Headers */,
 				0423573425552F2C00349CBD /* LYEmptyBaseView.h in Headers */,
@@ -1043,8 +991,6 @@
 				73B3A8FE253202B2008066B1 /* UIView+Empty.m in Headers */,
 				73B3A8FF253202B2008066B1 /* UIView+LYExtension.m in Headers */,
 				73B3A900253202B2008066B1 /* MUHookMethodHelper.m in Headers */,
-				73B3A901253202B2008066B1 /* TBCityIconFont.m in Headers */,
-				73B3A902253202B2008066B1 /* TBCityIconInfo.m in Headers */,
 				73B3A903253202B2008066B1 /* UINavigationController+FDFullscreenPopGesture.m in Headers */,
 				73B3A904253202B2008066B1 /* MHWebViewController.m in Headers */,
 				73B3A905253202B2008066B1 /* WSDatePickerView.m in Headers */,
@@ -1053,7 +999,6 @@
 				73B3A908253202B2008066B1 /* GZCMulitiDelegate.m in Headers */,
 				73B3A90B253202B2008066B1 /* MHBaseModel.m in Headers */,
 				73B3A90C253202B2008066B1 /* SPPageMenu.m in Headers */,
-				73B3A90D253202B2008066B1 /* SortNameTool.m in Headers */,
 				04AD3C672563A3AC00A429D3 /* iCarousel.h in Headers */,
 				73B3A90E253202B2008066B1 /* TTGTagCollectionView.m in Headers */,
 				73B3A90F253202B2008066B1 /* TTGTextTagCollectionView.m in Headers */,
@@ -1066,14 +1011,11 @@
 				04EBCE0B24DD4629005D7D8C /* NSDecimalNumber+Addtion.h in Headers */,
 				04EBCE1724DD4629005D7D8C /* ZZLimitInputManager.h in Headers */,
 				04EBCE0424DD4629005D7D8C /* MHWebViewController.h in Headers */,
-				04EBCE4524DD4629005D7D8C /* SortNameTool.h in Headers */,
 				04269F7724FCC11C00CFD9D5 /* SPAlertController.h in Headers */,
 				04EBCE4324DD4629005D7D8C /* SPPageMenu.h in Headers */,
 				04EBCE2A24DD4629005D7D8C /* MHBaseModel.h in Headers */,
 				04EBCE0824DD4629005D7D8C /* UITextView+Placeholder.h in Headers */,
 				04EBCE4124DD4629005D7D8C /* ToolMacro.h in Headers */,
-				04445C3B24E0D84E00D4FA5C /* TBCityIconInfo.h in Headers */,
-				04445C3C24E0D84E00D4FA5C /* TBCityIconFont.h in Headers */,
 				04445C3F24E0D98100D4FA5C /* MUHookMethodHelper.h in Headers */,
 				04EBCE1324DD4629005D7D8C /* MHHTTPSessionManager.h in Headers */,
 				04EBCE0524DD4629005D7D8C /* NSDate+MHExtension.h in Headers */,
@@ -1459,7 +1401,6 @@
 				0423575025552F2C00349CBD /* NSDecimalNumber+Addtion.m in Sources */,
 				0423575125552F2C00349CBD /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Sources */,
 				0423575225552F2C00349CBD /* WSDatePickerView.m in Sources */,
-				0423575325552F2C00349CBD /* TBCityIconFont.m in Sources */,
 				0423575425552F2C00349CBD /* ZZLimitInputManager.m in Sources */,
 				0423575525552F2C00349CBD /* MBProgressHUD.m in Sources */,
 				0423575625552F2C00349CBD /* LYEmptyView.m in Sources */,
@@ -1477,13 +1418,11 @@
 				0423576325552F2C00349CBD /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				0423576425552F2C00349CBD /* NSDate+MHExtension.m in Sources */,
 				0423576525552F2C00349CBD /* UILabel+topString.m in Sources */,
-				0423576625552F2C00349CBD /* SortNameTool.m in Sources */,
 				0423576725552F2C00349CBD /* MUHookMethodHelper.m in Sources */,
 				0423576825552F2C00349CBD /* StepSlider.m in Sources */,
 				0423576925552F2C00349CBD /* MHBaseModel.m in Sources */,
 				0423576A25552F2C00349CBD /* RKNotificationHub.m in Sources */,
 				0423576B25552F2C00349CBD /* GZCMulitiDelegate.m in Sources */,
-				0423576C25552F2C00349CBD /* TBCityIconInfo.m in Sources */,
 				0423576D25552F2C00349CBD /* TTGTagCollectionView.m in Sources */,
 				0423576E25552F2C00349CBD /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				0423576F25552F2C00349CBD /* UITableView+FDKeyedHeightCache.m in Sources */,
@@ -1537,7 +1476,6 @@
 				04EBCE0C24DD4629005D7D8C /* NSDecimalNumber+Addtion.m in Sources */,
 				734D819B2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Sources */,
 				04EBCE1224DD4629005D7D8C /* WSDatePickerView.m in Sources */,
-				04445C3824E0D84E00D4FA5C /* TBCityIconFont.m in Sources */,
 				04EBCE1624DD4629005D7D8C /* ZZLimitInputManager.m in Sources */,
 				04089EDF24ECB59E0044DD26 /* MBProgressHUD.m in Sources */,
 				04C4AACB24E285EA0092532B /* LYEmptyView.m in Sources */,
@@ -1556,13 +1494,11 @@
 				7368146D251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				04EBCE0624DD4629005D7D8C /* NSDate+MHExtension.m in Sources */,
 				0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */,
-				04EBCE4424DD4629005D7D8C /* SortNameTool.m in Sources */,
 				04445C4024E0D98100D4FA5C /* MUHookMethodHelper.m in Sources */,
 				04F0EDC6253697F000F20FED /* StepSlider.m in Sources */,
 				04EBCE2924DD4629005D7D8C /* MHBaseModel.m in Sources */,
 				0414BA9424EA2F9F00EBE089 /* RKNotificationHub.m in Sources */,
 				04EBCE2124DD4629005D7D8C /* GZCMulitiDelegate.m in Sources */,
-				04445C3924E0D84E00D4FA5C /* TBCityIconInfo.m in Sources */,
 				041C5ABE2507740B000670E7 /* TTGTagCollectionView.m in Sources */,
 				04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				04AD3C5B2563A3A100A429D3 /* iCarousel.m in Sources */,
