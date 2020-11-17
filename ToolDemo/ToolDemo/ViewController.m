@@ -167,7 +167,6 @@
 }
 
 - (void)textNetwork{
-    
 //    NSArray *dataArr = @[@"123",@"234",@"345",[NSNull null]];
 //    for (NSString*str in dataArr) {
 //        NSLog(@"%@",str);
@@ -379,8 +378,7 @@
     self.navigationBarTranslationY =  scrollView.contentOffset.y;
 //    [self.view endEditing:YES];
 
-    [MBHUD showProgress:scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.mh_height) inView:self.tableView.tableHeaderView animation:YES];
-    MBHUD.userInteractionEnabled = NO;
+    
 //    MBHUD.progress = scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.height);
 //    MBHUD.label.text = [NSString stringWithFormat:@"%.0f%%",MBHUD.progress*100];
 //    [MBHUD.button setTitle:@"111" forState:UIControlStateNormal];
