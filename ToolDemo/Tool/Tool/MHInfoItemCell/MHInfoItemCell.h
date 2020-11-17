@@ -42,6 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) UITextField *titleTextField;
 @property (nonatomic, strong, readonly) UITextField *contentTextField;
 
+@property (nonatomic, strong, readonly) UILabel *titleLab;
+@property (nonatomic, strong, readonly) UILabel *contentLab;
+
 /**
  最右边的"附件"视图.
  默认懒加载为ImageView, 也可以赋值成自定义视图.
@@ -66,6 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
  如果设置小于零的值(如-1), 则表示标题宽度自适应
  */
 @property (nonatomic, assign) CGFloat fixedTitleWidth;
+@property (nonatomic, assign) CGFloat fixedTitleHeight;
 
 /**
  在 ly_accessoryView.hide == YES 时, 是否将 contentTextField 的右边与ly_accessoryView对齐.
@@ -76,6 +80,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) void (^didBeginEditing)(MHInfoItemCell *cell,UITextField *textField);
 @property (nonatomic, copy) void (^didEndEditing)(MHInfoItemCell *cell,UITextField *textField);
 @property (nonatomic, copy) void (^textFieldValueChanged)(MHInfoItemCell *cell,UITextField *textField);
+
+
+///需要自动计算行高调用
+- (void)layoutView;
 
 @end
 

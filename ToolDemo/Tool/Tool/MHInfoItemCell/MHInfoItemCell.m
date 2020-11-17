@@ -7,10 +7,12 @@
 //
 
 #import "MHInfoItemCell.h"
-
+#import <objc/runtime.h>
 @interface MHInfoItemCell ()<UITextFieldDelegate>
 @property (nonatomic, strong, readwrite) UITextField *titleTextField;
 @property (nonatomic, strong, readwrite) UITextField *contentTextField;
+@property (nonatomic, strong, readwrite) UILabel *titleLab;
+@property (nonatomic, strong, readwrite) UILabel *contentLab;
 
 @end
 
@@ -22,7 +24,6 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
         _titleTextFieldLeftMargin = 16;
         _titleTextFieldRightMargin = 8;
         _accessoryViewLeftMargin = 8;
@@ -30,7 +31,7 @@
         _fixedTitleWidth = -1;
         self.titleTextField.text = @"";
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldValueChanged:) name:UITextFieldTextDidChangeNotification object:nil];
-
+        
     }
     return self;
 }
@@ -43,15 +44,19 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    [self layoutView];
+}
+
+- (void)layoutView{
     if (!_contentTextField && !_titleTextField && !_accessoryView) {
         return;
     }
     [self.contentView removeConstraints:self.contentView.constraints];
-
     _titleTextField.translatesAutoresizingMaskIntoConstraints = NO;
     _contentTextField.translatesAutoresizingMaskIntoConstraints = NO;
     _accessoryView.translatesAutoresizingMaskIntoConstraints = NO;
-
+    
+    
     NSDictionary *view = nil;
     NSString *horizontalString = @"";
     NSDictionary *metrics = @{@"accessoryViewWidth":@([self accessoryViewSize].width),@"titleLeftSpacing":@(self.titleTextFieldLeftMargin),@"titleRightSpacing":@(self.titleTextFieldRightMargin),@"accessoryLeftSpacing":@(self.accessoryViewLeftMargin),@"accessoryRightSpacing":@(self.accessoryViewRightMargin),@"fixedTitleWidth":@(self.fixedTitleWidth),@"accessoryViewHeight":@([self accessoryViewSize].height)};
@@ -59,18 +64,18 @@
     if (_contentTextField == nil) {
         if (_accessoryView) {
             view =  NSDictionaryOfVariableBindings(_titleTextField,_accessoryView);
-            horizontalString = @"H:|-titleLeftSpacing-[_titleTextField]-titleRightSpacing-[_accessoryView(accessoryViewWidth@1000)]-accessoryRightSpacing-|";
+            horizontalString = @"H:|-titleLeftSpacing-[_titleTextField(>=100@1000)]-titleRightSpacing-[_accessoryView(accessoryViewWidth@1000)]-accessoryRightSpacing@750-|";
         } else {
             view =  NSDictionaryOfVariableBindings(_titleTextField);
-            horizontalString = @"H:|-titleLeftSpacing-[_titleTextField]-titleRightSpacing-|";
+            horizontalString = @"H:|-titleLeftSpacing-[_titleTextField(>=100@1000)]-titleRightSpacing@750-|";
         }
     }else{
         if (_accessoryView) {
             view =  NSDictionaryOfVariableBindings(_titleTextField,_contentTextField,_accessoryView);
-            horizontalString =  @"H:|-titleLeftSpacing-[_titleTextField]-titleRightSpacing-[_contentTextField]-accessoryLeftSpacing-[_accessoryView(accessoryViewWidth@1000)]-accessoryRightSpacing-|";
+            horizontalString =  @"H:|-titleLeftSpacing-[_titleTextField(>=100@1000)]-titleRightSpacing-[_contentTextField]-accessoryLeftSpacing-[_accessoryView(accessoryViewWidth@1000)]-accessoryRightSpacing@750-|";
         } else {
             view =  NSDictionaryOfVariableBindings(_titleTextField,_contentTextField);
-            horizontalString =  @"H:|-titleLeftSpacing-[_titleTextField]-titleRightSpacing-[_contentTextField]-accessoryRightSpacing-|";
+            horizontalString =  @"H:|-titleLeftSpacing-[_titleTextField(>=100@1000)]-titleRightSpacing-[_contentTextField]-accessoryRightSpacing@750-|";
         }
 
     }
@@ -78,31 +83,44 @@
     NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:horizontalString options:0 metrics:metrics views:view];
     [self.contentView addConstraints:horizontalConstraints];
     
-    if (self.fixedTitleWidth > 0) {
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_titleTextField(<=fixedTitleWidth)]" options:0 metrics:@{@"fixedTitleWidth":@(self.fixedTitleWidth)} views:view]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_titleTextField]-0@1000-|" options:0 metrics:nil views:view]];
+
+    if (self.fixedTitleHeight > 0 ) {
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_titleTextField(fixedTitleHeight@750)]" options:0 metrics:@{@"fixedTitleHeight":@(self.fixedTitleHeight)} views:view]];
+
     }
-
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_titleTextField]-0-|" options:0 metrics:nil views:view]];
-
-    if (_contentTextField) {
+    if (_contentTextField && _contentTextField.superview) {
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_contentTextField]-0-|" options:0 metrics:nil views:view]];
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_contentTextField(>=100@1000)]" options:0 metrics:nil views:view]];
     }
+
     
-    if (_accessoryView) {
+    if (_accessoryView && _accessoryView.superview) {
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[accessoryView(accessoryViewHeight@1000)]" options:0 metrics:@{@"accessoryViewHeight":@([self accessoryViewSize].height)} views:@{@"accessoryView":_accessoryView}]];
         
         [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:_accessoryView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
     }
 
-
-
+    if (_titleLab && _titleLab.superview) {
+        [_titleTextField removeConstraints:_titleTextField.constraints];
+        _titleLab.translatesAutoresizingMaskIntoConstraints = NO;
+        [_titleTextField addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_titleLab]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleLab)]];
+        [_titleTextField addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-titleLeftViewWidth-[_titleLab]-titleRightViewWidth-|" options:0 metrics:@{@"titleLeftViewWidth":@(_titleTextField.leftView.frame.size.width),@"titleRightViewWidth":@(_titleTextField.rightView.frame.size.width)} views:NSDictionaryOfVariableBindings(_titleLab)]];
+    }
     
+    if (_contentLab && _contentLab.superview) {
+        [_contentTextField removeConstraints:_contentTextField.constraints];
+        _contentLab.translatesAutoresizingMaskIntoConstraints = NO;
+        [_contentTextField addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_contentLab]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_contentLab)]];
+        [_contentTextField addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-contentLeftViewWidth-[_contentLab]-contentRightViewWidth-|" options:0 metrics:@{@"contentLeftViewWidth":@(_contentTextField.leftView.frame.size.width),@"contentRightViewWidth":@(_contentTextField.rightView.frame.size.width)} views:NSDictionaryOfVariableBindings(_contentLab)]];
+    }
+
+    if (self.fixedTitleWidth > 0) {
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_titleTextField(fixedTitleWidth)]" options:0 metrics:@{@"fixedTitleWidth":@(self.fixedTitleWidth)} views:view]];
+    }
+
 }
 
-- (CGSize)intrinsicContentSize {
-    return CGSizeMake(UIViewNoIntrinsicMetric, 50);
-}
 
 #pragma mark - UITextFieldDelegate
 
@@ -142,6 +160,7 @@
         [self.contentView addSubview:accessoryView];
         _accessoryView = accessoryView;
         [self setNeedsLayout];
+
     }
 
 }
@@ -154,6 +173,7 @@
         }
         [(UIImageView *)self.accessoryView setImage:image];
         [self setNeedsLayout];
+
     }
 }
 
@@ -164,6 +184,7 @@
     if (_titleTextFieldLeftMargin != titleTextFieldLeftMargin) {
         _titleTextFieldLeftMargin = titleTextFieldLeftMargin;
         [self setNeedsLayout];
+
     }
 }
 
@@ -174,6 +195,7 @@
     if (_titleTextFieldRightMargin != titleTextFieldRightMargin) {
         _titleTextFieldRightMargin = titleTextFieldRightMargin;
         [self setNeedsLayout];
+
     }
 }
 
@@ -184,6 +206,7 @@
     if (_accessoryViewLeftMargin != accessoryViewLeftMargin) {
         _accessoryViewLeftMargin = accessoryViewLeftMargin;
         [self setNeedsLayout];
+
     }
 }
 
@@ -194,6 +217,7 @@
     if (_accessoryViewRightMargin != accessoryViewRightMargin) {
         _accessoryViewRightMargin = accessoryViewRightMargin;
         [self setNeedsLayout];
+
     }
 }
 
@@ -204,10 +228,19 @@
     }
 }
 
+- (void)setFixedTitleHeight:(CGFloat)fixedTitleHeight{
+    if (_fixedTitleHeight != fixedTitleHeight) {
+        _fixedTitleHeight = fixedTitleHeight;
+        [self setNeedsLayout];
+
+    }
+}
+
 - (void)setAccessoryViewSizeMargin:(CGSize)accessoryViewSizeMargin{
     if (!CGSizeEqualToSize(_accessoryView.bounds.size, accessoryViewSizeMargin) && !CGSizeEqualToSize(_accessoryViewSizeMargin, accessoryViewSizeMargin)) {
         _accessoryViewSizeMargin = accessoryViewSizeMargin;
         [self setNeedsLayout];
+
     }
 }
 
@@ -218,8 +251,9 @@
         _titleTextField = [[UITextField alloc] init];
         _titleTextField.font = [UIFont systemFontOfSize:15.0];
         //_titleTextField.backgroundColor = [UIColor orangeColor];
-        [_titleTextField setContentHuggingPriority:1000 forAxis:UILayoutConstraintAxisHorizontal];
-        [_titleTextField setContentCompressionResistancePriority:1000 forAxis:UILayoutConstraintAxisHorizontal];
+        [_titleTextField setContentHuggingPriority:999 forAxis:UILayoutConstraintAxisHorizontal];
+        [_titleTextField setContentCompressionResistancePriority:999 forAxis:UILayoutConstraintAxisHorizontal];
+        [_titleTextField setContentCompressionResistancePriority:999 forAxis:UILayoutConstraintAxisVertical];
 
         _titleTextField.delegate = self;
         _titleTextField.enabled = NO;
@@ -229,22 +263,57 @@
     return _titleTextField;
 }
 
+- (UILabel *)titleLab{
+    if (!_titleLab){
+        _titleLab = [[UILabel alloc]init];
+        _titleLab.textAlignment = self.titleTextField.textAlignment;
+        _titleLab.font = self.titleTextField.font;
+        _titleLab.textColor = self.titleTextField.textColor;
+        _titleLab.numberOfLines = 0;
+        [self.titleTextField addSubview:_titleLab];
+        self.titleTextField.enabled = NO;
+        self.titleTextField.text = @"";
+        self.titleTextField.placeholder = @"";
+//        [_titleLab setContentCompressionResistancePriority:1000 forAxis:UILayoutConstraintAxisVertical];
+//        [_titleLab setContentHuggingPriority:1000 forAxis:UILayoutConstraintAxisVertical];
+
+    }
+    return _titleLab;
+}
+
 - (UITextField *)contentTextField {
     if (!_contentTextField) {
         _contentTextField = [[UITextField alloc] init];
         _contentTextField.textAlignment = NSTextAlignmentRight;
         //_contentTextField.backgroundColor = [UIColor cyanColor];
         _contentTextField.font = [UIFont systemFontOfSize:15.0];
-        [_contentTextField setContentHuggingPriority:999 forAxis:UILayoutConstraintAxisHorizontal];
-        [_contentTextField setContentCompressionResistancePriority:999 forAxis:UILayoutConstraintAxisHorizontal];
+        [_contentTextField setContentHuggingPriority:998 forAxis:UILayoutConstraintAxisHorizontal];
+        [_contentTextField setContentCompressionResistancePriority:998 forAxis:UILayoutConstraintAxisHorizontal];
+        [_contentTextField setContentCompressionResistancePriority:998 forAxis:UILayoutConstraintAxisVertical];
 
         _contentTextField.delegate = self;
         _contentTextField.enabled = NO;
+
         
         [self.contentView addSubview:_contentTextField];
     }
     return _contentTextField;
 }
+- (UILabel *)contentLab{
+    if (!_contentLab){
+        _contentLab = [[UILabel alloc]init];
+        _contentLab.textAlignment = self.contentTextField.textAlignment;
+        _contentLab.font = self.contentTextField.font;
+        _contentLab.textColor = self.contentTextField.textColor;
+        _contentLab.numberOfLines = 0;
+        [self.contentTextField addSubview:_contentLab];
+        self.contentTextField.enabled = NO;
+        self.contentTextField.text = @"";
+        self.contentTextField.placeholder = @"";
+    }
+    return _contentLab;
+}
+
 
 - (CGSize)accessoryViewSize {
     if (!_accessoryView) {

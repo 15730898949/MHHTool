@@ -14,7 +14,7 @@
 #import <Masonry/Masonry.h>
 #import <Tool/LYEmptyViewHeader.h>
 #import <Tool/MBProgressHUD+Add.h>
-#import <Tool/UIView+Category.h>
+#import <Tool/UIView+MHCategory.h>
 #import <Tool/ToolMacro.h>
 #import <Tool/MBProgressHUD.h>
 #import <Tool/SPPageMenu.h>
@@ -24,6 +24,8 @@
 #import "NSMutableAttributedString+SCRAttributedStringBuilder.h"
 #import <Tool/Tool.h>
 #import "BaseWebViewController.h"
+
+#import <objc/runtime.h>
 @interface ViewController ()<CWCarouselDelegate,CWCarouselDatasource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate,MHInfoItemCellDelegate>
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableArray *dataArray;
@@ -41,9 +43,7 @@
 //    NSMutableAttributedString *textFont = [[NSMutableAttributedString alloc] initWithString:@"NSAttributedString设置字体大小"];
     [SFAtStringCore registerAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20]} forLabel:@"LABEL"];
     [SFAtStringCore registerAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forLabel:@"RED"];
-    
-    
-    
+        
 
     self.view.backgroundColor = UIColorFromHex(0x161b2f, 1);
     self.dataArray = [NSMutableArray array];
@@ -52,7 +52,9 @@
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [[UIView alloc]init];
     self.tableView.backgroundColor = UIColorFromHex(0x161b2f, 1);
-//    [self.tableView registerClass:[MHInfoItemCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[MHInfoItemCell class] forCellReuseIdentifier:@"cell"];
+//    self.tableView.estimatedRowHeight = 100;
+//    self.t
     self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImage:nil titleStr:@"暂无数据" detailStr:nil btnTitleStr:@"点击重试" btnClickBlock:^{
 //        [self.dataArray addObject:[NSString stringWithFormat:@"%ld",self.tableView.page]];
         [self.tableView reloadData];
@@ -189,7 +191,7 @@
     
     UILabel *lab = [cell.contentView viewWithTag:10002];
     if (!lab) {
-        lab = [[UILabel alloc]initWithFrame:CGRectMake(20, cell.contentView.bottom - 30, 200, 20)];
+        lab = [[UILabel alloc]initWithFrame:CGRectMake(20, cell.contentView.mh_bottom - 30, 200, 20)];
         lab.tag = 10002;
         lab.textColor = [UIColor whiteColor];
         lab.backgroundColor =UIColorFromRGB(0, 0, 0, 0.5);
@@ -210,30 +212,38 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
+    return [tableView fd_heightForCellWithIdentifier:@"cell" cacheByIndexPath:indexPath configuration:^(id cell) {
+        [self configCell:cell indexPath:indexPath];
+    }];
+
+//    return 200;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    MHInfoItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[MHInfoItemCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
+    MHInfoItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    [self configCell:cell indexPath:indexPath];
+
+    return cell;
+}
+
+
+- (void)configCell:(MHInfoItemCell *)cell indexPath:(NSIndexPath *)indexPath{
     cell.delegate = self;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     NSString *title = self.dataArray[indexPath.row][@"title"];
-    cell.titleTextField.text = title;
-    cell.contentTextField.enabled = YES;
-    cell.contentTextField.text = self.dataArray[indexPath.row][@"content"];
-    cell.contentTextField.placeholder = [NSString stringWithFormat:@"请输入%@",title];
+//    cell.titleTextField.text = title;
+//    cell.contentTextField.enabled = YES;
+//    cell.contentTextField.text = self.dataArray[indexPath.row][@"content"];
+//    cell.contentTextField.attributedText = [[NSAttributedString alloc]initWithString:@"qweqe\ndasdasdasda"];;
+//    cell.contentTextField.placeholder = [NSString stringWithFormat:@"请输入%@",title];
     cell.accessoryView = nil;
     if ([title isEqualToString:@"头像"]) {
         cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"add_wechat"]];
         cell.accessoryViewSizeMargin = CGSizeMake(30, 30);
         cell.contentTextField.enabled = NO;
         cell.contentTextField.placeholder = @"";
-//        cell.contentTextField.text = @"";
+        cell.contentTextField.text = @"";
 
     }else if ([title isEqualToString:@"性别"]){
         cell.contentTextField.enabled = NO;
@@ -246,30 +256,45 @@
 //        cell.contentTextField.text = @"";
 
     }
+
+    if (indexPath.row == 2) {
+        cell.titleTextField.leftView = ({
+            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, 50)];
+            UIImageView *imgView = [UIImageView new];
+            imgView.contentMode = UIViewContentModeCenter;
+            imgView.image = [UIImage imageNamed:@"add_wechat"];
+            imgView.frame = CGRectMake(0, 0, 50, 50);
+            imgView.layer.cornerRadius = 15;
+            imgView.layer.masksToBounds = YES;
+            [view addSubview:imgView];
+
+            view;
+        });
+        cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
+        cell.fixedTitleWidth = 160;
+
+        cell.accessoryView = [UISwitch new];
+
+    }else{
+        cell.titleTextField.leftView = nil;
+//        cell.titleTextField.text = @"";
+        cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
+    }
     
-//    if (indexPath.row == 2) {
-//        cell.titleTextField.leftView = ({
-//            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, 50)];
-//            UIImageView *imgView = [UIImageView new];
-//            imgView.contentMode = UIViewContentModeCenter;
-//            imgView.image = [UIImage imageNamed:@"add_wechat"];
-//            imgView.frame = CGRectMake(0, 0, 50, 50);
-//            imgView.layer.cornerRadius = 15;
-//            imgView.layer.masksToBounds = YES;
-//            [view addSubview:imgView];
-//
-//            view;
-//        });
-//        cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
-//        cell.fixedTitleWidth = 160;
-//
-//        cell.accessoryView = [UISwitch new];
-//
-//    }else{
-//        cell.titleTextField.leftView = nil;
-//        cell.fixedTitleWidth = 100;
-//        cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"add_wechat"]]];
-//    }
+//    cell.fixedTitleHeight = 300;
+//    cell.contentTextField.text = @"1\n2";
+    cell.contentLab.attributedText = [[NSMutableAttributedString alloc]initWithString:@""].append(@"qweqe\ndasdasdasda").color([UIColor redColor]).append(@"\ndddd\n").color([UIColor blackColor]).font([UIFont systemFontOfSize:20]).appendImage([UIImage imageNamed:@"add_wechat"]).append(@"\n123123");
+//   
+//    
+//    Ivar ivar = class_getInstanceVariable([cell.contentTextField class], "_label");
+//    id placeholderLabel = object_getIvar(cell.contentTextField, ivar);
+//    [placeholderLabel performSelector:@selector(setNumberOfLines:) withObject:0];
+    
+//    cell.titleLab.text = title;
+    
+    cell.titleLab.attributedText = [[NSMutableAttributedString alloc]initWithString:@""].append(@"qweqe\ndasdasdasda").color([UIColor redColor]).append(@"\ndddd\n").color([UIColor blackColor]).font([UIFont systemFontOfSize:20]).appendImage([UIImage imageNamed:@"add_wechat"]).append(@"\n123123");
+
+    
     
     [cell setTextFieldValueChanged:^(MHInfoItemCell * _Nonnull cell, UITextField * _Nonnull textField) {
         NSIndexPath *index = indexPath;
@@ -284,9 +309,8 @@
 
     }];
 
-    return cell;
+    [cell layoutView];
 }
-
 
 
 
@@ -308,7 +332,7 @@
     self.navigationBarTranslationY =  scrollView.contentOffset.y;
 //    [self.view endEditing:YES];
 
-    [MBHUD showProgress:scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.height) inView:self.tableView.tableHeaderView animation:YES];
+    [MBHUD showProgress:scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.mh_height) inView:self.tableView.tableHeaderView animation:YES];
     MBHUD.userInteractionEnabled = NO;
 //    MBHUD.progress = scrollView.contentOffset.y/(scrollView.contentSize.height - scrollView.height);
 //    MBHUD.label.text = [NSString stringWithFormat:@"%.0f%%",MBHUD.progress*100];
