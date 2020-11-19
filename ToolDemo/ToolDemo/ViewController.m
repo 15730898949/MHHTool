@@ -317,7 +317,7 @@
             view;
         });
         cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
-        cell.fixedTitleWidth = 160;
+//        cell.fixedTitleWidth = 160;
 
         cell.accessoryView = [UISwitch new];
 
@@ -327,9 +327,13 @@
         cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
     }
     
+    cell.titleLab.text = @"1231";
+    cell.contentTextField.placeholder = @"请输入";
+    cell.contentTextField.enabled = YES;
+    cell.fixedTitleHeight = 50;
 //    cell.fixedTitleHeight = 300;
 //    cell.contentTextField.text = @"1\n2";
-    cell.contentLab.attributedText = [[NSMutableAttributedString alloc]initWithString:@""].append(@"qweqe\ndasdasdasda").color([UIColor redColor]).append(@"\ndddd\n").color([UIColor blackColor]).font([UIFont systemFontOfSize:20]).appendImage([UIImage imageNamed:@"add_wechat"]).append(@"\n123123");
+//    cell.contentLab.attributedText = [[NSMutableAttributedString alloc]initWithString:@""].append(@"qweqe\ndasdasdasda").color([UIColor redColor]).append(@"\ndddd\n").color([UIColor blackColor]).font([UIFont systemFontOfSize:20]).appendImage([UIImage imageNamed:@"add_wechat"]).append(@"\n123123");
 //   
 //    
 //    Ivar ivar = class_getInstanceVariable([cell.contentTextField class], "_label");
@@ -338,7 +342,7 @@
     
 //    cell.titleLab.text = title;
     
-    cell.titleLab.attributedText = [[NSMutableAttributedString alloc]initWithString:@""].append(@"qweqe\ndasdasdasda").color([UIColor redColor]).append(@"\ndddd\n").color([UIColor blackColor]).font([UIFont systemFontOfSize:20]).appendImage([UIImage imageNamed:@"add_wechat"]).append(@"\n123123");
+//    cell.titleLab.attributedText = [[NSMutableAttributedString alloc]initWithString:@""].append(@"qweqe\ndasdasdasda").color([UIColor redColor]).append(@"\ndddd\n").color([UIColor blackColor]).font([UIFont systemFontOfSize:20]).appendImage([UIImage imageNamed:@"add_wechat"]).append(@"\n123123");
 
     
     

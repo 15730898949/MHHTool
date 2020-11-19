@@ -29,19 +29,19 @@
 FOUNDATION_EXPORT double UITextView_PlaceholderVersionNumber;
 FOUNDATION_EXPORT const unsigned char UITextView_PlaceholderVersionString[];
 
-@interface UITextView (Placeholder)
+@interface UITextView (mh_placeholder)
 
-@property (nonatomic, readonly) UITextView *placeholderTextView NS_SWIFT_NAME(placeholderTextView);
+@property (nonatomic, readonly) UITextView *mh_placeholderTextView NS_SWIFT_NAME(placeholderTextView);
 
-@property (nonatomic, strong) IBInspectable NSString *placeholder;
-@property (nonatomic, strong) NSAttributedString *attributedPlaceholder;
-@property (nonatomic, strong) IBInspectable UIColor *placeholderColor;
+@property (nonatomic, strong) IBInspectable NSString *mh_placeholder;
+@property (nonatomic, strong) NSAttributedString *mh_attributedPlaceholder;
+@property (nonatomic, strong) IBInspectable UIColor *mh_placeholderColor;
 
 + (UIColor *)defaultPlaceholderColor;
 
 @end
 
-@interface UITextField (Placeholder)
-@property (nonatomic, strong) IBInspectable UIColor *placeholderColor;
+@interface UITextField (mh_placeholder)
+@property (nonatomic, strong) IBInspectable UIColor *mh_placeholderColor;
 
 @end

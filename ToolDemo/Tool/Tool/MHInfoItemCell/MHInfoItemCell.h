@@ -60,6 +60,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) CGFloat titleTextFieldLeftMargin;
 @property (nonatomic, assign) CGFloat titleTextFieldRightMargin;
+@property (nonatomic, assign) CGFloat titleTextFieldTopMargin;
+@property (nonatomic, assign) CGFloat titleTextFieldBottomMargin;
 @property (nonatomic, assign) CGFloat accessoryViewLeftMargin;
 @property (nonatomic, assign) CGFloat accessoryViewRightMargin;
 @property (nonatomic, assign) CGSize accessoryViewSizeMargin;

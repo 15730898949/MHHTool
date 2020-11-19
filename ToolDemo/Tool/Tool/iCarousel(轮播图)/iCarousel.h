@@ -12,6 +12,15 @@
 //  https://github.com/nicklockwood/iCarousel
 
 /**
+ //初始化
+ iCarousel* carousel = [[iCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100)];
+ carousel.pagingEnabled = YES;
+ carousel.type = iCarouselTypeLinear;
+ carousel.delegate = self;
+ carousel.dataSource = self;
+ [carousel reloadData];
+
+ 
  //设置page
  _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 70, 150, 20)];
  _pageControl.numberOfPages = 3;
@@ -53,7 +62,7 @@
 
  }
  ///定时跳转下一页
-  - (void)delayMethod{
+ - (void)delayMethodWithCarousel:(iCarousel *)carousel{
       if (carousel.numberOfItems<= 0 && carousel) {
           return;
       }
@@ -65,13 +74,13 @@
      //设置currentPage
       _pageControl.currentPage = carousel.currentItemIndex;
      //延时加载下一页
-      [self performSelector:@selector(delayMethod) withObject:nil afterDelay:3];
+      [self performSelector:@selector(delayMethodWithCarousel:) withObject:carousel afterDelay:3];
 
   }
 
   ///开始触摸 取消自动翻页
   - (void)carouselWillBeginDragging:(iCarousel *)carousel{
-      [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(delayMethod) object:nil];
+      [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(delayMethodWithCarousel:) object:nil];
       [NSObject cancelPreviousPerformRequestsWithTarget:self];
   }
 
@@ -83,10 +92,11 @@
      return value;
  }
 
-///点击item
+ ///点击item
  - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index{
      NSLog(@"iCarousel点击%ld",index);
  }
+
 
  */
 

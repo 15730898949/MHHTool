@@ -59,23 +59,31 @@
     
     NSDictionary *view = nil;
     NSString *horizontalString = @"";
-    NSDictionary *metrics = @{@"accessoryViewWidth":@([self accessoryViewSize].width),@"titleLeftSpacing":@(self.titleTextFieldLeftMargin),@"titleRightSpacing":@(self.titleTextFieldRightMargin),@"accessoryLeftSpacing":@(self.accessoryViewLeftMargin),@"accessoryRightSpacing":@(self.accessoryViewRightMargin),@"fixedTitleWidth":@(self.fixedTitleWidth),@"accessoryViewHeight":@([self accessoryViewSize].height)};
+    NSDictionary *metrics = @{@"accessoryViewWidth":@([self accessoryViewSize].width),
+                              @"titleLeftSpacing":@(self.titleTextFieldLeftMargin),
+                              @"titleRightSpacing":@(self.titleTextFieldRightMargin),
+                              @"titleTopSpacing":@(self.titleTextFieldTopMargin),
+                              @"titleBottomSpacing":@(self.titleTextFieldBottomMargin),
+                              @"accessoryLeftSpacing":@(self.accessoryViewLeftMargin),
+                              @"accessoryRightSpacing":@(self.accessoryViewRightMargin),
+                              @"fixedTitleWidth":@(self.fixedTitleWidth),
+                              @"accessoryViewHeight":@([self accessoryViewSize].height)};
     
     if (_contentTextField == nil) {
         if (_accessoryView) {
             view =  NSDictionaryOfVariableBindings(_titleTextField,_accessoryView);
-            horizontalString = @"H:|-titleLeftSpacing-[_titleTextField(>=100@1000)]-titleRightSpacing-[_accessoryView(accessoryViewWidth@1000)]-accessoryRightSpacing@750-|";
+            horizontalString = @"H:|-titleLeftSpacing-[_titleTextField(>=50@750)]-titleRightSpacing-[_accessoryView(accessoryViewWidth@1000)]-accessoryRightSpacing-|";
         } else {
             view =  NSDictionaryOfVariableBindings(_titleTextField);
-            horizontalString = @"H:|-titleLeftSpacing-[_titleTextField(>=100@1000)]-titleRightSpacing@750-|";
+            horizontalString = @"H:|-titleLeftSpacing-[_titleTextField(>=100@750)]-titleRightSpacing-|";
         }
     }else{
         if (_accessoryView) {
             view =  NSDictionaryOfVariableBindings(_titleTextField,_contentTextField,_accessoryView);
-            horizontalString =  @"H:|-titleLeftSpacing-[_titleTextField(>=100@1000)]-titleRightSpacing-[_contentTextField]-accessoryLeftSpacing-[_accessoryView(accessoryViewWidth@1000)]-accessoryRightSpacing@750-|";
+            horizontalString =  @"H:|-titleLeftSpacing-[_titleTextField(>=50@1000)]-titleRightSpacing-[_contentTextField(>=100@750)]-accessoryLeftSpacing-[_accessoryView(accessoryViewWidth@1000)]-accessoryRightSpacing-|";
         } else {
             view =  NSDictionaryOfVariableBindings(_titleTextField,_contentTextField);
-            horizontalString =  @"H:|-titleLeftSpacing-[_titleTextField(>=100@1000)]-titleRightSpacing-[_contentTextField]-accessoryRightSpacing@750-|";
+            horizontalString =  @"H:|-titleLeftSpacing-[_titleTextField(>=50@1000)]-titleRightSpacing-[_contentTextField(>=100@750)]-accessoryRightSpacing-|";
         }
 
     }
@@ -83,7 +91,7 @@
     NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:horizontalString options:0 metrics:metrics views:view];
     [self.contentView addConstraints:horizontalConstraints];
     
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_titleTextField]-0@1000-|" options:0 metrics:nil views:view]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-titleTopSpacing-[_titleTextField]-titleBottomSpacing@1000-|" options:0 metrics:@{@"titleTopSpacing":@(self.titleTextFieldTopMargin),@"titleBottomSpacing":@(self.titleTextFieldBottomMargin),} views:view]];
 
     if (self.fixedTitleHeight > 0 ) {
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_titleTextField(fixedTitleHeight@750)]" options:0 metrics:@{@"fixedTitleHeight":@(self.fixedTitleHeight)} views:view]];
@@ -91,7 +99,7 @@
     }
     if (_contentTextField && _contentTextField.superview) {
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_contentTextField]-0-|" options:0 metrics:nil views:view]];
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_contentTextField(>=100@1000)]" options:0 metrics:nil views:view]];
+//        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_contentTextField(>=100@1000)]" options:0 metrics:nil views:view]];
     }
 
     
@@ -102,6 +110,7 @@
     }
 
     if (_titleLab && _titleLab.superview) {
+        NSLog(@"%f-------",_titleTextField.rightView.frame.size.width);
         [_titleTextField removeConstraints:_titleTextField.constraints];
         _titleLab.translatesAutoresizingMaskIntoConstraints = NO;
         [_titleTextField addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_titleLab]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleLab)]];
@@ -199,6 +208,27 @@
     }
 }
 
+- (void)setTitleTextFieldTopMargin:(CGFloat)titleTextFieldTopMargin{
+    if (titleTextFieldTopMargin < 0) {
+        return;
+    }
+    if (_titleTextFieldTopMargin != titleTextFieldTopMargin) {
+        _titleTextFieldTopMargin = titleTextFieldTopMargin;
+        [self setNeedsLayout];
+    }
+}
+
+- (void)setTitleTextFieldBottomMargin:(CGFloat)titleTextFieldBottomMargin{
+    if (titleTextFieldBottomMargin < 0) {
+        return;
+    }
+    if (_titleTextFieldBottomMargin != titleTextFieldBottomMargin) {
+        _titleTextFieldBottomMargin = titleTextFieldBottomMargin;
+        [self setNeedsLayout];
+    }
+}
+
+
 - (void)setAccessoryViewLeftMargin:(CGFloat)accessoryViewLeftMargin {
     if (accessoryViewLeftMargin < 0) {
         return;
@@ -274,8 +304,8 @@
         self.titleTextField.enabled = NO;
         self.titleTextField.text = @"";
         self.titleTextField.placeholder = @"";
-//        [_titleLab setContentCompressionResistancePriority:1000 forAxis:UILayoutConstraintAxisVertical];
-//        [_titleLab setContentHuggingPriority:1000 forAxis:UILayoutConstraintAxisVertical];
+        [_titleLab setContentHuggingPriority:1000 forAxis:UILayoutConstraintAxisHorizontal];
+        [_titleLab setContentCompressionResistancePriority:1000 forAxis:UILayoutConstraintAxisHorizontal];
 
     }
     return _titleLab;

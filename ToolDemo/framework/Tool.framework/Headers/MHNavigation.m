@@ -37,7 +37,7 @@ void MUHookMethodSubDecrption(const char * originalClassName ,SEL originalSEL ,c
 
 - (void)mu_Dealloc{
 #if DEBUG
-    NSLog(@"%@ ---------------  dealloc",NSStringFromClass([self class]));
+//    NSLog(@"%@ ---------------  dealloc",NSStringFromClass([self class]));
 #endif
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidChangeStatusBarFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"enterForeground" object:nil];
