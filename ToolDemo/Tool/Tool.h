@@ -46,8 +46,8 @@
 #import <Tool/MHNavigation.h>
 #import <Tool/StepSlider.h>
 #import <Tool/MHInfoItemCell.h>
-
-
+#import <Tool/SMPageControl.h>
+#import <Tool/MHCarousel.h>
 
 
 //! Project version number for Tool.

@@ -174,6 +174,7 @@ typedef NS_ENUM(NSInteger, iCarouselOption)
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol iCarouselDataSource, iCarouselDelegate;
+@class iCarousel;
 
 @interface iCarousel : UIView
 

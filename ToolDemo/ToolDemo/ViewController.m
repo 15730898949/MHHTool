@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <Tool/iCarousel.h>
+#import <Tool/MHCarousel.h>
 #import <Tool/ToolMacro.h>
 #import <Tool/UIImage+MUColor.h>
 #import <Tool/MHHTTPSessionManager.h>
@@ -26,9 +26,10 @@
 #import "BaseWebViewController.h"
 #import "iCarousel.h"
 #import <objc/runtime.h>
+#import "AppDelegate.h"
 @interface ViewController ()<iCarouselDelegate,iCarouselDataSource,UITableViewDelegate,UITableViewDataSource,SPPageMenuDelegate,MHInfoItemCellDelegate>{
     UIPageControl * _pageControl;
-    iCarousel *carousel;
+    MHCarousel *carousel;
 
 }
 @property (nonatomic ,strong)UITableView *tableView;
@@ -103,18 +104,19 @@
     }];
     
     
-    carousel = [[iCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100)];
+    carousel = [[MHCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100)];
     carousel.delegate = self;
     carousel.dataSource = self;
     carousel.pagingEnabled = YES;
     carousel.type = iCarouselTypeLinear;
+    carousel.timingSeconds = 2;
     [carousel reloadData];
     
     
-    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 70, 150, 20)];
-    _pageControl.numberOfPages = 3;
-    _pageControl.currentPage = 0;
-    [carousel addSubview:_pageControl];
+//    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 70, 150, 20)];
+//    _pageControl.numberOfPages = 3;
+//    _pageControl.currentPage = 0;
+//    [carousel addSubview:_pageControl];
     
 //    CWFlowLayout *layout = [[CWFlowLayout alloc]initWithStyle:CWCarouselStyle_Normal];
 //    CWCarousel *banner = [[CWCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100) delegate:self datasource:self flowLayout:layout];
@@ -231,23 +233,23 @@
     NSLog(@"iCarousel点击%ld",index);
 }
 
-- (void)delayMethod{
-    if (carousel.numberOfItems<= 0 && carousel) {
-        return;
-    }
-    [carousel scrollToItemAtIndex:carousel.currentItemIndex == carousel.numberOfItems-1?0:carousel.currentItemIndex+1 duration:1];
-}
-
-- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel{
-    _pageControl.currentPage = carousel.currentItemIndex;
-    [self performSelector:@selector(delayMethod) withObject:nil afterDelay:3];
-
-}
-
-- (void)carouselWillBeginDragging:(iCarousel *)carousel{
-    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(delayMethod) object:nil];
-    [NSObject cancelPreviousPerformRequestsWithTarget:self];
-}
+//- (void)delayMethod{
+//    if (carousel.numberOfItems<= 0 && carousel) {
+//        return;
+//    }
+//    [carousel scrollToItemAtIndex:carousel.currentItemIndex == carousel.numberOfItems-1?0:carousel.currentItemIndex+1 duration:1];
+//}
+//
+//- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel{
+//    _pageControl.currentPage = carousel.currentItemIndex;
+//    [self performSelector:@selector(delayMethod) withObject:nil afterDelay:3];
+//
+//}
+//
+//- (void)carouselWillBeginDragging:(iCarousel *)carousel{
+//    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(delayMethod) object:nil];
+//    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+//}
 
 
 
@@ -362,13 +364,22 @@
     [cell layoutView];
 }
 
+- (void)viewDidDisappear:(BOOL)animated{
+    [carousel.delayTimer invalidate];
+    carousel.delayTimer = nil;
 
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
 //        [MBHUD show];
 //        [MBHUD hideAnimated:YES afterDelay:3];
-        NSLog(@"%@",self.dataArray);
+//        NSLog(@"%@",self.dataArray);
+//        AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//        delegate.window.rootViewController = [UIViewController new];
+//         [delegate.window makeKeyAndVisible];
+        [self.navigationController pushViewController:[ViewController new] animated:YES];
+        
     }
 //    else if (indexPath.row == 1){
 //        [MBHUD showMsg:@"111" andOffer:100];

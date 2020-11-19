@@ -1910,6 +1910,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     {
         [self pushAnimationState:YES];
         [_delegate carouselDidScroll:self];
+        [self mh_didScroll];
         [self popAnimationState];
     }
     
@@ -2092,6 +2093,8 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     }
 }
 
+
+
 - (void)didPan:(UIPanGestureRecognizer *)panGesture
 {
     if (_scrollEnabled && _numberOfItems)
@@ -2104,12 +2107,12 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
                 _scrolling = NO;
                 _decelerating = NO;
                 _previousTranslation = _vertical? [panGesture translationInView:self].y: [panGesture translationInView:self].x;
-
+                
 #if defined(USING_CHAMELEON) && USING_CHAMELEON
 
                 _previousTranslation = -_previousTranslation;
 #endif
-
+                [self mh_willBeginDragging];
                 [_delegate carouselWillBeginDragging:self];
                 break;
             }
@@ -2127,6 +2130,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
                 
                 [self pushAnimationState:YES];
                 [_delegate carouselDidEndDragging:self willDecelerate:_decelerating];
+                [self mh_didEndDragging];
                 [self popAnimationState];
                 
                 if (!_decelerating)
@@ -2348,4 +2352,17 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
 
 #endif
 
+- (void)mh_willBeginDragging{
+    
+}
+- (void)mh_didEndDragging{
+    
+}
+
+-(void)mh_didScroll{
+    
+}
 @end
+
+
+

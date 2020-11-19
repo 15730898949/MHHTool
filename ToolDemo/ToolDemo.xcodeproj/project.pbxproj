@@ -132,6 +132,17 @@
 		0423577425552F2C00349CBD /* TTGTextTagCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */; };
 		0423577525552F2C00349CBD /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B085BF2500DACB00FB3554 /* NSString+Category.m */; };
 		0423577725552F2C00349CBD /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483C27224EF5B2A005BFD32 /* NullSafe.m */; };
+		0423E60C25666CFF00C027F3 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423E60A25666CFF00C027F3 /* SMPageControl.m */; };
+		0423E60D25666CFF00C027F3 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423E60A25666CFF00C027F3 /* SMPageControl.m */; };
+		0423E60E25666CFF00C027F3 /* SMPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 0423E60B25666CFF00C027F3 /* SMPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423E60F25666CFF00C027F3 /* SMPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 0423E60B25666CFF00C027F3 /* SMPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423E62A2566717E00C027F3 /* SMPageControl.m in Headers */ = {isa = PBXBuildFile; fileRef = 0423E60A25666CFF00C027F3 /* SMPageControl.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423E6302566718900C027F3 /* SMPageControl.m in Headers */ = {isa = PBXBuildFile; fileRef = 0423E60A25666CFF00C027F3 /* SMPageControl.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423E63D256677F500C027F3 /* MHCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0423E63B256677F500C027F3 /* MHCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423E63E256677F500C027F3 /* MHCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423E63C256677F500C027F3 /* MHCarousel.m */; };
+		0423E6442566785000C027F3 /* MHCarousel.m in Headers */ = {isa = PBXBuildFile; fileRef = 0423E63C256677F500C027F3 /* MHCarousel.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423E64F2566786500C027F3 /* MHCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0423E63B256677F500C027F3 /* MHCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0423E6502566786500C027F3 /* MHCarousel.m in Headers */ = {isa = PBXBuildFile; fileRef = 0423E63C256677F500C027F3 /* MHCarousel.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		04269F7724FCC11C00CFD9D5 /* SPAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7524FCC11C00CFD9D5 /* SPAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; };
 		04269F8224FCE67000CFD9D5 /* FTPopOverMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -335,6 +346,10 @@
 		041C5ABB2507740A000670E7 /* TTGTextTagCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGTextTagCollectionView.m; sourceTree = "<group>"; };
 		0423577F25552F2C00349CBD /* Tool_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tool_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0423578025552F2C00349CBD /* Tool copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Tool copy-Info.plist"; path = "/Users/mac/MHHTool/ToolDemo/Tool copy-Info.plist"; sourceTree = "<absolute>"; };
+		0423E60A25666CFF00C027F3 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
+		0423E60B25666CFF00C027F3 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
+		0423E63B256677F500C027F3 /* MHCarousel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHCarousel.h; sourceTree = "<group>"; };
+		0423E63C256677F500C027F3 /* MHCarousel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHCarousel.m; sourceTree = "<group>"; };
 		04269F7524FCC11C00CFD9D5 /* SPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAlertController.h; sourceTree = "<group>"; };
 		04269F7624FCC11C00CFD9D5 /* SPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAlertController.m; sourceTree = "<group>"; };
 		04269F8024FCE67000CFD9D5 /* FTPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPopOverMenu.h; sourceTree = "<group>"; };
@@ -522,6 +537,15 @@
 			path = "TTGTagCollectionView(tag标签)";
 			sourceTree = "<group>";
 		};
+		0423E61525666D0600C027F3 /* SMPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				0423E60B25666CFF00C027F3 /* SMPageControl.h */,
+				0423E60A25666CFF00C027F3 /* SMPageControl.m */,
+			);
+			path = SMPageControl;
+			sourceTree = "<group>";
+		};
 		04269F7F24FCE67000CFD9D5 /* FTPopOverMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -673,6 +697,7 @@
 				04EBCDBA24DD4629005D7D8C /* ZZLimitInputManager(正则限制输入框) */,
 				04EBCDBD24DD4629005D7D8C /* SPAlertController(仿原始AlertController) */,
 				04EBCDC824DD4629005D7D8C /* GZCMulitiDelegate(多播代理) */,
+				0423E61525666D0600C027F3 /* SMPageControl */,
 				04EBCDCB24DD4629005D7D8C /* iCarousel(轮播图) */,
 				04EBCDD224DD4629005D7D8C /* BaseModel */,
 				04EBCDF224DD4629005D7D8C /* ToolMacro.h */,
@@ -778,6 +803,8 @@
 			children = (
 				04AD3C45256368BF00A429D3 /* iCarousel.h */,
 				04AD3C44256368BF00A429D3 /* iCarousel.m */,
+				0423E63B256677F500C027F3 /* MHCarousel.h */,
+				0423E63C256677F500C027F3 /* MHCarousel.m */,
 			);
 			path = "iCarousel(轮播图)";
 			sourceTree = "<group>";
@@ -957,7 +984,11 @@
 				0423574A25552F2C00349CBD /* StepSlider.m in Headers */,
 				0423574B25552F2C00349CBD /* NSString+Category.h in Headers */,
 				04AD3C8E2563A3FB00A429D3 /* iCarousel.m in Headers */,
+				0423E60F25666CFF00C027F3 /* SMPageControl.h in Headers */,
+				0423E6302566718900C027F3 /* SMPageControl.m in Headers */,
 				04155C50255A207A006C3379 /* MHInfoItemCell.m in Headers */,
+				0423E64F2566786500C027F3 /* MHCarousel.h in Headers */,
+				0423E6502566786500C027F3 /* MHCarousel.m in Headers */,
 				0423574C25552F2C00349CBD /* Tool.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1043,7 +1074,11 @@
 				04F0EDC5253697F000F20FED /* StepSlider.h in Headers */,
 				04F0EDC72536981300F20FED /* StepSlider.m in Headers */,
 				04AD3C822563A3E300A429D3 /* MHInfoItemCell.m in Headers */,
+				0423E63D256677F500C027F3 /* MHCarousel.h in Headers */,
+				0423E6442566785000C027F3 /* MHCarousel.m in Headers */,
 				04AD3C832563A3E300A429D3 /* iCarousel.m in Headers */,
+				0423E60E25666CFF00C027F3 /* SMPageControl.h in Headers */,
+				0423E62A2566717E00C027F3 /* SMPageControl.m in Headers */,
 				04B085C02500DACB00FB3554 /* NSString+Category.h in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
 			);
@@ -1401,6 +1436,7 @@
 				0423575025552F2C00349CBD /* NSDecimalNumber+Addtion.m in Sources */,
 				0423575125552F2C00349CBD /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Sources */,
 				0423575225552F2C00349CBD /* WSDatePickerView.m in Sources */,
+				0423E60D25666CFF00C027F3 /* SMPageControl.m in Sources */,
 				0423575425552F2C00349CBD /* ZZLimitInputManager.m in Sources */,
 				0423575525552F2C00349CBD /* MBProgressHUD.m in Sources */,
 				0423575625552F2C00349CBD /* LYEmptyView.m in Sources */,
@@ -1494,7 +1530,9 @@
 				7368146D251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				04EBCE0624DD4629005D7D8C /* NSDate+MHExtension.m in Sources */,
 				0414BA9A24EA50D200EBE089 /* UILabel+topString.m in Sources */,
+				0423E63E256677F500C027F3 /* MHCarousel.m in Sources */,
 				04445C4024E0D98100D4FA5C /* MUHookMethodHelper.m in Sources */,
+				0423E60C25666CFF00C027F3 /* SMPageControl.m in Sources */,
 				04F0EDC6253697F000F20FED /* StepSlider.m in Sources */,
 				04EBCE2924DD4629005D7D8C /* MHBaseModel.m in Sources */,
 				0414BA9424EA2F9F00EBE089 /* RKNotificationHub.m in Sources */,

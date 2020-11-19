@@ -28,9 +28,9 @@
 
 
 /// post images有进度NSProgress
-- (void)POSTImage:(NSString *)URLString parameters:(NSDictionary *)parameters images:(NSArray *)images formData:(void (^)(id<AFMultipartFormData> formData))block progress:(void (^)(NSProgress *progress))progress success:(void (^)(id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error, NSString *errorMsg))failure;
+- (void)POSTImage:(NSString *)URLString parameters:(NSDictionary *)parameters images:(NSMutableArray *)images formData:(void (^)(id<AFMultipartFormData> formData))block progress:(void (^)(NSProgress *progress))progress success:(void (^)(id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error, NSString *errorMsg))failure;
 /// post images
-- (void)POSTImage:(NSString *)URLString parameters:(NSDictionary *)parameters images:(NSArray *)images formData:(void (^)(id<AFMultipartFormData> formData))block success:(void (^)(id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error, NSString *errorMsg))failure;
+- (void)POSTImage:(NSString *)URLString parameters:(NSDictionary *)parameters images:(NSMutableArray *)images formData:(void (^)(id<AFMultipartFormData> formData))block success:(void (^)(id responseObject))success failure:(void (^)(NSURLSessionDataTask *task, NSError *error, NSString *errorMsg))failure;
 
 
 //@param statusBlock a block object to be excuted when the requesting responsed.如果你设置了‘Status’，响应数据有这个字段时，就会返回响应的数据
