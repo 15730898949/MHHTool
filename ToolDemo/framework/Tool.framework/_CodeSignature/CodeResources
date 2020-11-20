@@ -4,22 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/CWCarousel.h</key>
-		<data>
-		lS3EzeD+ZHbwE2bkVEbQABLiCVA=
-		</data>
-		<key>Headers/CWCarousel.m</key>
-		<data>
-		wHYnZdgRi6sQ7+BEUbViInPkH50=
-		</data>
-		<key>Headers/CWFlowLayout.h</key>
-		<data>
-		6QSntQP1Znr994GrGrnTnXvg2Xw=
-		</data>
-		<key>Headers/CWFlowLayout.m</key>
-		<data>
-		+atPlTtOAOo/94KCNcUSXJfsJqw=
-		</data>
 		<key>Headers/FTPopOverMenu.h</key>
 		<data>
 		nsbDd6X5Ptd85DzwihMI6xUxfXI=
@@ -58,11 +42,11 @@
 		</data>
 		<key>Headers/MBProgressHUD+Add.h</key>
 		<data>
-		9jPuX+7+jm6F1sZAPRSzAMQ8rcc=
+		VkvkidZHte7b9/9RqCoL+aWFY/Y=
 		</data>
 		<key>Headers/MBProgressHUD+Add.m</key>
 		<data>
-		SE1Spm7rwIJLKwvnvtq/b0O6dSs=
+		uYT7JRCbEOT2hs6zsMvTFi18chY=
 		</data>
 		<key>Headers/MBProgressHUD.h</key>
 		<data>
@@ -80,13 +64,29 @@
 		<data>
 		bYxNiMGRNd2c40rB5d9THvTMIcs=
 		</data>
+		<key>Headers/MHCarousel.h</key>
+		<data>
+		u2VsE3lsLl+pNsxO5yJMe5ab5t4=
+		</data>
+		<key>Headers/MHCarousel.m</key>
+		<data>
+		VHYcy0zskS+TJnWa8ulnAdNHn4Y=
+		</data>
 		<key>Headers/MHHTTPSessionManager.h</key>
 		<data>
-		38bw+cRdWyMmURRTeZ8B1jIeAhU=
+		OEssI/lolHV0Y7g4YSRvQQkR684=
 		</data>
 		<key>Headers/MHHTTPSessionManager.m</key>
 		<data>
-		Nc6JTJ8j4F6kILh3udabG3Dl6cY=
+		d9WQmB5nFaNQzfyuNsKS8RbVoNU=
+		</data>
+		<key>Headers/MHInfoItemCell.h</key>
+		<data>
+		4202TN5CVDzv04Va6D7jqB3fvtA=
+		</data>
+		<key>Headers/MHInfoItemCell.m</key>
+		<data>
+		xNw7mWBB/IuINkLpJXMju6B/qHk=
 		</data>
 		<key>Headers/MHNavigation.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/MHNavigation.m</key>
 		<data>
-		6FFcri7sSdsA25xawzY6rbn2eO0=
+		Syk2PSpS3+Mna8D3bwEGjUqjJok=
 		</data>
 		<key>Headers/MHWebViewController.h</key>
 		<data>
@@ -112,13 +112,13 @@
 		<data>
 		g0uG9v4RnGFYYxFFCE0DoLOKEhs=
 		</data>
-		<key>Headers/NSDate+Extension.h</key>
+		<key>Headers/NSDate+MHExtension.h</key>
 		<data>
-		SZ9+c1PTax6RE7Mg004P9aCVS3w=
+		2fmASIOFpr9R0CKdBkFeO3epZjE=
 		</data>
-		<key>Headers/NSDate+Extension.m</key>
+		<key>Headers/NSDate+MHExtension.m</key>
 		<data>
-		ptZiBJ2Ealvnkmg8MdzWfnRL68o=
+		RTjJtiDfmuZNjot+DmmhMCm399Y=
 		</data>
 		<key>Headers/NSDecimalNumber+Addtion.h</key>
 		<data>
@@ -164,6 +164,14 @@
 		<data>
 		Zjd+9PhjFzXvhhJPG4fDlkUPfHU=
 		</data>
+		<key>Headers/SMPageControl.h</key>
+		<data>
+		nLnfYFPqQmLKS3NrVzsoxLzEGlg=
+		</data>
+		<key>Headers/SMPageControl.m</key>
+		<data>
+		3v/KFxD9qqO6WjmmemkB5hcKH4E=
+		</data>
 		<key>Headers/SPAlertController.h</key>
 		<data>
 		c49xoWbYzocDDjXTy/pW3Gcbe/Q=
@@ -180,14 +188,6 @@
 		<data>
 		y+55SJR2QW+2Cs6ZXZ8cyDDEQm4=
 		</data>
-		<key>Headers/SortNameTool.h</key>
-		<data>
-		cXFI5ALdUDwsaYbkn/73Py3ZOyc=
-		</data>
-		<key>Headers/SortNameTool.m</key>
-		<data>
-		8Ezh0X7H7e663SPT28xcTTco5UQ=
-		</data>
 		<key>Headers/StepSlider.h</key>
 		<data>
 		mBUlz1D+wHmVI9y3OYVkYsI2fEk=
@@ -195,22 +195,6 @@
 		<key>Headers/StepSlider.m</key>
 		<data>
 		BeMv7Wf8wlUCLM/iVWjqtIibdVM=
-		</data>
-		<key>Headers/TBCityIconFont.h</key>
-		<data>
-		oXhp84lWgpbWj2hgDO9gwv2mtyU=
-		</data>
-		<key>Headers/TBCityIconFont.m</key>
-		<data>
-		/Hr7fb1nEBfbGuUv4URxUxG69KY=
-		</data>
-		<key>Headers/TBCityIconInfo.h</key>
-		<data>
-		A0bxwFmtjdD1NvkOocVDc1FxYw0=
-		</data>
-		<key>Headers/TBCityIconInfo.m</key>
-		<data>
-		7KmtzB/zIVjTQZA/rUhgoV+tyqo=
 		</data>
 		<key>Headers/TTGTagCollectionView.h</key>
 		<data>
@@ -230,7 +214,7 @@
 		</data>
 		<key>Headers/Tool.h</key>
 		<data>
-		MYwf/1ija6cEP/qXGP+nYzDzs38=
+		KrBl7sCwcvoFi3ScOz9nqSP85R4=
 		</data>
 		<key>Headers/ToolMacro.h</key>
 		<data>
@@ -268,14 +252,6 @@
 		<data>
 		c4gyAA2nUVgm49k65p13HcrzDLw=
 		</data>
-		<key>Headers/UIScrollView+Emm.h</key>
-		<data>
-		6oqwhlCJlUkiowxU5t/RCXqJ7LI=
-		</data>
-		<key>Headers/UIScrollView+Emm.m</key>
-		<data>
-		IRa+cMlZF1oqupt0gtuyWYw7hgA=
-		</data>
 		<key>Headers/UITableView+FDIndexPathHeightCache.h</key>
 		<data>
 		RdTHSK6MrmTz8Loh1xSPyp7rNoM=
@@ -310,19 +286,11 @@
 		</data>
 		<key>Headers/UITextView+Placeholder.h</key>
 		<data>
-		9UNfLS+O1LWotCKfh+CIGiQWTtg=
+		XVQROeEOPtr4efvDgVlVeITLYyo=
 		</data>
 		<key>Headers/UITextView+Placeholder.m</key>
 		<data>
-		OlKtTmDGh5bCFeNvcdG9MMlrRUE=
-		</data>
-		<key>Headers/UIView+Category.h</key>
-		<data>
-		LmLR4hVn1DK+7MzP4YJ8T3GQHRw=
-		</data>
-		<key>Headers/UIView+Category.m</key>
-		<data>
-		WMODwufG3cDhKiyL1P4OpOusxKo=
+		q1aw9I0SYzohnsLA2bCXwmVhKJg=
 		</data>
 		<key>Headers/UIView+Empty.h</key>
 		<data>
@@ -340,13 +308,21 @@
 		<data>
 		ro8NOL8XNBd/1uCMEaS14/TGjFg=
 		</data>
+		<key>Headers/UIView+MHCategory.h</key>
+		<data>
+		tpS86iyqE8sx3ioRp2a4ZePr8p8=
+		</data>
+		<key>Headers/UIView+MHCategory.m</key>
+		<data>
+		bCzfLAeySoKtyoxiwcENx+qfqt0=
+		</data>
 		<key>Headers/WSDatePickerView.h</key>
 		<data>
 		UnHF3eySu4u7ae8I7fnrPTKBcPI=
 		</data>
 		<key>Headers/WSDatePickerView.m</key>
 		<data>
-		HIwFPaIFstgwGOHOzo9rNRbh1d4=
+		6d3ZIAQLirlhscdzKc7BARip2yA=
 		</data>
 		<key>Headers/ZZLimitInputManager.h</key>
 		<data>
@@ -356,9 +332,17 @@
 		<data>
 		8diEhVmmz8mqXPpqT/vMM8wp58k=
 		</data>
+		<key>Headers/iCarousel.h</key>
+		<data>
+		GUQ+vMBy+FAEjPuzt7rKLEKDCYk=
+		</data>
+		<key>Headers/iCarousel.m</key>
+		<data>
+		haVu2HlYxyyduCNHkIBx9b9S20k=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		BAZcy9621f8MFWeNIbQAEKg4xws=
+		RHFVeyfMTC0o6dR+nLlyASLsnrk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -367,50 +351,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/CWCarousel.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			lS3EzeD+ZHbwE2bkVEbQABLiCVA=
-			</data>
-			<key>hash2</key>
-			<data>
-			GRWN366hbjFIOcSMAehun+A1+B4D5ljhfnYlxoxHO0s=
-			</data>
-		</dict>
-		<key>Headers/CWCarousel.m</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wHYnZdgRi6sQ7+BEUbViInPkH50=
-			</data>
-			<key>hash2</key>
-			<data>
-			iZFf2zKStJaguis6pC4uoZQeK4wmMrgt/VN4Zb/ALyw=
-			</data>
-		</dict>
-		<key>Headers/CWFlowLayout.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			6QSntQP1Znr994GrGrnTnXvg2Xw=
-			</data>
-			<key>hash2</key>
-			<data>
-			0J5GIoB5uCSHLRgjfnYPvPAdNVqNN9ZKolw9Ly+qHlo=
-			</data>
-		</dict>
-		<key>Headers/CWFlowLayout.m</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+atPlTtOAOo/94KCNcUSXJfsJqw=
-			</data>
-			<key>hash2</key>
-			<data>
-			Bu2aclo4YSa8G/G1uebKqg/zNZuW6V8K80lu4ME/6lQ=
-			</data>
-		</dict>
 		<key>Headers/FTPopOverMenu.h</key>
 		<dict>
 			<key>hash</key>
@@ -514,22 +454,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9jPuX+7+jm6F1sZAPRSzAMQ8rcc=
+			VkvkidZHte7b9/9RqCoL+aWFY/Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			CG4jmcIkh4EDV28vG92E6FWfqoEGWB4iX72U3TPGH4Y=
+			QkzrQ4AMm+TITrzT0tDtAF7ofEoQcQ21UkC/VkmCUAY=
 			</data>
 		</dict>
 		<key>Headers/MBProgressHUD+Add.m</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SE1Spm7rwIJLKwvnvtq/b0O6dSs=
+			uYT7JRCbEOT2hs6zsMvTFi18chY=
 			</data>
 			<key>hash2</key>
 			<data>
-			FNvwWTSmK8bY0lDCM3snL20bOAp1B9CgFQDWHLTfdx4=
+			3sLyUuBdDskUeJRwly91gBzY187QwhQNIRN0o/PHVmM=
 			</data>
 		</dict>
 		<key>Headers/MBProgressHUD.h</key>
@@ -576,26 +516,70 @@
 			0THX+XHbSoB1QnWzateko8cKBl9P4+JfLOdCbatyfe8=
 			</data>
 		</dict>
+		<key>Headers/MHCarousel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			u2VsE3lsLl+pNsxO5yJMe5ab5t4=
+			</data>
+			<key>hash2</key>
+			<data>
+			clAxt4RHc5L61Lg1HKrwjDzceHYwj1DVF27WS+jacIY=
+			</data>
+		</dict>
+		<key>Headers/MHCarousel.m</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VHYcy0zskS+TJnWa8ulnAdNHn4Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			WQc1RAimaPERENVaOzQkqqAMiPAY4BjLA904gdGEP4I=
+			</data>
+		</dict>
 		<key>Headers/MHHTTPSessionManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			38bw+cRdWyMmURRTeZ8B1jIeAhU=
+			OEssI/lolHV0Y7g4YSRvQQkR684=
 			</data>
 			<key>hash2</key>
 			<data>
-			fSZu8J41nD6pAgQZmH/gOiyPIhVnAfJ62rLa2vza8rA=
+			ZOGIcGmbX5/kKcc/QxrDMml3oNWb8TALGdGXGHpsePo=
 			</data>
 		</dict>
 		<key>Headers/MHHTTPSessionManager.m</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Nc6JTJ8j4F6kILh3udabG3Dl6cY=
+			d9WQmB5nFaNQzfyuNsKS8RbVoNU=
 			</data>
 			<key>hash2</key>
 			<data>
-			i1mGgY8MdVhPLP1azt0TXR0hgZi5L8buwlnF1Imq4DE=
+			aMP3wBb5Y9ZA7rMF5lkF/E83cUcnlmVT8Y+nHAgoISo=
+			</data>
+		</dict>
+		<key>Headers/MHInfoItemCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4202TN5CVDzv04Va6D7jqB3fvtA=
+			</data>
+			<key>hash2</key>
+			<data>
+			of1BVef1CeFyVWzuOxRp5A1g0lrN6qWlFaWgJVm+4UQ=
+			</data>
+		</dict>
+		<key>Headers/MHInfoItemCell.m</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xNw7mWBB/IuINkLpJXMju6B/qHk=
+			</data>
+			<key>hash2</key>
+			<data>
+			qdWzuH7kZ7UJBSnxQ9/5aHEk4bXNbNT6hdMGW1RybZs=
 			</data>
 		</dict>
 		<key>Headers/MHNavigation.h</key>
@@ -613,11 +597,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6FFcri7sSdsA25xawzY6rbn2eO0=
+			Syk2PSpS3+Mna8D3bwEGjUqjJok=
 			</data>
 			<key>hash2</key>
 			<data>
-			2Gc9wnBKTePhZvCWpwzoZugushHrM9jsI+ong7sTKM0=
+			VAJ6UYd5ePNWuugGeXOUXK5RbzSJXCGe0OZxAOmf0Ac=
 			</data>
 		</dict>
 		<key>Headers/MHWebViewController.h</key>
@@ -664,26 +648,26 @@
 			eSorFGxHHAyMG1xV3FYSL8QrOs/GnGnwb9sxD9Z+sPY=
 			</data>
 		</dict>
-		<key>Headers/NSDate+Extension.h</key>
+		<key>Headers/NSDate+MHExtension.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SZ9+c1PTax6RE7Mg004P9aCVS3w=
+			2fmASIOFpr9R0CKdBkFeO3epZjE=
 			</data>
 			<key>hash2</key>
 			<data>
-			DD96Hoxh9LXBYR9ZW3XhXRh2i0QtPtXw1ESIWMhbPL8=
+			45xgdsvZ7ali++VmxXTKWtKDVb1bupyGUio6zRepFpQ=
 			</data>
 		</dict>
-		<key>Headers/NSDate+Extension.m</key>
+		<key>Headers/NSDate+MHExtension.m</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ptZiBJ2Ealvnkmg8MdzWfnRL68o=
+			RTjJtiDfmuZNjot+DmmhMCm399Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			LmrrKcUXEvSuWwQNg8jPrXqUMoseDkht1NQgfnLSilc=
+			8ZdajG3nVSNtZGhkS00bAhzjw6PBY6MrQQI66xueMbY=
 			</data>
 		</dict>
 		<key>Headers/NSDecimalNumber+Addtion.h</key>
@@ -807,6 +791,28 @@
 			QMOKjXbbs6yS2DtA+kMO+58f9H1j8nvCF1c6TuFi/Ss=
 			</data>
 		</dict>
+		<key>Headers/SMPageControl.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nLnfYFPqQmLKS3NrVzsoxLzEGlg=
+			</data>
+			<key>hash2</key>
+			<data>
+			8ddWomt5gWZlj3QjXQu7tflsU+4Y82iQ8BpvKaLLqhs=
+			</data>
+		</dict>
+		<key>Headers/SMPageControl.m</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3v/KFxD9qqO6WjmmemkB5hcKH4E=
+			</data>
+			<key>hash2</key>
+			<data>
+			oTIRUkzBKhdh3Yc9PP58QyDOmvZman6lknaqqcA+xGk=
+			</data>
+		</dict>
 		<key>Headers/SPAlertController.h</key>
 		<dict>
 			<key>hash</key>
@@ -851,28 +857,6 @@
 			UnVecMOWqxD/hwiX8SpzF3Ov496XvZHqFMh+2Z8Hl10=
 			</data>
 		</dict>
-		<key>Headers/SortNameTool.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			cXFI5ALdUDwsaYbkn/73Py3ZOyc=
-			</data>
-			<key>hash2</key>
-			<data>
-			dLvRZHRcwqtuKkoFsO/EKCLDWo/9rVfSfhHRbIi8mS4=
-			</data>
-		</dict>
-		<key>Headers/SortNameTool.m</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8Ezh0X7H7e663SPT28xcTTco5UQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			41i1lrNZ9am2FpK9qjGILdmWbyyP5VIxLdMdVehtVhk=
-			</data>
-		</dict>
 		<key>Headers/StepSlider.h</key>
 		<dict>
 			<key>hash</key>
@@ -893,50 +877,6 @@
 			<key>hash2</key>
 			<data>
 			X50QppDmy2HjSggKX841vXj8UtzUiYqZc9otjMsomyk=
-			</data>
-		</dict>
-		<key>Headers/TBCityIconFont.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oXhp84lWgpbWj2hgDO9gwv2mtyU=
-			</data>
-			<key>hash2</key>
-			<data>
-			u8X8zS7F2HzE1FcDch+3XKMkD0QWaeGIZvX6xIKtA2Q=
-			</data>
-		</dict>
-		<key>Headers/TBCityIconFont.m</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			/Hr7fb1nEBfbGuUv4URxUxG69KY=
-			</data>
-			<key>hash2</key>
-			<data>
-			Gh4T4JpHARya76HP950myAq0Lbv+QnBU7RPe3ZMuv5Q=
-			</data>
-		</dict>
-		<key>Headers/TBCityIconInfo.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			A0bxwFmtjdD1NvkOocVDc1FxYw0=
-			</data>
-			<key>hash2</key>
-			<data>
-			L7uaLGVg+TSxFWBwGDpMF5z5Cd7JtaIDJOF3lZHheRI=
-			</data>
-		</dict>
-		<key>Headers/TBCityIconInfo.m</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			7KmtzB/zIVjTQZA/rUhgoV+tyqo=
-			</data>
-			<key>hash2</key>
-			<data>
-			TU24CkrNifuxGG6EJVFR/bAlJaTCU5efZfu6pEjZS1s=
 			</data>
 		</dict>
 		<key>Headers/TTGTagCollectionView.h</key>
@@ -987,11 +927,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MYwf/1ija6cEP/qXGP+nYzDzs38=
+			KrBl7sCwcvoFi3ScOz9nqSP85R4=
 			</data>
 			<key>hash2</key>
 			<data>
-			tb/vcDxaFITl7O+ni7T3qDEw9OV/Og1T2TENk2bW1ic=
+			VSo/x4xTrbb4f0KvHW7PBimvTconOG0qd16cRFehIdY=
 			</data>
 		</dict>
 		<key>Headers/ToolMacro.h</key>
@@ -1093,28 +1033,6 @@
 			qvkuK9/9vssr88Mh0l5QdBW8Ma2mSu3fGerAj43n+NI=
 			</data>
 		</dict>
-		<key>Headers/UIScrollView+Emm.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			6oqwhlCJlUkiowxU5t/RCXqJ7LI=
-			</data>
-			<key>hash2</key>
-			<data>
-			exRrR6EfQP8YspXCGYmBxtkY1et4rchX4+uDvlp8D90=
-			</data>
-		</dict>
-		<key>Headers/UIScrollView+Emm.m</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			IRa+cMlZF1oqupt0gtuyWYw7hgA=
-			</data>
-			<key>hash2</key>
-			<data>
-			26KFqFkRoQaoVHPa713eChdZRe6pf7gKSB2wY+kKukQ=
-			</data>
-		</dict>
 		<key>Headers/UITableView+FDIndexPathHeightCache.h</key>
 		<dict>
 			<key>hash</key>
@@ -1207,44 +1125,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9UNfLS+O1LWotCKfh+CIGiQWTtg=
+			XVQROeEOPtr4efvDgVlVeITLYyo=
 			</data>
 			<key>hash2</key>
 			<data>
-			/Rh5M0r3Iv78GvbDmdaWGD5Z/2S0fl68729WdoAtHPk=
+			w5Tww+zJWsnGreoN/kLqDB066drzYiKvJ1eqG/E0wM4=
 			</data>
 		</dict>
 		<key>Headers/UITextView+Placeholder.m</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OlKtTmDGh5bCFeNvcdG9MMlrRUE=
+			q1aw9I0SYzohnsLA2bCXwmVhKJg=
 			</data>
 			<key>hash2</key>
 			<data>
-			n88+9yk9KeyP6iShRH6nHNcE/0Jk0FEnTJ4kQ9DvbW4=
-			</data>
-		</dict>
-		<key>Headers/UIView+Category.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			LmLR4hVn1DK+7MzP4YJ8T3GQHRw=
-			</data>
-			<key>hash2</key>
-			<data>
-			QepLUn+5UdlHbtfAQAdgeRwIBHG9hlmcdeTBqtCi7gI=
-			</data>
-		</dict>
-		<key>Headers/UIView+Category.m</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WMODwufG3cDhKiyL1P4OpOusxKo=
-			</data>
-			<key>hash2</key>
-			<data>
-			MdF1gwnVsIuT6WM0bEq3O3wUwDVgbOLT9hMgSJSqq1w=
+			rtYNbNsbFGqTgD8jpyGzj1NteLqZYqt14Ij1lJ8JVxI=
 			</data>
 		</dict>
 		<key>Headers/UIView+Empty.h</key>
@@ -1291,6 +1187,28 @@
 			NeOSh+Wql938U1uxrpwK8bmnat/bDrH0Y+eGddcyY90=
 			</data>
 		</dict>
+		<key>Headers/UIView+MHCategory.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tpS86iyqE8sx3ioRp2a4ZePr8p8=
+			</data>
+			<key>hash2</key>
+			<data>
+			FXMNPzkr9kppEoLTMQGaE4KjKSsLJWVxyZcJDVpP8rI=
+			</data>
+		</dict>
+		<key>Headers/UIView+MHCategory.m</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bCzfLAeySoKtyoxiwcENx+qfqt0=
+			</data>
+			<key>hash2</key>
+			<data>
+			Szqbhy9x1v5BOGP6jxnRqQ0WPp5Aas/IU446q7FPIhY=
+			</data>
+		</dict>
 		<key>Headers/WSDatePickerView.h</key>
 		<dict>
 			<key>hash</key>
@@ -1306,11 +1224,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HIwFPaIFstgwGOHOzo9rNRbh1d4=
+			6d3ZIAQLirlhscdzKc7BARip2yA=
 			</data>
 			<key>hash2</key>
 			<data>
-			3z0IDd/UKb2BSaSN0uB8cKEbBVE7FUtBbwfXaNNAopY=
+			TzrlISCq090mPhxqhavQDbEnO0P80cRAmi4jYlYvUEc=
 			</data>
 		</dict>
 		<key>Headers/ZZLimitInputManager.h</key>
@@ -1333,6 +1251,28 @@
 			<key>hash2</key>
 			<data>
 			uHjLDiYhTpqEYXzz/OehD95KNiUDlTnIcOJj+fLByho=
+			</data>
+		</dict>
+		<key>Headers/iCarousel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GUQ+vMBy+FAEjPuzt7rKLEKDCYk=
+			</data>
+			<key>hash2</key>
+			<data>
+			o4q61upRAuDIb6gILfUhKOgi3udw4ERmEOA4C+x3BTo=
+			</data>
+		</dict>
+		<key>Headers/iCarousel.m</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			haVu2HlYxyyduCNHkIBx9b9S20k=
+			</data>
+			<key>hash2</key>
+			<data>
+			egZLb4bvWpCvyU6J63xz5mO9pohJMfuYBzNmIUnb43I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

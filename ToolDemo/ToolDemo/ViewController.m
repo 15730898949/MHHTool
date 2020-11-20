@@ -104,31 +104,29 @@
     }];
     
     
-    carousel = [[MHCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100)];
+    carousel = [[MHCarousel alloc]initWithFrame:CGRectZero];
     carousel.delegate = self;
     carousel.dataSource = self;
     carousel.pagingEnabled = YES;
     carousel.type = iCarouselTypeLinear;
     carousel.timingSeconds = 2;
+    [self.view addSubview:carousel];
+    [carousel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.offset(100);
+        make.left.right.offset(0);
+        make.height.offset(100);
+    }];
+    [carousel.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(carousel);
+        make.bottom.offset(-10);
+        make.left.right.offset(0);
+        make.height.offset(20);
+    }];
     [carousel reloadData];
-    
-    
-//    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 70, 150, 20)];
-//    _pageControl.numberOfPages = 3;
-//    _pageControl.currentPage = 0;
-//    [carousel addSubview:_pageControl];
-    
-//    CWFlowLayout *layout = [[CWFlowLayout alloc]initWithStyle:CWCarouselStyle_Normal];
-//    CWCarousel *banner = [[CWCarousel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_Width, 100) delegate:self datasource:self flowLayout:layout];
-//    banner.isAuto = YES;
-//    banner.autoTimInterval = 2;
-//    banner.endless = YES;
-//    [banner.carouselView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-//    banner.backgroundColor = [UIColor whiteColor];
-//    [banner freshCarousel];
+//    self.tableView.tableHeaderView = carousel;
 
-    self.tableView.tableHeaderView = carousel;
-    [self   textNetwork ];
+    
+    [self   textNetwork];
 
     // Do any additional setup after loading the view.
 //    self.pageMenu.frame = CGRectMake(0, 300, SCREEN_Width, 100);
@@ -148,19 +146,19 @@
     self.titleLab.text = @"123333";
     
     
-    StepSlider *slider = [[StepSlider alloc]init];
-    [slider addTarget:self action:@selector(sliderChange:) forControlEvents:UIControlEventValueChanged];
-    slider.trackHeight = 4;
-    slider.trackCircleRadius = 0;
-    slider.sliderCircleRadius = 4;
-    slider.maxCount = 3;
-    slider.sliderBounces = NO;
-    [self.view addSubview:slider];
-    [slider mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.offset(16);
-        make.right.offset(-16);
-        make.top.offset(100);
-    }];
+//    StepSlider *slider = [[StepSlider alloc]init];
+//    [slider addTarget:self action:@selector(sliderChange:) forControlEvents:UIControlEventValueChanged];
+//    slider.trackHeight = 4;
+//    slider.trackCircleRadius = 0;
+//    slider.sliderCircleRadius = 4;
+//    slider.maxCount = 3;
+//    slider.sliderBounces = NO;
+//    [self.view addSubview:slider];
+//    [slider mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.offset(16);
+//        make.right.offset(-16);
+//        make.top.offset(100);
+//    }];
 }
 
 
@@ -232,24 +230,6 @@
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index{
     NSLog(@"iCarousel点击%ld",index);
 }
-
-//- (void)delayMethod{
-//    if (carousel.numberOfItems<= 0 && carousel) {
-//        return;
-//    }
-//    [carousel scrollToItemAtIndex:carousel.currentItemIndex == carousel.numberOfItems-1?0:carousel.currentItemIndex+1 duration:1];
-//}
-//
-//- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel{
-//    _pageControl.currentPage = carousel.currentItemIndex;
-//    [self performSelector:@selector(delayMethod) withObject:nil afterDelay:3];
-//
-//}
-//
-//- (void)carouselWillBeginDragging:(iCarousel *)carousel{
-//    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(delayMethod) object:nil];
-//    [NSObject cancelPreviousPerformRequestsWithTarget:self];
-//}
 
 
 
@@ -364,11 +344,11 @@
     [cell layoutView];
 }
 
-- (void)viewDidDisappear:(BOOL)animated{
-    [carousel.delayTimer invalidate];
-    carousel.delayTimer = nil;
-
-}
+//- (void)viewDidDisappear:(BOOL)animated{
+//    [carousel.delayTimer invalidate];
+//    carousel.delayTimer = nil;
+//
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {

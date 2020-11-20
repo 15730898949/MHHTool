@@ -7,8 +7,7 @@
 //
 
 #import "WSDatePickerView.h"
-#import "NSDate+Extension.h"
-#import "UIView+Category.h"
+#import "NSDate+MHExtension.h"
 
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
@@ -71,7 +70,7 @@ typedef void(^doneBlock)(NSDate *);
     self.buttomView.backgroundColor = RGBA(255, 255, 255, 0.98);
     [self addSubview:self.buttomView];
     
-    self.showYearView = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.buttomView.width, 216)];
+    self.showYearView = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.buttomView.frame.size.width, 216)];
     self.showYearView.textColor = RGBA(233, 237, 242, 1);
     self.showYearView.font = [UIFont systemFontOfSize:110];
     self.showYearView.textAlignment = NSTextAlignmentCenter;
@@ -79,7 +78,7 @@ typedef void(^doneBlock)(NSDate *);
     self.showYearView.backgroundColor = [UIColor clearColor];
     [self.buttomView addSubview:self.showYearView];
     
-    self.doneBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, self.showYearView.height, self.buttomView.width, self.buttomView.height - self.showYearView.height)];
+    self.doneBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, self.showYearView.frame.size.height, self.showYearView.frame.size.width, self.buttomView.frame.size.height - self.showYearView.frame.size.height)];
     self.doneBtn.backgroundColor = RGBA(10, 96, 255, 1);
     [self.doneBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.doneBtn.titleLabel.font = [UIFont systemFontOfSize:18];
@@ -215,7 +214,11 @@ typedef void(^doneBlock)(NSDate *);
     [self addGestureRecognizer:tap];
     
 //    self.bottomConstraint.constant = -self.height;
-    self.buttomView.bottom = kScreenHeight + self.buttomView.height;
+    
+    CGRect frame = self.buttomView.frame;
+    frame.origin.y = kScreenHeight + self.buttomView.frame.size.height - frame.size.height;
+    self.buttomView.frame = frame;
+
     self.backgroundColor = RGBA(0, 0, 0, 0);
     [self layoutIfNeeded];
     
@@ -706,14 +709,21 @@ typedef void(^doneBlock)(NSDate *);
     
     [[UIApplication sharedApplication].keyWindow addSubview:self];
     [UIView animateWithDuration:.3 animations:^{
-        self.buttomView.bottom =  kScreenHeight - bottom_height;
+        CGRect frame = self.buttomView.frame;
+        frame.origin.y = kScreenHeight - bottom_height - frame.size.height;
+        self.buttomView.frame = frame;
+
+        
         self.backgroundColor = RGBA(0, 0, 0, 0.4);
         [self layoutIfNeeded];
     }];
 }
 -(void)dismiss {
     [UIView animateWithDuration:.3 animations:^{
-        self.buttomView.bottom = kScreenHeight + self.buttomView.height;
+        CGRect frame = self.buttomView.frame;
+        frame.origin.y = kScreenHeight;
+        self.buttomView.frame = frame;
+
         self.backgroundColor = RGBA(0, 0, 0, 0);
         [self layoutIfNeeded];
     } completion:^(BOOL finished) {

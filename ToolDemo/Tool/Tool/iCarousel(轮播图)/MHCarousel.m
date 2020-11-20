@@ -13,16 +13,27 @@
 
 @implementation MHCarousel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
 
 - (void)reloadData{
     [super reloadData];
-    self.pageControl.numberOfPages =  self.numberOfItems;
 }
 
 #pragma mark----------Add Timer
 -(void)addTimerWithSecond:(CGFloat)second
 {
     [self removeTimer];
+
+    if (second <= 0) {
+        return;
+    }
     self.delayTimer = [NSTimer scheduledTimerWithTimeInterval:second
                                                   target:self
                                                 selector:@selector(nextImage)
@@ -43,7 +54,6 @@
 }
 
 - (void)nextImage{
-    NSLog(@"4444444");
     NSInteger index = self.currentItemIndex + 1;
     if (index == self.numberOfItems) {
         index  = 0;
@@ -53,27 +63,43 @@
 
 
 - (void)mh_willBeginDragging{
-    [self removeTimer];
-
+    if (self.timingSeconds>0) {
+        [self removeTimer];
+    }
 }
 
 - (void)mh_didEndDragging{
-    [self addTimerWithSecond:self.timingSeconds];
+    if (self.timingSeconds>0) {
+        [self addTimerWithSecond:self.timingSeconds];
+    }
 }
 -(void)mh_didScroll{
     self.pageControl.currentPage  = self.currentItemIndex;
 }
 
+///点击pageControl 跳转相应位置
+- (void)spacePageControl:(SMPageControl *)pageControl{
+    if (self.timingSeconds>0) {
+        [self removeTimer];
+    }
+    [self scrollToItemAtIndex:pageControl.currentPage animated:YES];
+    if (self.timingSeconds>0) {
+        [self addTimerWithSecond:self.timingSeconds];
+    }
+
+}
+
 
 - (SMPageControl *)pageControl{
     if (!_pageControl) {
-    _pageControl                               = [[SMPageControl alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds) - 40, CGRectGetWidth(self.bounds), 40)];
+    _pageControl      = [[SMPageControl alloc]initWithFrame:CGRectMake(0, CGRectGetHeight(self.bounds) - 40, CGRectGetWidth(self.bounds), 40)];
     _pageControl.pageIndicatorTintColor        = [UIColor blackColor];
     _pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+    [_pageControl addTarget:self action:@selector(spacePageControl:) forControlEvents:UIControlEventValueChanged];
     [self addSubview:_pageControl];
 
-
-    }return _pageControl;
+    }
+    return _pageControl;
 
 }
 
