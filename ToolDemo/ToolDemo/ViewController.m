@@ -229,6 +229,11 @@
 
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index{
     NSLog(@"iCarousel点击%ld",index);
+    
+    WSDatePickerView *datePicker = [[WSDatePickerView alloc]initWithDateStyle:DateStyleShowYear CompleteBlock:^(NSDate *) {
+        
+    }];
+    [datePicker show];
 }
 
 
