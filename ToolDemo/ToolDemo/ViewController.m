@@ -20,7 +20,6 @@
 #import <Tool/SPPageMenu.h>
 #import "TestTableViewCell.h"
 #import "TestTableViewCell1.h"
-#import "SFAttributedString.h"
 #import "NSMutableAttributedString+SCRAttributedStringBuilder.h"
 #import <Tool/Tool.h>
 #import "BaseWebViewController.h"
@@ -41,17 +40,19 @@
 
 @implementation ViewController
 
+- (NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = @[@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"}].mutableCopy;
+    }
+    return _dataArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addNavBar];
-
-//    NSMutableAttributedString *textFont = [[NSMutableAttributedString alloc] initWithString:@"NSAttributedString设置字体大小"];
-    [SFAtStringCore registerAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20]} forLabel:@"LABEL"];
-    [SFAtStringCore registerAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forLabel:@"RED"];
         
 
     self.view.backgroundColor = UIColorFromHex(0x161b2f, 1);
-    self.dataArray = [NSMutableArray array];
     self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -68,83 +69,24 @@
         [MBHUD show];
         
     }];
-//    [MHCurrentViewController.navigationController pushViewController:[ViewController new] animated:YES];
 
     
-    WeakSelf(self)
-//    [self.tableView addHeaderRefreshWithBlock:^{
-//        [weakself   textNetwork];
-//
-//    }];
- 
     
-    [self.dataArray addObjectsFromArray:@[@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"},@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"},@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"},@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"}]];
-    
-    
-//    [self.tableView addFooterRefreshWithBlock:^{
-//        [weakself.dataArray addObject:[NSString stringWithFormat:@"%ld",weakself.tableView.page]];
-//        [weakself.tableView reloadData];
-//        [weakself.tableView endRefreshing];
-////        [MBProgressHUD showRingInView:UIApplication.sharedApplication.delegate.window Msg:@"加载中" animation:YES];
-//    }];
 
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self.view);
         make.top.equalTo(self.navBar.mas_bottom);
     }];
-    self.lable = [[UILabel alloc]init];
-    self.lable.textColor = [UIColor redColor];
-    [self.view addSubview:self.lable];
-    [self.lable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.offset(100);
-        make.top.offset(100);
-        make.height.offset(30);
-        make.width.offset(100);
-    }];
     
     
-    carousel = [[MHCarousel alloc]initWithFrame:CGRectZero];
-    carousel.delegate = self;
-    carousel.dataSource = self;
-    carousel.pagingEnabled = YES;
-    carousel.type = iCarouselTypeLinear;
-    carousel.timingSeconds = 2;
-    [self.view addSubview:carousel];
-    [carousel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.offset(100);
-        make.left.right.offset(0);
-        make.height.offset(100);
-    }];
-    [carousel.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(carousel);
-        make.bottom.offset(-10);
-        make.left.right.offset(0);
-        make.height.offset(20);
-    }];
-    [carousel reloadData];
-//    self.tableView.tableHeaderView = carousel;
 
     
     [self   textNetwork];
 
-    // Do any additional setup after loading the view.
-//    self.pageMenu.frame = CGRectMake(0, 300, SCREEN_Width, 100);
-//    [self.view addSubview:self.pageMenu];
-//    NSArray *colorArr = @[[UIColor redColor],[UIColor blueColor],[UIColor orangeColor],[UIColor grayColor],[UIColor blackColor],[UIColor brownColor],[UIColor purpleColor]];
-//    NSMutableArray *arr = [NSMutableArray array];
-//    for (UIColor *color in colorArr) {
-//        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
-//        view.backgroundColor = color;
-//        view.userInteractionEnabled = NO;
-//        [arr addObject:view];
-//    }
-//    [self.pageMenu setItems:arr selectedItemIndex:0];
-////    [self.pageMenu setItems:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"] selectedItemIndex:0];
     
 
     self.titleLab.text = @"123333";
-    
     
 //    StepSlider *slider = [[StepSlider alloc]init];
 //    [slider addTarget:self action:@selector(sliderChange:) forControlEvents:UIControlEventValueChanged];
@@ -159,6 +101,32 @@
 //        make.right.offset(-16);
 //        make.top.offset(100);
 //    }];
+    
+    [self setBanner];
+    [self setFooter];
+}
+
+///设置banner
+- (void)setBanner{
+    carousel = [[MHCarousel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, 100)];
+    carousel.pageControl.frame = CGRectMake(0, 70, SCREEN_Width, 20);
+    carousel.delegate = self;
+    carousel.dataSource = self;
+    carousel.pagingEnabled = YES;
+    carousel.type = iCarouselTypeLinear;
+    carousel.timingSeconds = 2;
+    [carousel reloadData];
+    self.tableView.tableHeaderView = carousel;
+
+}
+
+- (void)setFooter{
+    UIButton *commitBtn = [[UIButton alloc]initWithFrame:CGRectMake(15, 20, -15, 50)];
+    [commitBtn setTitle:@"提交" forState:UIControlStateNormal];
+    [commitBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    commitBtn.backgroundColor = [UIColor whiteColor];
+    commitBtn.layer.cornerRadius = 5;
+    self.tableView.tableFooterView = commitBtn;
 }
 
 
@@ -186,7 +154,8 @@
 //    });
 }
 
-- (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel{
+- (NSInteger)numberOfItemsInCarousel:(MHCarousel *)carousel{
+    carousel.pageControl.numberOfPages = 2;
     return 2;
 }
 
@@ -241,16 +210,19 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [tableView fd_heightForCellWithIdentifier:@"cell" cacheByIndexPath:indexPath configuration:^(id cell) {
-        [self configCell:cell indexPath:indexPath];
-    }];
+//    return [tableView fd_heightForCellWithIdentifier:@"cell" cacheByIndexPath:indexPath configuration:^(id cell) {
+//        [self configCell:cell indexPath:indexPath];
+//    }];
 
-//    return 200;
+    return 50;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MHInfoItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    MHInfoItemCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (!cell) {
+        cell = [[MHInfoItemCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
     [self configCell:cell indexPath:indexPath];
 
     return cell;
@@ -261,11 +233,11 @@
     cell.delegate = self;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     NSString *title = self.dataArray[indexPath.row][@"title"];
-//    cell.titleTextField.text = title;
-//    cell.contentTextField.enabled = YES;
-//    cell.contentTextField.text = self.dataArray[indexPath.row][@"content"];
+    cell.titleTextField.text = title;
+    cell.contentTextField.enabled = YES;
+    cell.contentTextField.text = self.dataArray[indexPath.row][@"content"];
 //    cell.contentTextField.attributedText = [[NSAttributedString alloc]initWithString:@"qweqe\ndasdasdasda"];;
-//    cell.contentTextField.placeholder = [NSString stringWithFormat:@"请输入%@",title];
+    cell.contentTextField.placeholder = [NSString stringWithFormat:@"请输入%@",title];
     cell.accessoryView = nil;
     if ([title isEqualToString:@"头像"]) {
         cell.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"add_wechat"]];
@@ -276,6 +248,9 @@
 
     }else if ([title isEqualToString:@"性别"]){
         cell.contentTextField.enabled = NO;
+        cell.contentTextField.placeholder = @"";
+        cell.contentTextField.text = @"";
+
     }else if ([title isEqualToString:@"通知"]){
         UISwitch *sw = [UISwitch new];
         [sw addTarget:self action:@selector(changeSW:) forControlEvents:UIControlEventValueChanged];
@@ -286,54 +261,38 @@
 
     }
 
-    if (indexPath.row == 2) {
-        cell.titleTextField.leftView = ({
-            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, 50)];
-            UIImageView *imgView = [UIImageView new];
-            imgView.contentMode = UIViewContentModeCenter;
-            imgView.image = [UIImage imageNamed:@"add_wechat"];
-            imgView.frame = CGRectMake(0, 0, 50, 50);
-            imgView.layer.cornerRadius = 15;
-            imgView.layer.masksToBounds = YES;
-            [view addSubview:imgView];
-
-            view;
-        });
-        cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
-//        cell.fixedTitleWidth = 160;
-
-        cell.accessoryView = [UISwitch new];
-
-    }else{
-        cell.titleTextField.leftView = nil;
-//        cell.titleTextField.text = @"";
-        cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
-    }
+//    if (indexPath.row == 2) {
+//        cell.titleTextField.leftView = ({
+//            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, 50)];
+//            UIImageView *imgView = [UIImageView new];
+//            imgView.contentMode = UIViewContentModeCenter;
+//            imgView.image = [UIImage imageNamed:@"add_wechat"];
+//            imgView.frame = CGRectMake(0, 0, 50, 50);
+//            imgView.layer.cornerRadius = 15;
+//            imgView.layer.masksToBounds = YES;
+//            [view addSubview:imgView];
+//
+//            view;
+//        });
+//        cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
+////        cell.fixedTitleWidth = 160;
+//
+//        cell.accessoryView = [UISwitch new];
+//
+//    }else{
+//        cell.titleTextField.leftView = nil;
+////        cell.titleTextField.text = @"";
+//        cell.titleTextField.leftViewMode = UITextFieldViewModeAlways;
+//    }
     
-    cell.titleLab.text = @"1231";
-    cell.contentTextField.placeholder = @"请输入";
-    cell.contentTextField.enabled = YES;
-    cell.fixedTitleHeight = 50;
-//    cell.fixedTitleHeight = 300;
-//    cell.contentTextField.text = @"1\n2";
-//    cell.contentLab.attributedText = [[NSMutableAttributedString alloc]initWithString:@""].append(@"qweqe\ndasdasdasda").color([UIColor redColor]).append(@"\ndddd\n").color([UIColor blackColor]).font([UIFont systemFontOfSize:20]).appendImage([UIImage imageNamed:@"add_wechat"]).append(@"\n123123");
-//   
-//    
-//    Ivar ivar = class_getInstanceVariable([cell.contentTextField class], "_label");
-//    id placeholderLabel = object_getIvar(cell.contentTextField, ivar);
-//    [placeholderLabel performSelector:@selector(setNumberOfLines:) withObject:0];
-    
-//    cell.titleLab.text = title;
-    
-//    cell.titleLab.attributedText = [[NSMutableAttributedString alloc]initWithString:@""].append(@"qweqe\ndasdasdasda").color([UIColor redColor]).append(@"\ndddd\n").color([UIColor blackColor]).font([UIFont systemFontOfSize:20]).appendImage([UIImage imageNamed:@"add_wechat"]).append(@"\n123123");
-
+//    cell.titleLab.text = @"1231";
+//    cell.contentTextField.placeholder = @"请输入";
+//    cell.contentTextField.enabled = YES;
+//    cell.fixedTitleHeight = 50;
     
     
     [cell setTextFieldValueChanged:^(MHInfoItemCell * _Nonnull cell, UITextField * _Nonnull textField) {
         NSIndexPath *index = indexPath;
-//        if (!index) {
-//            return;
-//        }
         NSInteger row =index.row;
         NSLog(@"----%ld--%@",row,textField.text);
         NSMutableDictionary * dic = [NSMutableDictionary dictionaryWithDictionary:self.dataArray[row]];
@@ -342,14 +301,8 @@
 
     }];
 
-    [cell layoutView];
+//    [cell layoutView];
 }
-
-//- (void)viewDidDisappear:(BOOL)animated{
-//    [carousel.delayTimer invalidate];
-//    carousel.delayTimer = nil;
-//
-//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
@@ -371,7 +324,7 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    self.navigationBarTranslationY =  scrollView.contentOffset.y;
+//    self.navigationBarTranslationY =  scrollView.contentOffset.y;
 //    [self.view endEditing:YES];
 
     

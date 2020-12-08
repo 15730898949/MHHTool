@@ -219,7 +219,6 @@
 		04F0EDC72536981300F20FED /* StepSlider.m in Headers */ = {isa = PBXBuildFile; fileRef = 04F0EDC4253697EF00F20FED /* StepSlider.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		63758211B845B97FB25449F5 /* Pods_Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B31E198B12B549366BC1F8 /* Pods_Tool.framework */; };
 		66CC420A319AECFB8CCED05B /* Pods_ToolDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D1D7E67C9F2FDA51D0218F /* Pods_ToolDemo.framework */; };
-		734D81922510EF36009834F7 /* SFAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 734D81902510EF36009834F7 /* SFAttributedString.m */; };
 		734D819A2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 734D81982510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		734D819B2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */; };
 		734D81A325110679009834F7 /* emoji keyboard in Resources */ = {isa = PBXBuildFile; fileRef = 734D81A125110679009834F7 /* emoji keyboard */; };
@@ -426,8 +425,6 @@
 		04F0EDC3253697EF00F20FED /* StepSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepSlider.h; sourceTree = "<group>"; };
 		04F0EDC4253697EF00F20FED /* StepSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepSlider.m; sourceTree = "<group>"; };
 		07D0A9888F1988F690CD6EE6 /* Pods-ToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.debug.xcconfig"; path = "Target Support Files/Pods-ToolDemo/Pods-ToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		734D81902510EF36009834F7 /* SFAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAttributedString.m; sourceTree = "<group>"; };
-		734D81912510EF36009834F7 /* SFAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAttributedString.h; sourceTree = "<group>"; };
 		734D81982510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+SCRAttributedStringBuilder.h"; sourceTree = "<group>"; };
 		734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+SCRAttributedStringBuilder.m"; sourceTree = "<group>"; };
 		734D81A125110679009834F7 /* emoji keyboard */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "emoji keyboard"; sourceTree = "<group>"; };
@@ -622,8 +619,6 @@
 			children = (
 				734D81A5251106A6009834F7 /* cell */,
 				734D819C25110643009834F7 /* 表情键盘 */,
-				734D81912510EF36009834F7 /* SFAttributedString.h */,
-				734D81902510EF36009834F7 /* SFAttributedString.m */,
 				04F0EDAF253535F500F20FED /* test.html */,
 				04EBCC5924DD4434005D7D8C /* AppDelegate.h */,
 				04EBCC5A24DD4434005D7D8C /* AppDelegate.m */,
@@ -1479,7 +1474,6 @@
 			files = (
 				7355DB36250F9134000CF840 /* TestTableViewCell1.m in Sources */,
 				73B3A91E2534A678008066B1 /* BaseWebViewController.m in Sources */,
-				734D81922510EF36009834F7 /* SFAttributedString.m in Sources */,
 				04EBCC6124DD4434005D7D8C /* ViewController.m in Sources */,
 				7355DB32250F909D000CF840 /* TestTableViewCell.m in Sources */,
 				04EBCC5B24DD4434005D7D8C /* AppDelegate.m in Sources */,
