@@ -12,7 +12,7 @@
 
 @implementation NSString(Category)
 
-- (CGSize)sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size {
+- (CGSize)mh_sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size {
     CGSize resultSize;
     if ([self respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
         NSMethodSignature *signature = [[self class] instanceMethodSignatureForSelector:@selector(boundingRectWithSize:options:attributes:context:)];

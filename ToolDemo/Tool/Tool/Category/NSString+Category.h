@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString(Category)
 ///计算字符串长度
-- (CGSize)sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size;
+- (CGSize)mh_sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size;
 
 ///YYYY_MM_dd
 - (NSString *)timestampToYYYY_MM_ddFromMu;

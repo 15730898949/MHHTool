@@ -18,7 +18,6 @@
 #import <Tool/ToolMacro.h>
 #import <Tool/MBProgressHUD.h>
 #import <Tool/SPPageMenu.h>
-#import "TestTableViewCell.h"
 #import "TestTableViewCell1.h"
 #import "NSMutableAttributedString+SCRAttributedStringBuilder.h"
 #import <Tool/Tool.h>
@@ -31,8 +30,8 @@
     MHCarousel *carousel;
 
 }
-@property (nonatomic ,strong)UITableView *tableView;
-@property (nonatomic ,strong)NSMutableArray *dataArray;
+//@property (nonatomic ,strong)UITableView *tableView;
+//@property (nonatomic ,strong)NSMutableArray *dataArray;
 @property (nonatomic ,strong)UILabel *lable;
 @property (nonatomic ,strong)SPPageMenu *pageMenu;
 
@@ -41,10 +40,10 @@
 @implementation ViewController
 
 - (NSMutableArray *)dataArray{
-    if (!_dataArray) {
-        _dataArray = @[@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"}].mutableCopy;
-    }
-    return _dataArray;
+//    if (!_dataArray) {
+//        _dataArray = @[@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"}].mutableCopy;
+//    }
+    return @[@{@"title":@"头像"},@{@"title":@"姓名"},@{@"title":@"性别"},@{@"title":@"年龄"},@{@"title":@"电话"},@{@"title":@"邮箱"},@{@"title":@"通知"}];
 }
 
 - (void)viewDidLoad {
