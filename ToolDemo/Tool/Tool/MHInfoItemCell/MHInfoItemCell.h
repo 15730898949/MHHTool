@@ -66,6 +66,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat accessoryViewRightMargin;
 @property (nonatomic, assign) CGSize accessoryViewSizeMargin;
 
+@property (nonatomic, assign) UIEdgeInsets cellFrameSpace;
+
 /**
  如果设置大于零的值, 则标题的宽度固定;
  如果设置小于零的值(如-1), 则表示标题宽度自适应

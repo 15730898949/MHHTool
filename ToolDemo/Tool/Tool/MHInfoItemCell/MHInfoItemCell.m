@@ -275,6 +275,13 @@
 }
 
 
+- (void)setCellFrameSpace:(UIEdgeInsets)cellFrameSpace{
+    _cellFrameSpace = cellFrameSpace;
+    [self setNeedsLayout];
+}
+
+
+
 #pragma mark - Getter
 - (UITextField *)titleTextField {
     if (!_titleTextField) {
@@ -375,5 +382,18 @@
     }
 }
 
+-(void)setFrame:(CGRect)frame{
+    
+    if (self.cellFrameSpace.top || self.cellFrameSpace.bottom) {
+        frame.origin.y += self.cellFrameSpace.top;
+        frame.size.height -= (self.cellFrameSpace.top+self.cellFrameSpace.bottom);
+    }
+    if (self.cellFrameSpace.left || self.cellFrameSpace.right) {
+        frame.origin.x += self.cellFrameSpace.left;
+        frame.size.width -= (self.cellFrameSpace.left+self.cellFrameSpace.right);
+    }
+    
+    [super setFrame:frame];
+}
 
 @end
