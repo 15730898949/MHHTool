@@ -48,6 +48,8 @@
 #import <Tool/MHInfoItemCell.h>
 #import <Tool/SMPageControl.h>
 #import <Tool/MHCarousel.h>
+#import <Tool/MHBaseViewController.h>
+#import <Tool/MHBaseTableViewController.h>
 
 
 //! Project version number for Tool.

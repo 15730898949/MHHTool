@@ -53,48 +53,51 @@ static MBProgressHUD * _MBHUD = nil;
 
 
 -(void)showRingInView:(UIView *)view Msg:(NSString *)msg animation:(BOOL)animation{
-    MBProgressHUD *hud = self;
-    if (hud.superview != view) {
-        [self hideAnimated:NO];
-        [view addSubview:hud];
-    }
-    hud.mode = MBProgressHUDModeCustomView;
-    hud.backgroundView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
-    hud.userInteractionEnabled = YES;
-    SVIndefiniteAnimatedView *arcview = [[SVIndefiniteAnimatedView alloc]initWithFrame:CGRectZero];
-    arcview.strokeColor = [UIColor whiteColor];
-    arcview.strokeThickness = 2;
-    arcview.radius = 18.f;
-    [arcview sizeToFit];
-    if (msg.length) {
-        CGRect rect = arcview.frame;
-        rect.origin.x += 8;
-        rect.size.width += 16;
-        arcview.frame = rect;
-    }
-    hud.customView = arcview;
-    
-    NSLayoutConstraint *w_constraint = [NSLayoutConstraint constraintWithItem:arcview
-                                                                    attribute:NSLayoutAttributeWidth
-                                                                    relatedBy:NSLayoutRelationEqual
-                                                                       toItem:nil
-                                                                    attribute:NSLayoutAttributeNotAnAttribute
-                                                                   multiplier:1
-                                                                     constant:arcview.frame.size.width];
-    NSLayoutConstraint *h_constraint = [NSLayoutConstraint constraintWithItem:arcview
-                                                                    attribute:NSLayoutAttributeHeight
-                                                                    relatedBy:NSLayoutRelationEqual
-                                                                       toItem:nil
-                                                                    attribute:NSLayoutAttributeNotAnAttribute
-                                                                   multiplier:1
-                                                                     constant:arcview.frame.size.height];
-    [hud.customView addConstraints:@[w_constraint,h_constraint]];
-    hud.label.textColor = [UIColor whiteColor];
-    hud.label.text = msg;
-    hud.offset = CGPointMake(0, 0);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        MBProgressHUD *hud = self;
+        if (hud.superview != view) {
+            [self hideAnimated:NO];
+            [view addSubview:hud];
+        }
+        hud.mode = MBProgressHUDModeCustomView;
+        hud.backgroundView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
+        hud.userInteractionEnabled = YES;
+        SVIndefiniteAnimatedView *arcview = [[SVIndefiniteAnimatedView alloc]initWithFrame:CGRectZero];
+        arcview.strokeColor = [UIColor whiteColor];
+        arcview.strokeThickness = 2;
+        arcview.radius = 18.f;
+        [arcview sizeToFit];
+        if (msg.length) {
+            CGRect rect = arcview.frame;
+            rect.origin.x += 8;
+            rect.size.width += 16;
+            arcview.frame = rect;
+        }
+        hud.customView = arcview;
+        
+        NSLayoutConstraint *w_constraint = [NSLayoutConstraint constraintWithItem:arcview
+                                                                        attribute:NSLayoutAttributeWidth
+                                                                        relatedBy:NSLayoutRelationEqual
+                                                                           toItem:nil
+                                                                        attribute:NSLayoutAttributeNotAnAttribute
+                                                                       multiplier:1
+                                                                         constant:arcview.frame.size.width];
+        NSLayoutConstraint *h_constraint = [NSLayoutConstraint constraintWithItem:arcview
+                                                                        attribute:NSLayoutAttributeHeight
+                                                                        relatedBy:NSLayoutRelationEqual
+                                                                           toItem:nil
+                                                                        attribute:NSLayoutAttributeNotAnAttribute
+                                                                       multiplier:1
+                                                                         constant:arcview.frame.size.height];
+        [hud.customView addConstraints:@[w_constraint,h_constraint]];
+        hud.label.textColor = [UIColor whiteColor];
+        hud.label.text = msg;
+        hud.offset = CGPointMake(0, 0);
 
 
-    [hud showAnimated:animation];
+        [hud showAnimated:animation];
+
+    });
 
 }
 
@@ -118,19 +121,22 @@ static MBProgressHUD * _MBHUD = nil;
 }
 
 - (void)showProgress:(float)progress inView:(UIView *)view animation:(BOOL)animation{
-    MBProgressHUD *hud = self;
-    hud.mode = MBProgressHUDModeAnnularDeterminate;
-    hud.userInteractionEnabled = YES;
-    [hud setHudStyle];
-    hud.backgroundView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
-    if (self.superview != view) {
-        [self hideAnimated:NO];
-        [view addSubview:self];
-    }
-    [hud showAnimated:animation];
-    hud.label.textColor = [UIColor whiteColor];
-    hud.progress = progress;
-    hud.offset = CGPointMake(0, 0);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        MBProgressHUD *hud = self;
+        hud.mode = MBProgressHUDModeAnnularDeterminate;
+        hud.userInteractionEnabled = YES;
+        [hud setHudStyle];
+        hud.backgroundView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
+        if (self.superview != view) {
+            [self hideAnimated:NO];
+            [view addSubview:self];
+        }
+        [hud showAnimated:animation];
+        hud.label.textColor = [UIColor whiteColor];
+        hud.progress = progress;
+        hud.offset = CGPointMake(0, 0);
+
+    });
 
 }
 
@@ -172,23 +178,27 @@ static MBProgressHUD * _MBHUD = nil;
 }
 
 -(void)showInView:(UIView *)view Msg:(NSString *)msg andOffer:(CGFloat)offerset andDelay:(float)delay{
-    MBProgressHUD *hud = self;
-    hud.userInteractionEnabled = NO;
-    if (hud.superview != view) {
-        [self hideAnimated:NO];
-        [view addSubview:hud];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        MBProgressHUD *hud = self;
+        hud.userInteractionEnabled = NO;
+        if (hud.superview != view) {
+            [self hideAnimated:NO];
+            [view addSubview:hud];
+        }
 
-    hud.mode=MBProgressHUDModeText;
-    hud.label.text = msg;
-    hud.label.textColor = [UIColor whiteColor];
-    hud.offset = CGPointMake(0, offerset);
-    self.backgroundView.backgroundColor  = [[UIColor blackColor]colorWithAlphaComponent:0.0];
+        hud.mode=MBProgressHUDModeText;
+        hud.label.text = msg;
+        hud.label.textColor = [UIColor whiteColor];
+        hud.offset = CGPointMake(0, offerset);
+        self.backgroundView.backgroundColor  = [[UIColor blackColor]colorWithAlphaComponent:0.0];
 
-    [hud showAnimated:YES];
-    [hud hideAnimated:YES afterDelay:delay];
+        [hud showAnimated:YES];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES];
+        });
 
 
+    });
 }
 
 

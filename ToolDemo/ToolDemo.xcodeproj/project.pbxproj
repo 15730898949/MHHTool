@@ -148,6 +148,18 @@
 		04445C4224E0E82A00D4FA5C /* UIImage+MUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB124DD4628005D7D8C /* UIImage+MUColor.m */; };
 		04445C7424E1356900D4FA5C /* Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; };
 		04445C7524E1356900D4FA5C /* Tool.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		045CE6F52595817900423AF8 /* MHBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 045CE6F32595817900423AF8 /* MHBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		045CE6F62595817900423AF8 /* MHBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 045CE6F32595817900423AF8 /* MHBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		045CE6F72595817900423AF8 /* MHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CE6F42595817900423AF8 /* MHBaseViewController.m */; };
+		045CE6F82595817900423AF8 /* MHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CE6F42595817900423AF8 /* MHBaseViewController.m */; };
+		045CE7002595828E00423AF8 /* MHBaseTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 045CE6FE2595828E00423AF8 /* MHBaseTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		045CE7012595828E00423AF8 /* MHBaseTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 045CE6FE2595828E00423AF8 /* MHBaseTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		045CE7022595828E00423AF8 /* MHBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CE6FF2595828E00423AF8 /* MHBaseTableViewController.m */; };
+		045CE7032595828E00423AF8 /* MHBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045CE6FF2595828E00423AF8 /* MHBaseTableViewController.m */; };
+		045CE7222595897F00423AF8 /* MHBaseViewController.m in Headers */ = {isa = PBXBuildFile; fileRef = 045CE6F42595817900423AF8 /* MHBaseViewController.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		045CE7232595897F00423AF8 /* MHBaseTableViewController.m in Headers */ = {isa = PBXBuildFile; fileRef = 045CE6FF2595828E00423AF8 /* MHBaseTableViewController.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		045CE72E2595899300423AF8 /* MHBaseViewController.m in Headers */ = {isa = PBXBuildFile; fileRef = 045CE6F42595817900423AF8 /* MHBaseViewController.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		045CE72F2595899300423AF8 /* MHBaseTableViewController.m in Headers */ = {isa = PBXBuildFile; fileRef = 045CE6FF2595828E00423AF8 /* MHBaseTableViewController.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		0483C27324EF5B2A005BFD32 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483C27224EF5B2A005BFD32 /* NullSafe.m */; };
 		04AD3C5B2563A3A100A429D3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD3C44256368BF00A429D3 /* iCarousel.m */; };
 		04AD3C612563A3A200A429D3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD3C44256368BF00A429D3 /* iCarousel.m */; };
@@ -320,6 +332,10 @@
 		04269F8124FCE67000CFD9D5 /* FTPopOverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPopOverMenu.m; sourceTree = "<group>"; };
 		04445C3D24E0D98100D4FA5C /* MUHookMethodHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUHookMethodHelper.h; sourceTree = "<group>"; };
 		04445C3E24E0D98100D4FA5C /* MUHookMethodHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUHookMethodHelper.m; sourceTree = "<group>"; };
+		045CE6F32595817900423AF8 /* MHBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHBaseViewController.h; sourceTree = "<group>"; };
+		045CE6F42595817900423AF8 /* MHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHBaseViewController.m; sourceTree = "<group>"; };
+		045CE6FE2595828E00423AF8 /* MHBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHBaseTableViewController.h; sourceTree = "<group>"; };
+		045CE6FF2595828E00423AF8 /* MHBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHBaseTableViewController.m; sourceTree = "<group>"; };
 		0483C27224EF5B2A005BFD32 /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
 		04AD3C44256368BF00A429D3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		04AD3C45256368BF00A429D3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -387,6 +403,7 @@
 		731303482609C5B800F4651A /* GPSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSManager.h; sourceTree = "<group>"; };
 		731303492609C5B800F4651A /* Placemark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Placemark.m; sourceTree = "<group>"; };
 		7313034A2609C5B800F4651A /* GPSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSManager.m; sourceTree = "<group>"; };
+		41D8F9B9AFBDE6F617294198 /* Pods-Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.release.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.release.xcconfig"; sourceTree = "<group>"; };
 		734D81982510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+SCRAttributedStringBuilder.h"; sourceTree = "<group>"; };
 		734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+SCRAttributedStringBuilder.m"; sourceTree = "<group>"; };
 		734D81A125110679009834F7 /* emoji keyboard */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "emoji keyboard"; sourceTree = "<group>"; };
@@ -408,10 +425,9 @@
 		73B3A912253203EA008066B1 /* MHNavigation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHNavigation.m; sourceTree = "<group>"; };
 		73B3A91C2534A678008066B1 /* BaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
 		73B3A91D2534A678008066B1 /* BaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
-		846C32F4E6A339A32B57F53C /* Pods-Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.debug.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.debug.xcconfig"; sourceTree = "<group>"; };
 		8B5640E6AF4AB4B43302D994 /* Pods-ToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.release.xcconfig"; path = "Target Support Files/Pods-ToolDemo/Pods-ToolDemo.release.xcconfig"; sourceTree = "<group>"; };
-		9C3922DE94D3C4CECBA408A6 /* Pods-Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.release.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.release.xcconfig"; sourceTree = "<group>"; };
 		C0B31E198B12B549366BC1F8 /* Pods_Tool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24D9725DE1D1F2AF386C81B /* Pods-Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tool.debug.xcconfig"; path = "Target Support Files/Pods-Tool/Pods-Tool.debug.xcconfig"; sourceTree = "<group>"; };
 		F1D1D7E67C9F2FDA51D0218F /* Pods_ToolDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToolDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -604,7 +620,6 @@
 				04C4AABB24E285E90092532B /* LYEmptyView(空白页) */,
 				04445C4124E0D98600D4FA5C /* MUHookMethodHelper(交换方法) */,
 				04EBCD9124DD4628005D7D8C /* FDFullscreenPopGesture(侧滑返回) */,
-				04EBCD9D24DD4628005D7D8C /* WebViewController */,
 				04EBCDB324DD4628005D7D8C /* WSDatePickerView */,
 				04EBCDB624DD4628005D7D8C /* Networking */,
 				04EBCDBA24DD4629005D7D8C /* ZZLimitInputManager(正则限制输入框) */,
@@ -612,7 +627,7 @@
 				04EBCDC824DD4629005D7D8C /* GZCMulitiDelegate(多播代理) */,
 				0423E61525666D0600C027F3 /* SMPageControl */,
 				04EBCDCB24DD4629005D7D8C /* iCarousel(轮播图) */,
-				04EBCDD224DD4629005D7D8C /* BaseModel */,
+				04EBCDD224DD4629005D7D8C /* Base */,
 				04EBCDF224DD4629005D7D8C /* ToolMacro.h */,
 				04EBCDF324DD4629005D7D8C /* SPPageMenu(分页Page) */,
 				041C5AB72507740A000670E7 /* TTGTagCollectionView(tag标签) */,
@@ -627,15 +642,6 @@
 				04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */,
 			);
 			path = "FDFullscreenPopGesture(侧滑返回)";
-			sourceTree = "<group>";
-		};
-		04EBCD9D24DD4628005D7D8C /* WebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				04EBCD9F24DD4628005D7D8C /* MHWebViewController.h */,
-				04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */,
-			);
-			path = WebViewController;
 			sourceTree = "<group>";
 		};
 		04EBCDA024DD4628005D7D8C /* Category */ = {
@@ -722,13 +728,19 @@
 			path = "iCarousel(轮播图)";
 			sourceTree = "<group>";
 		};
-		04EBCDD224DD4629005D7D8C /* BaseModel */ = {
+		04EBCDD224DD4629005D7D8C /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				04EBCDD424DD4629005D7D8C /* MHBaseModel.h */,
 				04EBCDD324DD4629005D7D8C /* MHBaseModel.m */,
+				045CE6F32595817900423AF8 /* MHBaseViewController.h */,
+				045CE6F42595817900423AF8 /* MHBaseViewController.m */,
+				045CE6FE2595828E00423AF8 /* MHBaseTableViewController.h */,
+				045CE6FF2595828E00423AF8 /* MHBaseTableViewController.m */,
+				04EBCD9F24DD4628005D7D8C /* MHWebViewController.h */,
+				04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */,
 			);
-			path = BaseModel;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		04EBCDF324DD4629005D7D8C /* SPPageMenu(分页Page) */ = {
@@ -817,10 +829,10 @@
 		BFE8B820541A94752B017FCB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				846C32F4E6A339A32B57F53C /* Pods-Tool.debug.xcconfig */,
-				9C3922DE94D3C4CECBA408A6 /* Pods-Tool.release.xcconfig */,
 				07D0A9888F1988F690CD6EE6 /* Pods-ToolDemo.debug.xcconfig */,
 				8B5640E6AF4AB4B43302D994 /* Pods-ToolDemo.release.xcconfig */,
+				C24D9725DE1D1F2AF386C81B /* Pods-Tool.debug.xcconfig */,
+				41D8F9B9AFBDE6F617294198 /* Pods-Tool.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -911,8 +923,12 @@
 				0423E60F25666CFF00C027F3 /* SMPageControl.h in Headers */,
 				0423E6302566718900C027F3 /* SMPageControl.m in Headers */,
 				04155C50255A207A006C3379 /* MHInfoItemCell.m in Headers */,
+				045CE7012595828E00423AF8 /* MHBaseTableViewController.h in Headers */,
+				045CE6F62595817900423AF8 /* MHBaseViewController.h in Headers */,
 				0423E64F2566786500C027F3 /* MHCarousel.h in Headers */,
 				0423E6502566786500C027F3 /* MHCarousel.m in Headers */,
+				045CE72E2595899300423AF8 /* MHBaseViewController.m in Headers */,
+				045CE72F2595899300423AF8 /* MHBaseTableViewController.m in Headers */,
 				0423574C25552F2C00349CBD /* Tool.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -998,10 +1014,14 @@
 				0423E6442566785000C027F3 /* MHCarousel.m in Headers */,
 				04AD3C832563A3E300A429D3 /* iCarousel.m in Headers */,
 				0423E60E25666CFF00C027F3 /* SMPageControl.h in Headers */,
+				045CE6F52595817900423AF8 /* MHBaseViewController.h in Headers */,
+				045CE7002595828E00423AF8 /* MHBaseTableViewController.h in Headers */,
 				0423E62A2566717E00C027F3 /* SMPageControl.m in Headers */,
 				7313034F2609C5F300F4651A /* GPSManager.m in Headers */,
 				731303502609C5F300F4651A /* Placemark.m in Headers */,
 				04B085C02500DACB00FB3554 /* NSString+Category.h in Headers */,
+				045CE7222595897F00423AF8 /* MHBaseViewController.m in Headers */,
+				045CE7232595897F00423AF8 /* MHBaseTableViewController.m in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1013,7 +1033,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0423577C25552F2C00349CBD /* Build configuration list for PBXNativeTarget "Tool_swift" */;
 			buildPhases = (
-				042356F525552F2C00349CBD /* [CP] Check Pods Manifest.lock */,
 				042356F625552F2C00349CBD /* Headers */,
 				0423574D25552F2C00349CBD /* Sources */,
 				0423577825552F2C00349CBD /* Frameworks */,
@@ -1138,28 +1157,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		042356F525552F2C00349CBD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tool-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		0423577B25552F2C00349CBD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1270,6 +1267,7 @@
 				0423E60D25666CFF00C027F3 /* SMPageControl.m in Sources */,
 				0423575425552F2C00349CBD /* ZZLimitInputManager.m in Sources */,
 				0423575525552F2C00349CBD /* MBProgressHUD.m in Sources */,
+				045CE6F82595817900423AF8 /* MHBaseViewController.m in Sources */,
 				0423575625552F2C00349CBD /* LYEmptyView.m in Sources */,
 				0423575725552F2C00349CBD /* UITextView+Placeholder.m in Sources */,
 				0423575825552F2C00349CBD /* LYEmptyBaseView.m in Sources */,
@@ -1284,6 +1282,7 @@
 				0423576225552F2C00349CBD /* UIButton+Category.m in Sources */,
 				0423576325552F2C00349CBD /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				0423576425552F2C00349CBD /* NSDate+MHExtension.m in Sources */,
+				045CE7032595828E00423AF8 /* MHBaseTableViewController.m in Sources */,
 				0423576525552F2C00349CBD /* UILabel+topString.m in Sources */,
 				0423576725552F2C00349CBD /* MUHookMethodHelper.m in Sources */,
 				0423576825552F2C00349CBD /* StepSlider.m in Sources */,
@@ -1326,11 +1325,13 @@
 				04EBCE0C24DD4629005D7D8C /* NSDecimalNumber+Addtion.m in Sources */,
 				734D819B2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Sources */,
 				7313034E2609C5B800F4651A /* GPSManager.m in Sources */,
+				045CE7022595828E00423AF8 /* MHBaseTableViewController.m in Sources */,
 				04EBCE1224DD4629005D7D8C /* WSDatePickerView.m in Sources */,
 				04EBCE1624DD4629005D7D8C /* ZZLimitInputManager.m in Sources */,
 				04C4AACB24E285EA0092532B /* LYEmptyView.m in Sources */,
 				04EBCE0724DD4629005D7D8C /* UITextView+Placeholder.m in Sources */,
 				04C4AAC524E285EA0092532B /* LYEmptyBaseView.m in Sources */,
+				045CE6F72595817900423AF8 /* MHBaseViewController.m in Sources */,
 				04C87D8825594A9700BF7078 /* MHInfoItemCell.m in Sources */,
 				73681470251258180026C6E7 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				04EBCE0D24DD4629005D7D8C /* NSDictionary+LSCore.m in Sources */,
@@ -1388,7 +1389,6 @@
 /* Begin XCBuildConfiguration section */
 		0423577D25552F2C00349CBD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 846C32F4E6A339A32B57F53C /* Pods-Tool.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1452,7 +1452,6 @@
 		};
 		0423577E25552F2C00349CBD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C3922DE94D3C4CECBA408A6 /* Pods-Tool.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1727,7 +1726,7 @@
 		};
 		04EBCD8B24DD45FC005D7D8C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 846C32F4E6A339A32B57F53C /* Pods-Tool.debug.xcconfig */;
+			baseConfigurationReference = C24D9725DE1D1F2AF386C81B /* Pods-Tool.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1791,7 +1790,7 @@
 		};
 		04EBCD8C24DD45FC005D7D8C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C3922DE94D3C4CECBA408A6 /* Pods-Tool.release.xcconfig */;
+			baseConfigurationReference = 41D8F9B9AFBDE6F617294198 /* Pods-Tool.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

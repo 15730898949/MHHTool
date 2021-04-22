@@ -6,9 +6,9 @@
 //  Copyright © 2020 Mac. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Tool/MHBaseTableViewController.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : MHBaseTableViewController
 
 
 @end
