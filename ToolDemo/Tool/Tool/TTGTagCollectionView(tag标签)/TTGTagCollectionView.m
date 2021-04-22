@@ -13,6 +13,11 @@
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, assign) BOOL needsLayoutTagViews;
 @property (nonatomic, assign) NSUInteger actualNumberOfLines;
+
+@property(nonatomic ,assign)NSInteger number;
+@property(nonatomic ,strong)NSMutableArray<UIView *> *tags;
+@property(nonatomic ,strong)NSMutableArray *sizes;
+
 @end
 
 @implementation TTGTagCollectionView
@@ -73,9 +78,16 @@
     // Remove all tag views
     [_containerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
+    self.number = [_dataSource numberOfTagsInTagCollectionView:self];
+    self.tags = [NSMutableArray arrayWithCapacity:self.number];
+    self.sizes = [NSMutableArray arrayWithCapacity:self.number];
     // Add tag view
-    for (NSUInteger i = 0; i < [_dataSource numberOfTagsInTagCollectionView:self]; i++) {
-        [_containerView addSubview:[_dataSource tagCollectionView:self tagViewForIndex:i]];
+    for (NSUInteger i = 0; i < self.number; i++) {
+        UIView *tag = [_dataSource tagCollectionView:self tagViewForIndex:i];
+        [_containerView addSubview:tag];
+        [self.tags addObject:tag];
+        
+        [self.sizes addObject:[NSValue valueWithCGSize:[_delegate tagCollectionView:self sizeForTagAtIndex:i]]];
     }
     
     // Update tag view frame
@@ -87,8 +99,8 @@
     // We expect the point to be a point wrt to the TTGTagCollectionView.
     // so convert this point first to a point wrt to the container view.
     CGPoint convertedPoint = [self convertPoint:point toView:_containerView];
-    for (NSUInteger i = 0; i < [self.dataSource numberOfTagsInTagCollectionView:self]; i++) {
-        UIView *tagView = [self.dataSource tagCollectionView:self tagViewForIndex:i];
+    for (NSUInteger i = 0; i < self.number; i++) {
+        UIView *tagView = self.tags[i];
         if (CGRectContainsPoint(tagView.frame, convertedPoint) && !tagView.isHidden) {
             return i;
         }
@@ -116,8 +128,8 @@
     CGPoint tapPointInScrollView = [tapGesture locationInView:_containerView];
     BOOL hasLocatedToTag = NO;
     
-    for (NSUInteger i = 0; i < [self.dataSource numberOfTagsInTagCollectionView:self]; i++) {
-        UIView *tagView = [self.dataSource tagCollectionView:self tagViewForIndex:i];
+    for (NSUInteger i = 0; i < self.number; i++) {
+        UIView *tagView = self.tags[i];
         if (CGRectContainsPoint(tagView.frame, tapPointInScrollView) && !tagView.isHidden) {
             hasLocatedToTag = YES;
             if ([self.delegate respondsToSelector:@selector(tagCollectionView:shouldSelectTag:atIndex:)]) {
@@ -180,7 +192,7 @@
 }
 
 - (void)layoutTagViewsForVerticalDirection {
-    NSUInteger count = [_dataSource numberOfTagsInTagCollectionView:self];
+    NSUInteger count = self.number;
     NSUInteger currentLineTagsCount = 0;
     CGFloat totalWidth = (_manualCalculateHeight && _preferredMaxLayoutWidth > 0) ? _preferredMaxLayoutWidth : CGRectGetWidth(self.bounds);
     CGFloat maxLineWidth = totalWidth - _contentInset.left - _contentInset.right;
@@ -196,7 +208,7 @@
     
     // Get each line max height ,width and tag count
     for (NSUInteger i = 0; i < count; i++) {
-        CGSize tagSize = [_delegate tagCollectionView:self sizeForTagAtIndex:i];
+        CGSize tagSize = [self.sizes[i] CGSizeValue];
 
         if (currentLineX + tagSize.width > maxLineWidth && tmpTagIndexNumbers.count > 0) {
             // New Line
@@ -212,7 +224,7 @@
         
         // Line limit
         if (_numberOfLines != 0) {
-            UIView *tagView = [_dataSource tagCollectionView:self tagViewForIndex:i];
+            UIView *tagView = self.tags[i];
             tagView.hidden = eachLineWidthNumbers.count >= _numberOfLines;
         }
         
@@ -249,7 +261,7 @@
 }
 
 - (void)layoutTagViewsForHorizontalDirection {
-    NSInteger count = [_dataSource numberOfTagsInTagCollectionView:self];
+    NSInteger count = self.number;
     _numberOfLines = _numberOfLines == 0 ? 1 : _numberOfLines;
     _numberOfLines = MIN(count, _numberOfLines);
     
@@ -278,7 +290,7 @@
         CGFloat currentLineX = eachLineWidthNumbers[currentLine].floatValue;
         NSMutableArray *currentLineTagIndexNumbers = eachLineTagIndexs[currentLine];
         
-        CGSize tagSize = [_delegate tagCollectionView:self sizeForTagAtIndex:tagIndex];
+        CGSize tagSize = [self.sizes[tagIndex] CGSizeValue];
         currentLineX += tagSize.width + _horizontalSpacing;
         currentLineMaxHeight = MAX(tagSize.height, currentLineMaxHeight);
         currentLineTagsCount += 1;
@@ -364,8 +376,8 @@
         [eachLineTagIndexs[currentLine] enumerateObjectsUsingBlock:^(NSNumber * _Nonnull tagIndexNumber, NSUInteger idx, BOOL * _Nonnull stop) {
             NSUInteger tagIndex = tagIndexNumber.unsignedIntegerValue;
             
-            UIView *tagView = [self.dataSource tagCollectionView:self tagViewForIndex:tagIndex];
-            CGSize tagSize = [self.delegate tagCollectionView:self sizeForTagAtIndex:tagIndex];
+            UIView *tagView = self.tags[tagIndex];
+            CGSize tagSize = [self.sizes[tagIndex] CGSizeValue];
             
             CGPoint origin;
             origin.x = currentLineXOffset + currentLineX;

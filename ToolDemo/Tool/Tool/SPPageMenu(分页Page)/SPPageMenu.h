@@ -5,6 +5,34 @@
 //  Created by 乐升平 on 17/10/26. https://github.com/SPStore/SPPageMenu
 //  Copyright © 2017年 iDress. All rights reserved.
 //
+/**
+ - (void)pageMenu:(SPPageMenu *)pageMenu itemSelectedFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
+     NSLog(@"%zd------->%zd",fromIndex,toIndex);
+
+     // 如果该代理方法是由拖拽self.scrollView而触发，说明self.scrollView已经在用户手指的拖拽下而发生偏移，此时不需要再用代码去设置偏移量，否则在跟踪模式为SPPageMenuTrackerFollowingModeHalf的情况下，滑到屏幕一半时会有闪跳现象。闪跳是因为外界设置的scrollView偏移和用户拖拽产生冲突
+     if (!self.scrollView.isDragging) { // 判断用户是否在拖拽scrollView
+         // 如果fromIndex与toIndex之差大于等于2,说明跨界面移动了,此时不动画.
+         if (labs(toIndex - fromIndex) >= 2) {
+             [self.scrollView setContentOffset:CGPointMake(SCREEN_Width * toIndex, 0) animated:NO];
+         } else {
+             [self.scrollView setContentOffset:CGPointMake(SCREEN_Width * toIndex, 0) animated:YES];
+         }
+     }
+
+     if (self.childViewControllers.count <= toIndex) {return;}
+
+     UIViewController *targetViewController = self.childViewControllers[toIndex];
+     // 如果已经加载过，就不再加载
+     if ([targetViewController isViewLoaded]) return;
+
+     targetViewController.view.frame = CGRectMake(SCREEN_Width * toIndex, 0, SCREEN_Width, self.scrollView.height);
+     [_scrollView addSubview:targetViewController.view];
+
+ }
+
+ 
+ */
+
 
 #import <UIKit/UIKit.h>
 

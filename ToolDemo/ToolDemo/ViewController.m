@@ -10,13 +10,13 @@
 #import <Tool/MHCarousel.h>
 #import <Tool/ToolMacro.h>
 #import <Tool/UIImage+MUColor.h>
-#import <Tool/MHHTTPSessionManager.h>
+//#import <Tool/MHHTTPSessionManager.h>
 #import <Masonry/Masonry.h>
 #import <Tool/LYEmptyViewHeader.h>
-#import <Tool/MBProgressHUD+Add.h>
+//#import <Tool/MBProgressHUD+Add.h>
 #import <Tool/UIView+MHCategory.h>
 #import <Tool/ToolMacro.h>
-#import <Tool/MBProgressHUD.h>
+//#import <Tool/MBProgressHUD.h>
 #import <Tool/SPPageMenu.h>
 #import "TestTableViewCell.h"
 #import "TestTableViewCell1.h"
@@ -50,14 +50,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addNavBar];
+    
+    BaseWebViewController *vc = [[BaseWebViewController alloc]init];
+    vc.urlString = @"www.sdl96.com/onlineShop/index.html#/pages/index/index";
+    [self.navigationController pushViewController:vc animated:YES];
         
-
-    self.view.backgroundColor = UIColorFromHex(0x161b2f, 1);
+//    self.view.backgroundColor = UIColorFromHex(@"#161b2f",1);
+//    self.view.backgroundColor = UIColorFromHex1(0x161b2f, 1);
     self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [[UIView alloc]init];
-    self.tableView.backgroundColor = UIColorFromHex(0x161b2f, 1);
+//    self.tableView.backgroundColor = UIColorFromHex(0x161b2f, 1);
     [self.tableView registerClass:[MHInfoItemCell class] forCellReuseIdentifier:@"cell"];
 //    self.tableView.estimatedRowHeight = 100;
 //    self.t
@@ -66,7 +70,7 @@
         [self.tableView reloadData];
 //        [MBProgressHUD showRingInView:self.view Msg:nil animation:YES];
 //        [MBProgressHUD showActivView:self.view Msg:@"加载中" animation:YES];
-        [MBHUD show];
+//        [MBHUD show];
         
     }];
 

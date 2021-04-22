@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04089EDF24ECB59E0044DD26 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04089EDB24ECB59E0044DD26 /* MBProgressHUD.m */; };
-		04089EE024ECB59E0044DD26 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 04089EDC24ECB59E0044DD26 /* MBProgressHUD+Add.m */; };
-		04089EE124ECB59E0044DD26 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 04089EDD24ECB59E0044DD26 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04089EE224ECB59E0044DD26 /* MBProgressHUD+Add.h in Headers */ = {isa = PBXBuildFile; fileRef = 04089EDE24ECB59E0044DD26 /* MBProgressHUD+Add.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0414BA9324EA2F9F00EBE089 /* RKNotificationHub.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9124EA2F9E00EBE089 /* RKNotificationHub.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0414BA9424EA2F9F00EBE089 /* RKNotificationHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA9224EA2F9E00EBE089 /* RKNotificationHub.m */; };
 		0414BA9924EA50D200EBE089 /* UILabel+topString.h in Headers */ = {isa = PBXBuildFile; fileRef = 0414BA9724EA50D200EBE089 /* UILabel+topString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -180,10 +176,6 @@
 		04EBCC6624DD4436005D7D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EBCC6524DD4436005D7D8C /* Assets.xcassets */; };
 		04EBCC6924DD4436005D7D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EBCC6724DD4436005D7D8C /* LaunchScreen.storyboard */; };
 		04EBCC6C24DD4436005D7D8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC6B24DD4436005D7D8C /* main.m */; };
-		04EBCC7624DD4436005D7D8C /* ToolDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC7524DD4436005D7D8C /* ToolDemoTests.m */; };
-		04EBCC8124DD4436005D7D8C /* ToolDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC8024DD4436005D7D8C /* ToolDemoUITests.m */; };
-		04EBCD7C24DD45FB005D7D8C /* Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCD7324DD45FB005D7D8C /* Tool.framework */; };
-		04EBCD8324DD45FC005D7D8C /* ToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD8224DD45FC005D7D8C /* ToolTests.m */; };
 		04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD7524DD45FB005D7D8C /* Tool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCDF924DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9224DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */; };
@@ -202,8 +194,6 @@
 		04EBCE1024DD4629005D7D8C /* UIImage+MUColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB224DD4628005D7D8C /* UIImage+MUColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE1124DD4629005D7D8C /* WSDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB424DD4628005D7D8C /* WSDatePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE1224DD4629005D7D8C /* WSDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB524DD4628005D7D8C /* WSDatePickerView.m */; };
-		04EBCE1324DD4629005D7D8C /* MHHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB724DD4629005D7D8C /* MHHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04EBCE1524DD4629005D7D8C /* MHHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDB924DD4629005D7D8C /* MHHTTPSessionManager.m */; };
 		04EBCE1624DD4629005D7D8C /* ZZLimitInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDBB24DD4629005D7D8C /* ZZLimitInputManager.m */; };
 		04EBCE1724DD4629005D7D8C /* ZZLimitInputManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDBC24DD4629005D7D8C /* ZZLimitInputManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04EBCE2124DD4629005D7D8C /* GZCMulitiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; };
@@ -219,6 +209,12 @@
 		04F0EDC72536981300F20FED /* StepSlider.m in Headers */ = {isa = PBXBuildFile; fileRef = 04F0EDC4253697EF00F20FED /* StepSlider.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		63758211B845B97FB25449F5 /* Pods_Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B31E198B12B549366BC1F8 /* Pods_Tool.framework */; };
 		66CC420A319AECFB8CCED05B /* Pods_ToolDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D1D7E67C9F2FDA51D0218F /* Pods_ToolDemo.framework */; };
+		7313034B2609C5B800F4651A /* Placemark.h in Headers */ = {isa = PBXBuildFile; fileRef = 731303472609C5B800F4651A /* Placemark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7313034C2609C5B800F4651A /* GPSManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 731303482609C5B800F4651A /* GPSManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7313034D2609C5B800F4651A /* Placemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 731303492609C5B800F4651A /* Placemark.m */; };
+		7313034E2609C5B800F4651A /* GPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7313034A2609C5B800F4651A /* GPSManager.m */; };
+		7313034F2609C5F300F4651A /* GPSManager.m in Headers */ = {isa = PBXBuildFile; fileRef = 7313034A2609C5B800F4651A /* GPSManager.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		731303502609C5F300F4651A /* Placemark.m in Headers */ = {isa = PBXBuildFile; fileRef = 731303492609C5B800F4651A /* Placemark.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		734D819A2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 734D81982510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		734D819B2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */; };
 		734D81A325110679009834F7 /* emoji keyboard in Resources */ = {isa = PBXBuildFile; fileRef = 734D81A125110679009834F7 /* emoji keyboard */; };
@@ -240,8 +236,6 @@
 		73B3A8EA253202B2008066B1 /* UITableView+FDTemplateLayoutCell.m in Headers */ = {isa = PBXBuildFile; fileRef = 73681465251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8EB253202B2008066B1 /* UITableView+FDTemplateLayoutCellDebug.m in Headers */ = {isa = PBXBuildFile; fileRef = 73681469251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8EC253202B2008066B1 /* FTPopOverMenu.m in Headers */ = {isa = PBXBuildFile; fileRef = 04269F8124FCE67000CFD9D5 /* FTPopOverMenu.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B3A8ED253202B2008066B1 /* MBProgressHUD.m in Headers */ = {isa = PBXBuildFile; fileRef = 04089EDB24ECB59E0044DD26 /* MBProgressHUD.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B3A8EE253202B2008066B1 /* MBProgressHUD+Add.m in Headers */ = {isa = PBXBuildFile; fileRef = 04089EDC24ECB59E0044DD26 /* MBProgressHUD+Add.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8EF253202B2008066B1 /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Headers */ = {isa = PBXBuildFile; fileRef = 734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8F0253202B2008066B1 /* NullSafe.m in Headers */ = {isa = PBXBuildFile; fileRef = 0483C27224EF5B2A005BFD32 /* NullSafe.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A8F1253202B2008066B1 /* NSString+Category.m in Headers */ = {isa = PBXBuildFile; fileRef = 04B085BF2500DACB00FB3554 /* NSString+Category.m */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -262,7 +256,6 @@
 		73B3A903253202B2008066B1 /* UINavigationController+FDFullscreenPopGesture.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9324DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A904253202B2008066B1 /* MHWebViewController.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCD9E24DD4628005D7D8C /* MHWebViewController.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A905253202B2008066B1 /* WSDatePickerView.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB524DD4628005D7D8C /* WSDatePickerView.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B3A906253202B2008066B1 /* MHHTTPSessionManager.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDB924DD4629005D7D8C /* MHHTTPSessionManager.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A907253202B2008066B1 /* SPAlertController.m in Headers */ = {isa = PBXBuildFile; fileRef = 04269F7624FCC11C00CFD9D5 /* SPAlertController.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A908253202B2008066B1 /* GZCMulitiDelegate.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDC924DD4629005D7D8C /* GZCMulitiDelegate.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B3A90B253202B2008066B1 /* MHBaseModel.m in Headers */ = {isa = PBXBuildFile; fileRef = 04EBCDD324DD4629005D7D8C /* MHBaseModel.m */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -282,34 +275,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 04EBCD7224DD45FB005D7D8C;
 			remoteInfo = Tool;
-		};
-		04EBCC7224DD4436005D7D8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04EBCC4E24DD4434005D7D8C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04EBCC5524DD4434005D7D8C;
-			remoteInfo = ToolDemo;
-		};
-		04EBCC7D24DD4436005D7D8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04EBCC4E24DD4434005D7D8C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04EBCC5524DD4434005D7D8C;
-			remoteInfo = ToolDemo;
-		};
-		04EBCD7D24DD45FB005D7D8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04EBCC4E24DD4434005D7D8C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04EBCD7224DD45FB005D7D8C;
-			remoteInfo = Tool;
-		};
-		04EBCD7F24DD45FB005D7D8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04EBCC4E24DD4434005D7D8C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04EBCC5524DD4434005D7D8C;
-			remoteInfo = ToolDemo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -380,16 +345,9 @@
 		04EBCC6824DD4436005D7D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04EBCC6A24DD4436005D7D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04EBCC6B24DD4436005D7D8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		04EBCC7124DD4436005D7D8C /* ToolDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04EBCC7524DD4436005D7D8C /* ToolDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolDemoTests.m; sourceTree = "<group>"; };
-		04EBCC7724DD4436005D7D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04EBCC7C24DD4436005D7D8C /* ToolDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04EBCC8024DD4436005D7D8C /* ToolDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolDemoUITests.m; sourceTree = "<group>"; };
-		04EBCC8224DD4436005D7D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04EBCD7324DD45FB005D7D8C /* Tool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EBCD7524DD45FB005D7D8C /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		04EBCD7624DD45FB005D7D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04EBCD7B24DD45FB005D7D8C /* ToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EBCD8224DD45FC005D7D8C /* ToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolTests.m; sourceTree = "<group>"; };
 		04EBCD8424DD45FC005D7D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04EBCD9224DD4628005D7D8C /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
@@ -425,6 +383,10 @@
 		04F0EDC3253697EF00F20FED /* StepSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepSlider.h; sourceTree = "<group>"; };
 		04F0EDC4253697EF00F20FED /* StepSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepSlider.m; sourceTree = "<group>"; };
 		07D0A9888F1988F690CD6EE6 /* Pods-ToolDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToolDemo.debug.xcconfig"; path = "Target Support Files/Pods-ToolDemo/Pods-ToolDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		731303472609C5B800F4651A /* Placemark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Placemark.h; sourceTree = "<group>"; };
+		731303482609C5B800F4651A /* GPSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSManager.h; sourceTree = "<group>"; };
+		731303492609C5B800F4651A /* Placemark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Placemark.m; sourceTree = "<group>"; };
+		7313034A2609C5B800F4651A /* GPSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSManager.m; sourceTree = "<group>"; };
 		734D81982510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+SCRAttributedStringBuilder.h"; sourceTree = "<group>"; };
 		734D81992510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+SCRAttributedStringBuilder.m"; sourceTree = "<group>"; };
 		734D81A125110679009834F7 /* emoji keyboard */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "emoji keyboard"; sourceTree = "<group>"; };
@@ -470,33 +432,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04EBCC6E24DD4436005D7D8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04EBCC7924DD4436005D7D8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		04EBCD7024DD45FB005D7D8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				63758211B845B97FB25449F5 /* Pods_Tool.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04EBCD7824DD45FB005D7D8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04EBCD7C24DD45FB005D7D8C /* Tool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,8 +530,6 @@
 			isa = PBXGroup;
 			children = (
 				04EBCC5824DD4434005D7D8C /* ToolDemo */,
-				04EBCC7424DD4436005D7D8C /* ToolDemoTests */,
-				04EBCC7F24DD4436005D7D8C /* ToolDemoUITests */,
 				04EBCD7424DD45FB005D7D8C /* Tool */,
 				04EBCD8124DD45FB005D7D8C /* ToolTests */,
 				04EBCC5724DD4434005D7D8C /* Products */,
@@ -605,10 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				04EBCC5624DD4434005D7D8C /* ToolDemo.app */,
-				04EBCC7124DD4436005D7D8C /* ToolDemoTests.xctest */,
-				04EBCC7C24DD4436005D7D8C /* ToolDemoUITests.xctest */,
 				04EBCD7324DD45FB005D7D8C /* Tool.framework */,
-				04EBCD7B24DD45FB005D7D8C /* ToolTests.xctest */,
 				0423577F25552F2C00349CBD /* Tool_swift.framework */,
 			);
 			name = Products;
@@ -635,24 +570,6 @@
 			path = ToolDemo;
 			sourceTree = "<group>";
 		};
-		04EBCC7424DD4436005D7D8C /* ToolDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				04EBCC7524DD4436005D7D8C /* ToolDemoTests.m */,
-				04EBCC7724DD4436005D7D8C /* Info.plist */,
-			);
-			path = ToolDemoTests;
-			sourceTree = "<group>";
-		};
-		04EBCC7F24DD4436005D7D8C /* ToolDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				04EBCC8024DD4436005D7D8C /* ToolDemoUITests.m */,
-				04EBCC8224DD4436005D7D8C /* Info.plist */,
-			);
-			path = ToolDemoUITests;
-			sourceTree = "<group>";
-		};
 		04EBCD7424DD45FB005D7D8C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +592,7 @@
 		04EBCD9024DD4628005D7D8C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				731303462609C5B800F4651A /* GPSManager */,
 				04C87D572558E9AE00BF7078 /* MHInfoItemCell */,
 				04F0EDC1253697EF00F20FED /* StepSlider */,
 				73B3A910253203D6008066B1 /* MHNavigation */,
@@ -829,6 +747,17 @@
 				04F0EDC4253697EF00F20FED /* StepSlider.m */,
 			);
 			path = StepSlider;
+			sourceTree = "<group>";
+		};
+		731303462609C5B800F4651A /* GPSManager */ = {
+			isa = PBXGroup;
+			children = (
+				731303482609C5B800F4651A /* GPSManager.h */,
+				7313034A2609C5B800F4651A /* GPSManager.m */,
+				731303472609C5B800F4651A /* Placemark.h */,
+				731303492609C5B800F4651A /* Placemark.m */,
+			);
+			path = GPSManager;
 			sourceTree = "<group>";
 		};
 		734D819C25110643009834F7 /* 表情键盘 */ = {
@@ -998,8 +927,6 @@
 				04C87D7725594A8B00BF7078 /* MHInfoItemCell.h in Headers */,
 				73B3A8EB253202B2008066B1 /* UITableView+FDTemplateLayoutCellDebug.m in Headers */,
 				73B3A8EC253202B2008066B1 /* FTPopOverMenu.m in Headers */,
-				73B3A8ED253202B2008066B1 /* MBProgressHUD.m in Headers */,
-				73B3A8EE253202B2008066B1 /* MBProgressHUD+Add.m in Headers */,
 				73B3A8EF253202B2008066B1 /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Headers */,
 				73B3A8F0253202B2008066B1 /* NullSafe.m in Headers */,
 				73B3A8F1253202B2008066B1 /* NSString+Category.m in Headers */,
@@ -1020,7 +947,6 @@
 				73B3A903253202B2008066B1 /* UINavigationController+FDFullscreenPopGesture.m in Headers */,
 				73B3A904253202B2008066B1 /* MHWebViewController.m in Headers */,
 				73B3A905253202B2008066B1 /* WSDatePickerView.m in Headers */,
-				73B3A906253202B2008066B1 /* MHHTTPSessionManager.m in Headers */,
 				73B3A907253202B2008066B1 /* SPAlertController.m in Headers */,
 				73B3A908253202B2008066B1 /* GZCMulitiDelegate.m in Headers */,
 				73B3A90B253202B2008066B1 /* MHBaseModel.m in Headers */,
@@ -1034,6 +960,7 @@
 				04EBCE2224DD4629005D7D8C /* GZCMulitiDelegate.h in Headers */,
 				04EBCE1024DD4629005D7D8C /* UIImage+MUColor.h in Headers */,
 				04EBCE1124DD4629005D7D8C /* WSDatePickerView.h in Headers */,
+				7313034C2609C5B800F4651A /* GPSManager.h in Headers */,
 				04EBCE0B24DD4629005D7D8C /* NSDecimalNumber+Addtion.h in Headers */,
 				04EBCE1724DD4629005D7D8C /* ZZLimitInputManager.h in Headers */,
 				04EBCE0424DD4629005D7D8C /* MHWebViewController.h in Headers */,
@@ -1043,7 +970,6 @@
 				04EBCE0824DD4629005D7D8C /* UITextView+Placeholder.h in Headers */,
 				04EBCE4124DD4629005D7D8C /* ToolMacro.h in Headers */,
 				04445C3F24E0D98100D4FA5C /* MUHookMethodHelper.h in Headers */,
-				04EBCE1324DD4629005D7D8C /* MHHTTPSessionManager.h in Headers */,
 				04EBCE0524DD4629005D7D8C /* NSDate+MHExtension.h in Headers */,
 				04C4AAC924E285EA0092532B /* LYEmptyBaseView.h in Headers */,
 				04C4AACD24E285EA0092532B /* UIView+Empty.h in Headers */,
@@ -1051,9 +977,9 @@
 				04C4AAC624E285EA0092532B /* LYEmptyView.h in Headers */,
 				0414BA9924EA50D200EBE089 /* UILabel+topString.h in Headers */,
 				0414BA9E24EA523700EBE089 /* UIButton+Category.h in Headers */,
+				7313034B2609C5B800F4651A /* Placemark.h in Headers */,
 				04C4AACA24E285EA0092532B /* LYEmptyViewHeader.h in Headers */,
 				0414BA9324EA2F9F00EBE089 /* RKNotificationHub.h in Headers */,
-				04089EE124ECB59E0044DD26 /* MBProgressHUD.h in Headers */,
 				04269F8224FCE67000CFD9D5 /* FTPopOverMenu.h in Headers */,
 				041C5ABC2507740B000670E7 /* TTGTagCollectionView.h in Headers */,
 				041C5ABD2507740B000670E7 /* TTGTextTagCollectionView.h in Headers */,
@@ -1061,7 +987,6 @@
 				7368146E251258180026C6E7 /* UITableView+FDIndexPathHeightCache.h in Headers */,
 				73681474251258180026C6E7 /* UITableView+FDTemplateLayoutCell.h in Headers */,
 				7368146F251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.h in Headers */,
-				04089EE224ECB59E0044DD26 /* MBProgressHUD+Add.h in Headers */,
 				73B3A8E72531FD8A008066B1 /* ZZLimitInputManager.m in Headers */,
 				734D819A2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.h in Headers */,
 				73B3A913253203EA008066B1 /* MHNavigation.h in Headers */,
@@ -1074,6 +999,8 @@
 				04AD3C832563A3E300A429D3 /* iCarousel.m in Headers */,
 				0423E60E25666CFF00C027F3 /* SMPageControl.h in Headers */,
 				0423E62A2566717E00C027F3 /* SMPageControl.m in Headers */,
+				7313034F2609C5F300F4651A /* GPSManager.m in Headers */,
+				731303502609C5F300F4651A /* Placemark.m in Headers */,
 				04B085C02500DACB00FB3554 /* NSString+Category.h in Headers */,
 				04EBCD8524DD45FC005D7D8C /* Tool.h in Headers */,
 			);
@@ -1123,42 +1050,6 @@
 			productReference = 04EBCC5624DD4434005D7D8C /* ToolDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		04EBCC7024DD4436005D7D8C /* ToolDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04EBCC8824DD4436005D7D8C /* Build configuration list for PBXNativeTarget "ToolDemoTests" */;
-			buildPhases = (
-				04EBCC6D24DD4436005D7D8C /* Sources */,
-				04EBCC6E24DD4436005D7D8C /* Frameworks */,
-				04EBCC6F24DD4436005D7D8C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04EBCC7324DD4436005D7D8C /* PBXTargetDependency */,
-			);
-			name = ToolDemoTests;
-			productName = ToolDemoTests;
-			productReference = 04EBCC7124DD4436005D7D8C /* ToolDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		04EBCC7B24DD4436005D7D8C /* ToolDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04EBCC8B24DD4436005D7D8C /* Build configuration list for PBXNativeTarget "ToolDemoUITests" */;
-			buildPhases = (
-				04EBCC7824DD4436005D7D8C /* Sources */,
-				04EBCC7924DD4436005D7D8C /* Frameworks */,
-				04EBCC7A24DD4436005D7D8C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04EBCC7E24DD4436005D7D8C /* PBXTargetDependency */,
-			);
-			name = ToolDemoUITests;
-			productName = ToolDemoUITests;
-			productReference = 04EBCC7C24DD4436005D7D8C /* ToolDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		04EBCD7224DD45FB005D7D8C /* Tool */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04EBCD8A24DD45FC005D7D8C /* Build configuration list for PBXNativeTarget "Tool" */;
@@ -1179,25 +1070,6 @@
 			productReference = 04EBCD7324DD45FB005D7D8C /* Tool.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		04EBCD7A24DD45FB005D7D8C /* ToolTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04EBCD8D24DD45FC005D7D8C /* Build configuration list for PBXNativeTarget "ToolTests" */;
-			buildPhases = (
-				04EBCD7724DD45FB005D7D8C /* Sources */,
-				04EBCD7824DD45FB005D7D8C /* Frameworks */,
-				04EBCD7924DD45FB005D7D8C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04EBCD7E24DD45FB005D7D8C /* PBXTargetDependency */,
-				04EBCD8024DD45FB005D7D8C /* PBXTargetDependency */,
-			);
-			name = ToolTests;
-			productName = ToolTests;
-			productReference = 04EBCD7B24DD45FB005D7D8C /* ToolTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1210,20 +1082,8 @@
 					04EBCC5524DD4434005D7D8C = {
 						CreatedOnToolsVersion = 11.6;
 					};
-					04EBCC7024DD4436005D7D8C = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = 04EBCC5524DD4434005D7D8C;
-					};
-					04EBCC7B24DD4436005D7D8C = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = 04EBCC5524DD4434005D7D8C;
-					};
 					04EBCD7224DD45FB005D7D8C = {
 						CreatedOnToolsVersion = 11.6;
-					};
-					04EBCD7A24DD45FB005D7D8C = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = 04EBCC5524DD4434005D7D8C;
 					};
 				};
 			};
@@ -1241,10 +1101,7 @@
 			projectRoot = "";
 			targets = (
 				04EBCC5524DD4434005D7D8C /* ToolDemo */,
-				04EBCC7024DD4436005D7D8C /* ToolDemoTests */,
-				04EBCC7B24DD4436005D7D8C /* ToolDemoUITests */,
 				04EBCD7224DD45FB005D7D8C /* Tool */,
-				04EBCD7A24DD45FB005D7D8C /* ToolTests */,
 				042356F425552F2C00349CBD /* Tool_swift */,
 			);
 		};
@@ -1271,28 +1128,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04EBCC6F24DD4436005D7D8C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04EBCC7A24DD4436005D7D8C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		04EBCD7124DD45FB005D7D8C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04EBCD7924DD45FB005D7D8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1481,22 +1317,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04EBCC6D24DD4436005D7D8C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04EBCC7624DD4436005D7D8C /* ToolDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04EBCC7824DD4436005D7D8C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04EBCC8124DD4436005D7D8C /* ToolDemoUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		04EBCD6F24DD45FB005D7D8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1505,9 +1325,9 @@
 				04EBCE4224DD4629005D7D8C /* SPPageMenu.m in Sources */,
 				04EBCE0C24DD4629005D7D8C /* NSDecimalNumber+Addtion.m in Sources */,
 				734D819B2510F811009834F7 /* NSMutableAttributedString+SCRAttributedStringBuilder.m in Sources */,
+				7313034E2609C5B800F4651A /* GPSManager.m in Sources */,
 				04EBCE1224DD4629005D7D8C /* WSDatePickerView.m in Sources */,
 				04EBCE1624DD4629005D7D8C /* ZZLimitInputManager.m in Sources */,
-				04089EDF24ECB59E0044DD26 /* MBProgressHUD.m in Sources */,
 				04C4AACB24E285EA0092532B /* LYEmptyView.m in Sources */,
 				04EBCE0724DD4629005D7D8C /* UITextView+Placeholder.m in Sources */,
 				04C4AAC524E285EA0092532B /* LYEmptyBaseView.m in Sources */,
@@ -1517,9 +1337,9 @@
 				04269F7824FCC11C00CFD9D5 /* SPAlertController.m in Sources */,
 				73B3A914253203EA008066B1 /* MHNavigation.m in Sources */,
 				04C4AAC724E285EA0092532B /* UIView+Empty.m in Sources */,
+				7313034D2609C5B800F4651A /* Placemark.m in Sources */,
 				73681471251258180026C6E7 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				04C4AAC824E285EA0092532B /* UIView+LYExtension.m in Sources */,
-				04EBCE1524DD4629005D7D8C /* MHHTTPSessionManager.m in Sources */,
 				0414BA9F24EA523700EBE089 /* UIButton+Category.m in Sources */,
 				7368146D251258180026C6E7 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				04EBCE0624DD4629005D7D8C /* NSDate+MHExtension.m in Sources */,
@@ -1535,21 +1355,12 @@
 				04EBCDFA24DD4629005D7D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				04AD3C5B2563A3A100A429D3 /* iCarousel.m in Sources */,
 				73681472251258180026C6E7 /* UITableView+FDKeyedHeightCache.m in Sources */,
-				04089EE024ECB59E0044DD26 /* MBProgressHUD+Add.m in Sources */,
 				04EBCE0924DD4629005D7D8C /* UIView+MHCategory.m in Sources */,
 				04269F8324FCE67000CFD9D5 /* FTPopOverMenu.m in Sources */,
 				04EBCE0324DD4629005D7D8C /* MHWebViewController.m in Sources */,
 				041C5ABF2507740B000670E7 /* TTGTextTagCollectionView.m in Sources */,
 				04B085C12500DACB00FB3554 /* NSString+Category.m in Sources */,
 				0483C27324EF5B2A005BFD32 /* NullSafe.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04EBCD7724DD45FB005D7D8C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04EBCD8324DD45FC005D7D8C /* ToolTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1560,26 +1371,6 @@
 			isa = PBXTargetDependency;
 			target = 04EBCD7224DD45FB005D7D8C /* Tool */;
 			targetProxy = 04445C7224E1353500D4FA5C /* PBXContainerItemProxy */;
-		};
-		04EBCC7324DD4436005D7D8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04EBCC5524DD4434005D7D8C /* ToolDemo */;
-			targetProxy = 04EBCC7224DD4436005D7D8C /* PBXContainerItemProxy */;
-		};
-		04EBCC7E24DD4436005D7D8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04EBCC5524DD4434005D7D8C /* ToolDemo */;
-			targetProxy = 04EBCC7D24DD4436005D7D8C /* PBXContainerItemProxy */;
-		};
-		04EBCD7E24DD45FB005D7D8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04EBCD7224DD45FB005D7D8C /* Tool */;
-			targetProxy = 04EBCD7D24DD45FB005D7D8C /* PBXContainerItemProxy */;
-		};
-		04EBCD8024DD45FB005D7D8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04EBCC5524DD4434005D7D8C /* ToolDemo */;
-			targetProxy = 04EBCD7F24DD45FB005D7D8C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1934,82 +1725,6 @@
 			};
 			name = Release;
 		};
-		04EBCC8924DD4436005D7D8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZNR56QECEL;
-				INFOPLIST_FILE = ToolDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = a.ToolDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToolDemo.app/ToolDemo";
-			};
-			name = Debug;
-		};
-		04EBCC8A24DD4436005D7D8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZNR56QECEL;
-				INFOPLIST_FILE = ToolDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = a.ToolDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToolDemo.app/ToolDemo";
-			};
-			name = Release;
-		};
-		04EBCC8C24DD4436005D7D8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZNR56QECEL;
-				INFOPLIST_FILE = ToolDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = a.ToolDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ToolDemo;
-			};
-			name = Debug;
-		};
-		04EBCC8D24DD4436005D7D8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZNR56QECEL;
-				INFOPLIST_FILE = ToolDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = a.ToolDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ToolDemo;
-			};
-			name = Release;
-		};
 		04EBCD8B24DD45FC005D7D8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 846C32F4E6A339A32B57F53C /* Pods-Tool.debug.xcconfig */;
@@ -2139,42 +1854,6 @@
 			};
 			name = Release;
 		};
-		04EBCD8E24DD45FC005D7D8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZNR56QECEL;
-				INFOPLIST_FILE = ToolTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = a.ToolTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToolDemo.app/ToolDemo";
-			};
-			name = Debug;
-		};
-		04EBCD8F24DD45FC005D7D8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZNR56QECEL;
-				INFOPLIST_FILE = ToolTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = a.ToolTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToolDemo.app/ToolDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2205,38 +1884,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04EBCC8824DD4436005D7D8C /* Build configuration list for PBXNativeTarget "ToolDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04EBCC8924DD4436005D7D8C /* Debug */,
-				04EBCC8A24DD4436005D7D8C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04EBCC8B24DD4436005D7D8C /* Build configuration list for PBXNativeTarget "ToolDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04EBCC8C24DD4436005D7D8C /* Debug */,
-				04EBCC8D24DD4436005D7D8C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		04EBCD8A24DD45FC005D7D8C /* Build configuration list for PBXNativeTarget "Tool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04EBCD8B24DD45FC005D7D8C /* Debug */,
 				04EBCD8C24DD45FC005D7D8C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04EBCD8D24DD45FC005D7D8C /* Build configuration list for PBXNativeTarget "ToolTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04EBCD8E24DD45FC005D7D8C /* Debug */,
-				04EBCD8F24DD45FC005D7D8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

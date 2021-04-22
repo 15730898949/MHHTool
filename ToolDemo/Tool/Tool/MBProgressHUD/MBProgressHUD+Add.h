@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MBProgressHUD.h"
+#import <MBProgressHUD.h>
 
 #define MBHUD [MBProgressHUD sharedMBHUD]
 
