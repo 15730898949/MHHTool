@@ -294,6 +294,7 @@ typedef NS_ENUM(NSUInteger, FTPopOverMenuArrowDirection) {
 @property (nonatomic, strong) NSArray *menuImageArray;
 @property (nonatomic, assign) FTPopOverMenuArrowDirection arrowDirection;
 @property (nonatomic, strong) FTPopOverMenuDoneBlock doneBlock;
+@property (nonatomic, strong) FTPopOverMenuCellDataSourceBlock cellDataSourceBlock;
 @property (nonatomic, strong) CAShapeLayer *backgroundLayer;
 @property (nonatomic, strong) FTPopOverMenuConfiguration *config;
 
@@ -491,6 +492,11 @@ typedef NS_ENUM(NSUInteger, FTPopOverMenuArrowDirection) {
     }else{
         menuCell.separatorInset = self.config.separatorInset;
     }
+    
+    if (self.cellDataSourceBlock) {
+        menuCell = self.cellDataSourceBlock(menuCell);
+    }
+    
     return menuCell;
 }
 
@@ -522,6 +528,7 @@ typedef NS_ENUM(NSUInteger, FTPopOverMenuArrowDirection) {
 @property (nonatomic, strong) FTPopOverMenuView *popMenuView;
 @property (nonatomic, strong) FTPopOverMenuDoneBlock doneBlock;
 @property (nonatomic, strong) FTPopOverMenuDismissBlock dismissBlock;
+@property (nonatomic, strong) FTPopOverMenuCellDataSourceBlock cellDataSourceBlock;
 
 @property (nonatomic, strong) UIView *sender;
 @property (nonatomic, assign) CGRect senderFrame;
@@ -557,6 +564,21 @@ typedef NS_ENUM(NSUInteger, FTPopOverMenuArrowDirection) {
                     dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock {
     return [[self sharedInstance] showForSender:sender window:nil senderFrame:CGRectNull withMenu:menuArray imageNameArray:imageArray config:nil doneBlock:doneBlock dismissBlock:dismissBlock];
 }
+
++ (FTPopOverMenu *)showForSender:(UIView *)sender
+                   withMenuArray:(NSArray *)menuArray
+                      imageArray:(NSArray *)imageArray
+                       doneBlock:(FTPopOverMenuDoneBlock)doneBlock
+                    dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock
+             cellDataSourceBlock:(FTPopOverMenuCellDataSourceBlock)cellDataSourceBlock{
+    [[self sharedInstance] showForSender:sender window:nil senderFrame:CGRectNull withMenu:menuArray imageNameArray:imageArray config:nil doneBlock:doneBlock dismissBlock:dismissBlock];
+    [self sharedInstance].cellDataSourceBlock = cellDataSourceBlock;
+    [self sharedInstance].popMenuView.cellDataSourceBlock = [self sharedInstance].cellDataSourceBlock;
+
+    return [self sharedInstance];
+}
+
+
 
 + (FTPopOverMenu *)showForSender:(UIView *)sender
                    withMenuArray:(NSArray *)menuArray
@@ -788,7 +810,6 @@ typedef NS_ENUM(NSUInteger, FTPopOverMenuArrowDirection) {
         anchorPoint = CGPointMake(menuArrowPoint.x/menuRect.size.width, 1);
     }
     self.popMenuView.transform = CGAffineTransformMakeScale(1, 1);
-    
     [self.popMenuView showWithFrame:menuRect
                          anglePoint:menuArrowPoint
                       withNameArray:self.menuArray

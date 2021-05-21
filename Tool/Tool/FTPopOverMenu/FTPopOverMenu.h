@@ -44,6 +44,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class FTPopOverMenuCell;
 /**
  *  FTPopOverMenuDoneBlock
  *
@@ -54,6 +55,10 @@ typedef void (^FTPopOverMenuDoneBlock)(NSInteger selectedIndex);
  *  FTPopOverMenuDismissBlock
  */
 typedef void (^FTPopOverMenuDismissBlock)(void);
+
+
+typedef FTPopOverMenuCell* (^FTPopOverMenuCellDataSourceBlock)(FTPopOverMenuCell *cell);
+
 
 /**
  *  -----------------------FTPopOverMenuModel-----------------------
@@ -160,6 +165,14 @@ typedef void (^FTPopOverMenuDismissBlock)(void);
                       imageArray:(NSArray *)imageArray
                        doneBlock:(FTPopOverMenuDoneBlock)doneBlock
                     dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock;
+
++ (FTPopOverMenu *)showForSender:(UIView *)sender
+                   withMenuArray:(NSArray *)menuArray
+                      imageArray:(NSArray *)imageArray
+                       doneBlock:(FTPopOverMenuDoneBlock)doneBlock
+                    dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock
+                    cellDataSourceBlock:(FTPopOverMenuCellDataSourceBlock)cellDataSourceBlock;
+
 
 /**
  show method with sender, image resouce Array and configuration
